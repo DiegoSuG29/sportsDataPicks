@@ -1,0 +1,4 @@
+# NFL data pipeline dependencies
+# nflreadpy pulls nflverse open data (schedules, pbp, player stats, snaps, injuries).
+# polars is installed as a dependency of nflreadpy and used directly here.
+nflreadpy>=0.1.5

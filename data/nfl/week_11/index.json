@@ -1,0 +1,142 @@
+{
+  "season": 2026,
+  "week": 11,
+  "generated_at": "2026-11-17T23:52:52+00:00",
+  "stats_through_week": 10,
+  "reference_window": [
+    2025,
+    2026
+  ],
+  "games": [
+    {
+      "game_id": "2026_11_IND_HOU",
+      "away_team": "IND",
+      "home_team": "HOU",
+      "gameday": "2026-11-19",
+      "weekday": "Thursday",
+      "spread_line": 12.5,
+      "total_line": 44.5,
+      "file": "week_11/2026_11_IND_HOU.json"
+    },
+    {
+      "game_id": "2026_11_MIA_BUF",
+      "away_team": "MIA",
+      "home_team": "BUF",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": 16.5,
+      "total_line": 45.5,
+      "file": "week_11/2026_11_MIA_BUF.json"
+    },
+    {
+      "game_id": "2026_11_BAL_CAR",
+      "away_team": "BAL",
+      "home_team": "CAR",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": 2.5,
+      "total_line": 44.5,
+      "file": "week_11/2026_11_BAL_CAR.json"
+    },
+    {
+      "game_id": "2026_11_NO_CHI",
+      "away_team": "NO",
+      "home_team": "CHI",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": 11.5,
+      "total_line": 48.5,
+      "file": "week_11/2026_11_NO_CHI.json"
+    },
+    {
+      "game_id": "2026_11_TEN_DAL",
+      "away_team": "TEN",
+      "home_team": "DAL",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": 8.5,
+      "total_line": 54.5,
+      "file": "week_11/2026_11_TEN_DAL.json"
+    },
+    {
+      "game_id": "2026_11_TB_DET",
+      "away_team": "TB",
+      "home_team": "DET",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": 7.0,
+      "total_line": 44.5,
+      "file": "week_11/2026_11_TB_DET.json"
+    },
+    {
+      "game_id": "2026_11_ARI_KC",
+      "away_team": "ARI",
+      "home_team": "KC",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": 16.5,
+      "total_line": 41.5,
+      "file": "week_11/2026_11_ARI_KC.json"
+    },
+    {
+      "game_id": "2026_11_JAX_NYG",
+      "away_team": "JAX",
+      "home_team": "NYG",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": -6.0,
+      "total_line": 46.5,
+      "file": "week_11/2026_11_JAX_NYG.json"
+    },
+    {
+      "game_id": "2026_11_NYJ_LAC",
+      "away_team": "NYJ",
+      "home_team": "LAC",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": 3.5,
+      "total_line": 41.5,
+      "file": "week_11/2026_11_NYJ_LAC.json"
+    },
+    {
+      "game_id": "2026_11_LV_DEN",
+      "away_team": "LV",
+      "home_team": "DEN",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": 10.0,
+      "total_line": 40.5,
+      "file": "week_11/2026_11_LV_DEN.json"
+    },
+    {
+      "game_id": "2026_11_PIT_PHI",
+      "away_team": "PIT",
+      "home_team": "PHI",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": -4.5,
+      "total_line": 38.5,
+      "file": "week_11/2026_11_PIT_PHI.json"
+    },
+    {
+      "game_id": "2026_11_MIN_SF",
+      "away_team": "MIN",
+      "home_team": "SF",
+      "gameday": "2026-11-22",
+      "weekday": "Sunday",
+      "spread_line": 3.0,
+      "total_line": 45.5,
+      "file": "week_11/2026_11_MIN_SF.json"
+    },
+    {
+      "game_id": "2026_11_CIN_WAS",
+      "away_team": "CIN",
+      "home_team": "WAS",
+      "gameday": "2026-11-23",
+      "weekday": "Monday",
+      "spread_line": -6.5,
+      "total_line": 53.5,
+      "file": "week_11/2026_11_CIN_WAS.json"
+    }
+  ]
+}
