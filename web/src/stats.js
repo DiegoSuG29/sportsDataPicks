@@ -55,13 +55,31 @@ export function computeProp(logs, optKey, line, filters) {
   };
 }
 
-export function computeWithWithout(playerLogs, mateLogs, optKey) {
+// Group with/without across one or more teammates.
+//   "with"    = games where EVERY selected teammate played
+//   "without" = games where NO selected teammate played
+//   mixed games (some in, some out) are excluded from both.
+// With a single teammate this is the usual with/without split.
+export function computeWithWithout(playerLogs, mateLogsList, optKey) {
   const opt = statOption(optKey);
-  const matePlayed = new Set(mateLogs.map((l) => `${l.season}-${l.week}`));
+  const playedSets = mateLogsList.map(
+    (logs) => new Set(logs.map((l) => `${l.season}-${l.week}`))
+  );
   const withG = [], withoutG = [];
+  let mixedN = 0;
   playerLogs.forEach((l) => {
-    (matePlayed.has(`${l.season}-${l.week}`) ? withG : withoutG).push(statVal(opt, l));
+    const key = `${l.season}-${l.week}`;
+    const presences = playedSets.map((s) => s.has(key));
+    const val = statVal(opt, l);
+    if (presences.every(Boolean)) withG.push(val);
+    else if (presences.every((p) => !p)) withoutG.push(val);
+    else mixedN += 1;
   });
   const avg = (arr) => (arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : null);
-  return { opt, withN: withG.length, withAvg: avg(withG), withoutN: withoutG.length, withoutAvg: avg(withoutG) };
+  return {
+    opt,
+    withN: withG.length, withAvg: avg(withG),
+    withoutN: withoutG.length, withoutAvg: avg(withoutG),
+    mixedN,
+  };
 }

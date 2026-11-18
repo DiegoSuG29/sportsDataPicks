@@ -1,6 +1,4 @@
-import { fmt, pct, spreadText } from "../util.js";
-
-const POS_BUCKET = { QB: "QB", RB: "RB", FB: "RB", WR: "WR", TE: "TE" };
+import { fmt, pct, spreadText, posClass } from "../util.js";
 
 export default function GameView({ game, onPlayer }) {
   return (
@@ -20,12 +18,25 @@ export default function GameView({ game, onPlayer }) {
         <div className="box"><span>Surface </span><b>{game.surface || "—"}</b></div>
       </div>
 
+      <PosLegend />
+
       <Edges edges={game.edges} />
 
       <div className="teams">
         <TeamPanel game={game} team={game.away_team} venue="Away" onPlayer={onPlayer} />
         <TeamPanel game={game} team={game.home_team} venue="Home" onPlayer={onPlayer} />
       </div>
+    </div>
+  );
+}
+
+function PosLegend() {
+  return (
+    <div className="pos-legend">
+      <span className="k">Positions:</span>
+      {["QB", "RB", "WR", "TE"].map((p) => (
+        <span className="lg" key={p}><span className={`sw ${p}`} />{p}</span>
+      ))}
     </div>
   );
 }
@@ -130,8 +141,8 @@ function UsageTable({ usage, onPlayer }) {
       <tbody>
         {!usage.length && <tr><td colSpan={7} className="empty">No usage data.</td></tr>}
         {usage.map((p) => (
-          <tr key={p.player_id} className="clickable" onClick={() => onPlayer(p)}>
-            <td>{p.name}<span className="pos-tag">{p.position}</span></td>
+          <tr key={p.player_id} className={`clickable ${posClass(p.position)}`} onClick={() => onPlayer(p)}>
+            <td>{p.name}<span className={`pos-tag ${posClass(p.position)}`}>{p.position}</span></td>
             <td>{pct(p.snap_pct)}</td>
             <td>{pct(p.target_share)}</td>
             <td>{fmt(p.targets_pg)}</td>
@@ -152,7 +163,7 @@ function InjuryList({ injuries }) {
       {injuries.map((i, idx) => (
         <div className="inj-row" key={idx}>
           <span>
-            {i.name} <span className="pos-tag">{i.position}</span>{" "}
+            {i.name} <span className={`pos-tag ${posClass(i.position)}`}>{i.position}</span>{" "}
             <span className="muted">{i.injury || ""}{i.games_missed != null ? ` · ${i.games_missed} missed` : ""}</span>
           </span>
           <span className={`status ${i.report_status || ""}`}>

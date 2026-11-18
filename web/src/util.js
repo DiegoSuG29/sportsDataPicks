@@ -3,6 +3,10 @@ export const fmt = (v, d = 1) =>
 
 export const pct = (v) => (v == null ? "—" : Math.round(v * 100) + "%");
 
+// Map a listed position to its color class (FB shares RB's color).
+const POS_CLASS = { QB: "pos-QB", RB: "pos-RB", FB: "pos-RB", WR: "pos-WR", TE: "pos-TE" };
+export const posClass = (p) => POS_CLASS[p] || "";
+
 export function spreadText(game) {
   const s = game.spread_line;
   if (s == null) return "—";

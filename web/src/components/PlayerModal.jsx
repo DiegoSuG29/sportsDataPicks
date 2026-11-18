@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { fmt } from "../util.js";
+import { fmt, posClass } from "../util.js";
 import { STAT_OPTIONS, statOption, computeProp, computeWithWithout } from "../stats.js";
 
 export default function PlayerModal({ game, team, player, onClose }) {
@@ -14,8 +14,11 @@ export default function PlayerModal({ game, team, player, onClose }) {
   const [statKey, setStatKey] = useState(defaultStat);
   const [line, setLine] = useState(statOption(defaultStat).def);
   const [filters, setFilters] = useState({ season: "all", venue: "all", div: "all", opp: "all" });
-  const [mateId, setMateId] = useState(teammates[0]?.player_id || "");
+  const [mateIds, setMateIds] = useState(teammates[0] ? [teammates[0].player_id] : []);
   const [wwStat, setWwStat] = useState(defaultStat);
+
+  const toggleMate = (id) =>
+    setMateIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
 
   // close on Escape
   useEffect(() => {
@@ -34,10 +37,18 @@ export default function PlayerModal({ game, team, player, onClose }) {
     [logs, statKey, line, filters]
   );
   const ww = useMemo(() => {
-    if (!mateId) return null;
-    return computeWithWithout(logs, game.player_logs[mateId] || [], wwStat);
-  }, [logs, mateId, wwStat, game]);
-  const mateName = teammates.find((m) => m.player_id === mateId)?.name || "teammate";
+    if (!mateIds.length) return null;
+    const mateLogsList = mateIds.map((id) => game.player_logs[id] || []);
+    return computeWithWithout(logs, mateLogsList, wwStat);
+  }, [logs, mateIds, wwStat, game]);
+  const mateNames = mateIds
+    .map((id) => teammates.find((m) => m.player_id === id)?.name)
+    .filter(Boolean);
+  const mateLabel =
+    mateNames.length === 0 ? "teammate"
+    : mateNames.length === 1 ? mateNames[0]
+    : mateNames.length === 2 ? mateNames.join(" & ")
+    : `${mateNames.length} teammates`;
 
   const setF = (k, v) => setFilters((f) => ({ ...f, [k]: v }));
 
@@ -47,7 +58,7 @@ export default function PlayerModal({ game, team, player, onClose }) {
         <button className="modal-close" aria-label="Close" onClick={onClose}>×</button>
 
         <div className="pd-head">
-          <h3>{player.name} <span className="pos-tag">{player.position}</span></h3>
+          <h3>{player.name} <span className={`pos-tag ${posClass(player.position)}`}>{player.position}</span></h3>
           <div className="pd-sub">
             {team} · {logs.length} games on record (last season + this season) · this week vs {opp}
           </div>
@@ -89,30 +100,47 @@ export default function PlayerModal({ game, team, player, onClose }) {
         <PropResult prop={prop} line={parseFloat(line)} />
         <PropLog prop={prop} line={parseFloat(line)} />
 
-        <div className="section-label">With / without a teammate</div>
+        <div className="section-label">With / without teammates</div>
         <div className="ww-wrap">
-          <div className="prop-grid">
-            <label>Teammate
-              <select value={mateId} onChange={(e) => setMateId(e.target.value)}>
-                {!teammates.length && <option value="">—</option>}
-                {teammates.map((m) => <option key={m.player_id} value={m.player_id}>{m.name} ({m.position})</option>)}
-              </select>
-            </label>
-            <label>Stat
-              <select value={wwStat} onChange={(e) => setWwStat(e.target.value)}>
-                {STAT_OPTIONS.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
-              </select>
-            </label>
-          </div>
-          {ww ? (
+          {teammates.length ? (
             <>
-              <div className="loghint">
-                {player.name}'s {ww.opt.label.toLowerCase()} per game when {mateName} played vs sat (reference window).
+              <div className="loghint">Pick one or more teammates to toggle in/out.</div>
+              <div className="ww-mates">
+                {teammates.map((m) => {
+                  const on = mateIds.includes(m.player_id);
+                  return (
+                    <button
+                      key={m.player_id}
+                      className={`ww-chip ${on ? "on" : ""}`}
+                      onClick={() => toggleMate(m.player_id)}
+                    >
+                      <span className={`pos-tag ${posClass(m.position)}`}>{m.position}</span> {m.name}
+                      <span className="pm">{on ? "−" : "+"}</span>
+                    </button>
+                  );
+                })}
               </div>
-              <div className="ww-compare">
-                <div className="ww-box"><div className="big">{ww.withN ? fmt(ww.withAvg, 1) : "—"}</div><div className="lbl">With {mateName} ({ww.withN}g)</div></div>
-                <div className="ww-box"><div className="big">{ww.withoutN ? fmt(ww.withoutAvg, 1) : "—"}</div><div className="lbl">Without ({ww.withoutN}g)</div></div>
+              <div className="prop-grid">
+                <label>Stat
+                  <select value={wwStat} onChange={(e) => setWwStat(e.target.value)}>
+                    {STAT_OPTIONS.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
+                  </select>
+                </label>
               </div>
+              {ww ? (
+                <>
+                  <div className="loghint">
+                    {player.name}'s {ww.opt.label.toLowerCase()} per game — {mateNames.length > 1 ? "all of " : ""}{mateLabel} in vs out (reference window).
+                  </div>
+                  <div className="ww-compare">
+                    <div className="ww-box"><div className="big">{ww.withN ? fmt(ww.withAvg, 1) : "—"}</div><div className="lbl">With {mateNames.length > 1 ? "all" : mateLabel} ({ww.withN}g)</div></div>
+                    <div className="ww-box"><div className="big">{ww.withoutN ? fmt(ww.withoutAvg, 1) : "—"}</div><div className="lbl">Without {mateNames.length > 1 ? "any" : ""} ({ww.withoutN}g)</div></div>
+                  </div>
+                  {mateIds.length > 1 && ww.mixedN > 0 && (
+                    <div className="ww-excluded">{ww.mixedN} game{ww.mixedN === 1 ? "" : "s"} excluded (some in, some out).</div>
+                  )}
+                </>
+              ) : <p className="empty">Select a teammate above.</p>}
             </>
           ) : <p className="empty">No teammates listed.</p>}
         </div>
