@@ -4,13 +4,13 @@
 // Each option carries the positions it applies to and a slider range tuned to
 // the stat (min/max/step), with defaults sitting on the step grid.
 export const STAT_OPTIONS = [
-  { key: "rec_yds", label: "Receiving yards", positions: ["WR", "TE", "RB"], def: 40.5, min: 10.5, max: 150.5, step: 5, dec: 1 },
+  { key: "rec_yds", label: "Receiving yards", positions: ["WR", "TE", "RB"], def: 40.5, min: 10.5, max: 150.5, step: 1, dec: 1 },
   { key: "receptions", label: "Receptions", positions: ["WR", "TE", "RB"], def: 3.5, min: 0.5, max: 12.5, step: 1, dec: 0 },
   { key: "targets", label: "Targets", positions: ["WR", "TE", "RB"], def: 5.5, min: 0.5, max: 15.5, step: 1, dec: 0 },
-  { key: "rush_yds", label: "Rushing yards", positions: ["RB", "QB"], def: 40.5, min: 10.5, max: 150.5, step: 5, dec: 1 },
+  { key: "rush_yds", label: "Rushing yards", positions: ["RB", "QB"], def: 40.5, min: 10.5, max: 150.5, step: 1, dec: 1 },
   { key: "carries", label: "Rush attempts", positions: ["RB", "QB"], def: 10.5, min: 2.5, max: 29.5, step: 1, dec: 0 },
-  { key: "scrim_yds", label: "Rush + Rec yards", positions: ["RB", "WR", "TE"], def: 60.5, min: 20.5, max: 200.5, step: 5, dec: 1, compute: (r) => r.rush_yds + r.rec_yds },
-  { key: "pass_yds", label: "Passing yards", positions: ["QB"], def: 224.5, min: 149.5, max: 349.5, step: 5, dec: 1 },
+  { key: "scrim_yds", label: "Rush + Rec yards", positions: ["RB", "WR", "TE"], def: 60.5, min: 20.5, max: 200.5, step: 1, dec: 1, compute: (r) => r.rush_yds + r.rec_yds },
+  { key: "pass_yds", label: "Passing yards", positions: ["QB"], def: 224.5, min: 149.5, max: 349.5, step: 1, dec: 1 },
   { key: "pass_tds", label: "Passing TDs", positions: ["QB"], def: 1.5, min: 0.5, max: 5.5, step: 1, dec: 0 },
   { key: "anytime_td", label: "Anytime TD", positions: ["QB", "RB", "WR", "TE"], def: 0.5, min: 0.5, max: 2.5, step: 1, dec: 0, compute: (r) => r.rush_tds + r.rec_tds },
 ];
@@ -39,6 +39,9 @@ export function filterLogs(logs, f) {
     if (f.div === "div" && !l.div_game) return false;
     if (f.div === "nondiv" && l.div_game) return false;
     if (f.opp !== "all" && l.opponent !== f.opp) return false;
+    if (f.snap && Number(f.snap) > 0) { // f.snap is a percent threshold (0 = any)
+      if (l.snap_pct == null || l.snap_pct * 100 < Number(f.snap)) return false;
+    }
     return true;
   });
 }

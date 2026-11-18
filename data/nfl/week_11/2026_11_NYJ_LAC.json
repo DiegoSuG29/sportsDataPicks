@@ -97,7 +97,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 1,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039794",
@@ -114,7 +117,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 3,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0037740",
@@ -131,7 +137,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 3
+          "rec_tds": 3,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039890",
@@ -148,7 +157,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041511",
@@ -165,7 +177,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 2
+          "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040736",
@@ -182,7 +197,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 2
+          "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041032",
@@ -199,7 +217,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 1,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041056",
@@ -216,7 +237,10 @@
           "pass_yds_pg": 137.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 11,
+          "attempts": 20,
+          "interceptions": 1
         },
         {
           "player_id": "00-0033375",
@@ -234,6 +258,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "INACTIVE",
           "status_note": "Inactive"
         },
@@ -252,24 +279,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 2
-        },
-        {
-          "player_id": "00-0039798",
-          "name": "Isaiah Davis",
-          "position": "RB",
-          "games": 9,
-          "snap_pct": 0.072,
-          "target_share": 0.023,
-          "targets_pg": 0.7,
-          "receptions_pg": 0.6,
-          "rec_yds_pg": 7.6,
-          "carries_pg": 1.7,
-          "rush_yds_pg": 4.9,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0030565",
@@ -286,7 +299,30 @@
           "pass_yds_pg": 222.6,
           "pass_tds": 12,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 196,
+          "attempts": 292,
+          "interceptions": 3
+        },
+        {
+          "player_id": "00-0039798",
+          "name": "Isaiah Davis",
+          "position": "RB",
+          "games": 9,
+          "snap_pct": 0.072,
+          "target_share": 0.023,
+          "targets_pg": 0.7,
+          "receptions_pg": 0.6,
+          "rec_yds_pg": 7.6,
+          "carries_pg": 1.7,
+          "rush_yds_pg": 4.9,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0037805",
@@ -303,7 +339,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0032385",
@@ -321,6 +360,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         },
@@ -340,6 +382,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "INACTIVE",
           "status_note": "Inactive"
         },
@@ -359,6 +404,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "IR",
           "status_note": "On injured reserve"
         },
@@ -377,7 +425,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0036842",
@@ -394,7 +445,30 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0041267",
+          "name": "Malik McClain",
+          "position": "WR",
+          "games": 5,
+          "snap_pct": 0.055,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040405",
@@ -412,25 +486,11 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
-        },
-        {
-          "player_id": "00-0041267",
-          "name": "Malik McClain",
-          "position": "WR",
-          "games": 5,
-          "snap_pct": 0.055,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
         }
       ],
       "injuries": [
@@ -601,7 +661,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 4,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0038454",
@@ -618,7 +681,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039391",
@@ -635,7 +701,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 1,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040727",
@@ -652,7 +721,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 1,
+          "interceptions": 0
         },
         {
           "player_id": "00-0036355",
@@ -669,24 +741,10 @@
           "pass_yds_pg": 191.1,
           "pass_tds": 6,
           "rush_tds": 1,
-          "rec_tds": 0
-        },
-        {
-          "player_id": "00-0038544",
-          "name": "Quentin Johnston",
-          "position": "WR",
-          "games": 8,
-          "snap_pct": 0.806,
-          "target_share": 0.134,
-          "targets_pg": 3.9,
-          "receptions_pg": 1.8,
-          "rec_yds_pg": 33.2,
-          "carries_pg": 0.4,
-          "rush_yds_pg": 1.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 0,
+          "completions": 156,
+          "attempts": 253,
+          "interceptions": 11
         },
         {
           "player_id": "00-0040184",
@@ -703,7 +761,30 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0038544",
+          "name": "Quentin Johnston",
+          "position": "WR",
+          "games": 8,
+          "snap_pct": 0.806,
+          "target_share": 0.134,
+          "targets_pg": 3.9,
+          "receptions_pg": 1.8,
+          "rec_yds_pg": 33.2,
+          "carries_pg": 0.4,
+          "rush_yds_pg": 1.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0033885",
@@ -720,7 +801,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039915",
@@ -737,24 +821,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
-        },
-        {
-          "player_id": "00-0038046",
-          "name": "Charlie Kolar",
-          "position": "TE",
-          "games": 7,
-          "snap_pct": 0.654,
-          "target_share": 0.128,
-          "targets_pg": 3.3,
-          "receptions_pg": 2.1,
-          "rec_yds_pg": 20.7,
-          "carries_pg": 0.1,
-          "rush_yds_pg": 0.4,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040189",
@@ -771,7 +841,30 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0038046",
+          "name": "Charlie Kolar",
+          "position": "TE",
+          "games": 7,
+          "snap_pct": 0.654,
+          "target_share": 0.128,
+          "targets_pg": 3.3,
+          "receptions_pg": 2.1,
+          "rec_yds_pg": 20.7,
+          "carries_pg": 0.1,
+          "rush_yds_pg": 0.4,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041550",
@@ -788,24 +881,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
-          "player_id": "00-0040311",
-          "name": "Theo Wease Jr.",
-          "position": "WR",
-          "games": 3,
-          "snap_pct": 0.4,
-          "target_share": 0.064,
-          "targets_pg": 1.7,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 12.3,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0034272",
@@ -823,8 +902,31 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "TRADED",
           "status_note": "No longer on LAC \u2014 now with PIT. Stats shown are from their time with LAC."
+        },
+        {
+          "player_id": "00-0040311",
+          "name": "Theo Wease Jr.",
+          "position": "WR",
+          "games": 3,
+          "snap_pct": 0.4,
+          "target_share": 0.064,
+          "targets_pg": 1.7,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 12.3,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0035125",
@@ -842,6 +944,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "IR",
           "status_note": "On injured reserve"
         },
@@ -860,7 +965,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039489",
@@ -878,6 +986,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "TRADED",
           "status_note": "No longer on LAC \u2014 now with PHI. Stats shown are from their time with LAC."
         },
@@ -896,7 +1007,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040464",
@@ -913,7 +1027,10 @@
           "pass_yds_pg": 24.0,
           "pass_tds": 1,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 2,
+          "attempts": 7,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040331",
@@ -931,6 +1048,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         }
@@ -11822,7 +11942,7 @@
     {
       "type": "matchup",
       "tier": "tough",
-      "text": "LAC WRs vs NYJ: TOUGH matchup. NYJ allows the 26th-most to WRs (28.4 FP/g, 126.5 yds/g). Fade: Tre Harris (19% tgt share), Quentin Johnston (13% tgt share), KeAndre Lambert-Smith (13% tgt share).",
+      "text": "LAC WRs vs NYJ: TOUGH matchup. NYJ allows the 26th-most to WRs (28.4 FP/g, 126.5 yds/g). Fade: Tre Harris (19% tgt share), KeAndre Lambert-Smith (13% tgt share), Quentin Johnston (13% tgt share).",
       "stat": "NYJ vs WR rank 26/32; 1.0 TD/g allowed."
     },
     {
@@ -11837,8 +11957,8 @@
     },
     {
       "type": "injury",
-      "text": "LAC WR room thinned \u2014 Marquez Valdes-Scantling (TRADED). Snaps/targets funnel to Tre Harris, Quentin Johnston.",
-      "stat": "next up: Tre Harris 19% tgt share, Quentin Johnston 13% tgt share, KeAndre Lambert-Smith 13% tgt share"
+      "text": "LAC WR room thinned \u2014 Marquez Valdes-Scantling (TRADED). Snaps/targets funnel to Tre Harris, KeAndre Lambert-Smith.",
+      "stat": "next up: Tre Harris 19% tgt share, KeAndre Lambert-Smith 13% tgt share, Quentin Johnston 13% tgt share"
     }
   ]
 }

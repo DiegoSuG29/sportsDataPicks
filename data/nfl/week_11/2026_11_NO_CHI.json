@@ -97,7 +97,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039373",
@@ -114,7 +117,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 1,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0038551",
@@ -132,6 +138,9 @@
           "pass_tds": 0,
           "rush_tds": 2,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "TRADED",
           "status_note": "No longer on NO \u2014 now with DAL. Stats shown are from their time with NO."
         },
@@ -150,7 +159,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 3,
-          "rec_tds": 2
+          "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0037239",
@@ -167,7 +179,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 2
+          "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041029",
@@ -184,7 +199,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039424",
@@ -201,7 +219,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 3
+          "rec_tds": 3,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0036040",
@@ -218,7 +239,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 4
+          "rec_tds": 4,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040743",
@@ -235,7 +259,10 @@
           "pass_yds_pg": 241.4,
           "pass_tds": 15,
           "rush_tds": 2,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 229,
+          "attempts": 343,
+          "interceptions": 7
         },
         {
           "player_id": "00-0041326",
@@ -253,6 +280,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "INACTIVE",
           "status_note": "Inactive"
         },
@@ -271,7 +301,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0035644",
@@ -288,7 +321,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 3
+          "rec_tds": 3,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0038040",
@@ -306,6 +342,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         },
@@ -325,6 +364,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         },
@@ -343,7 +385,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041041",
@@ -360,7 +405,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039518",
@@ -378,6 +426,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         },
@@ -397,6 +448,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         }
@@ -596,7 +650,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 10,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040236",
@@ -613,7 +670,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 3,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040735",
@@ -630,7 +690,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 4
+          "rec_tds": 4,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040126",
@@ -647,7 +710,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 2
+          "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039919",
@@ -664,7 +730,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039021",
@@ -681,7 +750,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 1,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039918",
@@ -698,7 +770,10 @@
           "pass_yds_pg": 257.7,
           "pass_tds": 8,
           "rush_tds": 2,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 134,
+          "attempts": 195,
+          "interceptions": 5
         },
         {
           "player_id": "00-0036020",
@@ -716,6 +791,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         },
@@ -734,7 +812,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0028986",
@@ -751,7 +832,10 @@
           "pass_yds_pg": 177.5,
           "pass_tds": 2,
           "rush_tds": 1,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 35,
+          "attempts": 53,
+          "interceptions": 1
         },
         {
           "player_id": "00-0038416",
@@ -768,7 +852,10 @@
           "pass_yds_pg": 136.3,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 42,
+          "attempts": 64,
+          "interceptions": 3
         },
         {
           "player_id": "00-0036290",
@@ -786,6 +873,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "IR",
           "status_note": "On injured reserve"
         },
@@ -804,7 +894,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041558",
@@ -821,7 +914,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040277",
@@ -838,7 +934,32 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0038440",
+          "name": "Zavier Scott",
+          "position": "RB",
+          "games": 4,
+          "snap_pct": 0.0,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
+          "status": "IR",
+          "status_note": "On injured reserve"
         },
         {
           "player_id": "00-0037380",
@@ -856,6 +977,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         },
@@ -874,26 +998,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
-          "player_id": "00-0038440",
-          "name": "Zavier Scott",
-          "position": "RB",
-          "games": 4,
-          "snap_pct": 0.0,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
           "rec_tds": 0,
-          "status": "IR",
-          "status_note": "On injured reserve"
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         }
       ],
       "injuries": [

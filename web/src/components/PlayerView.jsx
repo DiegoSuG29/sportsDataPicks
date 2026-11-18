@@ -33,11 +33,14 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
   const defaultStat = defaultStatFor(player.position);
   const [statKey, setStatKey] = useState(defaultStat);
   const [line, setLine] = useState(statOption(defaultStat).def);
-  const [filters, setFilters] = useState({ season: "all", venue: "all", div: "all", opp: "all" });
+  const [filters, setFilters] = useState({ season: "all", venue: "all", div: "all", opp: "all", snap: "0" });
   const [mateIds, setMateIds] = useState([]);
 
   const toggleMate = (id) =>
     setMateIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
+
+  // land at the top whenever the page opens or the player changes (keyed remount)
+  useEffect(() => { window.scrollTo(0, 0); }, []);
 
   // The switcher only offers players with a chance to play (no IR/PUP/traded/…).
   const navList = useMemo(() => roster.filter((r) => !r.status), [roster]);
@@ -168,7 +171,16 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
           </select>
         </label>
         <label className="pp-line">Line
-          <LineInput opt={statOption(statKey)} value={line} onChange={setLine} />
+          <StepControl
+            min={statOption(statKey).min} max={statOption(statKey).max} step={statOption(statKey).step}
+            fallback={statOption(statKey).def} value={line} onChange={setLine}
+          />
+        </label>
+        <label className="pp-line">Min snap%
+          <StepControl
+            min={0} max={100} step={1} quantize={Math.round} suffix="%"
+            value={filters.snap} onChange={(v) => setF("snap", v)}
+          />
         </label>
       </div>
       <div className="prop-grid">
@@ -257,26 +269,28 @@ function StatStrip({ tiles }) {
   );
 }
 
-// Three-way line control: type, slide, or step with +/- buttons. Range + step
-// come from the active prop (opt), so bounds adapt to the stat being checked.
-function LineInput({ opt, value, onChange }) {
+// Three-way control: type, slide, or step with +/- buttons (one step at a time).
+// Used for the prop line and the min-snap% threshold; bounds adapt per use.
+function StepControl({ min, max, step, quantize, suffix, fallback, value, onChange }) {
+  const q = quantize || ((v) => Math.round(v * 2) / 2); // default keeps half-point lines
   const num = parseFloat(value);
-  const clamp = (v) => Math.min(opt.max, Math.max(opt.min, Math.round(v * 2) / 2));
-  const sliderVal = Number.isNaN(num) ? opt.def : clamp(num);
-  const bump = (dir) => onChange(String(clamp((Number.isNaN(num) ? opt.def : num) + dir * opt.step)));
+  const base = Number.isNaN(num) ? (fallback ?? min) : num;
+  const clamp = (v) => Math.min(max, Math.max(min, q(v)));
+  const bump = (dir) => onChange(String(clamp(base + dir * step)));
+  const edge = (v) => `${v}${suffix || ""}`;
   return (
     <div className="line-input">
       <div className="li-row">
-        <button type="button" className="li-btn" onClick={() => bump(-1)} aria-label={`−${opt.step}`}>−</button>
-        <input className="li-num" type="number" step="0.5" value={value} onChange={(e) => onChange(e.target.value)} />
-        <button type="button" className="li-btn" onClick={() => bump(1)} aria-label={`+${opt.step}`}>+</button>
+        <button type="button" className="li-btn" onClick={() => bump(-1)} aria-label={`−${step}`}>−</button>
+        <input className="li-num" type="number" step="any" value={value} onChange={(e) => onChange(e.target.value)} />
+        <button type="button" className="li-btn" onClick={() => bump(1)} aria-label={`+${step}`}>+</button>
       </div>
       <input
         className="li-range" type="range"
-        min={opt.min} max={opt.max} step={opt.step}
-        value={sliderVal} onChange={(e) => onChange(e.target.value)}
+        min={min} max={max} step={step}
+        value={clamp(base)} onChange={(e) => onChange(e.target.value)}
       />
-      <div className="li-scale"><span>{opt.min}</span><span className="li-step">±{opt.step}</span><span>{opt.max}</span></div>
+      <div className="li-scale"><span>{edge(min)}</span><span className="li-step">±{step}</span><span>{edge(max)}</span></div>
     </div>
   );
 }

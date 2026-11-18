@@ -97,7 +97,10 @@
           "pass_yds_pg": -0.3,
           "pass_tds": 0,
           "rush_tds": 10,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 1,
+          "attempts": 1,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039064",
@@ -114,7 +117,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 3
+          "rec_tds": 3,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0034975",
@@ -131,7 +137,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 1,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0034753",
@@ -148,7 +157,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040870",
@@ -165,7 +177,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0034796",
@@ -183,25 +198,9 @@
           "pass_tds": 6,
           "rush_tds": 1,
           "rec_tds": 0,
-          "status": "IR",
-          "status_note": "On injured reserve"
-        },
-        {
-          "player_id": "00-0035993",
-          "name": "Tyler Huntley",
-          "position": "QB",
-          "games": 5,
-          "snap_pct": 0.736,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 3.6,
-          "rush_yds_pg": 15.2,
-          "pass_yds_pg": 145.4,
-          "pass_tds": 4,
-          "rush_tds": 1,
-          "rec_tds": 0,
+          "completions": 68,
+          "attempts": 97,
+          "interceptions": 1,
           "status": "IR",
           "status_note": "On injured reserve"
         },
@@ -220,7 +219,32 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0035993",
+          "name": "Tyler Huntley",
+          "position": "QB",
+          "games": 5,
+          "snap_pct": 0.736,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 3.6,
+          "rush_yds_pg": 15.2,
+          "pass_yds_pg": 145.4,
+          "pass_tds": 4,
+          "rush_tds": 1,
+          "rec_tds": 0,
+          "completions": 76,
+          "attempts": 110,
+          "interceptions": 1,
+          "status": "IR",
+          "status_note": "On injured reserve"
         },
         {
           "player_id": "00-0040981",
@@ -237,41 +261,10 @@
           "pass_yds_pg": 75.5,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
-          "player_id": "00-0040887",
-          "name": "Josh Cuevas",
-          "position": "TE",
-          "games": 8,
-          "snap_pct": 0.215,
-          "target_share": 0.063,
-          "targets_pg": 2.0,
-          "receptions_pg": 1.6,
-          "rec_yds_pg": 21.4,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 1
-        },
-        {
-          "player_id": "00-0033119",
-          "name": "Jacoby Brissett",
-          "position": "QB",
-          "games": 1,
-          "snap_pct": 1.0,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 2.0,
-          "rush_yds_pg": 2.0,
-          "pass_yds_pg": 340.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 20,
+          "attempts": 39,
+          "interceptions": 3
         },
         {
           "player_id": "00-0040876",
@@ -288,7 +281,50 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0040887",
+          "name": "Josh Cuevas",
+          "position": "TE",
+          "games": 8,
+          "snap_pct": 0.215,
+          "target_share": 0.063,
+          "targets_pg": 2.0,
+          "receptions_pg": 1.6,
+          "rec_yds_pg": 21.4,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0033119",
+          "name": "Jacoby Brissett",
+          "position": "QB",
+          "games": 1,
+          "snap_pct": 1.0,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 2.0,
+          "rush_yds_pg": 2.0,
+          "pass_yds_pg": 340.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 33,
+          "attempts": 49,
+          "interceptions": 1
         },
         {
           "player_id": "00-0039792",
@@ -305,7 +341,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0032398",
@@ -322,7 +361,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040879",
@@ -339,7 +381,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039796",
@@ -356,7 +401,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0034798",
@@ -374,6 +422,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "IR",
           "status_note": "On injured reserve"
         },
@@ -392,7 +443,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         }
       ],
       "injuries": [
@@ -572,7 +626,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 7,
-          "rec_tds": 2
+          "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040124",
@@ -589,7 +646,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 3
+          "rec_tds": 3,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039491",
@@ -606,7 +666,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 3
+          "rec_tds": 3,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039344",
@@ -624,6 +687,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "IR",
           "status_note": "Injured reserve (designated to return)"
         },
@@ -643,6 +709,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "INACTIVE",
           "status_note": "Inactive"
         },
@@ -661,7 +730,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 4
+          "rec_tds": 4,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0037005",
@@ -678,7 +750,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 3
+          "rec_tds": 3,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040644",
@@ -695,7 +770,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039342",
@@ -712,7 +790,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0037614",
@@ -729,7 +810,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040187",
@@ -746,24 +830,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
-          "player_id": "00-0039150",
-          "name": "Bryce Young",
-          "position": "QB",
-          "games": 9,
-          "snap_pct": 0.957,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 1.3,
-          "rush_yds_pg": 5.3,
-          "pass_yds_pg": 266.3,
-          "pass_tds": 16,
-          "rush_tds": 1,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0038840",
@@ -780,7 +850,30 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0039150",
+          "name": "Bryce Young",
+          "position": "QB",
+          "games": 9,
+          "snap_pct": 0.957,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 1.3,
+          "rush_yds_pg": 5.3,
+          "pass_yds_pg": 266.3,
+          "pass_tds": 16,
+          "rush_tds": 1,
+          "rec_tds": 0,
+          "completions": 203,
+          "attempts": 338,
+          "interceptions": 6
         },
         {
           "player_id": "00-0040265",
@@ -798,25 +891,11 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
-        },
-        {
-          "player_id": "00-0038102",
-          "name": "Kenny Pickett",
-          "position": "QB",
-          "games": 3,
-          "snap_pct": 0.13,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 1.0,
-          "rush_yds_pg": 11.7,
-          "pass_yds_pg": 15.7,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
         },
         {
           "player_id": "00-0040218",
@@ -833,7 +912,30 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0038102",
+          "name": "Kenny Pickett",
+          "position": "QB",
+          "games": 3,
+          "snap_pct": 0.13,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 1.0,
+          "rush_yds_pg": 11.7,
+          "pass_yds_pg": 15.7,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 3,
+          "attempts": 5,
+          "interceptions": 0
         },
         {
           "player_id": "00-0033589",
@@ -851,6 +953,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         },
@@ -869,7 +974,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 1,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0036825",
@@ -886,7 +994,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         }
       ],
       "injuries": [

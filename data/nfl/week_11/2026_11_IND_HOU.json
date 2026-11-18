@@ -97,7 +97,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 8,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040128",
@@ -114,7 +117,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 1,
-          "rec_tds": 2
+          "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0030279",
@@ -132,6 +138,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "TRADED",
           "status_note": "No longer on IND \u2014 now with SF. Stats shown are from their time with IND."
         },
@@ -151,6 +160,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "TRADED",
           "status_note": "No longer on IND \u2014 now with KC. Stats shown are from their time with IND."
         },
@@ -169,7 +181,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 2,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040179",
@@ -186,7 +201,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0038394",
@@ -204,6 +222,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "INACTIVE",
           "status_note": "Inactive"
         },
@@ -223,6 +244,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "IR",
           "status_note": "On injured reserve"
         },
@@ -241,7 +265,10 @@
           "pass_yds_pg": 183.0,
           "pass_tds": 7,
           "rush_tds": 1,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 193,
+          "attempts": 324,
+          "interceptions": 12
         },
         {
           "player_id": "00-0032951",
@@ -258,7 +285,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0035021",
@@ -275,7 +305,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039164",
@@ -292,7 +325,10 @@
           "pass_yds_pg": 8.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 2,
+          "attempts": 2,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041132",
@@ -309,7 +345,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0033217",
@@ -327,25 +366,11 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "IR",
           "status_note": "On injured reserve"
-        },
-        {
-          "player_id": "00-0037292",
-          "name": "Andrew Ogletree",
-          "position": "TE",
-          "games": 7,
-          "snap_pct": 0.324,
-          "target_share": 0.04,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.6,
-          "rec_yds_pg": 3.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
         },
         {
           "player_id": "00-0033439",
@@ -362,24 +387,30 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
-          "player_id": "00-0036182",
-          "name": "Nick Westbrook-Ikhine",
-          "position": "WR",
-          "games": 3,
-          "snap_pct": 0.118,
-          "target_share": 0.024,
-          "targets_pg": 0.7,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
+          "player_id": "00-0037292",
+          "name": "Andrew Ogletree",
+          "position": "TE",
+          "games": 7,
+          "snap_pct": 0.324,
+          "target_share": 0.04,
+          "targets_pg": 1.0,
+          "receptions_pg": 0.6,
+          "rec_yds_pg": 3.0,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039816",
@@ -396,7 +427,30 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0036182",
+          "name": "Nick Westbrook-Ikhine",
+          "position": "WR",
+          "games": 3,
+          "snap_pct": 0.118,
+          "target_share": 0.024,
+          "targets_pg": 0.7,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         }
       ],
       "injuries": [
@@ -612,7 +666,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 2,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0035685",
@@ -630,6 +687,9 @@
           "pass_tds": 0,
           "rush_tds": 2,
           "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "INACTIVE",
           "status_note": "Inactive"
         },
@@ -648,7 +708,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0036554",
@@ -665,7 +728,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 5
+          "rec_tds": 5,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039405",
@@ -683,6 +749,9 @@
           "pass_tds": 0,
           "rush_tds": 1,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         },
@@ -701,24 +770,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 3
-        },
-        {
-          "player_id": "00-0038977",
-          "name": "Tank Dell",
-          "position": "WR",
-          "games": 3,
-          "snap_pct": 0.397,
-          "target_share": 0.13,
-          "targets_pg": 4.7,
-          "receptions_pg": 2.7,
-          "rec_yds_pg": 56.3,
-          "carries_pg": 0.7,
-          "rush_yds_pg": 0.7,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 3,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0034383",
@@ -735,7 +790,30 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0038977",
+          "name": "Tank Dell",
+          "position": "WR",
+          "games": 3,
+          "snap_pct": 0.397,
+          "target_share": 0.13,
+          "targets_pg": 4.7,
+          "receptions_pg": 2.7,
+          "rec_yds_pg": 56.3,
+          "carries_pg": 0.7,
+          "rush_yds_pg": 0.7,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040138",
@@ -753,6 +831,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "IR",
           "status_note": "On injured reserve"
         },
@@ -772,6 +853,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "INACTIVE",
           "status_note": "Inactive"
         },
@@ -790,7 +874,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 2
+          "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0038728",
@@ -808,6 +895,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "TRADED",
           "status_note": "No longer on HOU \u2014 now with MIA. Stats shown are from their time with HOU."
         },
@@ -826,7 +916,10 @@
           "pass_yds_pg": 273.6,
           "pass_tds": 19,
           "rush_tds": 1,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 201,
+          "attempts": 320,
+          "interceptions": 3
         },
         {
           "player_id": "00-0034981",
@@ -843,7 +936,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 3
+          "rec_tds": 3,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0036898",
@@ -860,7 +956,10 @@
           "pass_yds_pg": 7.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 1,
+          "attempts": 2,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041472",
@@ -877,26 +976,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
-          "player_id": "00-0033854",
-          "name": "Dare Ogunbowale",
-          "position": "RB",
-          "games": 3,
-          "snap_pct": 0.077,
-          "target_share": 0.018,
-          "targets_pg": 0.7,
-          "receptions_pg": 0.7,
-          "rec_yds_pg": 5.3,
-          "carries_pg": 0.3,
-          "rush_yds_pg": 0.7,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
           "rec_tds": 0,
-          "status": "PRACTICE SQ",
-          "status_note": "On the practice squad"
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039359",
@@ -913,7 +996,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041467",
@@ -931,6 +1017,31 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
+        },
+        {
+          "player_id": "00-0033854",
+          "name": "Dare Ogunbowale",
+          "position": "RB",
+          "games": 3,
+          "snap_pct": 0.077,
+          "target_share": 0.018,
+          "targets_pg": 0.7,
+          "receptions_pg": 0.7,
+          "rec_yds_pg": 5.3,
+          "carries_pg": 0.3,
+          "rush_yds_pg": 0.7,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
         },
@@ -950,6 +1061,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "INACTIVE",
           "status_note": "Inactive"
         },
@@ -968,7 +1082,10 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039603",
@@ -986,6 +1103,9 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
           "status": "IR",
           "status_note": "On injured reserve"
         }
@@ -12527,7 +12647,7 @@
     {
       "type": "matchup",
       "tier": "tough",
-      "text": "IND TEs vs HOU: TOUGH matchup. HOU allows the 28th-most to TEs (10.7 FP/g, 51.8 yds/g). Fade: Tyler Warren (22% tgt share), Andrew Ogletree (4% tgt share), Pharaoh Brown (3% tgt share).",
+      "text": "IND TEs vs HOU: TOUGH matchup. HOU allows the 28th-most to TEs (10.7 FP/g, 51.8 yds/g). Fade: Tyler Warren (22% tgt share), Pharaoh Brown (3% tgt share), Andrew Ogletree (4% tgt share).",
       "stat": "HOU vs TE rank 28/32; 0.11 TD/g allowed."
     },
     {
@@ -12549,8 +12669,8 @@
     },
     {
       "type": "injury",
-      "text": "IND TE room thinned \u2014 Will Mallory (INACTIVE); Mo Alie-Cox (IR). Snaps/targets funnel to Tyler Warren, Andrew Ogletree.",
-      "stat": "next up: Tyler Warren 22% tgt share, Andrew Ogletree 4% tgt share, Pharaoh Brown 3% tgt share"
+      "text": "IND TE room thinned \u2014 Will Mallory (INACTIVE); Mo Alie-Cox (IR). Snaps/targets funnel to Tyler Warren, Pharaoh Brown.",
+      "stat": "next up: Tyler Warren 22% tgt share, Pharaoh Brown 3% tgt share, Andrew Ogletree 4% tgt share"
     },
     {
       "type": "injury",

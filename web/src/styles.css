@@ -153,6 +153,23 @@ main { padding: 18px 28px 40px; width: 100%; margin: 0; }
 .team-panel .rec { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
 .section-label { font-size: 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 16px 0 8px; }
 
+/* Usage section: full-width, team-toggled, per-position grids */
+.usage-section { margin: 18px 0; }
+.usage-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.team-toggle { display: inline-flex; background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 3px; gap: 2px; }
+.tt-btn { border: none; background: transparent; color: var(--muted); font-weight: 700; font-size: 13px; padding: 6px 16px; border-radius: 6px; cursor: pointer; }
+.tt-btn:hover { color: var(--text); }
+.tt-btn.active { background: var(--accent); color: #07121f; }
+.pos-grids { display: flex; flex-direction: column; gap: 14px; margin-top: 12px; }
+.pos-grid { border: 1px solid var(--line); border-radius: 9px; overflow: hidden; }
+.pos-grid-head { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; padding: 8px 12px; background: var(--panel-2); border-bottom: 1px solid var(--line); }
+.pos-grid-head.pos-QB { color: var(--pos-qb); }
+.pos-grid-head.pos-RB { color: var(--pos-rb); }
+.pos-grid-head.pos-WR { color: var(--pos-wr); }
+.pos-grid-head.pos-TE { color: var(--pos-te); }
+.pos-grid table td, .pos-grid table th { border-bottom: 1px solid var(--line); }
+.pos-grid tbody tr:last-child td { border-bottom: none; }
+
 /* headline team metrics */
 .team-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0 4px; }
 .team-metrics .tm { background: var(--panel-2); border: 1px solid var(--line); border-radius: 9px; padding: 9px 6px; text-align: center; }
@@ -181,10 +198,6 @@ main { padding: 18px 28px 40px; width: 100%; margin: 0; }
 table { width: 100%; border-collapse: collapse; font-size: 13px; }
 th, td { text-align: right; padding: 6px 8px; border-bottom: 1px solid var(--line); white-space: nowrap; }
 
-/* QB passing/rushing TD split */
-.td-split { display: inline-flex; gap: 10px; }
-.td-k { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .02em; }
-
 /* roster special-circumstance flag chips (IR / PUP / TRADED / …) */
 .flag { font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 6px; letter-spacing: .02em; margin-left: 6px; white-space: nowrap; }
 .flag.out { background: #3a1a1a; color: var(--bad); }
@@ -207,17 +220,6 @@ tbody tr.pos-RB td:first-child { box-shadow: inset 3px 0 0 var(--pos-rb); }
 tbody tr.pos-WR td:first-child { box-shadow: inset 3px 0 0 var(--pos-wr); }
 tbody tr.pos-TE td:first-child { box-shadow: inset 3px 0 0 var(--pos-te); }
 tbody tr[class*="pos-"] td:first-child { padding-left: 12px; }
-
-/* position group headers inside the usage table */
-tbody tr.pos-group td {
-  text-transform: uppercase; font-size: 11px; font-weight: 700; letter-spacing: .05em;
-  padding-top: 14px; color: var(--muted); border-bottom: 1px solid var(--line);
-}
-tbody tr.pos-group:first-child td { padding-top: 4px; }
-tbody tr.pos-group.pos-QB td { color: var(--pos-qb); }
-tbody tr.pos-group.pos-RB td { color: var(--pos-rb); }
-tbody tr.pos-group.pos-WR td { color: var(--pos-wr); }
-tbody tr.pos-group.pos-TE td { color: var(--pos-te); }
 
 .inj-row { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
 .inj-row:last-child { border-bottom: none; }
@@ -243,11 +245,19 @@ tbody tr.pos-group.pos-TE td { color: var(--pos-te); }
 /* quick-context row: season usage strip + opponent matchup callout */
 .pv-context { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 14px; align-items: stretch; margin: 6px 0 18px; }
 @media (max-width: 860px) { .pv-context { grid-template-columns: 1fr; } }
-.stat-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
-.stat-strip .tm { background: var(--panel-2); border: 1px solid var(--line); border-radius: 9px; padding: 9px 6px; text-align: center; }
-.stat-strip .tm-big { font-size: 18px; font-weight: 700; }
-.stat-strip .tm-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: .03em; color: var(--muted); margin-top: 2px; }
-@media (max-width: 560px) { .stat-strip { grid-template-columns: repeat(3, 1fr); } }
+.stat-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+.stat-strip .tm {
+  position: relative; overflow: hidden; text-align: center;
+  background: linear-gradient(180deg, var(--panel-2), var(--panel));
+  border: 1px solid var(--line); border-radius: 11px; padding: 13px 8px 11px;
+}
+.stat-strip .tm::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 35%, transparent));
+}
+.stat-strip .tm-big { font-size: 21px; font-weight: 750; letter-spacing: -.01em; line-height: 1.1; }
+.stat-strip .tm-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-top: 4px; }
+@media (max-width: 560px) { .stat-strip { grid-template-columns: repeat(3, 1fr); gap: 8px; } }
 
 .matchup-callout { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--panel); display: flex; flex-direction: column; gap: 6px; }
 .matchup-callout.soft { border-color: color-mix(in srgb, var(--good) 45%, var(--line)); }
@@ -263,9 +273,9 @@ tbody tr.pos-group.pos-TE td { color: var(--pos-te); }
 .pv-main, .pv-side { min-width: 0; }
 @media (max-width: 860px) { .pv-cols { grid-template-columns: 1fr; gap: 10px; } }
 
-/* prop checker: stat + line control get a prominent primary row */
-.prop-primary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 16px; align-items: end; margin-bottom: 12px; }
-@media (max-width: 560px) { .prop-primary { grid-template-columns: 1fr; } }
+/* prop checker: stat + the two step controls (line, min snap%) up top */
+.prop-primary { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr) minmax(0, 1fr); gap: 16px; align-items: start; margin-bottom: 12px; }
+@media (max-width: 680px) { .prop-primary { grid-template-columns: 1fr; } }
 .prop-primary > label { display: flex; flex-direction: column; gap: 5px; font-size: 12px; color: var(--muted); min-width: 0; }
 .prop-primary select { background: var(--panel-2); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 9px 10px; font-size: 15px; width: 100%; }
 

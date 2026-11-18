@@ -243,6 +243,9 @@ def team_usage(player_stats: pl.DataFrame, snaps: pl.DataFrame, team: str,
         pl.col("rushing_tds").fill_null(0).sum().alias("rush_tds"),
         pl.col("receiving_tds").fill_null(0).sum().alias("rec_tds"),
         pl.col("passing_yards").fill_null(0).sum().alias("pass_yds"),
+        pl.col("completions").fill_null(0).sum().alias("completions"),
+        pl.col("attempts").fill_null(0).sum().alias("attempts"),
+        pl.col("passing_interceptions").fill_null(0).sum().alias("interceptions"),
     )
 
     # snap % by normalized name (snap_counts keys on display name, not gsis id)
@@ -275,6 +278,9 @@ def team_usage(player_stats: pl.DataFrame, snaps: pl.DataFrame, team: str,
                 "pass_tds": int(r["pass_tds"]),
                 "rush_tds": int(r["rush_tds"]),
                 "rec_tds": int(r["rec_tds"]),
+                "completions": int(r["completions"]),
+                "attempts": int(r["attempts"]),
+                "interceptions": int(r["interceptions"]),
             }
         )
     # sort by involvement: targets + carries
