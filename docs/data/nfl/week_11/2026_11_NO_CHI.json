@@ -263,21 +263,6 @@
           "total_tds": 3
         },
         {
-          "player_id": "00-0038040",
-          "name": "Zamir White",
-          "position": "RB",
-          "games": 1,
-          "snap_pct": 0.05,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 1.0,
-          "rush_yds_pg": 5.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
           "player_id": "00-0037231",
           "name": "Kevin Austin Jr.",
           "position": "WR",
@@ -289,6 +274,21 @@
           "rec_yds_pg": 7.0,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "total_tds": 0
+        },
+        {
+          "player_id": "00-0038040",
+          "name": "Zamir White",
+          "position": "RB",
+          "games": 1,
+          "snap_pct": 0.05,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 1.0,
+          "rush_yds_pg": 5.0,
           "pass_yds_pg": 0.0,
           "total_tds": 0
         },
@@ -759,6 +759,21 @@
           "total_tds": 1
         },
         {
+          "player_id": "00-0037380",
+          "name": "Kaden Davis",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.13,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "total_tds": 0
+        },
+        {
           "player_id": "00-0038440",
           "name": "Zavier Scott",
           "position": "RB",
@@ -779,21 +794,6 @@
           "position": "TE",
           "games": 1,
           "snap_pct": 0.175,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
-          "player_id": "00-0037380",
-          "name": "Kaden Davis",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.13,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,

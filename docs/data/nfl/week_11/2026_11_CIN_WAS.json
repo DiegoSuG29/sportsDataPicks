@@ -173,21 +173,6 @@
           "total_tds": 1
         },
         {
-          "player_id": "00-0038839",
-          "name": "Mitchell Tinsley",
-          "position": "WR",
-          "games": 3,
-          "snap_pct": 0.27,
-          "target_share": 0.068,
-          "targets_pg": 3.0,
-          "receptions_pg": 1.7,
-          "rec_yds_pg": 20.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
           "player_id": "00-0039814",
           "name": "Erick All",
           "position": "TE",
@@ -197,6 +182,21 @@
           "targets_pg": 3.0,
           "receptions_pg": 2.7,
           "rec_yds_pg": 18.7,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "total_tds": 0
+        },
+        {
+          "player_id": "00-0038839",
+          "name": "Mitchell Tinsley",
+          "position": "WR",
+          "games": 3,
+          "snap_pct": 0.27,
+          "target_share": 0.068,
+          "targets_pg": 3.0,
+          "receptions_pg": 1.7,
+          "rec_yds_pg": 20.0,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
@@ -612,21 +612,6 @@
           "total_tds": 2
         },
         {
-          "player_id": "00-0036415",
-          "name": "Van Jefferson",
-          "position": "WR",
-          "games": 2,
-          "snap_pct": 0.275,
-          "target_share": 0.121,
-          "targets_pg": 4.0,
-          "receptions_pg": 2.5,
-          "rec_yds_pg": 29.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 1
-        },
-        {
           "player_id": "00-0041096",
           "name": "Kaytron Allen",
           "position": "RB",
@@ -640,6 +625,21 @@
           "rush_yds_pg": 13.7,
           "pass_yds_pg": 0.0,
           "total_tds": 0
+        },
+        {
+          "player_id": "00-0036415",
+          "name": "Van Jefferson",
+          "position": "WR",
+          "games": 2,
+          "snap_pct": 0.275,
+          "target_share": 0.121,
+          "targets_pg": 4.0,
+          "receptions_pg": 2.5,
+          "rec_yds_pg": 29.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "total_tds": 1
         },
         {
           "player_id": "00-0037742",
@@ -702,11 +702,11 @@
           "total_tds": 0
         },
         {
-          "player_id": "00-0035567",
-          "name": "Craig Reynolds",
+          "player_id": "00-0041178",
+          "name": "Robert Henry Jr.",
           "position": "RB",
           "games": 1,
-          "snap_pct": 0.09,
+          "snap_pct": 0.04,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -717,11 +717,11 @@
           "total_tds": 0
         },
         {
-          "player_id": "00-0041178",
-          "name": "Robert Henry Jr.",
+          "player_id": "00-0035567",
+          "name": "Craig Reynolds",
           "position": "RB",
           "games": 1,
-          "snap_pct": 0.04,
+          "snap_pct": 0.09,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -747,21 +747,6 @@
           "total_tds": 1
         },
         {
-          "player_id": "00-0036628",
-          "name": "John Bates",
-          "position": "TE",
-          "games": 6,
-          "snap_pct": 0.398,
-          "target_share": 0.035,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.8,
-          "rec_yds_pg": 4.5,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
           "player_id": "00-0041176",
           "name": "Jaden Bradley",
           "position": "WR",
@@ -771,6 +756,21 @@
           "targets_pg": 1.0,
           "receptions_pg": 1.0,
           "rec_yds_pg": 12.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "total_tds": 0
+        },
+        {
+          "player_id": "00-0036628",
+          "name": "John Bates",
+          "position": "TE",
+          "games": 6,
+          "snap_pct": 0.398,
+          "target_share": 0.035,
+          "targets_pg": 1.0,
+          "receptions_pg": 0.8,
+          "rec_yds_pg": 4.5,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,

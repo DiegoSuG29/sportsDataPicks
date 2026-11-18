@@ -1,0 +1,24 @@
+{
+  "sport": "nfl",
+  "generated_at": "2026-11-18T00:00:42+00:00",
+  "latest": {
+    "season": 2026,
+    "week": 11,
+    "label": "Week 11",
+    "file": "week_11/index.json",
+    "games": 13,
+    "generated_at": "2026-11-18T00:00:41+00:00",
+    "stats_through_week": 10
+  },
+  "weeks": [
+    {
+      "season": 2026,
+      "week": 11,
+      "label": "Week 11",
+      "file": "week_11/index.json",
+      "games": 13,
+      "generated_at": "2026-11-18T00:00:41+00:00",
+      "stats_through_week": 10
+    }
+  ]
+}

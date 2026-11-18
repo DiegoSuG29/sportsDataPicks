@@ -30,7 +30,11 @@ import nflreadpy as nfl
 import polars as pl
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-OUT_ROOT = REPO_ROOT / "data" / "nfl"
+# Output lives under docs/ so GitHub Pages serves it same-origin with the
+# dashboard (Pages only serves the /docs subtree; a root-level data/ dir would
+# not be fetchable and raw.githubusercontent fetches are the fragile path
+# CLAUDE.md warns against).
+OUT_ROOT = REPO_ROOT / "docs" / "data" / "nfl"
 
 SKILL_POSITIONS = ("QB", "RB", "WR", "TE", "FB")
 # Buckets used for defense-allowed-by-position (FB folded into RB).
@@ -474,7 +478,39 @@ def build_week(season: int, week: int) -> dict:
 
     (out_dir / "index.json").write_text(json.dumps(index, indent=2), encoding="utf-8")
     print(f"  wrote {(out_dir / 'index.json').relative_to(REPO_ROOT)}")
+
+    write_manifest()
     return index
+
+
+def write_manifest() -> None:
+    """Rebuild data/nfl/manifest.json from the week_* dirs the dashboard reads."""
+    weeks = []
+    for d in sorted(OUT_ROOT.glob("week_*")):
+        idx_path = d / "index.json"
+        if not idx_path.exists():
+            continue
+        idx = json.loads(idx_path.read_text(encoding="utf-8"))
+        weeks.append({
+            "season": idx["season"],
+            "week": idx["week"],
+            "label": f"Week {idx['week']}",
+            "file": f"{d.name}/index.json",
+            "games": len(idx.get("games", [])),
+            "generated_at": idx.get("generated_at"),
+            "stats_through_week": idx.get("stats_through_week"),
+        })
+    weeks.sort(key=lambda w: (w["season"], w["week"]))
+    manifest = {
+        "sport": "nfl",
+        "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+        "latest": weeks[-1] if weeks else None,
+        "weeks": weeks,
+    }
+    (OUT_ROOT / "manifest.json").write_text(
+        json.dumps(manifest, indent=2), encoding="utf-8"
+    )
+    print(f"  wrote {(OUT_ROOT / 'manifest.json').relative_to(REPO_ROOT)}")
 
 
 def main():

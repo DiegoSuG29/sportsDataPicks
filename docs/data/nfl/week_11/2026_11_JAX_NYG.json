@@ -660,21 +660,6 @@
           "total_tds": 1
         },
         {
-          "player_id": "00-0041376",
-          "name": "Gregory Desrosiers",
-          "position": "RB",
-          "games": 2,
-          "snap_pct": 0.035,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 1.5,
-          "rush_yds_pg": 10.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
           "player_id": "00-0033376",
           "name": "Patrick Ricard",
           "position": "RB",
@@ -686,6 +671,21 @@
           "rec_yds_pg": 0.5,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "total_tds": 0
+        },
+        {
+          "player_id": "00-0041376",
+          "name": "Gregory Desrosiers",
+          "position": "RB",
+          "games": 2,
+          "snap_pct": 0.035,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 1.5,
+          "rush_yds_pg": 10.0,
           "pass_yds_pg": 0.0,
           "total_tds": 0
         },
@@ -765,11 +765,11 @@
           "total_tds": 0
         },
         {
-          "player_id": "00-0031484",
-          "name": "Chris Manhertz",
-          "position": "TE",
-          "games": 3,
-          "snap_pct": 0.338,
+          "player_id": "00-0040431",
+          "name": "Dalen Cambre",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.02,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -780,11 +780,11 @@
           "total_tds": 0
         },
         {
-          "player_id": "00-0040431",
-          "name": "Dalen Cambre",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.02,
+          "player_id": "00-0031484",
+          "name": "Chris Manhertz",
+          "position": "TE",
+          "games": 3,
+          "snap_pct": 0.338,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
