@@ -831,11 +831,11 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0041292",
-          "name": "Kolbe Katsis",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.0,
+          "player_id": "00-0039703",
+          "name": "Cody Schrader",
+          "position": "RB",
+          "games": 2,
+          "snap_pct": 0.015,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -853,11 +853,11 @@
           "status_note": "On the practice squad"
         },
         {
-          "player_id": "00-0039703",
-          "name": "Cody Schrader",
-          "position": "RB",
-          "games": 2,
-          "snap_pct": 0.015,
+          "player_id": "00-0041292",
+          "name": "Kolbe Katsis",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.0,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,

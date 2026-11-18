@@ -8,7 +8,7 @@
   "away_team": "PIT",
   "home_team": "PHI",
   "spread_line": -4.5,
-  "total_line": 38.5,
+  "total_line": 37.5,
   "div_game": false,
   "roof": "outdoors",
   "surface": "grass",
@@ -347,6 +347,26 @@
           "interceptions": 0
         },
         {
+          "player_id": "00-0033757",
+          "name": "Robert Tonyan",
+          "position": "TE",
+          "games": 2,
+          "snap_pct": 0.072,
+          "target_share": 0.033,
+          "targets_pg": 1.0,
+          "receptions_pg": 0.5,
+          "rec_yds_pg": 1.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
           "player_id": "00-0037382",
           "name": "Brandon Johnson",
           "position": "WR",
@@ -367,26 +387,6 @@
           "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
-        },
-        {
-          "player_id": "00-0033757",
-          "name": "Robert Tonyan",
-          "position": "TE",
-          "games": 2,
-          "snap_pct": 0.072,
-          "target_share": 0.033,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.5,
-          "rec_yds_pg": 1.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
         },
         {
           "player_id": "00-0035594",
@@ -904,26 +904,6 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0036980",
-          "name": "Elijah Moore",
-          "position": "WR",
-          "games": 3,
-          "snap_pct": 0.221,
-          "target_share": 0.056,
-          "targets_pg": 2.0,
-          "receptions_pg": 1.3,
-          "rec_yds_pg": 5.7,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0038400",
           "name": "Tanner McKee",
           "position": "QB",
@@ -942,6 +922,26 @@
           "completions": 72,
           "attempts": 114,
           "interceptions": 2
+        },
+        {
+          "player_id": "00-0036980",
+          "name": "Elijah Moore",
+          "position": "WR",
+          "games": 3,
+          "snap_pct": 0.221,
+          "target_share": 0.056,
+          "targets_pg": 2.0,
+          "receptions_pg": 1.3,
+          "rec_yds_pg": 5.7,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0041483",
@@ -1041,9 +1041,7 @@
           "rec_tds": 0,
           "completions": 0,
           "attempts": 0,
-          "interceptions": 0,
-          "status": "PRACTICE SQ",
-          "status_note": "On the practice squad"
+          "interceptions": 0
         },
         {
           "player_id": "00-0038498",
@@ -1051,6 +1049,26 @@
           "position": "TE",
           "games": 3,
           "snap_pct": 0.177,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0037132",
+          "name": "Britain Covey",
+          "position": "WR",
+          "games": 7,
+          "snap_pct": 0.0,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -1084,26 +1102,6 @@
           "completions": 0,
           "attempts": 1,
           "interceptions": 1
-        },
-        {
-          "player_id": "00-0037132",
-          "name": "Britain Covey",
-          "position": "WR",
-          "games": 7,
-          "snap_pct": 0.0,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
         }
       ],
       "injuries": [
@@ -11713,8 +11711,8 @@
   "edges": [
     {
       "type": "total",
-      "text": "Low total (38.5) \u2014 grind profile; favors unders and lead-back carries.",
-      "stat": "total_line=38.5"
+      "text": "Low total (37.5) \u2014 grind profile; favors unders and lead-back carries.",
+      "stat": "total_line=37.5"
     },
     {
       "type": "matchup",

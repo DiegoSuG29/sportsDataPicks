@@ -209,26 +209,6 @@
           "status_note": "Inactive"
         },
         {
-          "player_id": "00-0040215",
-          "name": "Gavin Bartholomew",
-          "position": "TE",
-          "games": 4,
-          "snap_pct": 0.218,
-          "target_share": 0.103,
-          "targets_pg": 3.0,
-          "receptions_pg": 2.5,
-          "rec_yds_pg": 22.5,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 1,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0029604",
           "name": "Kirk Cousins",
           "position": "QB",
@@ -267,6 +247,26 @@
           "completions": 31,
           "attempts": 64,
           "interceptions": 2
+        },
+        {
+          "player_id": "00-0040215",
+          "name": "Gavin Bartholomew",
+          "position": "TE",
+          "games": 4,
+          "snap_pct": 0.218,
+          "target_share": 0.103,
+          "targets_pg": 3.0,
+          "receptions_pg": 2.5,
+          "rec_yds_pg": 22.5,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0040154",

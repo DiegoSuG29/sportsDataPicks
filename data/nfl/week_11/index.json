@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 11,
-  "generated_at": "2026-11-18T05:43:31+00:00",
+  "generated_at": "2026-11-18T21:39:54+00:00",
   "stats_through_week": 10,
   "reference_window": [
     2025,
@@ -265,7 +265,7 @@
       "gameday": "2026-11-22",
       "weekday": "Sunday",
       "spread_line": 2.5,
-      "total_line": 44.5,
+      "total_line": 43.5,
       "file": "week_11/2026_11_BAL_CAR.json"
     },
     {
@@ -275,7 +275,7 @@
       "gameday": "2026-11-22",
       "weekday": "Sunday",
       "spread_line": 11.5,
-      "total_line": 49.5,
+      "total_line": 48.5,
       "file": "week_11/2026_11_NO_CHI.json"
     },
     {
@@ -285,7 +285,7 @@
       "gameday": "2026-11-22",
       "weekday": "Sunday",
       "spread_line": 8.5,
-      "total_line": 54.5,
+      "total_line": 55.5,
       "file": "week_11/2026_11_TEN_DAL.json"
     },
     {
@@ -295,7 +295,7 @@
       "gameday": "2026-11-22",
       "weekday": "Sunday",
       "spread_line": 7.0,
-      "total_line": 44.5,
+      "total_line": 43.5,
       "file": "week_11/2026_11_TB_DET.json"
     },
     {
@@ -304,8 +304,8 @@
       "home_team": "KC",
       "gameday": "2026-11-22",
       "weekday": "Sunday",
-      "spread_line": 16.5,
-      "total_line": 41.5,
+      "spread_line": 15.5,
+      "total_line": 40.5,
       "file": "week_11/2026_11_ARI_KC.json"
     },
     {
@@ -324,7 +324,7 @@
       "home_team": "LAC",
       "gameday": "2026-11-22",
       "weekday": "Sunday",
-      "spread_line": 3.5,
+      "spread_line": 3.0,
       "total_line": 41.5,
       "file": "week_11/2026_11_NYJ_LAC.json"
     },
@@ -345,7 +345,7 @@
       "gameday": "2026-11-22",
       "weekday": "Sunday",
       "spread_line": -4.5,
-      "total_line": 38.5,
+      "total_line": 37.5,
       "file": "week_11/2026_11_PIT_PHI.json"
     },
     {
@@ -365,7 +365,7 @@
       "gameday": "2026-11-23",
       "weekday": "Monday",
       "spread_line": -6.5,
-      "total_line": 53.5,
+      "total_line": 54.5,
       "file": "week_11/2026_11_CIN_WAS.json"
     }
   ]

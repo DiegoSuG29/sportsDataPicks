@@ -7,7 +7,7 @@
   "gametime": "16:05",
   "away_team": "NYJ",
   "home_team": "LAC",
-  "spread_line": 3.5,
+  "spread_line": 3.0,
   "total_line": 41.5,
   "div_game": false,
   "roof": "dome",
@@ -223,26 +223,6 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0041056",
-          "name": "Cade Klubnik",
-          "position": "QB",
-          "games": 1,
-          "snap_pct": 0.52,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 3.0,
-          "rush_yds_pg": 26.0,
-          "pass_yds_pg": 137.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 11,
-          "attempts": 20,
-          "interceptions": 1
-        },
-        {
           "player_id": "00-0033375",
           "name": "Tim Patrick",
           "position": "WR",
@@ -265,6 +245,26 @@
           "status_note": "Inactive"
         },
         {
+          "player_id": "00-0041056",
+          "name": "Cade Klubnik",
+          "position": "QB",
+          "games": 1,
+          "snap_pct": 0.52,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 3.0,
+          "rush_yds_pg": 26.0,
+          "pass_yds_pg": 137.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 11,
+          "attempts": 20,
+          "interceptions": 1
+        },
+        {
           "player_id": "00-0039451",
           "name": "Isaiah Williams",
           "position": "WR",
@@ -280,6 +280,26 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 2,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0039798",
+          "name": "Isaiah Davis",
+          "position": "RB",
+          "games": 9,
+          "snap_pct": 0.072,
+          "target_share": 0.023,
+          "targets_pg": 0.7,
+          "receptions_pg": 0.6,
+          "rec_yds_pg": 7.6,
+          "carries_pg": 1.7,
+          "rush_yds_pg": 4.9,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
           "completions": 0,
           "attempts": 0,
           "interceptions": 0
@@ -303,26 +323,6 @@
           "completions": 196,
           "attempts": 292,
           "interceptions": 3
-        },
-        {
-          "player_id": "00-0039798",
-          "name": "Isaiah Davis",
-          "position": "RB",
-          "games": 9,
-          "snap_pct": 0.072,
-          "target_share": 0.023,
-          "targets_pg": 0.7,
-          "receptions_pg": 0.6,
-          "rec_yds_pg": 7.6,
-          "carries_pg": 1.7,
-          "rush_yds_pg": 4.9,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
         },
         {
           "player_id": "00-0037805",
@@ -431,26 +431,6 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0036842",
-          "name": "Kene Nwangwu",
-          "position": "RB",
-          "games": 5,
-          "snap_pct": 0.0,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0041267",
           "name": "Malik McClain",
           "position": "WR",
@@ -491,6 +471,26 @@
           "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
+        },
+        {
+          "player_id": "00-0036842",
+          "name": "Kene Nwangwu",
+          "position": "RB",
+          "games": 5,
+          "snap_pct": 0.0,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         }
       ],
       "injuries": [
@@ -824,6 +824,28 @@
           "rec_tds": 1,
           "completions": 0,
           "attempts": 0,
+          "interceptions": 0,
+          "status": "INACTIVE",
+          "status_note": "Inactive"
+        },
+        {
+          "player_id": "00-0038046",
+          "name": "Charlie Kolar",
+          "position": "TE",
+          "games": 7,
+          "snap_pct": 0.654,
+          "target_share": 0.128,
+          "targets_pg": 3.3,
+          "receptions_pg": 2.1,
+          "rec_yds_pg": 20.7,
+          "carries_pg": 0.1,
+          "rush_yds_pg": 0.4,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
           "interceptions": 0
         },
         {
@@ -847,26 +869,6 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0038046",
-          "name": "Charlie Kolar",
-          "position": "TE",
-          "games": 7,
-          "snap_pct": 0.654,
-          "target_share": 0.128,
-          "targets_pg": 3.3,
-          "receptions_pg": 2.1,
-          "rec_yds_pg": 20.7,
-          "carries_pg": 0.1,
-          "rush_yds_pg": 0.4,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0041550",
           "name": "Brenen Thompson",
           "position": "WR",
@@ -884,7 +886,9 @@
           "rec_tds": 0,
           "completions": 0,
           "attempts": 0,
-          "interceptions": 0
+          "interceptions": 0,
+          "status": "INACTIVE",
+          "status_note": "Inactive"
         },
         {
           "player_id": "00-0034272",
@@ -993,6 +997,28 @@
           "status_note": "No longer on LAC \u2014 now with PHI. Stats shown are from their time with LAC."
         },
         {
+          "player_id": "00-0040331",
+          "name": "Patrick Herbert",
+          "position": "TE",
+          "games": 1,
+          "snap_pct": 0.035,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
+        },
+        {
           "player_id": "00-0038614",
           "name": "Scott Matlock",
           "position": "RB",
@@ -1031,28 +1057,6 @@
           "completions": 2,
           "attempts": 7,
           "interceptions": 0
-        },
-        {
-          "player_id": "00-0040331",
-          "name": "Patrick Herbert",
-          "position": "TE",
-          "games": 1,
-          "snap_pct": 0.035,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0,
-          "status": "PRACTICE SQ",
-          "status_note": "On the practice squad"
         }
       ],
       "injuries": [
@@ -11957,7 +11961,7 @@
     },
     {
       "type": "injury",
-      "text": "LAC WR room thinned \u2014 Marquez Valdes-Scantling (TRADED). Snaps/targets funnel to Tre Harris, KeAndre Lambert-Smith.",
+      "text": "LAC WR room thinned \u2014 Ladd McConkey (INACTIVE); Marquez Valdes-Scantling (TRADED). Snaps/targets funnel to Tre Harris, KeAndre Lambert-Smith.",
       "stat": "next up: Tre Harris 19% tgt share, KeAndre Lambert-Smith 13% tgt share, Quentin Johnston 13% tgt share"
     }
   ]

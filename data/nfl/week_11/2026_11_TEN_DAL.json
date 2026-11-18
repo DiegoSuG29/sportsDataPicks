@@ -8,7 +8,7 @@
   "away_team": "TEN",
   "home_team": "DAL",
   "spread_line": 8.5,
-  "total_line": 54.5,
+  "total_line": 55.5,
   "div_game": false,
   "roof": null,
   "surface": "matrixturf",
@@ -142,7 +142,9 @@
           "rec_tds": 3,
           "completions": 0,
           "attempts": 0,
-          "interceptions": 0
+          "interceptions": 0,
+          "status": "IR",
+          "status_note": "On injured reserve"
         },
         {
           "player_id": "00-0039032",
@@ -182,7 +184,9 @@
           "rec_tds": 0,
           "completions": 0,
           "attempts": 0,
-          "interceptions": 0
+          "interceptions": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
         },
         {
           "player_id": "00-0040170",
@@ -344,28 +348,6 @@
           "rec_tds": 0,
           "completions": 0,
           "attempts": 0,
-          "interceptions": 0,
-          "status": "PRACTICE SQ",
-          "status_note": "On the practice squad"
-        },
-        {
-          "player_id": "00-0036876",
-          "name": "Kylen Granson",
-          "position": "TE",
-          "games": 1,
-          "snap_pct": 0.017,
-          "target_share": 0.029,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
           "interceptions": 0
         },
         {
@@ -391,13 +373,13 @@
           "status_note": "On the practice squad"
         },
         {
-          "player_id": "00-0037594",
-          "name": "Julius Chestnut",
-          "position": "RB",
-          "games": 6,
-          "snap_pct": 0.003,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
+          "player_id": "00-0036876",
+          "name": "Kylen Granson",
+          "position": "TE",
+          "games": 1,
+          "snap_pct": 0.017,
+          "target_share": 0.029,
+          "targets_pg": 1.0,
           "receptions_pg": 0.0,
           "rec_yds_pg": 0.0,
           "carries_pg": 0.0,
@@ -416,6 +398,26 @@
           "position": "TE",
           "games": 1,
           "snap_pct": 0.044,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0037594",
+          "name": "Julius Chestnut",
+          "position": "RB",
+          "games": 6,
+          "snap_pct": 0.003,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -862,26 +864,6 @@
           "status_note": "Inactive"
         },
         {
-          "player_id": "00-0038547",
-          "name": "Luke Schoonmaker",
-          "position": "TE",
-          "games": 4,
-          "snap_pct": 0.189,
-          "target_share": 0.031,
-          "targets_pg": 1.2,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 10.5,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0038738",
           "name": "Hunter Luepke",
           "position": "RB",
@@ -893,6 +875,26 @@
           "rec_yds_pg": 2.1,
           "carries_pg": 0.6,
           "rush_yds_pg": 3.1,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0038547",
+          "name": "Luke Schoonmaker",
+          "position": "TE",
+          "games": 4,
+          "snap_pct": 0.189,
+          "target_share": 0.031,
+          "targets_pg": 1.2,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 10.5,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
@@ -11617,12 +11619,12 @@
     {
       "type": "line",
       "text": "DAL favored by 8.5. Moderate favorite; game script roughly balanced.",
-      "stat": "spread_line=8.5, total_line=54.5"
+      "stat": "spread_line=8.5, total_line=55.5"
     },
     {
       "type": "total",
-      "text": "High total (54.5) \u2014 shootout profile; favors pass-catcher overs and anytime-TD props.",
-      "stat": "total_line=54.5"
+      "text": "High total (55.5) \u2014 shootout profile; favors pass-catcher overs and anytime-TD props.",
+      "stat": "total_line=55.5"
     },
     {
       "type": "matchup",
@@ -11633,13 +11635,13 @@
     {
       "type": "matchup",
       "tier": "soft",
-      "text": "TEN RBs vs DAL: SOFT matchup. DAL allows the 1st-most to RBs (29.3 FP/g, 155.1 yds/g). Target: Tony Pollard (15.8 car/g), Tyjae Spears (3.1 car/g), Michael Carter (3.0 car/g).",
+      "text": "TEN RBs vs DAL: SOFT matchup. DAL allows the 1st-most to RBs (29.3 FP/g, 155.1 yds/g). Target: Tony Pollard (15.8 car/g), Tyjae Spears (3.1 car/g).",
       "stat": "DAL vs RB rank 1/32; 1.6 TD/g allowed."
     },
     {
       "type": "matchup",
       "tier": "soft",
-      "text": "TEN WRs vs DAL: SOFT matchup. DAL allows the 7th-most to WRs (35.7 FP/g, 172.3 yds/g). Target: Wan'Dale Robinson (20% tgt share), Elic Ayomanor (13% tgt share), Calvin Ridley (8% tgt share).",
+      "text": "TEN WRs vs DAL: SOFT matchup. DAL allows the 7th-most to WRs (35.7 FP/g, 172.3 yds/g). Target: Elic Ayomanor (13% tgt share), Calvin Ridley (8% tgt share), Chimere Dike (5% tgt share).",
       "stat": "DAL vs WR rank 7/32; 1.2 TD/g allowed."
     },
     {
@@ -11656,8 +11658,8 @@
     },
     {
       "type": "injury",
-      "text": "TEN WR room thinned \u2014 Carnell Tate (INACTIVE). Snaps/targets funnel to Wan'Dale Robinson, Elic Ayomanor.",
-      "stat": "next up: Wan'Dale Robinson 20% tgt share, Elic Ayomanor 13% tgt share, Calvin Ridley 8% tgt share"
+      "text": "TEN WR room thinned \u2014 Carnell Tate (INACTIVE); Wan'Dale Robinson (IR). Snaps/targets funnel to Elic Ayomanor, Calvin Ridley.",
+      "stat": "next up: Elic Ayomanor 13% tgt share, Calvin Ridley 8% tgt share, Chimere Dike 5% tgt share"
     },
     {
       "type": "injury",
