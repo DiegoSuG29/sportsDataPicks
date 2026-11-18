@@ -295,25 +295,6 @@
           "rec_tds": 1
         },
         {
-          "player_id": "00-0035249",
-          "name": "Josh Oliver",
-          "position": "TE",
-          "games": 3,
-          "snap_pct": 0.553,
-          "target_share": 0.076,
-          "targets_pg": 1.7,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 15.3,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "status": "IR",
-          "status_note": "On injured reserve"
-        },
-        {
           "player_id": "00-0036259",
           "name": "Jauan Jennings",
           "position": "WR",
@@ -331,6 +312,25 @@
           "rec_tds": 0,
           "status": "INACTIVE",
           "status_note": "Inactive"
+        },
+        {
+          "player_id": "00-0035249",
+          "name": "Josh Oliver",
+          "position": "TE",
+          "games": 3,
+          "snap_pct": 0.553,
+          "target_share": 0.076,
+          "targets_pg": 1.7,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 15.3,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "status": "IR",
+          "status_note": "On injured reserve"
         },
         {
           "player_id": "00-0040509",

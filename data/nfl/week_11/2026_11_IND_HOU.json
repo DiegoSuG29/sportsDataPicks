@@ -331,23 +331,6 @@
           "status_note": "On injured reserve"
         },
         {
-          "player_id": "00-0033439",
-          "name": "Pharaoh Brown",
-          "position": "TE",
-          "games": 1,
-          "snap_pct": 0.167,
-          "target_share": 0.026,
-          "targets_pg": 1.0,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 7.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
           "player_id": "00-0037292",
           "name": "Andrew Ogletree",
           "position": "TE",
@@ -365,15 +348,15 @@
           "rec_tds": 0
         },
         {
-          "player_id": "00-0039816",
-          "name": "Anthony Gould",
-          "position": "WR",
-          "games": 7,
-          "snap_pct": 0.081,
-          "target_share": 0.032,
-          "targets_pg": 0.7,
-          "receptions_pg": 0.4,
-          "rec_yds_pg": 6.3,
+          "player_id": "00-0033439",
+          "name": "Pharaoh Brown",
+          "position": "TE",
+          "games": 1,
+          "snap_pct": 0.167,
+          "target_share": 0.026,
+          "targets_pg": 1.0,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 7.0,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
@@ -391,6 +374,23 @@
           "targets_pg": 0.7,
           "receptions_pg": 0.0,
           "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0039816",
+          "name": "Anthony Gould",
+          "position": "WR",
+          "games": 7,
+          "snap_pct": 0.081,
+          "target_share": 0.032,
+          "targets_pg": 0.7,
+          "receptions_pg": 0.4,
+          "rec_yds_pg": 6.3,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
@@ -954,6 +954,23 @@
           "status_note": "Inactive"
         },
         {
+          "player_id": "00-0038519",
+          "name": "Nikko Remigio",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.0,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
           "player_id": "00-0039603",
           "name": "British Brooks",
           "position": "RB",
@@ -971,23 +988,6 @@
           "rec_tds": 0,
           "status": "IR",
           "status_note": "On injured reserve"
-        },
-        {
-          "player_id": "00-0038519",
-          "name": "Nikko Remigio",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.0,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
         }
       ],
       "injuries": [
@@ -12527,7 +12527,7 @@
     {
       "type": "matchup",
       "tier": "tough",
-      "text": "IND TEs vs HOU: TOUGH matchup. HOU allows the 28th-most to TEs (10.7 FP/g, 51.8 yds/g). Fade: Tyler Warren (22% tgt share), Pharaoh Brown (3% tgt share), Andrew Ogletree (4% tgt share).",
+      "text": "IND TEs vs HOU: TOUGH matchup. HOU allows the 28th-most to TEs (10.7 FP/g, 51.8 yds/g). Fade: Tyler Warren (22% tgt share), Andrew Ogletree (4% tgt share), Pharaoh Brown (3% tgt share).",
       "stat": "HOU vs TE rank 28/32; 0.11 TD/g allowed."
     },
     {
@@ -12549,8 +12549,8 @@
     },
     {
       "type": "injury",
-      "text": "IND TE room thinned \u2014 Will Mallory (INACTIVE); Mo Alie-Cox (IR). Snaps/targets funnel to Tyler Warren, Pharaoh Brown.",
-      "stat": "next up: Tyler Warren 22% tgt share, Pharaoh Brown 3% tgt share, Andrew Ogletree 4% tgt share"
+      "text": "IND TE room thinned \u2014 Will Mallory (INACTIVE); Mo Alie-Cox (IR). Snaps/targets funnel to Tyler Warren, Andrew Ogletree.",
+      "stat": "next up: Tyler Warren 22% tgt share, Andrew Ogletree 4% tgt share, Pharaoh Brown 3% tgt share"
     },
     {
       "type": "injury",

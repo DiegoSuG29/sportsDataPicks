@@ -187,23 +187,6 @@
           "status_note": "On injured reserve"
         },
         {
-          "player_id": "00-0036550",
-          "name": "Rashod Bateman",
-          "position": "WR",
-          "games": 10,
-          "snap_pct": 0.718,
-          "target_share": 0.126,
-          "targets_pg": 3.6,
-          "receptions_pg": 2.3,
-          "rec_yds_pg": 33.6,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 1
-        },
-        {
           "player_id": "00-0035993",
           "name": "Tyler Huntley",
           "position": "QB",
@@ -223,6 +206,23 @@
           "status_note": "On injured reserve"
         },
         {
+          "player_id": "00-0036550",
+          "name": "Rashod Bateman",
+          "position": "WR",
+          "games": 10,
+          "snap_pct": 0.718,
+          "target_share": 0.126,
+          "targets_pg": 3.6,
+          "receptions_pg": 2.3,
+          "rec_yds_pg": 33.6,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
+        },
+        {
           "player_id": "00-0040981",
           "name": "Joe Fagnano",
           "position": "QB",
@@ -238,6 +238,23 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0
+        },
+        {
+          "player_id": "00-0040887",
+          "name": "Josh Cuevas",
+          "position": "TE",
+          "games": 8,
+          "snap_pct": 0.215,
+          "target_share": 0.063,
+          "targets_pg": 2.0,
+          "receptions_pg": 1.6,
+          "rec_yds_pg": 21.4,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0033119",
@@ -274,15 +291,15 @@
           "rec_tds": 0
         },
         {
-          "player_id": "00-0040887",
-          "name": "Josh Cuevas",
-          "position": "TE",
-          "games": 8,
-          "snap_pct": 0.215,
+          "player_id": "00-0039792",
+          "name": "Devontez Walker",
+          "position": "WR",
+          "games": 5,
+          "snap_pct": 0.362,
           "target_share": 0.063,
-          "targets_pg": 2.0,
-          "receptions_pg": 1.6,
-          "rec_yds_pg": 21.4,
+          "targets_pg": 1.8,
+          "receptions_pg": 0.8,
+          "rec_yds_pg": 15.0,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
@@ -300,23 +317,6 @@
           "targets_pg": 1.8,
           "receptions_pg": 0.8,
           "rec_yds_pg": 15.8,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 1
-        },
-        {
-          "player_id": "00-0039792",
-          "name": "Devontez Walker",
-          "position": "WR",
-          "games": 5,
-          "snap_pct": 0.362,
-          "target_share": 0.063,
-          "targets_pg": 1.8,
-          "receptions_pg": 0.8,
-          "rec_yds_pg": 15.0,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
@@ -783,12 +783,12 @@
           "rec_tds": 0
         },
         {
-          "player_id": "00-0040218",
-          "name": "Jimmy Horn Jr.",
+          "player_id": "00-0040265",
+          "name": "Ja'Seem Reed",
           "position": "WR",
           "games": 1,
-          "snap_pct": 0.21,
-          "target_share": 0.029,
+          "snap_pct": 0.13,
+          "target_share": 0.026,
           "targets_pg": 1.0,
           "receptions_pg": 0.0,
           "rec_yds_pg": 0.0,
@@ -797,7 +797,9 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
         },
         {
           "player_id": "00-0038102",
@@ -817,12 +819,12 @@
           "rec_tds": 0
         },
         {
-          "player_id": "00-0040265",
-          "name": "Ja'Seem Reed",
+          "player_id": "00-0040218",
+          "name": "Jimmy Horn Jr.",
           "position": "WR",
           "games": 1,
-          "snap_pct": 0.13,
-          "target_share": 0.026,
+          "snap_pct": 0.21,
+          "target_share": 0.029,
           "targets_pg": 1.0,
           "receptions_pg": 0.0,
           "rec_yds_pg": 0.0,
@@ -831,9 +833,7 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0,
-          "status": "PRACTICE SQ",
-          "status_note": "On the practice squad"
+          "rec_tds": 0
         },
         {
           "player_id": "00-0033589",

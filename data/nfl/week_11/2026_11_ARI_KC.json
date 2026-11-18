@@ -876,23 +876,6 @@
           "rec_tds": 1
         },
         {
-          "player_id": "00-0036945",
-          "name": "Justin Fields",
-          "position": "QB",
-          "games": 2,
-          "snap_pct": 0.05,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 1.5,
-          "rush_yds_pg": -0.5,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
           "player_id": "00-0040959",
           "name": "Jaydn Ott",
           "position": "RB",
@@ -912,6 +895,23 @@
           "status_note": "Inactive"
         },
         {
+          "player_id": "00-0036945",
+          "name": "Justin Fields",
+          "position": "QB",
+          "games": 2,
+          "snap_pct": 0.05,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 1.5,
+          "rush_yds_pg": -0.5,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
           "player_id": "00-0040081",
           "name": "Jake Briningstool",
           "position": "TE",
@@ -927,6 +927,23 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0
+        },
+        {
+          "player_id": "00-0040298",
+          "name": "Andrew Armstrong",
+          "position": "WR",
+          "games": 5,
+          "snap_pct": 0.436,
+          "target_share": 0.032,
+          "targets_pg": 1.0,
+          "receptions_pg": 0.6,
+          "rec_yds_pg": 11.8,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0034386",
@@ -948,23 +965,6 @@
           "status_note": "On the practice squad"
         },
         {
-          "player_id": "00-0040298",
-          "name": "Andrew Armstrong",
-          "position": "WR",
-          "games": 5,
-          "snap_pct": 0.436,
-          "target_share": 0.032,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.6,
-          "rec_yds_pg": 11.8,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 1
-        },
-        {
           "player_id": "00-0040078",
           "name": "Brashard Smith",
           "position": "RB",
@@ -984,11 +984,11 @@
           "status_note": "On injured reserve"
         },
         {
-          "player_id": "00-0038519",
-          "name": "Nikko Remigio",
-          "position": "WR",
-          "games": 8,
-          "snap_pct": 0.004,
+          "player_id": "00-0038489",
+          "name": "Ben VanSumeren",
+          "position": "RB",
+          "games": 2,
+          "snap_pct": 0.012,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -999,8 +999,8 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
-          "status": "TRADED",
-          "status_note": "No longer on KC \u2014 now with HOU. Stats shown are from their time with KC."
+          "status": "INACTIVE",
+          "status_note": "Inactive"
         },
         {
           "player_id": "00-0040967",
@@ -1022,11 +1022,11 @@
           "status_note": "On the practice squad"
         },
         {
-          "player_id": "00-0038489",
-          "name": "Ben VanSumeren",
-          "position": "RB",
-          "games": 2,
-          "snap_pct": 0.012,
+          "player_id": "00-0038519",
+          "name": "Nikko Remigio",
+          "position": "WR",
+          "games": 8,
+          "snap_pct": 0.004,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -1037,8 +1037,8 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
-          "status": "INACTIVE",
-          "status_note": "Inactive"
+          "status": "TRADED",
+          "status_note": "No longer on KC \u2014 now with HOU. Stats shown are from their time with KC."
         }
       ],
       "injuries": [

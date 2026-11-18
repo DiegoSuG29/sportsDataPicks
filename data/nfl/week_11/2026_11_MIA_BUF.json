@@ -172,23 +172,6 @@
           "status_note": "On injured reserve"
         },
         {
-          "player_id": "00-0037252",
-          "name": "Greg Dulcich",
-          "position": "TE",
-          "games": 8,
-          "snap_pct": 0.659,
-          "target_share": 0.161,
-          "targets_pg": 4.2,
-          "receptions_pg": 3.0,
-          "rec_yds_pg": 33.8,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
           "player_id": "00-0039874",
           "name": "Jaylen Wright",
           "position": "RB",
@@ -200,6 +183,23 @@
           "rec_yds_pg": 2.4,
           "carries_pg": 3.6,
           "rush_yds_pg": 5.6,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0037252",
+          "name": "Greg Dulcich",
+          "position": "TE",
+          "games": 8,
+          "snap_pct": 0.659,
+          "target_share": 0.161,
+          "targets_pg": 4.2,
+          "receptions_pg": 3.0,
+          "rec_yds_pg": 33.8,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
@@ -293,23 +293,6 @@
           "rec_tds": 0
         },
         {
-          "player_id": "00-0041436",
-          "name": "DJ Herman",
-          "position": "RB",
-          "games": 3,
-          "snap_pct": 0.381,
-          "target_share": 0.054,
-          "targets_pg": 1.3,
-          "receptions_pg": 0.7,
-          "rec_yds_pg": 9.3,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
           "player_id": "00-0038824",
           "name": "Ryan Miller",
           "position": "WR",
@@ -325,6 +308,23 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 1
+        },
+        {
+          "player_id": "00-0041436",
+          "name": "DJ Herman",
+          "position": "RB",
+          "games": 3,
+          "snap_pct": 0.381,
+          "target_share": 0.054,
+          "targets_pg": 1.3,
+          "receptions_pg": 0.7,
+          "rec_yds_pg": 9.3,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0041524",
@@ -832,23 +832,6 @@
           "rec_tds": 0
         },
         {
-          "player_id": "00-0035500",
-          "name": "Greg Dortch",
-          "position": "WR",
-          "games": 9,
-          "snap_pct": 0.039,
-          "target_share": 0.005,
-          "targets_pg": 0.1,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
           "player_id": "00-0040363",
           "name": "Keleki Latu",
           "position": "TE",
@@ -864,6 +847,23 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 1
+        },
+        {
+          "player_id": "00-0035500",
+          "name": "Greg Dortch",
+          "position": "WR",
+          "games": 9,
+          "snap_pct": 0.039,
+          "target_share": 0.005,
+          "targets_pg": 0.1,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0034487",
