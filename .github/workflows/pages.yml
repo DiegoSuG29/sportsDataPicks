@@ -1,0 +1,57 @@
+name: Deploy dashboard to Pages
+
+# Publishes the static dashboard. It assembles the Pages artifact from two
+# places so the frontend and the data it fetches end up same-origin:
+#   web/      -> site root   (the dashboard; swap for a React build later)
+#   data/     -> /data       (per-game JSON written by the pipelines)
+# Pages source must be set to "GitHub Actions" (Settings > Pages > Build and
+# deployment > Source: GitHub Actions) for this to deploy.
+
+on:
+  push:
+    branches: [main]
+    # Only redeploy when the site or the data actually changes.
+    paths:
+      - "web/**"
+      - "data/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch: {}
+
+# Allow one concurrent deployment; let an in-progress run finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble site (frontend + data)
+        run: |
+          mkdir -p _site
+          cp -r web/. _site/
+          mkdir -p _site/data
+          cp -r data/. _site/data/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

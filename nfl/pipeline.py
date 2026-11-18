@@ -30,11 +30,9 @@ import nflreadpy as nfl
 import polars as pl
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-# Output lives under docs/ so GitHub Pages serves it same-origin with the
-# dashboard (Pages only serves the /docs subtree; a root-level data/ dir would
-# not be fetchable and raw.githubusercontent fetches are the fragile path
-# CLAUDE.md warns against).
-OUT_ROOT = REPO_ROOT / "docs" / "data" / "nfl"
+# GitHub Pages serves this repo from its root, so data/nfl/ sits next to the
+# dashboard and is fetched same-origin (no CORS, no raw.githubusercontent).
+OUT_ROOT = REPO_ROOT / "data" / "nfl"
 
 SKILL_POSITIONS = ("QB", "RB", "WR", "TE", "FB")
 # Buckets used for defense-allowed-by-position (FB folded into RB).

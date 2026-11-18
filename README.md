@@ -11,9 +11,17 @@ See [CLAUDE.md](CLAUDE.md) for the full project brief and methodology.
 ```
 nfl/pipeline.py              # nflreadpy -> per-game JSON
 data/nfl/week_XX/*.json      # pipeline output (one file per game + index.json)
-docs/                        # static dashboard (GitHub Pages)
-.github/workflows/           # scheduled + manual refresh workflows
+data/nfl/manifest.json       # list of available weeks (dashboard reads this)
+web/                         # static dashboard source (vanilla now; React-ready)
+.github/workflows/pages.yml  # bundles web/ + data/ and deploys to GitHub Pages
 ```
+
+GitHub Pages is served via **GitHub Actions** (Settings → Pages → Source:
+GitHub Actions). The deploy workflow copies `web/` to the site root and `data/`
+to `/data`, so the dashboard fetches its JSON same-origin at `data/nfl/...`.
+To move the frontend to React later, point a build (e.g. Vite with
+`base: '/sportsDataPicks/'`) at `web/` and have the workflow deploy its output
+instead — the data layout stays the same.
 
 ## Running the NFL pipeline locally
 ```bash
