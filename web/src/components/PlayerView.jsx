@@ -1,6 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { fmt, pct, posClass, FLAG_TONE } from "../util.js";
-import { STAT_OPTIONS, statOption, computeProp, computeWithWithout } from "../stats.js";
+import {
+  statOption, statsForPosition, defaultStatFor, computeProp, computeWithWithout,
+} from "../stats.js";
 
 export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
   // flat roster across both teams in display order (away then home) for the switcher
@@ -27,18 +29,25 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
   }, [logs]);
   const multiTeam = teamCounts.length > 1;
 
-  const defaultStat =
-    player.position === "QB" ? "pass_yds" : player.position === "RB" ? "rush_yds" : "rec_yds";
+  const availStats = useMemo(() => statsForPosition(player.position), [player.position]);
+  const defaultStat = defaultStatFor(player.position);
   const [statKey, setStatKey] = useState(defaultStat);
   const [line, setLine] = useState(statOption(defaultStat).def);
   const [filters, setFilters] = useState({ season: "all", venue: "all", div: "all", opp: "all" });
   const [mateIds, setMateIds] = useState([]);
-  const [wwStat, setWwStat] = useState(defaultStat);
 
   const toggleMate = (id) =>
     setMateIds((ids) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id]));
 
-  const go = (delta) => onSelectPlayer(roster[(idx + delta + roster.length) % roster.length].player_id);
+  // The switcher only offers players with a chance to play (no IR/PUP/traded/…).
+  const navList = useMemo(() => roster.filter((r) => !r.status), [roster]);
+  const navIdx = navList.findIndex((r) => r.player_id === player.player_id);
+  const go = (delta) => {
+    if (!navList.length) return;
+    const base = navIdx === -1 ? (delta > 0 ? -1 : 0) : navIdx;
+    const n = (((base + delta) % navList.length) + navList.length) % navList.length;
+    onSelectPlayer(navList[n].player_id);
+  };
 
   // Esc → back; ←/→ → prev/next player (ignored while typing in a field)
   useEffect(() => {
@@ -50,18 +59,27 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
-  }, [idx, roster, onBack]);
+  }, [navIdx, navList, onBack]);
 
   const onStatChange = (key) => { setStatKey(key); setLine(statOption(key).def); };
 
+  // When teammates are selected, scope the log/prop to games where NONE of them
+  // played — i.e. the "without" projection — so the table hides mismatched games.
+  const scopedLogs = useMemo(() => {
+    if (!mateIds.length) return logs;
+    const sets = mateIds.map((id) => new Set((game.player_logs[id] || []).map((l) => `${l.season}-${l.week}`)));
+    return logs.filter((l) => sets.every((s) => !s.has(`${l.season}-${l.week}`)));
+  }, [logs, mateIds, game]);
+
   const prop = useMemo(
-    () => computeProp(logs, statKey, parseFloat(line), filters),
-    [logs, statKey, line, filters]
+    () => computeProp(scopedLogs, statKey, parseFloat(line), filters),
+    [scopedLogs, statKey, line, filters]
   );
+  // with/without tracks the same stat as the prop checker (the two are tied)
   const ww = useMemo(() => {
     if (!mateIds.length) return null;
-    return computeWithWithout(logs, mateIds.map((id) => game.player_logs[id] || []), wwStat);
-  }, [logs, mateIds, wwStat, game]);
+    return computeWithWithout(logs, mateIds.map((id) => game.player_logs[id] || []), statKey);
+  }, [logs, mateIds, statKey, game]);
   const mateNames = mateIds
     .map((id) => teammates.find((m) => m.player_id === id)?.name)
     .filter(Boolean);
@@ -74,6 +92,19 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
   const setF = (k, v) => setFilters((f) => ({ ...f, [k]: v }));
   const oppDef = game.teams[opp]?.defense?.[player.position];
 
+  // teammates unavailable this week: roster status flag OR injury Out/Doubtful
+  const outMateIds = useMemo(() => {
+    const injOut = new Set(
+      (game.teams[team].injuries || [])
+        .filter((i) => i.report_status === "Out" || i.report_status === "Doubtful")
+        .map((i) => i.name.toLowerCase())
+    );
+    return teammates
+      .filter((m) => m.status || injOut.has(m.name.toLowerCase()))
+      .map((m) => m.player_id);
+  }, [game, team, teammates]);
+  const outIds = useMemo(() => new Set(outMateIds), [outMateIds]);
+
   return (
     <div className="player-view">
       <div className="pv-nav">
@@ -81,15 +112,19 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
         <div className="pv-switch">
           <button className="pv-arrow" onClick={() => go(-1)} title="Previous player (←)" aria-label="Previous player">‹</button>
           <select className="pv-select" value={player.player_id} onChange={(e) => onSelectPlayer(e.target.value)}>
-            {[game.away_team, game.home_team].map((tm) => (
-              <optgroup key={tm} label={tm}>
-                {game.teams[tm].usage.map((p) => (
-                  <option key={p.player_id} value={p.player_id}>
-                    {p.name} · {p.position}{p.status ? ` · ${p.status}` : ""}
-                  </option>
-                ))}
-              </optgroup>
-            ))}
+            {[game.away_team, game.home_team].map((tm) => {
+              // only playable players, plus the current one if it happens to be out
+              const list = game.teams[tm].usage.filter((p) => !p.status || p.player_id === player.player_id);
+              return (
+                <optgroup key={tm} label={tm}>
+                  {list.map((p) => (
+                    <option key={p.player_id} value={p.player_id}>
+                      {p.name} · {p.position}{p.status ? ` · ${p.status}` : ""}
+                    </option>
+                  ))}
+                </optgroup>
+              );
+            })}
           </select>
           <button className="pv-arrow" onClick={() => go(1)} title="Next player (→)" aria-label="Next player">›</button>
         </div>
@@ -126,15 +161,17 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
       </div>
 
       <div className="section-label">Prop checker</div>
-      <div className="prop-grid">
-        <label>Stat
+      <div className="prop-primary">
+        <label className="pp-stat">Stat
           <select value={statKey} onChange={(e) => onStatChange(e.target.value)}>
-            {STAT_OPTIONS.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
+            {availStats.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
           </select>
         </label>
-        <label>Line
-          <input type="number" step="0.5" value={line} onChange={(e) => setLine(e.target.value)} />
+        <label className="pp-line">Line
+          <LineInput opt={statOption(statKey)} value={line} onChange={setLine} />
         </label>
+      </div>
+      <div className="prop-grid">
         <label>Season
           <select value={filters.season} onChange={(e) => setF("season", e.target.value)}>
             <option value="all">All</option>
@@ -163,6 +200,12 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
       <div className="pv-cols">
         <div className="pv-main">
           <div className="section-label">Game log</div>
+          {mateIds.length > 0 && (
+            <div className="loghint">
+              Filtered to games <b>without</b> the {mateIds.length} selected teammate{mateIds.length === 1 ? "" : "s"} —
+              showing {scopedLogs.length} of {logs.length}.
+            </div>
+          )}
           <PropLog prop={prop} line={parseFloat(line)} showTeam={multiTeam} />
         </div>
         <div className="pv-side">
@@ -172,8 +215,12 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
             teammates={teammates}
             mateIds={mateIds}
             toggleMate={toggleMate}
-            wwStat={wwStat}
-            setWwStat={setWwStat}
+            outIds={outIds}
+            onAutoOut={() => setMateIds([...outMateIds])}
+            onClear={() => setMateIds([])}
+            statKey={statKey}
+            onStatChange={onStatChange}
+            availStats={availStats}
             ww={ww}
             mateNames={mateNames}
             mateLabel={mateLabel}
@@ -210,6 +257,30 @@ function StatStrip({ tiles }) {
   );
 }
 
+// Three-way line control: type, slide, or step with +/- buttons. Range + step
+// come from the active prop (opt), so bounds adapt to the stat being checked.
+function LineInput({ opt, value, onChange }) {
+  const num = parseFloat(value);
+  const clamp = (v) => Math.min(opt.max, Math.max(opt.min, Math.round(v * 2) / 2));
+  const sliderVal = Number.isNaN(num) ? opt.def : clamp(num);
+  const bump = (dir) => onChange(String(clamp((Number.isNaN(num) ? opt.def : num) + dir * opt.step)));
+  return (
+    <div className="line-input">
+      <div className="li-row">
+        <button type="button" className="li-btn" onClick={() => bump(-1)} aria-label={`−${opt.step}`}>−</button>
+        <input className="li-num" type="number" step="0.5" value={value} onChange={(e) => onChange(e.target.value)} />
+        <button type="button" className="li-btn" onClick={() => bump(1)} aria-label={`+${opt.step}`}>+</button>
+      </div>
+      <input
+        className="li-range" type="range"
+        min={opt.min} max={opt.max} step={opt.step}
+        value={sliderVal} onChange={(e) => onChange(e.target.value)}
+      />
+      <div className="li-scale"><span>{opt.min}</span><span className="li-step">±{opt.step}</span><span>{opt.max}</span></div>
+    </div>
+  );
+}
+
 function MatchupCallout({ opp, pos, d }) {
   const third = d.of_teams / 3;
   const tier = d.rank_most_allowed <= third ? "soft"
@@ -233,31 +304,51 @@ function MatchupCallout({ opp, pos, d }) {
   );
 }
 
-function WithWithout({ player, teammates, mateIds, toggleMate, wwStat, setWwStat, ww, mateNames, mateLabel }) {
+function WithWithout({ player, teammates, mateIds, toggleMate, outIds, onAutoOut, onClear, statKey, onStatChange, availStats, ww, mateNames, mateLabel }) {
   if (!teammates.length) return <p className="empty">No teammates listed.</p>;
   const multi = mateNames.length > 1;
+  const outCount = outIds?.size || 0;
   return (
     <div className="ww-wrap">
       <div className="loghint">Toggle teammates in/out to see how {player.name}'s output shifts.</div>
+      <div className="ww-actions">
+        {outCount > 0 && (
+          <button className="btn ghost sm" onClick={onAutoOut}>
+            Match this week's absences ({outCount})
+          </button>
+        )}
+        {mateIds.length > 0 && (
+          <button className="btn ghost sm" onClick={onClear}>Clear</button>
+        )}
+      </div>
       <div className="ww-mates">
         {teammates.map((m) => {
           const on = mateIds.includes(m.player_id);
+          const isOut = outIds?.has(m.player_id);
           return (
             <button
               key={m.player_id}
-              className={`ww-chip ${on ? "on" : ""}`}
+              className={`ww-chip ${on ? "on" : ""} ${isOut ? "out" : ""}`}
               onClick={() => toggleMate(m.player_id)}
+              title={isOut ? "Out this week" : undefined}
             >
               <span className={`pos-tag ${posClass(m.position)}`}>{m.position}</span> {m.name}
+              {isOut && <span className="ww-outdot" title="Out this week">●</span>}
               <span className="pm">{on ? "−" : "+"}</span>
             </button>
           );
         })}
       </div>
+      {outCount > 0 && (
+        <div className="loghint">
+          "Match this week's absences" selects the {outCount} teammate{outCount === 1 ? "" : "s"} out this week —
+          the <b>Without</b> figure then projects {player.name} with them sidelined.
+        </div>
+      )}
       <div className="prop-grid">
-        <label>Stat
-          <select value={wwStat} onChange={(e) => setWwStat(e.target.value)}>
-            {STAT_OPTIONS.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
+        <label>Stat (shared with the prop checker)
+          <select value={statKey} onChange={(e) => onStatChange(e.target.value)}>
+            {availStats.map((o) => <option key={o.key} value={o.key}>{o.label}</option>)}
           </select>
         </label>
       </div>
@@ -278,7 +369,8 @@ function WithWithout({ player, teammates, mateIds, toggleMate, wwStat, setWwStat
 
 function WwCompare({ ww, mateLabel, multi }) {
   const max = Math.max(ww.withAvg || 0, ww.withoutAvg || 0, 1);
-  const diff = ww.withN && ww.withoutN ? ww.withAvg - ww.withoutAvg : null;
+  // framed around absence: positive = the player does MORE with them out (good).
+  const outDiff = ww.withN && ww.withoutN ? ww.withoutAvg - ww.withAvg : null;
   const Bar = ({ avg, n, label, tone }) => (
     <div className="ww-row">
       <div className="ww-row-top">
@@ -292,11 +384,11 @@ function WwCompare({ ww, mateLabel, multi }) {
   );
   return (
     <div className="ww-compare">
-      <Bar avg={ww.withAvg} n={ww.withN} tone="in" label={`With ${multi ? "all in" : mateLabel}`} />
       <Bar avg={ww.withoutAvg} n={ww.withoutN} tone="out" label={`Without ${multi ? "any" : mateLabel}`} />
-      {diff != null && (
-        <div className={`ww-delta ${diff >= 0 ? "up" : "down"}`}>
-          {diff >= 0 ? "▲" : "▼"} {fmt(Math.abs(diff), 1)} per game {diff >= 0 ? "more" : "fewer"} with {multi ? "them" : mateLabel} in
+      <Bar avg={ww.withAvg} n={ww.withN} tone="in" label={`With ${multi ? "all in" : mateLabel}`} />
+      {outDiff != null && (
+        <div className={`ww-delta ${outDiff >= 0 ? "up" : "down"}`}>
+          {outDiff >= 0 ? "▲" : "▼"} {fmt(Math.abs(outDiff), 1)} per game {outDiff >= 0 ? "more" : "fewer"} with {multi ? "them" : mateLabel} out
         </div>
       )}
     </div>
@@ -352,7 +444,7 @@ function PropLog({ prop, line, showTeam }) {
 
       <div className="table-wrap">
         <table className="oulog">
-          <thead><tr><th>Game</th><th>Opp</th><th>H/A</th><th>{prop.opt.label}</th><th>± line</th><th></th></tr></thead>
+          <thead><tr><th>Game</th><th>Opp</th><th>H/A</th><th>Snap%</th><th>{prop.opt.label}</th><th>± line</th><th></th></tr></thead>
           <tbody>
             {prop.rows.map((l, i) => {
               const v = prop.vals[i];
@@ -367,6 +459,7 @@ function PropLog({ prop, line, showTeam }) {
                   </td>
                   <td>{l.opponent}</td>
                   <td>{l.home === true ? "H" : l.home === false ? "A" : "—"}</td>
+                  <td className="muted">{pct(l.snap_pct)}</td>
                   <td className={cls ? `val-${cls}` : ""}>{fmt(v, dec)}</td>
                   <td>
                     {hasLine && (

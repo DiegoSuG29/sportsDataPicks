@@ -188,6 +188,37 @@ def defense_profile(def_table: pl.DataFrame, team: str) -> dict:
     return out
 
 
+def worst_defenses(def_table: pl.DataFrame, team_opp: dict, top_n: int = 5) -> dict:
+    """Top-N defenses allowing the most per position, limited to teams playing
+    this week and annotated with the offense that gets to attack them."""
+    out = {}
+    for bucket in BUCKETS:
+        sub = def_table.filter(pl.col("bucket") == bucket)
+        if not sub.height:
+            continue
+        ranked = sub.sort("fp_pg", descending=True).with_row_index("rk", offset=1)
+        rows = []
+        for r in ranked.iter_rows(named=True):
+            opp = team_opp.get(r["opponent_team"])
+            if not opp:
+                continue  # team is on bye this week
+            rows.append({
+                "team": r["opponent_team"],
+                "rank": int(r["rk"]),
+                "of_teams": int(ranked.height),
+                "fantasy_pg_allowed": _round(r["fp_pg"], 1),
+                "yards_pg_allowed": _round(r["yds_pg"], 1),
+                "tds_pg_allowed": _round(r["tds_pg"], 2),
+                "opponent": opp["opponent"],
+                "home": opp["home"],
+                "game_file": opp["game_file"],
+            })
+            if len(rows) >= top_n:
+                break
+        out[bucket] = rows
+    return out
+
+
 def team_usage(player_stats: pl.DataFrame, snaps: pl.DataFrame, team: str,
                season: int, upto_week: int) -> list[dict]:
     """Per-player current-season usage for a team's skill players."""
@@ -353,7 +384,7 @@ def roster_info_map(rosters: pl.DataFrame, season: int, week: int) -> dict:
 
 
 def player_logs(player_stats: pl.DataFrame, schedules: pl.DataFrame,
-                player_ids: list[str]) -> dict:
+                player_ids: list[str], snaps: pl.DataFrame | None = None) -> dict:
     """Per-game logs (reference window) for prop-checker filtering in the browser."""
     if not player_ids:
         return {}
@@ -363,10 +394,17 @@ def player_logs(player_stats: pl.DataFrame, schedules: pl.DataFrame,
     meta = {r["game_id"]: (r["home_team"], bool(r["div_game"]))
             for r in schedules.iter_rows(named=True)}
 
+    # per-game offensive snap share, keyed by (normalized name, season, week)
+    snap_lookup = {}
+    if snaps is not None and snaps.height:
+        for r in snaps.iter_rows(named=True):
+            snap_lookup[(_norm_name(r["player"]), r["season"], r["week"])] = r["offense_pct"]
+
     logs: dict[str, list] = {}
     for r in df.iter_rows(named=True):
         home_team, div = meta.get(r["game_id"], (None, None))
         is_home = (home_team == r["team"]) if home_team else None
+        snap = snap_lookup.get((_norm_name(r["player_display_name"]), r["season"], r["week"]))
         logs.setdefault(r["player_id"], []).append(
             {
                 "season": r["season"],
@@ -384,7 +422,7 @@ def player_logs(player_stats: pl.DataFrame, schedules: pl.DataFrame,
                 "rush_tds": int(r["rushing_tds"] or 0),
                 "pass_yds": int(r["passing_yards"] or 0),
                 "pass_tds": int(r["passing_tds"] or 0),
-                "snap_pct": None,
+                "snap_pct": _round(snap, 3) if snap is not None else None,
             }
         )
     return logs
@@ -393,50 +431,113 @@ def player_logs(player_stats: pl.DataFrame, schedules: pl.DataFrame,
 # --------------------------------------------------------------------------- #
 # Edges (transparent, data-backed flags)
 # --------------------------------------------------------------------------- #
+def _key_usage(p: dict, bucket: str) -> str:
+    """A short usage descriptor for a player, by position bucket."""
+    if bucket == "QB":
+        return f"{p.get('pass_yds_pg') or 0:.0f} pass yds/g"
+    if bucket == "RB":
+        return f"{p.get('carries_pg') or 0:.1f} car/g"
+    return f"{round((p.get('target_share') or 0) * 100)}% tgt share"
+
+
+def _notable(p: dict, bucket: str) -> bool:
+    """Whether an absence at this player's usage level is worth flagging."""
+    if bucket == "QB":
+        return True
+    return ((p.get("snap_pct") or 0) >= 0.35
+            or (p.get("target_share") or 0) >= 0.12
+            or (p.get("carries_pg") or 0) >= 6)
+
+
+def _has_role(p: dict) -> bool:
+    """A real on-field role, to keep edge watch-lists free of zero-usage scrubs."""
+    return ((p.get("snap_pct") or 0) >= 0.12
+            or (p.get("target_share") or 0) >= 0.05
+            or (p.get("carries_pg") or 0) >= 2
+            or (p.get("pass_yds_pg") or 0) >= 50)
+
+
 def flag_edges(meta: dict, teams: dict) -> list[dict]:
     edges = []
     away, home = meta["away_team"], meta["home_team"]
-    spread = meta["spread_line"]
+    spread, total = meta["spread_line"], meta["total_line"]
 
-    if spread is not None and abs(spread) >= 10:
+    # ---- game script from the betting line ----
+    if spread is not None and abs(spread) >= 7:
         fav, dog = (home, away) if spread > 0 else (away, home)
+        heavy = abs(spread) >= 10
         edges.append({
             "type": "line",
-            "text": f"Large spread: {fav} favored by {abs(spread)} over {dog}.",
-            "stat": f"spread_line={spread}, total_line={meta['total_line']}",
+            "text": (f"{fav} favored by {abs(spread)}. "
+                     + (f"With a lead {fav} leans run-heavy while {dog} throws to catch up "
+                        f"— {dog} pass volume and RB receiving up."
+                        if heavy else "Moderate favorite; game script roughly balanced.")),
+            "stat": f"spread_line={spread}, total_line={total}",
         })
+    if total is not None and total >= 48:
+        edges.append({"type": "total",
+            "text": f"High total ({total}) — shootout profile; favors pass-catcher overs and anytime-TD props.",
+            "stat": f"total_line={total}"})
+    elif total is not None and total <= 39:
+        edges.append({"type": "total",
+            "text": f"Low total ({total}) — grind profile; favors unders and lead-back carries.",
+            "stat": f"total_line={total}"})
 
-    # offense vs opponent defense allowances by position
+    # ---- per-position matchup vs the opposing defense ----
     for off, dfn in ((away, home), (home, away)):
         prof = teams[dfn]["defense"]
-        for p in teams[off]["usage"][:4]:
-            bucket = POS_BUCKET.get(p["position"])
-            dp = prof.get(bucket) if bucket else None
+        usage = teams[off]["usage"]
+        for bucket in ("QB", "RB", "WR", "TE"):
+            dp = prof.get(bucket)
             if not dp:
                 continue
-            if dp["rank_most_allowed"] <= 8 and (p["target_share"] or 0) >= 0.18:
-                edges.append({
-                    "type": "matchup",
-                    "text": f"{p['name']} ({off} {p['position']}) vs a {dfn} "
-                            f"defense allowing the {_ordinal(dp['rank_most_allowed'])}-most "
-                            f"fantasy to {bucket}s.",
-                    "stat": f"{p['name']} target_share={p['target_share']}, "
-                            f"{dfn} allows {dp['fantasy_pg_allowed']} fp/g to {bucket} "
-                            f"(rank {dp['rank_most_allowed']}/{dp['of_teams']}).",
-                })
+            third = dp["of_teams"] / 3
+            tier = ("soft" if dp["rank_most_allowed"] <= third
+                    else "tough" if dp["rank_most_allowed"] > 2 * third else None)
+            if not tier:
+                continue
+            grp = [p for p in usage
+                   if POS_BUCKET.get(p["position"]) == bucket and not p.get("status")
+                   and _has_role(p)][:3]
+            if not grp:
+                continue
+            watch = ", ".join(f"{p['name']} ({_key_usage(p, bucket)})" for p in grp)
+            edges.append({
+                "type": "matchup", "tier": tier,
+                "text": (f"{off} {bucket}s vs {dfn}: {tier.upper()} matchup. "
+                         f"{dfn} allows the {_ordinal(dp['rank_most_allowed'])}-most to {bucket}s "
+                         f"({dp['fantasy_pg_allowed']} FP/g, {dp['yards_pg_allowed']} yds/g). "
+                         f"{'Target' if tier == 'soft' else 'Fade'}: {watch}."),
+                "stat": f"{dfn} vs {bucket} rank {dp['rank_most_allowed']}/{dp['of_teams']}; "
+                        f"{dp['tds_pg_allowed']} TD/g allowed.",
+            })
 
-    # injury-driven opportunity — only skill positions redistribute offensive usage
+    # ---- availability / usage redistribution, per position ----
     for t in (away, home):
-        for inj in teams[t]["injuries"]:
-            if (inj["report_status"] in ("Out", "Doubtful")
-                    and inj["position"] in SKILL_POSITIONS):
-                edges.append({
-                    "type": "injury",
-                    "text": f"{inj['name']} ({t} {inj['position']}) {inj['report_status']} "
-                            f"({inj['injury'] or 'undisclosed'}) — usage redistributes.",
-                    "stat": f"report_week={inj['report_week']}, "
-                            f"games_missed={inj['games_missed']}",
-                })
+        usage = teams[t]["usage"]
+        inj_out = {_norm_name(i["name"]): i for i in teams[t]["injuries"]
+                   if i["report_status"] in ("Out", "Doubtful")}
+        for bucket in ("QB", "RB", "WR", "TE"):
+            grp = [p for p in usage if POS_BUCKET.get(p["position"]) == bucket]
+            avail = [p for p in grp
+                     if not p.get("status") and _norm_name(p["name"]) not in inj_out]
+            gone = []
+            for p in grp:
+                reason = p.get("status") or (
+                    inj_out[_norm_name(p["name"])]["report_status"]
+                    if _norm_name(p["name"]) in inj_out else None)
+                if reason and _notable(p, bucket):
+                    gone.append(f"{p['name']} ({reason})")
+            if not gone:
+                continue
+            benef = ", ".join(p["name"] for p in avail[:2]) or "a committee"
+            edges.append({
+                "type": "injury",
+                "text": f"{t} {bucket} room thinned — {'; '.join(gone)}. Snaps/targets funnel to {benef}.",
+                "stat": "next up: " + (", ".join(
+                    f"{p['name']} {_key_usage(p, bucket)}" for p in avail[:3]) or "none listed"),
+            })
+
     return edges
 
 
@@ -481,12 +582,20 @@ def build_week(season: int, week: int) -> dict:
     out_dir = OUT_ROOT / f"week_{week:02d}"
     out_dir.mkdir(parents=True, exist_ok=True)
 
+    # each defense -> the offense it faces this week (for the worst-defense board)
+    team_opp = {}
+    for gr in games.iter_rows(named=True):
+        gf = f"week_{week:02d}/{gr['game_id']}.json"
+        team_opp[gr["home_team"]] = {"opponent": gr["away_team"], "home": True, "game_file": gf}
+        team_opp[gr["away_team"]] = {"opponent": gr["home_team"], "home": False, "game_file": gf}
+
     index = {
         "season": season,
         "week": week,
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "stats_through_week": stats_max_week,
         "reference_window": seasons,
+        "worst_defenses": worst_defenses(def_table, team_opp),
         "games": [],
     }
 
@@ -537,7 +646,7 @@ def build_week(season: int, week: int) -> dict:
 
         # player logs for every listed skill player, both teams (prop checker)
         pids = [p["player_id"] for t in (away, home) for p in teams[t]["usage"]]
-        logs = player_logs(player_stats, schedules, pids)
+        logs = player_logs(player_stats, schedules, pids, snaps)
 
         game = {
             **meta,

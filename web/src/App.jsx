@@ -5,6 +5,7 @@ import GameList from "./components/GameList.jsx";
 import GameTabs from "./components/GameTabs.jsx";
 import GameView from "./components/GameView.jsx";
 import PlayerView from "./components/PlayerView.jsx";
+import WorstDefenses from "./components/WorstDefenses.jsx";
 
 const ACTIONS_URL = "https://github.com/DiegoSuG29/sportsDataPicks/actions";
 
@@ -65,7 +66,12 @@ export default function App() {
         {error && <p className="empty">Could not load data: {error}</p>}
 
         {!gameFile && week && (
-          <GameList games={week.games} onOpen={setGameFile} />
+          <>
+            <GameList games={week.games} onOpen={setGameFile} />
+            {week.worst_defenses && (
+              <WorstDefenses week={week.week} data={week.worst_defenses} onOpen={setGameFile} />
+            )}
+          </>
         )}
 
         {gameFile && week && (

@@ -748,6 +748,23 @@
           "status_note": "Inactive"
         },
         {
+          "player_id": "00-0032268",
+          "name": "Marcus Mariota",
+          "position": "QB",
+          "games": 3,
+          "snap_pct": 0.537,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 2.3,
+          "rush_yds_pg": 16.3,
+          "pass_yds_pg": 113.3,
+          "pass_tds": 4,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
           "player_id": "00-0036626",
           "name": "Dyami Brown",
           "position": "WR",
@@ -765,23 +782,6 @@
           "rec_tds": 0,
           "status": "IR",
           "status_note": "On injured reserve"
-        },
-        {
-          "player_id": "00-0032268",
-          "name": "Marcus Mariota",
-          "position": "QB",
-          "games": 3,
-          "snap_pct": 0.537,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 2.3,
-          "rush_yds_pg": 16.3,
-          "pass_yds_pg": 113.3,
-          "pass_tds": 4,
-          "rush_tds": 0,
-          "rec_tds": 0
         },
         {
           "player_id": "00-0035567",
@@ -837,23 +837,6 @@
           "rec_tds": 1
         },
         {
-          "player_id": "00-0036628",
-          "name": "John Bates",
-          "position": "TE",
-          "games": 6,
-          "snap_pct": 0.398,
-          "target_share": 0.035,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.8,
-          "rec_yds_pg": 4.5,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
           "player_id": "00-0041176",
           "name": "Jaden Bradley",
           "position": "WR",
@@ -871,6 +854,23 @@
           "rec_tds": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
+        },
+        {
+          "player_id": "00-0036628",
+          "name": "John Bates",
+          "position": "TE",
+          "games": 6,
+          "snap_pct": 0.398,
+          "target_share": 0.035,
+          "targets_pg": 1.0,
+          "receptions_pg": 0.8,
+          "rec_yds_pg": 4.5,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039686",
@@ -1031,7 +1031,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.41
       },
       {
         "season": 2025,
@@ -1049,7 +1049,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       },
       {
         "season": 2025,
@@ -1067,7 +1067,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.53
       },
       {
         "season": 2025,
@@ -1085,7 +1085,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.63
       },
       {
         "season": 2025,
@@ -1103,7 +1103,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.5
       },
       {
         "season": 2025,
@@ -1121,7 +1121,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.59
       },
       {
         "season": 2025,
@@ -1139,7 +1139,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.54
       },
       {
         "season": 2025,
@@ -1157,7 +1157,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2025,
@@ -1175,7 +1175,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.6
       },
       {
         "season": 2025,
@@ -1193,7 +1193,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.59
       },
       {
         "season": 2025,
@@ -1211,7 +1211,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.69
       },
       {
         "season": 2025,
@@ -1229,7 +1229,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.48
       },
       {
         "season": 2025,
@@ -1247,7 +1247,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.48
       },
       {
         "season": 2025,
@@ -1265,7 +1265,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.5
       },
       {
         "season": 2025,
@@ -1283,7 +1283,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.59
       },
       {
         "season": 2025,
@@ -1301,7 +1301,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       },
       {
         "season": 2025,
@@ -1319,7 +1319,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.46
       },
       {
         "season": 2025,
@@ -1337,7 +1337,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.62
       },
       {
         "season": 2025,
@@ -1355,7 +1355,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.55
       },
       {
         "season": 2025,
@@ -1373,7 +1373,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.47
       },
       {
         "season": 2025,
@@ -1391,7 +1391,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.63
       },
       {
         "season": 2026,
@@ -1409,7 +1409,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.63
       },
       {
         "season": 2026,
@@ -1427,7 +1427,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2026,
@@ -1445,7 +1445,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.59
       },
       {
         "season": 2026,
@@ -1463,7 +1463,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.66
       },
       {
         "season": 2026,
@@ -1481,7 +1481,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.61
       },
       {
         "season": 2026,
@@ -1499,7 +1499,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.65
       },
       {
         "season": 2026,
@@ -1517,7 +1517,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.61
       },
       {
         "season": 2026,
@@ -1535,7 +1535,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.64
       }
     ],
     "00-0033526": [
@@ -1555,7 +1555,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.25
       },
       {
         "season": 2025,
@@ -1573,7 +1573,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.29
       },
       {
         "season": 2025,
@@ -1591,7 +1591,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.27
       },
       {
         "season": 2025,
@@ -1609,7 +1609,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.31
       },
       {
         "season": 2025,
@@ -1627,7 +1627,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.47
       },
       {
         "season": 2025,
@@ -1645,7 +1645,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.46
       },
       {
         "season": 2025,
@@ -1663,7 +1663,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.37
       },
       {
         "season": 2025,
@@ -1681,7 +1681,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.42
       },
       {
         "season": 2025,
@@ -1699,7 +1699,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.01
       },
       {
         "season": 2025,
@@ -1717,7 +1717,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.4
       },
       {
         "season": 2025,
@@ -1735,7 +1735,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.37
       },
       {
         "season": 2025,
@@ -1753,7 +1753,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.45
       },
       {
         "season": 2025,
@@ -1771,7 +1771,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.39
       },
       {
         "season": 2025,
@@ -1789,7 +1789,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.31
       },
       {
         "season": 2025,
@@ -1807,7 +1807,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2026,
@@ -1825,7 +1825,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.28
       },
       {
         "season": 2026,
@@ -1843,7 +1843,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.4
       },
       {
         "season": 2026,
@@ -1861,7 +1861,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.32
       },
       {
         "season": 2026,
@@ -1879,7 +1879,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.36
       },
       {
         "season": 2026,
@@ -1897,7 +1897,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2026,
@@ -1915,7 +1915,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.23
       },
       {
         "season": 2026,
@@ -1933,7 +1933,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.35
       },
       {
         "season": 2026,
@@ -1951,7 +1951,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.4
       },
       {
         "season": 2026,
@@ -1969,7 +1969,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.3
       }
     ],
     "00-0033699": [
@@ -1989,7 +1989,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.47
       },
       {
         "season": 2025,
@@ -2007,7 +2007,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       },
       {
         "season": 2026,
@@ -2025,7 +2025,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.27
       },
       {
         "season": 2026,
@@ -2043,7 +2043,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.1
       },
       {
         "season": 2026,
@@ -2061,7 +2061,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.1
       },
       {
         "season": 2026,
@@ -2079,7 +2079,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.33
       },
       {
         "season": 2026,
@@ -2097,7 +2097,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.45
       },
       {
         "season": 2026,
@@ -2115,7 +2115,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.43
       }
     ],
     "00-0033955": [
@@ -2135,7 +2135,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.19
       },
       {
         "season": 2025,
@@ -2153,7 +2153,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.26
       },
       {
         "season": 2025,
@@ -2171,7 +2171,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.33
       },
       {
         "season": 2025,
@@ -2189,7 +2189,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.25
       },
       {
         "season": 2025,
@@ -2207,7 +2207,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.32
       },
       {
         "season": 2025,
@@ -2225,7 +2225,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.36
       },
       {
         "season": 2025,
@@ -2243,7 +2243,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.43
       },
       {
         "season": 2025,
@@ -2261,7 +2261,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.26
       },
       {
         "season": 2025,
@@ -2279,7 +2279,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.31
       },
       {
         "season": 2025,
@@ -2297,7 +2297,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.25
       },
       {
         "season": 2025,
@@ -2315,7 +2315,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2025,
@@ -2333,7 +2333,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.35
       },
       {
         "season": 2025,
@@ -2351,7 +2351,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2025,
@@ -2369,7 +2369,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.28
       },
       {
         "season": 2025,
@@ -2387,7 +2387,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.41
       },
       {
         "season": 2025,
@@ -2405,7 +2405,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.22
       },
       {
         "season": 2026,
@@ -2423,7 +2423,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.18
       },
       {
         "season": 2026,
@@ -2441,7 +2441,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.2
       }
     ],
     "00-0034829": [
@@ -2461,7 +2461,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.31
       },
       {
         "season": 2025,
@@ -2479,7 +2479,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       },
       {
         "season": 2025,
@@ -2497,7 +2497,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.3
       },
       {
         "season": 2025,
@@ -2515,7 +2515,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.56
       },
       {
         "season": 2025,
@@ -2533,7 +2533,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.5
       },
       {
         "season": 2025,
@@ -2551,7 +2551,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.43
       },
       {
         "season": 2025,
@@ -2569,7 +2569,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.28
       },
       {
         "season": 2025,
@@ -2587,7 +2587,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.42
       },
       {
         "season": 2025,
@@ -2605,7 +2605,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.57
       },
       {
         "season": 2025,
@@ -2623,7 +2623,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.48
       },
       {
         "season": 2025,
@@ -2641,7 +2641,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.23
       },
       {
         "season": 2025,
@@ -2659,7 +2659,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.38
       },
       {
         "season": 2026,
@@ -2677,7 +2677,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.33
       },
       {
         "season": 2026,
@@ -2695,7 +2695,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2026,
@@ -2713,7 +2713,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.62
       },
       {
         "season": 2026,
@@ -2731,7 +2731,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.45
       },
       {
         "season": 2026,
@@ -2749,7 +2749,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.38
       },
       {
         "season": 2026,
@@ -2767,7 +2767,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.68
       },
       {
         "season": 2026,
@@ -2785,7 +2785,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.47
       },
       {
         "season": 2026,
@@ -2803,7 +2803,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.41
       }
     ],
     "00-0035567": [
@@ -2823,7 +2823,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -2841,7 +2841,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.05
       },
       {
         "season": 2025,
@@ -2859,7 +2859,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -2877,7 +2877,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -2895,7 +2895,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2026,
@@ -2913,7 +2913,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.09
       }
     ],
     "00-0035631": [
@@ -2933,7 +2933,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.69
       },
       {
         "season": 2025,
@@ -2951,7 +2951,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.41
       },
       {
         "season": 2025,
@@ -2969,7 +2969,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.68
       },
       {
         "season": 2025,
@@ -2987,7 +2987,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.44
       },
       {
         "season": 2025,
@@ -3005,7 +3005,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.34
       },
       {
         "season": 2025,
@@ -3023,7 +3023,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2025,
@@ -3041,7 +3041,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       },
       {
         "season": 2025,
@@ -3059,7 +3059,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.59
       },
       {
         "season": 2025,
@@ -3077,7 +3077,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.54
       },
       {
         "season": 2025,
@@ -3095,7 +3095,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.66
       },
       {
         "season": 2025,
@@ -3113,7 +3113,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.65
       },
       {
         "season": 2025,
@@ -3131,7 +3131,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.72
       },
       {
         "season": 2026,
@@ -3149,7 +3149,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.66
       },
       {
         "season": 2026,
@@ -3167,7 +3167,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2026,
@@ -3185,7 +3185,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       },
       {
         "season": 2026,
@@ -3203,7 +3203,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.55
       },
       {
         "season": 2026,
@@ -3221,7 +3221,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.64
       }
     ],
     "00-0035659": [
@@ -3241,7 +3241,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.79
       },
       {
         "season": 2025,
@@ -3259,7 +3259,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.91
       },
       {
         "season": 2025,
@@ -3277,7 +3277,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.6
       },
       {
         "season": 2025,
@@ -3295,7 +3295,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.47
       },
       {
         "season": 2025,
@@ -3313,7 +3313,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2025,
@@ -3331,7 +3331,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.62
       },
       {
         "season": 2025,
@@ -3349,7 +3349,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.75
       },
       {
         "season": 2025,
@@ -3367,7 +3367,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.83
       },
       {
         "season": 2025,
@@ -3385,7 +3385,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.86
       },
       {
         "season": 2025,
@@ -3403,7 +3403,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.7
       },
       {
         "season": 2026,
@@ -3421,7 +3421,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.87
       },
       {
         "season": 2026,
@@ -3439,7 +3439,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.7
       },
       {
         "season": 2026,
@@ -3457,7 +3457,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.75
       },
       {
         "season": 2026,
@@ -3475,7 +3475,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.58
       },
       {
         "season": 2026,
@@ -3493,7 +3493,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.1
       }
     ],
     "00-0036410": [
@@ -3513,7 +3513,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.79
       },
       {
         "season": 2025,
@@ -3531,7 +3531,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.87
       },
       {
         "season": 2025,
@@ -3549,7 +3549,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.82
       },
       {
         "season": 2025,
@@ -3567,7 +3567,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.83
       },
       {
         "season": 2025,
@@ -3585,7 +3585,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.97
       },
       {
         "season": 2025,
@@ -3603,7 +3603,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.8
       },
       {
         "season": 2025,
@@ -3621,7 +3621,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.87
       },
       {
         "season": 2025,
@@ -3639,7 +3639,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.88
       },
       {
         "season": 2025,
@@ -3657,7 +3657,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.82
       },
       {
         "season": 2025,
@@ -3675,7 +3675,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.92
       },
       {
         "season": 2025,
@@ -3693,7 +3693,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.77
       },
       {
         "season": 2025,
@@ -3711,7 +3711,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.73
       },
       {
         "season": 2025,
@@ -3729,7 +3729,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.62
       },
       {
         "season": 2025,
@@ -3747,7 +3747,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.57
       },
       {
         "season": 2025,
@@ -3765,7 +3765,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.87
       },
       {
         "season": 2026,
@@ -3783,7 +3783,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.72
       },
       {
         "season": 2026,
@@ -3801,7 +3801,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.72
       },
       {
         "season": 2026,
@@ -3819,7 +3819,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.93
       },
       {
         "season": 2026,
@@ -3837,7 +3837,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.79
       },
       {
         "season": 2026,
@@ -3855,7 +3855,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.69
       },
       {
         "season": 2026,
@@ -3873,7 +3873,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.87
       },
       {
         "season": 2026,
@@ -3891,7 +3891,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.88
       },
       {
         "season": 2026,
@@ -3909,7 +3909,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.68
       },
       {
         "season": 2026,
@@ -3927,7 +3927,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.77
       }
     ],
     "00-0036442": [
@@ -3947,7 +3947,7 @@
         "rush_tds": 0,
         "pass_yds": 113,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -3965,7 +3965,7 @@
         "rush_tds": 0,
         "pass_yds": 76,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 0.3
       },
       {
         "season": 2025,
@@ -3983,7 +3983,7 @@
         "rush_tds": 0,
         "pass_yds": 261,
         "pass_tds": 2,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -4001,7 +4001,7 @@
         "rush_tds": 0,
         "pass_yds": 284,
         "pass_tds": 4,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -4019,7 +4019,7 @@
         "rush_tds": 0,
         "pass_yds": 225,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -4037,7 +4037,7 @@
         "rush_tds": 0,
         "pass_yds": 309,
         "pass_tds": 4,
-        "snap_pct": null
+        "snap_pct": 0.9
       },
       {
         "season": 2025,
@@ -4055,7 +4055,7 @@
         "rush_tds": 0,
         "pass_yds": 305,
         "pass_tds": 2,
-        "snap_pct": null
+        "snap_pct": 0.83
       },
       {
         "season": 2025,
@@ -4073,7 +4073,7 @@
         "rush_tds": 0,
         "pass_yds": 236,
         "pass_tds": 3,
-        "snap_pct": null
+        "snap_pct": 0.99
       },
       {
         "season": 2026,
@@ -4091,7 +4091,7 @@
         "rush_tds": 0,
         "pass_yds": 254,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -4109,7 +4109,7 @@
         "rush_tds": 0,
         "pass_yds": 207,
         "pass_tds": 2,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -4127,7 +4127,7 @@
         "rush_tds": 0,
         "pass_yds": 282,
         "pass_tds": 3,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -4145,7 +4145,7 @@
         "rush_tds": 1,
         "pass_yds": 428,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -4163,7 +4163,7 @@
         "rush_tds": 0,
         "pass_yds": 190,
         "pass_tds": 4,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -4181,7 +4181,7 @@
         "rush_tds": 0,
         "pass_yds": 292,
         "pass_tds": 4,
-        "snap_pct": null
+        "snap_pct": 0.94
       },
       {
         "season": 2026,
@@ -4199,7 +4199,7 @@
         "rush_tds": 1,
         "pass_yds": 462,
         "pass_tds": 5,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -4217,7 +4217,7 @@
         "rush_tds": 1,
         "pass_yds": 271,
         "pass_tds": 3,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -4235,7 +4235,7 @@
         "rush_tds": 0,
         "pass_yds": 409,
         "pass_tds": 4,
-        "snap_pct": null
+        "snap_pct": 0.95
       }
     ],
     "00-0036626": [
@@ -4255,7 +4255,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.71
       },
       {
         "season": 2025,
@@ -4273,7 +4273,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.8
       },
       {
         "season": 2025,
@@ -4291,7 +4291,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.33
       },
       {
         "season": 2025,
@@ -4309,7 +4309,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.66
       },
       {
         "season": 2025,
@@ -4327,7 +4327,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.64
       },
       {
         "season": 2025,
@@ -4345,7 +4345,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.3
       },
       {
         "season": 2025,
@@ -4363,7 +4363,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.6
       },
       {
         "season": 2025,
@@ -4381,7 +4381,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.37
       },
       {
         "season": 2025,
@@ -4399,7 +4399,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.27
       },
       {
         "season": 2025,
@@ -4417,7 +4417,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.08
       },
       {
         "season": 2025,
@@ -4435,7 +4435,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.13
       },
       {
         "season": 2026,
@@ -4453,7 +4453,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.53
       },
       {
         "season": 2026,
@@ -4471,7 +4471,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.55
       },
       {
         "season": 2026,
@@ -4489,7 +4489,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.3
       },
       {
         "season": 2026,
@@ -4507,7 +4507,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.56
       },
       {
         "season": 2026,
@@ -4525,7 +4525,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.37
       },
       {
         "season": 2026,
@@ -4543,7 +4543,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2026,
@@ -4561,7 +4561,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.25
       }
     ],
     "00-0036900": [
@@ -4581,7 +4581,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.87
       },
       {
         "season": 2025,
@@ -4599,7 +4599,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.96
       },
       {
         "season": 2025,
@@ -4617,7 +4617,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.86
       },
       {
         "season": 2025,
@@ -4635,7 +4635,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.96
       },
       {
         "season": 2025,
@@ -4653,7 +4653,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.92
       },
       {
         "season": 2025,
@@ -4671,7 +4671,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -4689,7 +4689,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.99
       },
       {
         "season": 2025,
@@ -4707,7 +4707,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.98
       },
       {
         "season": 2025,
@@ -4725,7 +4725,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.99
       },
       {
         "season": 2025,
@@ -4743,7 +4743,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.97
       },
       {
         "season": 2025,
@@ -4761,7 +4761,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.99
       },
       {
         "season": 2025,
@@ -4779,7 +4779,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -4797,7 +4797,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.97
       },
       {
         "season": 2025,
@@ -4815,7 +4815,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.87
       },
       {
         "season": 2025,
@@ -4833,7 +4833,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.77
       },
       {
         "season": 2025,
@@ -4851,7 +4851,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -4869,7 +4869,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.94
       },
       {
         "season": 2026,
@@ -4887,7 +4887,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.88
       },
       {
         "season": 2026,
@@ -4905,7 +4905,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -4923,7 +4923,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.2
       },
       {
         "season": 2026,
@@ -4941,7 +4941,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.89
       },
       {
         "season": 2026,
@@ -4959,7 +4959,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.87
       },
       {
         "season": 2026,
@@ -4977,7 +4977,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.96
       },
       {
         "season": 2026,
@@ -4995,7 +4995,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.84
       },
       {
         "season": 2026,
@@ -5013,7 +5013,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.89
       }
     ],
     "00-0037256": [
@@ -5033,7 +5033,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.24
       },
       {
         "season": 2025,
@@ -5051,7 +5051,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.31
       },
       {
         "season": 2025,
@@ -5069,7 +5069,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.28
       },
       {
         "season": 2025,
@@ -5087,7 +5087,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.42
       },
       {
         "season": 2025,
@@ -5105,7 +5105,7 @@
         "rush_tds": 2,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.8
       },
       {
         "season": 2025,
@@ -5123,7 +5123,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.77
       },
       {
         "season": 2025,
@@ -5141,7 +5141,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.9
       },
       {
         "season": 2025,
@@ -5159,7 +5159,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.55
       },
       {
         "season": 2025,
@@ -5177,7 +5177,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.72
       },
       {
         "season": 2025,
@@ -5195,7 +5195,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.6
       },
       {
         "season": 2025,
@@ -5213,7 +5213,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.6
       },
       {
         "season": 2025,
@@ -5231,7 +5231,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.38
       },
       {
         "season": 2025,
@@ -5249,7 +5249,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2025,
@@ -5267,7 +5267,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.42
       },
       {
         "season": 2025,
@@ -5285,7 +5285,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.39
       },
       {
         "season": 2025,
@@ -5303,7 +5303,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.48
       },
       {
         "season": 2025,
@@ -5321,7 +5321,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.33
       },
       {
         "season": 2026,
@@ -5339,7 +5339,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.41
       },
       {
         "season": 2026,
@@ -5357,7 +5357,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       },
       {
         "season": 2026,
@@ -5375,7 +5375,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.43
       },
       {
         "season": 2026,
@@ -5393,7 +5393,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.6
       },
       {
         "season": 2026,
@@ -5411,7 +5411,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.69
       },
       {
         "season": 2026,
@@ -5429,7 +5429,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.47
       },
       {
         "season": 2026,
@@ -5447,7 +5447,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.56
       },
       {
         "season": 2026,
@@ -5465,7 +5465,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       }
     ],
     "00-0037809": [
@@ -5791,7 +5791,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.56
       },
       {
         "season": 2026,
@@ -5809,7 +5809,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.58
       },
       {
         "season": 2026,
@@ -5827,7 +5827,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.71
       },
       {
         "season": 2026,
@@ -5845,7 +5845,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.76
       },
       {
         "season": 2026,
@@ -5863,7 +5863,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.77
       },
       {
         "season": 2026,
@@ -5881,7 +5881,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.74
       },
       {
         "season": 2026,
@@ -5899,7 +5899,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.59
       }
     ],
     "00-0038597": [
@@ -5919,7 +5919,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.75
       },
       {
         "season": 2025,
@@ -5937,7 +5937,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.71
       },
       {
         "season": 2025,
@@ -5955,7 +5955,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.55
       },
       {
         "season": 2025,
@@ -5973,7 +5973,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.73
       },
       {
         "season": 2025,
@@ -5991,7 +5991,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.53
       },
       {
         "season": 2025,
@@ -6009,7 +6009,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.54
       },
       {
         "season": 2025,
@@ -6027,7 +6027,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.63
       },
       {
         "season": 2025,
@@ -6045,7 +6045,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.54
       },
       {
         "season": 2025,
@@ -6063,7 +6063,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.96
       },
       {
         "season": 2025,
@@ -6081,7 +6081,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.82
       },
       {
         "season": 2025,
@@ -6099,7 +6099,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.89
       },
       {
         "season": 2025,
@@ -6117,7 +6117,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.6
       },
       {
         "season": 2025,
@@ -6135,7 +6135,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.67
       },
       {
         "season": 2025,
@@ -6153,7 +6153,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.62
       },
       {
         "season": 2025,
@@ -6171,7 +6171,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.61
       },
       {
         "season": 2025,
@@ -6189,7 +6189,7 @@
         "rush_tds": 2,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.61
       },
       {
         "season": 2025,
@@ -6207,7 +6207,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.56
       },
       {
         "season": 2026,
@@ -6225,7 +6225,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.72
       },
       {
         "season": 2026,
@@ -6243,7 +6243,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.7
       },
       {
         "season": 2026,
@@ -6261,7 +6261,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.7
       },
       {
         "season": 2026,
@@ -6279,7 +6279,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.79
       },
       {
         "season": 2026,
@@ -6297,7 +6297,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.6
       },
       {
         "season": 2026,
@@ -6315,7 +6315,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.75
       },
       {
         "season": 2026,
@@ -6333,7 +6333,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.69
       },
       {
         "season": 2026,
@@ -6351,7 +6351,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.63
       },
       {
         "season": 2026,
@@ -6369,7 +6369,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.73
       }
     ],
     "00-0039355": [
@@ -6389,7 +6389,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.07
       },
       {
         "season": 2025,
@@ -6407,7 +6407,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.23
       },
       {
         "season": 2025,
@@ -6425,7 +6425,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.36
       },
       {
         "season": 2025,
@@ -6443,7 +6443,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.37
       },
       {
         "season": 2025,
@@ -6461,7 +6461,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.39
       },
       {
         "season": 2025,
@@ -6479,7 +6479,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.38
       },
       {
         "season": 2025,
@@ -6497,7 +6497,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.54
       },
       {
         "season": 2025,
@@ -6515,7 +6515,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2025,
@@ -6533,7 +6533,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2026,
@@ -6551,7 +6551,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2026,
@@ -6569,7 +6569,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2026,
@@ -6587,7 +6587,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.12
       },
       {
         "season": 2026,
@@ -6605,7 +6605,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.05
       },
       {
         "season": 2026,
@@ -6623,7 +6623,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.15
       },
       {
         "season": 2026,
@@ -6641,7 +6641,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.2
       }
     ],
     "00-0039686": [
@@ -6661,7 +6661,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.06
       },
       {
         "season": 2025,
@@ -6679,7 +6679,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.34
       },
       {
         "season": 2025,
@@ -6697,7 +6697,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.18
       },
       {
         "season": 2025,
@@ -6715,7 +6715,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.05
       },
       {
         "season": 2025,
@@ -6733,7 +6733,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.05
       },
       {
         "season": 2025,
@@ -6751,7 +6751,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.06
       },
       {
         "season": 2025,
@@ -6769,7 +6769,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.27
       },
       {
         "season": 2025,
@@ -6787,7 +6787,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.04
       },
       {
         "season": 2025,
@@ -6805,7 +6805,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.23
       },
       {
         "season": 2025,
@@ -6823,7 +6823,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.13
       },
       {
         "season": 2026,
@@ -6841,7 +6841,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.03
       },
       {
         "season": 2026,
@@ -6859,7 +6859,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.3
       },
       {
         "season": 2026,
@@ -6877,7 +6877,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.46
       },
       {
         "season": 2026,
@@ -6895,7 +6895,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.11
       },
       {
         "season": 2026,
@@ -6913,7 +6913,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.02
       },
       {
         "season": 2026,
@@ -6931,7 +6931,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.07
       },
       {
         "season": 2026,
@@ -6949,7 +6949,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.02
       },
       {
         "season": 2026,
@@ -6967,7 +6967,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.11
       }
     ],
     "00-0039910": [
@@ -6987,7 +6987,7 @@
         "rush_tds": 0,
         "pass_yds": 233,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -7005,7 +7005,7 @@
         "rush_tds": 0,
         "pass_yds": 200,
         "pass_tds": 2,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -7023,7 +7023,7 @@
         "rush_tds": 0,
         "pass_yds": 231,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -7041,7 +7041,7 @@
         "rush_tds": 0,
         "pass_yds": 211,
         "pass_tds": 3,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -7059,7 +7059,7 @@
         "rush_tds": 1,
         "pass_yds": 156,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 0.69
       },
       {
         "season": 2025,
@@ -7077,7 +7077,7 @@
         "rush_tds": 1,
         "pass_yds": 153,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.88
       },
       {
         "season": 2025,
@@ -7095,7 +7095,7 @@
         "rush_tds": 0,
         "pass_yds": 78,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.75
       },
       {
         "season": 2026,
@@ -7113,7 +7113,7 @@
         "rush_tds": 0,
         "pass_yds": 164,
         "pass_tds": 2,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -7131,7 +7131,7 @@
         "rush_tds": 0,
         "pass_yds": 96,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 0.55
       },
       {
         "season": 2026,
@@ -7149,7 +7149,7 @@
         "rush_tds": 2,
         "pass_yds": 199,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -7167,7 +7167,7 @@
         "rush_tds": 0,
         "pass_yds": 300,
         "pass_tds": 2,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -7185,7 +7185,7 @@
         "rush_tds": 0,
         "pass_yds": 217,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -7203,7 +7203,7 @@
         "rush_tds": 0,
         "pass_yds": 274,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -7221,7 +7221,7 @@
         "rush_tds": 0,
         "pass_yds": 249,
         "pass_tds": 3,
-        "snap_pct": null
+        "snap_pct": 1.0
       }
     ],
     "00-0040164": [
@@ -7241,7 +7241,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.3
       },
       {
         "season": 2025,
@@ -7259,7 +7259,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       },
       {
         "season": 2025,
@@ -7277,7 +7277,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.24
       },
       {
         "season": 2025,
@@ -7295,7 +7295,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.44
       },
       {
         "season": 2025,
@@ -7313,7 +7313,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.34
       },
       {
         "season": 2025,
@@ -7331,7 +7331,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.42
       },
       {
         "season": 2025,
@@ -7349,7 +7349,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.69
       },
       {
         "season": 2025,
@@ -7367,7 +7367,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.43
       },
       {
         "season": 2025,
@@ -7385,7 +7385,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.63
       },
       {
         "season": 2025,
@@ -7403,7 +7403,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.28
       },
       {
         "season": 2025,
@@ -7421,7 +7421,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.15
       },
       {
         "season": 2025,
@@ -7439,7 +7439,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.39
       },
       {
         "season": 2025,
@@ -7457,7 +7457,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.12
       },
       {
         "season": 2025,
@@ -7475,7 +7475,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.46
       },
       {
         "season": 2025,
@@ -7493,7 +7493,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.02
       },
       {
         "season": 2026,
@@ -7511,7 +7511,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.26
       },
       {
         "season": 2026,
@@ -7529,7 +7529,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.15
       },
       {
         "season": 2026,
@@ -7547,7 +7547,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.07
       },
       {
         "season": 2026,
@@ -7565,7 +7565,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.02
       }
     ],
     "00-0040208": [
@@ -7585,7 +7585,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -7603,7 +7603,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -7621,7 +7621,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.18
       },
       {
         "season": 2025,
@@ -7639,7 +7639,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -7657,7 +7657,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -7675,7 +7675,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -7693,7 +7693,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.04
       },
       {
         "season": 2025,
@@ -7711,7 +7711,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.11
       },
       {
         "season": 2025,
@@ -7729,7 +7729,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.14
       },
       {
         "season": 2025,
@@ -7747,7 +7747,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.01
       },
       {
         "season": 2025,
@@ -7765,7 +7765,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.1
       },
       {
         "season": 2025,
@@ -7783,7 +7783,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.14
       },
       {
         "season": 2026,
@@ -7801,7 +7801,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.03
       },
       {
         "season": 2026,
@@ -7819,7 +7819,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2026,
@@ -7837,7 +7837,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2026,
@@ -7855,7 +7855,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.06
       },
       {
         "season": 2026,
@@ -7873,7 +7873,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2026,
@@ -7891,7 +7891,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2026,
@@ -7909,7 +7909,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.05
       }
     ],
     "00-0040242": [
@@ -7929,7 +7929,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.33
       },
       {
         "season": 2025,
@@ -7947,7 +7947,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.22
       },
       {
         "season": 2025,
@@ -7965,7 +7965,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.4
       },
       {
         "season": 2025,
@@ -7983,7 +7983,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.35
       },
       {
         "season": 2025,
@@ -8001,7 +8001,7 @@
         "rush_tds": 2,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.47
       },
       {
         "season": 2025,
@@ -8019,7 +8019,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.66
       },
       {
         "season": 2025,
@@ -8037,7 +8037,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2025,
@@ -8055,7 +8055,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.57
       },
       {
         "season": 2025,
@@ -8073,7 +8073,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.46
       },
       {
         "season": 2025,
@@ -8091,7 +8091,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.44
       },
       {
         "season": 2025,
@@ -8109,7 +8109,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.27
       },
       {
         "season": 2025,
@@ -8127,7 +8127,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.14
       },
       {
         "season": 2025,
@@ -8145,7 +8145,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.19
       },
       {
         "season": 2025,
@@ -8163,7 +8163,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       },
       {
         "season": 2025,
@@ -8181,7 +8181,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.2
       },
       {
         "season": 2025,
@@ -8199,7 +8199,7 @@
         "rush_tds": 2,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.64
       },
       {
         "season": 2025,
@@ -8217,7 +8217,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.36
       },
       {
         "season": 2026,
@@ -8235,7 +8235,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2026,
@@ -8253,7 +8253,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.37
       },
       {
         "season": 2026,
@@ -8271,7 +8271,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.57
       },
       {
         "season": 2026,
@@ -8289,7 +8289,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.45
       },
       {
         "season": 2026,
@@ -8307,7 +8307,7 @@
         "rush_tds": 1,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.35
       }
     ],
     "00-0036415": [
@@ -8327,7 +8327,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.26
       },
       {
         "season": 2025,
@@ -8345,7 +8345,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.34
       },
       {
         "season": 2025,
@@ -8363,7 +8363,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.38
       },
       {
         "season": 2025,
@@ -8381,7 +8381,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.74
       },
       {
         "season": 2025,
@@ -8399,7 +8399,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.85
       },
       {
         "season": 2025,
@@ -8417,7 +8417,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.79
       },
       {
         "season": 2025,
@@ -8435,7 +8435,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.83
       },
       {
         "season": 2025,
@@ -8453,7 +8453,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.92
       },
       {
         "season": 2025,
@@ -8471,7 +8471,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.91
       },
       {
         "season": 2025,
@@ -8489,7 +8489,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.75
       },
       {
         "season": 2025,
@@ -8507,7 +8507,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.73
       },
       {
         "season": 2025,
@@ -8525,7 +8525,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.58
       },
       {
         "season": 2025,
@@ -8543,7 +8543,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.68
       },
       {
         "season": 2025,
@@ -8561,7 +8561,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.31
       },
       {
         "season": 2026,
@@ -8579,7 +8579,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.12
       },
       {
         "season": 2026,
@@ -8597,7 +8597,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.58
       }
     ],
     "00-0038619": [
@@ -8617,7 +8617,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.84
       },
       {
         "season": 2025,
@@ -8635,7 +8635,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.9
       },
       {
         "season": 2025,
@@ -8653,7 +8653,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.87
       },
       {
         "season": 2025,
@@ -8671,7 +8671,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.94
       },
       {
         "season": 2025,
@@ -8689,7 +8689,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.7
       },
       {
         "season": 2025,
@@ -8707,7 +8707,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.8
       },
       {
         "season": 2025,
@@ -8725,7 +8725,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.84
       },
       {
         "season": 2025,
@@ -8743,7 +8743,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.74
       },
       {
         "season": 2025,
@@ -8761,7 +8761,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.83
       },
       {
         "season": 2025,
@@ -8779,7 +8779,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.94
       },
       {
         "season": 2025,
@@ -8797,7 +8797,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.65
       },
       {
         "season": 2025,
@@ -8815,7 +8815,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.89
       },
       {
         "season": 2025,
@@ -8833,7 +8833,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2025,
@@ -8851,7 +8851,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.7
       },
       {
         "season": 2025,
@@ -8869,7 +8869,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.53
       },
       {
         "season": 2026,
@@ -8887,7 +8887,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.61
       },
       {
         "season": 2026,
@@ -8905,7 +8905,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.53
       }
     ],
     "00-0038839": [
@@ -8925,7 +8925,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.14
       },
       {
         "season": 2025,
@@ -8943,7 +8943,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.12
       },
       {
         "season": 2025,
@@ -8961,7 +8961,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.15
       },
       {
         "season": 2025,
@@ -8979,7 +8979,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.25
       },
       {
         "season": 2025,
@@ -8997,7 +8997,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.74
       },
       {
         "season": 2025,
@@ -9015,7 +9015,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.67
       },
       {
         "season": 2025,
@@ -9033,7 +9033,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.45
       },
       {
         "season": 2025,
@@ -9051,7 +9051,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.36
       },
       {
         "season": 2026,
@@ -9069,7 +9069,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.53
       },
       {
         "season": 2026,
@@ -9087,7 +9087,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.34
       },
       {
         "season": 2026,
@@ -9105,7 +9105,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.19
       }
     ],
     "00-0039912": [
@@ -9125,7 +9125,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.04
       },
       {
         "season": 2025,
@@ -9143,7 +9143,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.47
       },
       {
         "season": 2025,
@@ -9161,7 +9161,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.21
       },
       {
         "season": 2025,
@@ -9179,7 +9179,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.39
       },
       {
         "season": 2025,
@@ -9197,7 +9197,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.25
       },
       {
         "season": 2025,
@@ -9215,7 +9215,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.57
       },
       {
         "season": 2025,
@@ -9233,7 +9233,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.69
       },
       {
         "season": 2025,
@@ -9251,7 +9251,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.61
       },
       {
         "season": 2025,
@@ -9269,7 +9269,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.55
       },
       {
         "season": 2026,
@@ -9287,7 +9287,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.68
       },
       {
         "season": 2026,
@@ -9305,7 +9305,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2026,
@@ -9323,7 +9323,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.37
       },
       {
         "season": 2026,
@@ -9341,7 +9341,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.35
       }
     ],
     "00-0032268": [
@@ -9361,7 +9361,7 @@
         "rush_tds": 1,
         "pass_yds": 207,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -9379,7 +9379,7 @@
         "rush_tds": 0,
         "pass_yds": 156,
         "pass_tds": 2,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -9397,7 +9397,7 @@
         "rush_tds": 0,
         "pass_yds": 63,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.31
       },
       {
         "season": 2025,
@@ -9415,7 +9415,7 @@
         "rush_tds": 0,
         "pass_yds": 213,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -9433,7 +9433,7 @@
         "rush_tds": 0,
         "pass_yds": 213,
         "pass_tds": 2,
-        "snap_pct": null
+        "snap_pct": 0.94
       },
       {
         "season": 2025,
@@ -9451,7 +9451,7 @@
         "rush_tds": 0,
         "pass_yds": 213,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 0.99
       },
       {
         "season": 2025,
@@ -9469,7 +9469,7 @@
         "rush_tds": 0,
         "pass_yds": 294,
         "pass_tds": 2,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -9487,7 +9487,7 @@
         "rush_tds": 0,
         "pass_yds": 30,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.25
       },
       {
         "season": 2025,
@@ -9505,7 +9505,7 @@
         "rush_tds": 0,
         "pass_yds": 211,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2025,
@@ -9523,7 +9523,7 @@
         "rush_tds": 0,
         "pass_yds": 95,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.59
       },
       {
         "season": 2026,
@@ -9541,7 +9541,7 @@
         "rush_tds": 0,
         "pass_yds": 111,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 0.45
       },
       {
         "season": 2026,
@@ -9559,7 +9559,7 @@
         "rush_tds": 0,
         "pass_yds": 183,
         "pass_tds": 3,
-        "snap_pct": null
+        "snap_pct": 1.0
       },
       {
         "season": 2026,
@@ -9577,7 +9577,7 @@
         "rush_tds": 0,
         "pass_yds": 46,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.16
       }
     ],
     "00-0036628": [
@@ -9597,7 +9597,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2025,
@@ -9615,7 +9615,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.43
       },
       {
         "season": 2025,
@@ -9633,7 +9633,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.55
       },
       {
         "season": 2025,
@@ -9651,7 +9651,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2025,
@@ -9669,7 +9669,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.7
       },
       {
         "season": 2025,
@@ -9687,7 +9687,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2025,
@@ -9705,7 +9705,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.62
       },
       {
         "season": 2025,
@@ -9723,7 +9723,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.69
       },
       {
         "season": 2025,
@@ -9741,7 +9741,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.5
       },
       {
         "season": 2025,
@@ -9759,7 +9759,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.59
       },
       {
         "season": 2026,
@@ -9777,7 +9777,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2026,
@@ -9795,7 +9795,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.54
       },
       {
         "season": 2026,
@@ -9813,7 +9813,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.45
       },
       {
         "season": 2026,
@@ -9831,7 +9831,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.37
       },
       {
         "season": 2026,
@@ -9849,7 +9849,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.35
       },
       {
         "season": 2026,
@@ -9867,7 +9867,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.41
       }
     ],
     "00-0034613": [
@@ -9887,7 +9887,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.25
       },
       {
         "season": 2025,
@@ -9905,7 +9905,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.19
       },
       {
         "season": 2025,
@@ -9923,7 +9923,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.16
       },
       {
         "season": 2025,
@@ -9941,7 +9941,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.33
       },
       {
         "season": 2025,
@@ -9959,7 +9959,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.22
       },
       {
         "season": 2025,
@@ -9977,7 +9977,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.07
       },
       {
         "season": 2025,
@@ -9995,7 +9995,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.1
       },
       {
         "season": 2025,
@@ -10013,7 +10013,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.25
       },
       {
         "season": 2025,
@@ -10031,7 +10031,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.25
       },
       {
         "season": 2025,
@@ -10049,7 +10049,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.26
       },
       {
         "season": 2026,
@@ -10067,7 +10067,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.09
       },
       {
         "season": 2026,
@@ -10085,7 +10085,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.23
       },
       {
         "season": 2026,
@@ -10103,7 +10103,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.41
       },
       {
         "season": 2026,
@@ -10121,7 +10121,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.29
       }
     ],
     "00-0040534": [
@@ -10141,7 +10141,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.02
       },
       {
         "season": 2025,
@@ -10159,7 +10159,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -10177,7 +10177,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.02
       },
       {
         "season": 2025,
@@ -10195,7 +10195,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.03
       },
       {
         "season": 2025,
@@ -10213,7 +10213,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -10231,7 +10231,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -10249,7 +10249,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2025,
@@ -10267,7 +10267,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.12
       },
       {
         "season": 2025,
@@ -10285,7 +10285,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.07
       },
       {
         "season": 2025,
@@ -10303,7 +10303,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.1
       },
       {
         "season": 2025,
@@ -10321,7 +10321,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.03
       },
       {
         "season": 2026,
@@ -10339,7 +10339,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       }
     ],
     "00-0037742": [
@@ -10359,7 +10359,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.51
       },
       {
         "season": 2025,
@@ -10377,7 +10377,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.39
       },
       {
         "season": 2025,
@@ -10395,7 +10395,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.66
       },
       {
         "season": 2025,
@@ -10413,7 +10413,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.37
       },
       {
         "season": 2025,
@@ -10431,7 +10431,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.46
       },
       {
         "season": 2025,
@@ -10449,7 +10449,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.83
       },
       {
         "season": 2025,
@@ -10467,7 +10467,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.91
       },
       {
         "season": 2025,
@@ -10485,7 +10485,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.68
       },
       {
         "season": 2026,
@@ -10503,7 +10503,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.3
       },
       {
         "season": 2026,
@@ -10521,7 +10521,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.36
       },
       {
         "season": 2026,
@@ -10539,7 +10539,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.59
       },
       {
         "season": 2026,
@@ -10557,7 +10557,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.73
       },
       {
         "season": 2026,
@@ -10575,7 +10575,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.55
       },
       {
         "season": 2026,
@@ -10593,7 +10593,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.67
       },
       {
         "season": 2026,
@@ -10611,7 +10611,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.61
       }
     ],
     "00-0040785": [
@@ -10631,7 +10631,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.16
       },
       {
         "season": 2026,
@@ -10649,7 +10649,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.18
       },
       {
         "season": 2026,
@@ -10667,7 +10667,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.56
       },
       {
         "season": 2026,
@@ -10685,7 +10685,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.89
       },
       {
         "season": 2026,
@@ -10703,7 +10703,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.29
       },
       {
         "season": 2026,
@@ -10721,7 +10721,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.38
       },
       {
         "season": 2026,
@@ -10739,7 +10739,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.59
       },
       {
         "season": 2026,
@@ -10757,7 +10757,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.42
       },
       {
         "season": 2026,
@@ -10775,7 +10775,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.42
       }
     ],
     "00-0041040": [
@@ -10795,7 +10795,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.37
       },
       {
         "season": 2026,
@@ -10813,7 +10813,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.49
       },
       {
         "season": 2026,
@@ -10831,7 +10831,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.41
       },
       {
         "season": 2026,
@@ -10849,7 +10849,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.69
       },
       {
         "season": 2026,
@@ -10867,7 +10867,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.68
       },
       {
         "season": 2026,
@@ -10885,7 +10885,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.67
       },
       {
         "season": 2026,
@@ -10903,7 +10903,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.83
       },
       {
         "season": 2026,
@@ -10921,7 +10921,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.84
       },
       {
         "season": 2026,
@@ -10939,7 +10939,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.86
       }
     ],
     "00-0041096": [
@@ -10959,7 +10959,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.1
       },
       {
         "season": 2026,
@@ -10977,7 +10977,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.08
       },
       {
         "season": 2026,
@@ -10995,7 +10995,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.19
       },
       {
         "season": 2026,
@@ -11013,7 +11013,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.0
       },
       {
         "season": 2026,
@@ -11031,7 +11031,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.11
       },
       {
         "season": 2026,
@@ -11049,7 +11049,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.03
       }
     ],
     "00-0039814": [
@@ -11069,7 +11069,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.42
       },
       {
         "season": 2026,
@@ -11087,7 +11087,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.52
       },
       {
         "season": 2026,
@@ -11105,7 +11105,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.28
       }
     ],
     "00-0041069": [
@@ -11125,7 +11125,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.17
       },
       {
         "season": 2026,
@@ -11143,7 +11143,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.02
       }
     ],
     "00-0041117": [
@@ -11163,7 +11163,7 @@
         "rush_tds": 0,
         "pass_yds": 186,
         "pass_tds": 1,
-        "snap_pct": null
+        "snap_pct": 0.84
       }
     ],
     "00-0041116": [
@@ -11183,7 +11183,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.16
       },
       {
         "season": 2026,
@@ -11201,7 +11201,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.3
       },
       {
         "season": 2026,
@@ -11219,7 +11219,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.2
       }
     ],
     "00-0041176": [
@@ -11239,7 +11239,7 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.27
       }
     ],
     "00-0041178": [
@@ -11259,20 +11259,59 @@
         "rush_tds": 0,
         "pass_yds": 0,
         "pass_tds": 0,
-        "snap_pct": null
+        "snap_pct": 0.04
       }
     ]
   },
   "edges": [
     {
-      "type": "injury",
-      "text": "Andrei Iosivas (CIN WR) Doubtful (Thumb) \u2014 usage redistributes.",
-      "stat": "report_week=10, games_missed=7"
+      "type": "total",
+      "text": "High total (53.5) \u2014 shootout profile; favors pass-catcher overs and anytime-TD props.",
+      "stat": "total_line=53.5"
+    },
+    {
+      "type": "matchup",
+      "tier": "soft",
+      "text": "CIN QBs vs WAS: SOFT matchup. WAS allows the 8th-most to QBs (18.8 FP/g, 280.4 yds/g). Target: Joe Burrow (311 pass yds/g).",
+      "stat": "WAS vs QB rank 8/32; 2.0 TD/g allowed."
+    },
+    {
+      "type": "matchup",
+      "tier": "soft",
+      "text": "CIN TEs vs WAS: SOFT matchup. WAS allows the 2nd-most to TEs (20.2 FP/g, 76.3 yds/g). Target: Mike Gesicki (9% tgt share), Drew Sample (6% tgt share), Jack Endries (4% tgt share).",
+      "stat": "WAS vs TE rank 2/32; 1.0 TD/g allowed."
+    },
+    {
+      "type": "matchup",
+      "tier": "tough",
+      "text": "WAS WRs vs CIN: TOUGH matchup. CIN allows the 24th-most to WRs (29.7 FP/g, 136.0 yds/g). Fade: Stefon Diggs (23% tgt share), Antonio Williams (15% tgt share), Van Jefferson (12% tgt share).",
+      "stat": "CIN vs WR rank 24/32; 1.0 TD/g allowed."
+    },
+    {
+      "type": "matchup",
+      "tier": "soft",
+      "text": "WAS TEs vs CIN: SOFT matchup. CIN allows the 9th-most to TEs (15.6 FP/g, 76.2 yds/g). Target: Chig Okonkwo (18% tgt share), Ben Sinnott (5% tgt share), John Bates (4% tgt share).",
+      "stat": "CIN vs TE rank 9/32; 0.22 TD/g allowed."
     },
     {
       "type": "injury",
-      "text": "Colson Yankoff (WAS TE) Out (Knee) \u2014 usage redistributes.",
-      "stat": "report_week=10, games_missed=1"
+      "text": "CIN WR room thinned \u2014 Andrei Iosivas (IR). Snaps/targets funnel to Ja'Marr Chase, Tee Higgins.",
+      "stat": "next up: Ja'Marr Chase 27% tgt share, Tee Higgins 22% tgt share, Dohnte Meyers 8% tgt share"
+    },
+    {
+      "type": "injury",
+      "text": "WAS QB room thinned \u2014 Athan Kaliakmanis (INACTIVE). Snaps/targets funnel to Jayden Daniels, Marcus Mariota.",
+      "stat": "next up: Jayden Daniels 214 pass yds/g, Marcus Mariota 113 pass yds/g"
+    },
+    {
+      "type": "injury",
+      "text": "WAS RB room thinned \u2014 Jacory Croskey-Merritt (IR). Snaps/targets funnel to Rachaad White, Austin Ekeler.",
+      "stat": "next up: Rachaad White 8.1 car/g, Austin Ekeler 5.5 car/g, Robert Henry Jr. 2.0 car/g"
+    },
+    {
+      "type": "injury",
+      "text": "WAS WR room thinned \u2014 Terry McLaurin (IR); Dyami Brown (IR). Snaps/targets funnel to Stefon Diggs, Antonio Williams.",
+      "stat": "next up: Stefon Diggs 23% tgt share, Antonio Williams 15% tgt share, Van Jefferson 12% tgt share"
     }
   ]
 }

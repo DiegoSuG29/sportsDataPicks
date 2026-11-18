@@ -39,7 +39,7 @@ function Edges({ edges }) {
       {!edges.length && <p className="empty">No edges flagged from the data for this game.</p>}
       {edges.map((e, i) => (
         <div className="edge" key={i}>
-          <span className={`tag ${e.type}`}>{e.type}</span>
+          <span className={`tag ${e.type} ${e.tier || ""}`}>{e.type === "matchup" ? e.tier : e.type}</span>
           <div>
             <div className="etext">{e.text}</div>
             {e.stat && <div className="estat">{e.stat}</div>}

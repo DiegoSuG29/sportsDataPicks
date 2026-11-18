@@ -1,17 +1,32 @@
 // Prop-checker math over a player's per-game logs. Pure functions so they are
 // easy to reason about and could be unit-tested.
 
+// Each option carries the positions it applies to and a slider range tuned to
+// the stat (min/max/step), with defaults sitting on the step grid.
 export const STAT_OPTIONS = [
-  { key: "rec_yds", label: "Receiving yards", def: 40.5, dec: 1 },
-  { key: "receptions", label: "Receptions", def: 3.5, dec: 0 },
-  { key: "targets", label: "Targets", def: 5.5, dec: 0 },
-  { key: "rush_yds", label: "Rushing yards", def: 40.5, dec: 1 },
-  { key: "carries", label: "Rush attempts", def: 10.5, dec: 0 },
-  { key: "scrim_yds", label: "Rush + Rec yards", def: 60.5, dec: 1, compute: (r) => r.rush_yds + r.rec_yds },
-  { key: "pass_yds", label: "Passing yards", def: 224.5, dec: 1 },
-  { key: "pass_tds", label: "Passing TDs", def: 1.5, dec: 0 },
-  { key: "anytime_td", label: "Anytime TD", def: 0.5, dec: 0, compute: (r) => r.rush_tds + r.rec_tds },
+  { key: "rec_yds", label: "Receiving yards", positions: ["WR", "TE", "RB"], def: 40.5, min: 10.5, max: 150.5, step: 5, dec: 1 },
+  { key: "receptions", label: "Receptions", positions: ["WR", "TE", "RB"], def: 3.5, min: 0.5, max: 12.5, step: 1, dec: 0 },
+  { key: "targets", label: "Targets", positions: ["WR", "TE", "RB"], def: 5.5, min: 0.5, max: 15.5, step: 1, dec: 0 },
+  { key: "rush_yds", label: "Rushing yards", positions: ["RB", "QB"], def: 40.5, min: 10.5, max: 150.5, step: 5, dec: 1 },
+  { key: "carries", label: "Rush attempts", positions: ["RB", "QB"], def: 10.5, min: 2.5, max: 29.5, step: 1, dec: 0 },
+  { key: "scrim_yds", label: "Rush + Rec yards", positions: ["RB", "WR", "TE"], def: 60.5, min: 20.5, max: 200.5, step: 5, dec: 1, compute: (r) => r.rush_yds + r.rec_yds },
+  { key: "pass_yds", label: "Passing yards", positions: ["QB"], def: 224.5, min: 149.5, max: 349.5, step: 5, dec: 1 },
+  { key: "pass_tds", label: "Passing TDs", positions: ["QB"], def: 1.5, min: 0.5, max: 5.5, step: 1, dec: 0 },
+  { key: "anytime_td", label: "Anytime TD", positions: ["QB", "RB", "WR", "TE"], def: 0.5, min: 0.5, max: 2.5, step: 1, dec: 0, compute: (r) => r.rush_tds + r.rec_tds },
 ];
+
+// FB shares RB's prop menu; otherwise use the listed position.
+const STAT_BUCKET = { QB: "QB", RB: "RB", FB: "RB", WR: "WR", TE: "TE" };
+export const statsForPosition = (pos) => {
+  const b = STAT_BUCKET[pos] || pos;
+  return STAT_OPTIONS.filter((o) => o.positions.includes(b));
+};
+// A sensible default prop for a position (falls back to the first available).
+export const defaultStatFor = (pos) => {
+  const avail = statsForPosition(pos);
+  const pref = pos === "QB" ? "pass_yds" : pos === "RB" || pos === "FB" ? "rush_yds" : "rec_yds";
+  return avail.find((o) => o.key === pref)?.key || avail[0]?.key;
+};
 
 export const statOption = (key) => STAT_OPTIONS.find((o) => o.key === key);
 export const statVal = (opt, row) => (opt.compute ? opt.compute(row) : row[opt.key] ?? 0);

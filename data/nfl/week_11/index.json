@@ -1,12 +1,242 @@
 {
   "season": 2026,
   "week": 11,
-  "generated_at": "2026-11-18T04:07:43+00:00",
+  "generated_at": "2026-11-18T04:49:17+00:00",
   "stats_through_week": 10,
   "reference_window": [
     2025,
     2026
   ],
+  "worst_defenses": {
+    "QB": [
+      {
+        "team": "DET",
+        "rank": 1,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 20.8,
+        "yards_pg_allowed": 281.2,
+        "tds_pg_allowed": 2.33,
+        "opponent": "TB",
+        "home": true,
+        "game_file": "week_11/2026_11_TB_DET.json"
+      },
+      {
+        "team": "ARI",
+        "rank": 2,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 20.8,
+        "yards_pg_allowed": 249.6,
+        "tds_pg_allowed": 2.5,
+        "opponent": "KC",
+        "home": false,
+        "game_file": "week_11/2026_11_ARI_KC.json"
+      },
+      {
+        "team": "DAL",
+        "rank": 3,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 20.3,
+        "yards_pg_allowed": 278.5,
+        "tds_pg_allowed": 2.0,
+        "opponent": "TEN",
+        "home": true,
+        "game_file": "week_11/2026_11_TEN_DAL.json"
+      },
+      {
+        "team": "LV",
+        "rank": 4,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 19.9,
+        "yards_pg_allowed": 263.9,
+        "tds_pg_allowed": 2.5,
+        "opponent": "DEN",
+        "home": false,
+        "game_file": "week_11/2026_11_LV_DEN.json"
+      },
+      {
+        "team": "TEN",
+        "rank": 5,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 19.3,
+        "yards_pg_allowed": 299.8,
+        "tds_pg_allowed": 1.89,
+        "opponent": "DAL",
+        "home": false,
+        "game_file": "week_11/2026_11_TEN_DAL.json"
+      }
+    ],
+    "RB": [
+      {
+        "team": "DAL",
+        "rank": 1,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 29.3,
+        "yards_pg_allowed": 155.1,
+        "tds_pg_allowed": 1.6,
+        "opponent": "TEN",
+        "home": true,
+        "game_file": "week_11/2026_11_TEN_DAL.json"
+      },
+      {
+        "team": "NO",
+        "rank": 2,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 29.1,
+        "yards_pg_allowed": 153.6,
+        "tds_pg_allowed": 1.56,
+        "opponent": "CHI",
+        "home": false,
+        "game_file": "week_11/2026_11_NO_CHI.json"
+      },
+      {
+        "team": "CAR",
+        "rank": 3,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 27.3,
+        "yards_pg_allowed": 130.3,
+        "tds_pg_allowed": 1.56,
+        "opponent": "BAL",
+        "home": true,
+        "game_file": "week_11/2026_11_BAL_CAR.json"
+      },
+      {
+        "team": "MIA",
+        "rank": 5,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 25.4,
+        "yards_pg_allowed": 144.4,
+        "tds_pg_allowed": 1.11,
+        "opponent": "BUF",
+        "home": false,
+        "game_file": "week_11/2026_11_MIA_BUF.json"
+      },
+      {
+        "team": "LV",
+        "rank": 6,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 25.4,
+        "yards_pg_allowed": 161.4,
+        "tds_pg_allowed": 1.1,
+        "opponent": "DEN",
+        "home": false,
+        "game_file": "week_11/2026_11_LV_DEN.json"
+      }
+    ],
+    "WR": [
+      {
+        "team": "TEN",
+        "rank": 1,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 42.4,
+        "yards_pg_allowed": 210.6,
+        "tds_pg_allowed": 1.0,
+        "opponent": "DAL",
+        "home": false,
+        "game_file": "week_11/2026_11_TEN_DAL.json"
+      },
+      {
+        "team": "PHI",
+        "rank": 3,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 37.7,
+        "yards_pg_allowed": 178.1,
+        "tds_pg_allowed": 1.22,
+        "opponent": "PIT",
+        "home": true,
+        "game_file": "week_11/2026_11_PIT_PHI.json"
+      },
+      {
+        "team": "HOU",
+        "rank": 5,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 36.2,
+        "yards_pg_allowed": 178.4,
+        "tds_pg_allowed": 1.0,
+        "opponent": "IND",
+        "home": true,
+        "game_file": "week_11/2026_11_IND_HOU.json"
+      },
+      {
+        "team": "LAC",
+        "rank": 6,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 35.8,
+        "yards_pg_allowed": 165.0,
+        "tds_pg_allowed": 1.33,
+        "opponent": "NYJ",
+        "home": true,
+        "game_file": "week_11/2026_11_NYJ_LAC.json"
+      },
+      {
+        "team": "DAL",
+        "rank": 7,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 35.7,
+        "yards_pg_allowed": 172.3,
+        "tds_pg_allowed": 1.2,
+        "opponent": "TEN",
+        "home": true,
+        "game_file": "week_11/2026_11_TEN_DAL.json"
+      }
+    ],
+    "TE": [
+      {
+        "team": "DET",
+        "rank": 1,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 22.9,
+        "yards_pg_allowed": 81.3,
+        "tds_pg_allowed": 1.22,
+        "opponent": "TB",
+        "home": true,
+        "game_file": "week_11/2026_11_TB_DET.json"
+      },
+      {
+        "team": "WAS",
+        "rank": 2,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 20.2,
+        "yards_pg_allowed": 76.3,
+        "tds_pg_allowed": 1.0,
+        "opponent": "CIN",
+        "home": true,
+        "game_file": "week_11/2026_11_CIN_WAS.json"
+      },
+      {
+        "team": "DEN",
+        "rank": 3,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 19.2,
+        "yards_pg_allowed": 75.4,
+        "tds_pg_allowed": 0.78,
+        "opponent": "LV",
+        "home": true,
+        "game_file": "week_11/2026_11_LV_DEN.json"
+      },
+      {
+        "team": "MIA",
+        "rank": 4,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 16.2,
+        "yards_pg_allowed": 58.2,
+        "tds_pg_allowed": 0.67,
+        "opponent": "BUF",
+        "home": false,
+        "game_file": "week_11/2026_11_MIA_BUF.json"
+      },
+      {
+        "team": "ARI",
+        "rank": 5,
+        "of_teams": 32,
+        "fantasy_pg_allowed": 16.1,
+        "yards_pg_allowed": 50.7,
+        "tds_pg_allowed": 1.0,
+        "opponent": "KC",
+        "home": false,
+        "game_file": "week_11/2026_11_ARI_KC.json"
+      }
+    ]
+  },
   "games": [
     {
       "game_id": "2026_11_IND_HOU",
@@ -65,7 +295,7 @@
       "gameday": "2026-11-22",
       "weekday": "Sunday",
       "spread_line": 7.0,
-      "total_line": 43.5,
+      "total_line": 44.5,
       "file": "week_11/2026_11_TB_DET.json"
     },
     {
