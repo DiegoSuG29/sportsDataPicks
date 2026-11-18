@@ -426,7 +426,7 @@ function PropLog({ prop, line, showTeam }) {
       </div>
 
       {hasLine && (
-        <div className="ou-strip" title="Most recent games left → right">
+        <div className="ou-strip" title="Newest game on the left → oldest on the right">
           {prop.vals.map((v, i) => {
             const over = v > line;
             return (

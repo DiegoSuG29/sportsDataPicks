@@ -16,6 +16,11 @@ on:
       - "data/**"
       - ".github/workflows/pages.yml"
   workflow_dispatch: {}
+  # Data commits from the refresh workflow use GITHUB_TOKEN, which does not fire
+  # the push trigger above (loop prevention), so redeploy when it finishes.
+  workflow_run:
+    workflows: ["Refresh NFL data"]
+    types: [completed]
 
 # Allow one concurrent deployment; let an in-progress run finish.
 concurrency:
@@ -30,6 +35,9 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # For a workflow_run trigger, only deploy if the refresh actually succeeded;
+    # push / manual dispatch always proceed.
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     steps:
       - uses: actions/checkout@v4
 

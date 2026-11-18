@@ -45,8 +45,9 @@ export function filterLogs(logs, f) {
 
 export function computeProp(logs, optKey, line, filters) {
   const opt = statOption(optKey);
+  // newest first: this season before last season, latest week before earlier.
   const rows = filterLogs(logs, filters).sort(
-    (a, b) => a.season - b.season || a.week - b.week
+    (a, b) => b.season - a.season || b.week - a.week
   );
   const vals = rows.map((l) => statVal(opt, l));
   const n = vals.length;
@@ -60,7 +61,7 @@ export function computeProp(logs, optKey, line, filters) {
     sorted.length % 2
       ? sorted[(sorted.length - 1) / 2]
       : (sorted[sorted.length / 2 - 1] + sorted[sorted.length / 2]) / 2;
-  const l5 = vals.slice(-5);
+  const l5 = vals.slice(0, 5); // rows are newest-first, so the first 5 are the last 5 games
   const l5overs = hasLine ? l5.filter((v) => v > line).length : null;
 
   return {

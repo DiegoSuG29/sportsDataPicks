@@ -1,0 +1,69 @@
+name: Refresh NFL data
+
+# Regenerates the per-game JSON the dashboard reads, commits it, and lets
+# pages.yml (via its workflow_run trigger) redeploy the site. Runs on a
+# schedule in-season and on demand — "Run workflow" here is the dashboard's
+# Refresh button (e.g. trigger it before TNF once the final injury report is out).
+#
+# NOTE: GitHub pauses scheduled workflows in public repos after 60 days without
+# repo activity. In-season the data commits keep it alive; after the offseason
+# it needs a manual re-enable (one manual run re-arms the schedule).
+
+on:
+  schedule:
+    # UTC (~9am ET): Wednesday for midweek injury reports, Saturday pre-Sunday.
+    # Thursday games are covered by a manual Refresh after the final report.
+    - cron: "0 14 * * 3"
+    - cron: "0 14 * * 6"
+  workflow_dispatch:
+    inputs:
+      season:
+        description: "Season (blank = auto-detect)"
+        required: false
+        type: string
+      week:
+        description: "Week (blank = auto-detect)"
+        required: false
+        type: string
+
+# Let an in-progress run finish rather than piling refreshes up.
+concurrency:
+  group: nfl-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # commit the regenerated data/
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build NFL data
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.season }}" ]; then ARGS="$ARGS --season ${{ inputs.season }}"; fi
+          if [ -n "${{ inputs.week }}" ]; then ARGS="$ARGS --week ${{ inputs.week }}"; fi
+          echo "Running: python nfl/pipeline.py $ARGS"
+          python nfl/pipeline.py $ARGS
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/nfl
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore(data): refresh NFL data [auto]"
+            git push
+          fi
