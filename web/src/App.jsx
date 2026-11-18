@@ -4,7 +4,7 @@ import Header from "./components/Header.jsx";
 import GameList from "./components/GameList.jsx";
 import GameTabs from "./components/GameTabs.jsx";
 import GameView from "./components/GameView.jsx";
-import PlayerModal from "./components/PlayerModal.jsx";
+import PlayerView from "./components/PlayerView.jsx";
 
 const ACTIONS_URL = "https://github.com/DiegoSuG29/sportsDataPicks/actions";
 
@@ -14,7 +14,7 @@ export default function App() {
   const [week, setWeek] = useState(null);
   const [gameFile, setGameFile] = useState(null); // null => list view
   const [game, setGame] = useState(null);
-  const [modal, setModal] = useState(null); // { game, team, player }
+  const [playerId, setPlayerId] = useState(null); // non-null => player page
   const [error, setError] = useState(null);
 
   // manifest on mount
@@ -37,6 +37,7 @@ export default function App() {
 
   // game detail when a game is selected
   useEffect(() => {
+    setPlayerId(null); // leaving/switching a game drops any open player page
     if (!gameFile) {
       setGame(null);
       return;
@@ -75,27 +76,22 @@ export default function App() {
               onSelect={setGameFile}
               onBack={() => setGameFile(null)}
             />
-            {game ? (
-              <GameView game={game} onPlayer={(team, player) => setModal({ game, team, player })} />
-            ) : (
+            {!game ? (
               <p className="empty">Loading game…</p>
+            ) : playerId ? (
+              <PlayerView
+                key={playerId}
+                game={game}
+                playerId={playerId}
+                onSelectPlayer={setPlayerId}
+                onBack={() => setPlayerId(null)}
+              />
+            ) : (
+              <GameView game={game} onPlayer={(team, player) => setPlayerId(player.player_id)} />
             )}
           </>
         )}
       </main>
-
-      {modal && (
-        <PlayerModal
-          game={modal.game}
-          team={modal.team}
-          player={modal.player}
-          onClose={() => setModal(null)}
-        />
-      )}
-
-      <footer className="foot">
-        <p>No betting sites or picks articles are used as inputs. Reference window: last season + current season only.</p>
-      </footer>
     </>
   );
 }

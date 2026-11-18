@@ -250,7 +250,9 @@
           "pass_yds_pg": 260.0,
           "pass_tds": 20,
           "rush_tds": 2,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "status": "TRADED",
+          "status_note": "No longer on LV \u2014 now with MIN. Stats shown are from their time with LV."
         },
         {
           "player_id": "00-0040894",
@@ -267,7 +269,9 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "status": "INACTIVE",
+          "status_note": "Inactive"
         },
         {
           "player_id": "00-0034365",
@@ -301,7 +305,9 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
         },
         {
           "player_id": "00-0037304",
@@ -521,7 +527,9 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 1,
-          "rec_tds": 1
+          "rec_tds": 1,
+          "status": "IR",
+          "status_note": "On injured reserve"
         },
         {
           "player_id": "00-0036613",
@@ -640,6 +648,25 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
+          "rec_tds": 0,
+          "status": "IR",
+          "status_note": "On injured reserve"
+        },
+        {
+          "player_id": "00-0036422",
+          "name": "Adam Trautman",
+          "position": "TE",
+          "games": 5,
+          "snap_pct": 0.513,
+          "target_share": 0.067,
+          "targets_pg": 2.0,
+          "receptions_pg": 1.2,
+          "rec_yds_pg": 11.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
           "rec_tds": 0
         },
         {
@@ -654,23 +681,6 @@
           "rec_yds_pg": 12.5,
           "carries_pg": 0.1,
           "rush_yds_pg": 0.6,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
-          "player_id": "00-0036422",
-          "name": "Adam Trautman",
-          "position": "TE",
-          "games": 5,
-          "snap_pct": 0.513,
-          "target_share": 0.067,
-          "targets_pg": 2.0,
-          "receptions_pg": 1.2,
-          "rec_yds_pg": 11.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
@@ -728,23 +738,6 @@
           "rec_tds": 0
         },
         {
-          "player_id": "00-0039703",
-          "name": "Cody Schrader",
-          "position": "RB",
-          "games": 2,
-          "snap_pct": 0.015,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0
-        },
-        {
           "player_id": "00-0041292",
           "name": "Kolbe Katsis",
           "position": "WR",
@@ -759,7 +752,28 @@
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 0
+          "rec_tds": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
+        },
+        {
+          "player_id": "00-0039703",
+          "name": "Cody Schrader",
+          "position": "RB",
+          "games": 2,
+          "snap_pct": 0.015,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
         }
       ],
       "injuries": [
@@ -852,6 +866,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "DEN",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -869,6 +884,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "DEN",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -886,6 +902,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -903,6 +920,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -920,6 +938,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "DEN",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -937,6 +956,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -954,6 +974,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -971,6 +992,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "DEN",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -988,6 +1010,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "DEN",
         "opponent": "LV",
         "home": true,
         "div_game": true,
@@ -1005,6 +1028,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -1022,6 +1046,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -1039,6 +1064,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -1056,6 +1082,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "DEN",
         "opponent": "GB",
         "home": true,
         "div_game": false,
@@ -1073,6 +1100,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -1090,6 +1118,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -1107,6 +1136,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "DEN",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -1124,6 +1154,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -1141,6 +1172,7 @@
       {
         "season": 2025,
         "week": 21,
+        "team": "DEN",
         "opponent": "NE",
         "home": true,
         "div_game": false,
@@ -1158,6 +1190,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -1175,6 +1208,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -1192,6 +1226,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -1209,6 +1244,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -1226,6 +1262,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -1243,6 +1280,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "DEN",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -1260,6 +1298,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -1277,6 +1316,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -1294,6 +1334,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -1313,6 +1354,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "DEN",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -1330,6 +1372,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "DEN",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -1347,6 +1390,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -1364,6 +1408,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -1381,6 +1426,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -1398,6 +1444,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "DEN",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -1415,6 +1462,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -1432,6 +1480,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -1449,6 +1498,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "DEN",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -1466,6 +1516,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "DEN",
         "opponent": "LV",
         "home": true,
         "div_game": true,
@@ -1483,6 +1534,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -1500,6 +1552,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -1517,6 +1570,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -1534,6 +1588,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "DEN",
         "opponent": "GB",
         "home": true,
         "div_game": false,
@@ -1551,6 +1606,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -1568,6 +1624,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -1585,6 +1642,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "DEN",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -1602,6 +1660,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -1619,6 +1678,7 @@
       {
         "season": 2025,
         "week": 21,
+        "team": "DEN",
         "opponent": "NE",
         "home": true,
         "div_game": false,
@@ -1636,6 +1696,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -1653,6 +1714,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -1670,6 +1732,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -1687,6 +1750,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -1704,6 +1768,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -1721,6 +1786,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "DEN",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -1738,6 +1804,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -1755,6 +1822,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -1772,6 +1840,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -1791,6 +1860,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "SEA",
         "opponent": "SF",
         "home": true,
         "div_game": true,
@@ -1808,6 +1878,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "SEA",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -1825,6 +1896,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "SEA",
         "opponent": "ARI",
         "home": true,
         "div_game": true,
@@ -1842,6 +1914,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "SEA",
         "opponent": "LA",
         "home": false,
         "div_game": true,
@@ -1859,6 +1932,7 @@
       {
         "season": 2025,
         "week": 12,
+        "team": "SEA",
         "opponent": "TEN",
         "home": false,
         "div_game": false,
@@ -1876,6 +1950,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "SEA",
         "opponent": "MIN",
         "home": true,
         "div_game": false,
@@ -1893,6 +1968,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "SEA",
         "opponent": "ATL",
         "home": false,
         "div_game": false,
@@ -1910,6 +1986,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "SEA",
         "opponent": "LA",
         "home": true,
         "div_game": true,
@@ -1927,6 +2004,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -1944,6 +2022,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -1961,6 +2040,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -1978,6 +2058,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -1995,6 +2076,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -2012,6 +2094,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -2029,6 +2112,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -2046,6 +2130,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -2065,6 +2150,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "DEN",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -2082,6 +2168,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "DEN",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -2099,6 +2186,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -2116,6 +2204,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -2133,6 +2222,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -2150,6 +2240,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "DEN",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -2167,6 +2258,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -2184,6 +2276,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -2201,6 +2294,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "DEN",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -2218,6 +2312,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "DEN",
         "opponent": "LV",
         "home": true,
         "div_game": true,
@@ -2235,6 +2330,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -2252,6 +2348,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -2269,6 +2366,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -2286,6 +2384,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -2303,6 +2402,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -2320,6 +2420,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "DEN",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -2337,6 +2438,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -2354,6 +2456,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -2371,6 +2474,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -2390,6 +2494,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "DEN",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -2407,6 +2512,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "DEN",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -2424,6 +2530,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -2441,6 +2548,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -2458,6 +2566,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -2475,6 +2584,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -2492,6 +2602,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "DEN",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -2509,6 +2620,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "DEN",
         "opponent": "LV",
         "home": true,
         "div_game": true,
@@ -2526,6 +2638,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -2543,6 +2656,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -2560,6 +2674,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -2577,6 +2692,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -2594,6 +2710,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -2611,6 +2728,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -2628,6 +2746,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -2645,6 +2764,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -2662,6 +2782,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -2679,6 +2800,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -2696,6 +2818,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -2715,6 +2838,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "MIA",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -2732,6 +2856,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "MIA",
         "opponent": "NE",
         "home": true,
         "div_game": true,
@@ -2749,6 +2874,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "MIA",
         "opponent": "BUF",
         "home": false,
         "div_game": true,
@@ -2766,6 +2892,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "MIA",
         "opponent": "NYJ",
         "home": true,
         "div_game": true,
@@ -2783,6 +2910,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "MIA",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -2800,6 +2928,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "MIA",
         "opponent": "LAC",
         "home": true,
         "div_game": false,
@@ -2817,6 +2946,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "MIA",
         "opponent": "CLE",
         "home": false,
         "div_game": false,
@@ -2834,6 +2964,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "MIA",
         "opponent": "ATL",
         "home": false,
         "div_game": false,
@@ -2851,6 +2982,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "MIA",
         "opponent": "BAL",
         "home": true,
         "div_game": false,
@@ -2868,6 +3000,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "MIA",
         "opponent": "BUF",
         "home": true,
         "div_game": true,
@@ -2885,6 +3018,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "MIA",
         "opponent": "WAS",
         "home": true,
         "div_game": false,
@@ -2902,6 +3036,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "MIA",
         "opponent": "NO",
         "home": true,
         "div_game": false,
@@ -2919,6 +3054,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "MIA",
         "opponent": "NYJ",
         "home": false,
         "div_game": true,
@@ -2936,6 +3072,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "MIA",
         "opponent": "PIT",
         "home": false,
         "div_game": false,
@@ -2953,6 +3090,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "MIA",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -2970,6 +3108,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "MIA",
         "opponent": "TB",
         "home": true,
         "div_game": false,
@@ -2987,6 +3126,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -3004,6 +3144,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -3021,6 +3162,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -3038,6 +3180,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -3055,6 +3198,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -3072,6 +3216,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "DEN",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -3089,6 +3234,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -3106,6 +3252,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -3123,6 +3270,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -3142,6 +3290,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "DEN",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -3159,6 +3308,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -3176,6 +3326,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -3193,6 +3344,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "DEN",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -3210,6 +3362,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -3227,6 +3380,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "DEN",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -3244,6 +3398,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "DEN",
         "opponent": "LV",
         "home": true,
         "div_game": true,
@@ -3261,6 +3416,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -3278,6 +3434,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -3295,6 +3452,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -3312,6 +3470,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "DEN",
         "opponent": "GB",
         "home": true,
         "div_game": false,
@@ -3329,6 +3488,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -3346,6 +3506,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "DEN",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -3363,6 +3524,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -3380,6 +3542,7 @@
       {
         "season": 2025,
         "week": 21,
+        "team": "DEN",
         "opponent": "NE",
         "home": true,
         "div_game": false,
@@ -3397,6 +3560,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -3414,6 +3578,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -3431,6 +3596,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -3448,6 +3614,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -3465,6 +3632,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "DEN",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -3482,6 +3650,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -3499,6 +3668,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -3516,6 +3686,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -3535,6 +3706,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "DEN",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -3552,6 +3724,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "DEN",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -3569,6 +3742,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -3586,6 +3760,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -3603,6 +3778,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -3620,6 +3796,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -3637,6 +3814,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -3654,6 +3832,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "DEN",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -3671,6 +3850,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "DEN",
         "opponent": "LV",
         "home": true,
         "div_game": true,
@@ -3688,6 +3868,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -3705,6 +3886,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -3722,6 +3904,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -3739,6 +3922,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "DEN",
         "opponent": "GB",
         "home": true,
         "div_game": false,
@@ -3756,6 +3940,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -3773,6 +3958,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -3790,6 +3976,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "DEN",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -3807,6 +3994,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -3824,6 +4012,7 @@
       {
         "season": 2025,
         "week": 21,
+        "team": "DEN",
         "opponent": "NE",
         "home": true,
         "div_game": false,
@@ -3841,6 +4030,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -3858,6 +4048,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -3875,6 +4066,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -3892,6 +4084,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -3909,6 +4102,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "DEN",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -3928,6 +4122,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "MIN",
         "opponent": "CHI",
         "home": false,
         "div_game": true,
@@ -3945,6 +4140,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "MIN",
         "opponent": "ATL",
         "home": true,
         "div_game": false,
@@ -3962,6 +4158,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "MIN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -3979,6 +4176,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "MIN",
         "opponent": "PIT",
         "home": false,
         "div_game": false,
@@ -3996,6 +4194,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "MIN",
         "opponent": "CLE",
         "home": false,
         "div_game": false,
@@ -4013,6 +4212,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "MIN",
         "opponent": "PHI",
         "home": true,
         "div_game": false,
@@ -4030,6 +4230,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "MIN",
         "opponent": "LAC",
         "home": false,
         "div_game": false,
@@ -4047,6 +4248,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "MIN",
         "opponent": "DET",
         "home": false,
         "div_game": true,
@@ -4064,6 +4266,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "MIN",
         "opponent": "BAL",
         "home": true,
         "div_game": false,
@@ -4081,6 +4284,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "MIN",
         "opponent": "CHI",
         "home": true,
         "div_game": true,
@@ -4098,6 +4302,7 @@
       {
         "season": 2025,
         "week": 12,
+        "team": "MIN",
         "opponent": "GB",
         "home": false,
         "div_game": true,
@@ -4115,6 +4320,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "MIN",
         "opponent": "SEA",
         "home": false,
         "div_game": false,
@@ -4132,6 +4338,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "MIN",
         "opponent": "WAS",
         "home": true,
         "div_game": false,
@@ -4149,6 +4356,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "MIN",
         "opponent": "DAL",
         "home": false,
         "div_game": false,
@@ -4166,6 +4374,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "MIN",
         "opponent": "NYG",
         "home": false,
         "div_game": false,
@@ -4183,6 +4392,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "MIN",
         "opponent": "DET",
         "home": true,
         "div_game": true,
@@ -4200,6 +4410,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "MIN",
         "opponent": "GB",
         "home": true,
         "div_game": true,
@@ -4217,6 +4428,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -4234,6 +4446,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -4251,6 +4464,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -4268,6 +4482,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -4285,6 +4500,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -4302,6 +4518,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "LV",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -4319,6 +4536,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "LV",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -4336,6 +4554,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -4355,6 +4574,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "PIT",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -4372,6 +4592,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "PIT",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -4389,6 +4610,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "PIT",
         "opponent": "MIN",
         "home": true,
         "div_game": false,
@@ -4406,6 +4628,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "PIT",
         "opponent": "CLE",
         "home": true,
         "div_game": true,
@@ -4423,6 +4646,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "PIT",
         "opponent": "CIN",
         "home": false,
         "div_game": true,
@@ -4440,6 +4664,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "PIT",
         "opponent": "GB",
         "home": true,
         "div_game": false,
@@ -4457,6 +4682,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "PIT",
         "opponent": "IND",
         "home": true,
         "div_game": false,
@@ -4474,6 +4700,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "PIT",
         "opponent": "LAC",
         "home": false,
         "div_game": false,
@@ -4491,6 +4718,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "PIT",
         "opponent": "CIN",
         "home": true,
         "div_game": true,
@@ -4508,6 +4736,7 @@
       {
         "season": 2025,
         "week": 12,
+        "team": "PIT",
         "opponent": "CHI",
         "home": false,
         "div_game": false,
@@ -4525,6 +4754,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "PIT",
         "opponent": "BAL",
         "home": false,
         "div_game": true,
@@ -4542,6 +4772,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "PIT",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -4559,6 +4790,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "PIT",
         "opponent": "CLE",
         "home": false,
         "div_game": true,
@@ -4576,6 +4808,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "PIT",
         "opponent": "BAL",
         "home": true,
         "div_game": true,
@@ -4593,6 +4826,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -4610,6 +4844,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -4627,6 +4862,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -4644,6 +4880,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -4661,6 +4898,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -4678,6 +4916,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -4695,6 +4934,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -4712,6 +4952,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "LV",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -4729,6 +4970,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -4748,6 +4990,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -4765,6 +5008,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -4782,6 +5026,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "LV",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -4799,6 +5044,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "LV",
         "opponent": "CHI",
         "home": true,
         "div_game": false,
@@ -4816,6 +5062,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "LV",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -4833,6 +5080,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "LV",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -4850,6 +5098,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "LV",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -4867,6 +5116,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "LV",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -4884,6 +5134,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "LV",
         "opponent": "DEN",
         "home": false,
         "div_game": true,
@@ -4901,6 +5152,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "LV",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -4918,6 +5170,7 @@
       {
         "season": 2025,
         "week": 12,
+        "team": "LV",
         "opponent": "CLE",
         "home": true,
         "div_game": false,
@@ -4935,6 +5188,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -4952,6 +5206,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "LV",
         "opponent": "DEN",
         "home": true,
         "div_game": true,
@@ -4969,6 +5224,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "LV",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -4986,6 +5242,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "LV",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -5003,6 +5260,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "LV",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -5020,6 +5278,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -5037,6 +5296,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -5054,6 +5314,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -5071,6 +5332,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -5088,6 +5350,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -5105,6 +5368,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -5122,6 +5386,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -5139,6 +5404,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -5156,6 +5422,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "LV",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -5173,6 +5440,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "LV",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -5190,6 +5458,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -5209,6 +5478,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "DEN",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -5226,6 +5496,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "DEN",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -5243,6 +5514,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -5260,6 +5532,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -5277,6 +5550,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -5294,6 +5568,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "DEN",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -5311,6 +5586,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -5328,6 +5604,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -5345,6 +5622,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -5362,6 +5640,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -5379,6 +5658,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -5396,6 +5676,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "DEN",
         "opponent": "GB",
         "home": true,
         "div_game": false,
@@ -5413,6 +5694,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -5430,6 +5712,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -5447,6 +5730,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "DEN",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -5464,6 +5748,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -5481,6 +5766,7 @@
       {
         "season": 2025,
         "week": 21,
+        "team": "DEN",
         "opponent": "NE",
         "home": true,
         "div_game": false,
@@ -5498,6 +5784,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -5515,6 +5802,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -5532,6 +5820,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -5549,6 +5838,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "DEN",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -5566,6 +5856,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -5583,6 +5874,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -5600,6 +5892,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -5619,6 +5912,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -5636,6 +5930,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -5653,6 +5948,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "LV",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -5670,6 +5966,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "LV",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -5687,6 +5984,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "LV",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -5704,6 +6002,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "LV",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -5721,6 +6020,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "LV",
         "opponent": "DEN",
         "home": false,
         "div_game": true,
@@ -5738,6 +6038,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "LV",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -5755,6 +6056,7 @@
       {
         "season": 2025,
         "week": 12,
+        "team": "LV",
         "opponent": "CLE",
         "home": true,
         "div_game": false,
@@ -5772,6 +6074,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "LV",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -5789,6 +6092,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "LV",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -5806,6 +6110,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "LV",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -5823,6 +6128,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -5840,6 +6146,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -5857,6 +6164,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -5874,6 +6182,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -5891,6 +6200,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -5908,6 +6218,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -5925,6 +6236,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -5942,6 +6254,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -5959,6 +6272,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "LV",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -5976,6 +6290,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "LV",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -5993,6 +6308,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -6012,6 +6328,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -6029,6 +6346,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -6046,6 +6364,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "LV",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -6063,6 +6382,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "LV",
         "opponent": "CHI",
         "home": true,
         "div_game": false,
@@ -6080,6 +6400,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "LV",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -6097,6 +6418,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "LV",
         "opponent": "DEN",
         "home": false,
         "div_game": true,
@@ -6114,6 +6436,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "LV",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -6131,6 +6454,7 @@
       {
         "season": 2025,
         "week": 12,
+        "team": "LV",
         "opponent": "CLE",
         "home": true,
         "div_game": false,
@@ -6148,6 +6472,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -6165,6 +6490,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "LV",
         "opponent": "DEN",
         "home": true,
         "div_game": true,
@@ -6182,6 +6508,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "LV",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -6199,6 +6526,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "LV",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -6216,6 +6544,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -6233,6 +6562,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -6250,6 +6580,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -6267,6 +6598,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -6284,6 +6616,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -6301,6 +6634,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "LV",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -6318,6 +6652,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "LV",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -6335,6 +6670,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -6354,6 +6690,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -6371,6 +6708,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -6388,6 +6726,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "LV",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -6405,6 +6744,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "LV",
         "opponent": "CHI",
         "home": true,
         "div_game": false,
@@ -6422,6 +6762,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "LV",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -6439,6 +6780,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "LV",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -6456,6 +6798,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "LV",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -6473,6 +6816,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "LV",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -6490,6 +6834,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "LV",
         "opponent": "DEN",
         "home": false,
         "div_game": true,
@@ -6507,6 +6852,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "LV",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -6524,6 +6870,7 @@
       {
         "season": 2025,
         "week": 12,
+        "team": "LV",
         "opponent": "CLE",
         "home": true,
         "div_game": false,
@@ -6541,6 +6888,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -6558,6 +6906,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "LV",
         "opponent": "DEN",
         "home": true,
         "div_game": true,
@@ -6575,6 +6924,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "LV",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -6592,6 +6942,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "LV",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -6609,6 +6960,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "LV",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -6626,6 +6978,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -6643,6 +6996,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -6660,6 +7014,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -6677,6 +7032,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -6694,6 +7050,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -6711,6 +7068,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -6728,6 +7086,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -6745,6 +7104,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -6762,6 +7122,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "LV",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -6779,6 +7140,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "LV",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -6796,6 +7158,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -6815,6 +7178,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "DEN",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -6832,6 +7196,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "DEN",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -6849,6 +7214,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -6866,6 +7232,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -6883,6 +7250,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -6900,6 +7268,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "DEN",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -6917,6 +7286,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -6934,6 +7304,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -6951,6 +7322,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "DEN",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -6968,6 +7340,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "DEN",
         "opponent": "LV",
         "home": true,
         "div_game": true,
@@ -6985,6 +7358,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -7002,6 +7376,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -7019,6 +7394,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -7036,6 +7412,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "DEN",
         "opponent": "GB",
         "home": true,
         "div_game": false,
@@ -7053,6 +7430,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -7070,6 +7448,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -7087,6 +7466,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "DEN",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -7104,6 +7484,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -7121,6 +7502,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -7138,6 +7520,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -7155,6 +7538,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -7172,6 +7556,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -7189,6 +7574,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -7206,6 +7592,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "DEN",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -7223,6 +7610,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -7240,6 +7628,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -7257,6 +7646,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -7276,6 +7666,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "DEN",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -7293,6 +7684,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "DEN",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -7310,6 +7702,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -7327,6 +7720,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -7344,6 +7738,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -7361,6 +7756,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "DEN",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -7378,6 +7774,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -7395,6 +7792,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -7412,6 +7810,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "DEN",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -7429,6 +7828,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "DEN",
         "opponent": "LV",
         "home": true,
         "div_game": true,
@@ -7446,6 +7846,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -7463,6 +7864,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -7480,6 +7882,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -7497,6 +7900,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "DEN",
         "opponent": "GB",
         "home": true,
         "div_game": false,
@@ -7514,6 +7918,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -7531,6 +7936,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -7548,6 +7954,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "DEN",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -7565,6 +7972,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -7582,6 +7990,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -7599,6 +8008,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -7616,6 +8026,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -7633,6 +8044,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "DEN",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -7650,6 +8062,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -7667,6 +8080,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -7684,6 +8098,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -7703,6 +8118,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -7720,6 +8136,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -7737,6 +8154,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "LV",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -7754,6 +8172,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "LV",
         "opponent": "CHI",
         "home": true,
         "div_game": false,
@@ -7771,6 +8190,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "LV",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -7788,6 +8208,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "LV",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -7805,6 +8226,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "LV",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -7822,6 +8244,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "LV",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -7839,6 +8262,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "LV",
         "opponent": "DEN",
         "home": false,
         "div_game": true,
@@ -7856,6 +8280,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "LV",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -7873,6 +8298,7 @@
       {
         "season": 2025,
         "week": 12,
+        "team": "LV",
         "opponent": "CLE",
         "home": true,
         "div_game": false,
@@ -7890,6 +8316,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -7907,6 +8334,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "LV",
         "opponent": "DEN",
         "home": true,
         "div_game": true,
@@ -7924,6 +8352,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "LV",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -7941,6 +8370,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "LV",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -7958,6 +8388,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "LV",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -7975,6 +8406,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -7992,6 +8424,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -8009,6 +8442,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -8026,6 +8460,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -8043,6 +8478,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -8060,6 +8496,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -8077,6 +8514,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -8094,6 +8532,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -8111,6 +8550,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "LV",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -8128,6 +8568,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "LV",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -8145,6 +8586,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -8164,6 +8606,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -8181,6 +8624,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "LV",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -8198,6 +8642,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "LV",
         "opponent": "CHI",
         "home": true,
         "div_game": false,
@@ -8215,6 +8660,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "LV",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -8232,6 +8678,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "LV",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -8249,6 +8696,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "LV",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -8266,6 +8714,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "LV",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -8283,6 +8732,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "LV",
         "opponent": "DEN",
         "home": false,
         "div_game": true,
@@ -8300,6 +8750,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "LV",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -8317,6 +8768,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -8334,6 +8786,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "LV",
         "opponent": "DEN",
         "home": true,
         "div_game": true,
@@ -8351,6 +8804,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "LV",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -8368,6 +8822,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "LV",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -8385,6 +8840,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -8402,6 +8858,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -8419,6 +8876,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -8436,6 +8894,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "LV",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -8453,6 +8912,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -8472,6 +8932,7 @@
       {
         "season": 2025,
         "week": 1,
+        "team": "DEN",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -8489,6 +8950,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "DEN",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -8506,6 +8968,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -8523,6 +8986,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -8540,6 +9004,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -8557,6 +9022,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "DEN",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -8574,6 +9040,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -8591,6 +9058,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -8608,6 +9076,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "DEN",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -8625,6 +9094,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "DEN",
         "opponent": "LV",
         "home": true,
         "div_game": true,
@@ -8642,6 +9112,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -8659,6 +9130,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -8676,6 +9148,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -8693,6 +9166,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "DEN",
         "opponent": "GB",
         "home": true,
         "div_game": false,
@@ -8710,6 +9184,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -8727,6 +9202,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -8744,6 +9220,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "DEN",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -8761,6 +9238,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -8778,6 +9256,7 @@
       {
         "season": 2025,
         "week": 21,
+        "team": "DEN",
         "opponent": "NE",
         "home": true,
         "div_game": false,
@@ -8795,6 +9274,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -8812,6 +9292,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -8829,6 +9310,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -8846,6 +9328,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -8863,6 +9346,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "DEN",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -8880,6 +9364,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -8899,6 +9384,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -8916,6 +9402,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "LV",
         "opponent": "CHI",
         "home": true,
         "div_game": false,
@@ -8933,6 +9420,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "LV",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -8950,6 +9438,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "LV",
         "opponent": "TEN",
         "home": true,
         "div_game": false,
@@ -8967,6 +9456,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "LV",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -8984,6 +9474,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "LV",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -9001,6 +9492,7 @@
       {
         "season": 2025,
         "week": 12,
+        "team": "LV",
         "opponent": "CLE",
         "home": true,
         "div_game": false,
@@ -9018,6 +9510,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -9035,6 +9528,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "LV",
         "opponent": "DEN",
         "home": true,
         "div_game": true,
@@ -9052,6 +9546,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -9069,6 +9564,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -9086,6 +9582,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -9103,6 +9600,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -9120,6 +9618,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -9139,6 +9638,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "SEA",
         "opponent": "PIT",
         "home": false,
         "div_game": false,
@@ -9156,6 +9656,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "SEA",
         "opponent": "NO",
         "home": true,
         "div_game": false,
@@ -9173,6 +9674,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "SEA",
         "opponent": "ARI",
         "home": false,
         "div_game": true,
@@ -9190,6 +9692,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "SEA",
         "opponent": "TB",
         "home": true,
         "div_game": false,
@@ -9207,6 +9710,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "SEA",
         "opponent": "JAX",
         "home": false,
         "div_game": false,
@@ -9224,6 +9728,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "SEA",
         "opponent": "HOU",
         "home": true,
         "div_game": false,
@@ -9241,6 +9746,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "SEA",
         "opponent": "LA",
         "home": true,
         "div_game": true,
@@ -9258,6 +9764,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "SEA",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -9275,6 +9782,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "SEA",
         "opponent": "SF",
         "home": true,
         "div_game": true,
@@ -9292,6 +9800,7 @@
       {
         "season": 2025,
         "week": 21,
+        "team": "SEA",
         "opponent": "LA",
         "home": true,
         "div_game": true,
@@ -9309,6 +9818,7 @@
       {
         "season": 2025,
         "week": 22,
+        "team": "SEA",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -9326,6 +9836,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -9343,6 +9854,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -9360,6 +9872,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -9377,6 +9890,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -9394,6 +9908,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -9411,6 +9926,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "LV",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -9428,6 +9944,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "LV",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -9445,6 +9962,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -9464,6 +9982,7 @@
       {
         "season": 2025,
         "week": 2,
+        "team": "DEN",
         "opponent": "IND",
         "home": false,
         "div_game": false,
@@ -9481,6 +10000,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -9498,6 +10018,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -9515,6 +10036,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "DEN",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -9532,6 +10054,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -9549,6 +10072,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -9566,6 +10090,7 @@
       {
         "season": 2025,
         "week": 9,
+        "team": "DEN",
         "opponent": "HOU",
         "home": false,
         "div_game": false,
@@ -9583,6 +10108,7 @@
       {
         "season": 2025,
         "week": 10,
+        "team": "DEN",
         "opponent": "LV",
         "home": true,
         "div_game": true,
@@ -9600,6 +10126,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -9617,6 +10144,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -9634,6 +10162,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -9651,6 +10180,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -9668,6 +10198,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "DEN",
         "opponent": "LAC",
         "home": true,
         "div_game": true,
@@ -9685,6 +10216,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -9702,6 +10234,7 @@
       {
         "season": 2025,
         "week": 21,
+        "team": "DEN",
         "opponent": "NE",
         "home": true,
         "div_game": false,
@@ -9719,6 +10252,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -9736,6 +10270,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -9753,6 +10288,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -9770,6 +10306,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "DEN",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -9787,6 +10324,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -9806,6 +10344,7 @@
       {
         "season": 2025,
         "week": 3,
+        "team": "ATL",
         "opponent": "CAR",
         "home": false,
         "div_game": true,
@@ -9823,6 +10362,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "ATL",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -9840,6 +10380,7 @@
       {
         "season": 2025,
         "week": 11,
+        "team": "ATL",
         "opponent": "CAR",
         "home": true,
         "div_game": true,
@@ -9857,6 +10398,7 @@
       {
         "season": 2025,
         "week": 12,
+        "team": "ATL",
         "opponent": "NO",
         "home": false,
         "div_game": true,
@@ -9874,6 +10416,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "ATL",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -9891,6 +10434,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "ATL",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -9908,6 +10452,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "ATL",
         "opponent": "TB",
         "home": false,
         "div_game": true,
@@ -9925,6 +10470,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "ATL",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -9942,6 +10488,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "ATL",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -9959,6 +10506,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "ATL",
         "opponent": "NO",
         "home": true,
         "div_game": true,
@@ -9976,6 +10524,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -9993,6 +10542,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -10010,6 +10560,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -10027,6 +10578,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -10044,6 +10596,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -10061,6 +10614,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -10078,6 +10632,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -10095,6 +10650,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "LV",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -10112,6 +10668,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "LV",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -10129,6 +10686,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "MIN",
         "opponent": "GB",
         "home": false,
         "div_game": true,
@@ -10148,6 +10706,7 @@
       {
         "season": 2025,
         "week": 4,
+        "team": "DEN",
         "opponent": "CIN",
         "home": true,
         "div_game": false,
@@ -10165,6 +10724,7 @@
       {
         "season": 2025,
         "week": 5,
+        "team": "DEN",
         "opponent": "PHI",
         "home": false,
         "div_game": false,
@@ -10182,6 +10742,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "DEN",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -10199,6 +10760,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "DEN",
         "opponent": "NYG",
         "home": true,
         "div_game": false,
@@ -10216,6 +10778,7 @@
       {
         "season": 2025,
         "week": 8,
+        "team": "DEN",
         "opponent": "DAL",
         "home": true,
         "div_game": false,
@@ -10233,6 +10796,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -10250,6 +10814,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -10267,6 +10832,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -10284,6 +10850,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -10301,6 +10868,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -10318,6 +10886,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -10335,6 +10904,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -10352,6 +10922,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -10371,6 +10942,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "NYG",
         "opponent": "PHI",
         "home": true,
         "div_game": true,
@@ -10388,6 +10960,7 @@
       {
         "season": 2025,
         "week": 7,
+        "team": "NYG",
         "opponent": "DEN",
         "home": false,
         "div_game": false,
@@ -10405,6 +10978,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "DEN",
         "opponent": "WAS",
         "home": false,
         "div_game": false,
@@ -10422,6 +10996,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "DEN",
         "opponent": "LV",
         "home": false,
         "div_game": true,
@@ -10439,6 +11014,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "DEN",
         "opponent": "GB",
         "home": true,
         "div_game": false,
@@ -10456,6 +11032,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -10473,6 +11050,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -10490,6 +11068,7 @@
       {
         "season": 2025,
         "week": 20,
+        "team": "DEN",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -10507,6 +11086,7 @@
       {
         "season": 2025,
         "week": 21,
+        "team": "DEN",
         "opponent": "NE",
         "home": true,
         "div_game": false,
@@ -10524,6 +11104,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -10541,6 +11122,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "DEN",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -10558,6 +11140,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -10575,6 +11158,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -10594,6 +11178,7 @@
       {
         "season": 2025,
         "week": 6,
+        "team": "ATL",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -10611,6 +11196,7 @@
       {
         "season": 2025,
         "week": 13,
+        "team": "ATL",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -10628,6 +11214,7 @@
       {
         "season": 2025,
         "week": 14,
+        "team": "ATL",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -10645,6 +11232,7 @@
       {
         "season": 2025,
         "week": 15,
+        "team": "ATL",
         "opponent": "TB",
         "home": false,
         "div_game": true,
@@ -10662,6 +11250,7 @@
       {
         "season": 2025,
         "week": 16,
+        "team": "ATL",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -10679,6 +11268,7 @@
       {
         "season": 2025,
         "week": 17,
+        "team": "ATL",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -10696,6 +11286,7 @@
       {
         "season": 2025,
         "week": 18,
+        "team": "ATL",
         "opponent": "NO",
         "home": true,
         "div_game": true,
@@ -10713,6 +11304,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -10732,6 +11324,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -10749,6 +11342,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -10766,6 +11360,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -10783,6 +11378,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -10800,6 +11396,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -10817,6 +11414,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -10834,6 +11432,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -10851,6 +11450,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "LV",
         "opponent": "NYJ",
         "home": false,
         "div_game": false,
@@ -10868,6 +11468,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "LV",
         "opponent": "SF",
         "home": false,
         "div_game": false,
@@ -10885,6 +11486,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -10904,6 +11506,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "LV",
         "opponent": "MIA",
         "home": true,
         "div_game": false,
@@ -10921,6 +11524,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "LV",
         "opponent": "LAC",
         "home": false,
         "div_game": true,
@@ -10938,6 +11542,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "LV",
         "opponent": "NO",
         "home": false,
         "div_game": false,
@@ -10955,6 +11560,7 @@
       {
         "season": 2026,
         "week": 4,
+        "team": "LV",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -10972,6 +11578,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -10989,6 +11596,7 @@
       {
         "season": 2026,
         "week": 6,
+        "team": "LV",
         "opponent": "BUF",
         "home": true,
         "div_game": false,
@@ -11006,6 +11614,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "LV",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -11025,6 +11634,7 @@
       {
         "season": 2026,
         "week": 1,
+        "team": "DEN",
         "opponent": "KC",
         "home": false,
         "div_game": true,
@@ -11042,6 +11652,7 @@
       {
         "season": 2026,
         "week": 2,
+        "team": "DEN",
         "opponent": "JAX",
         "home": true,
         "div_game": false,
@@ -11059,6 +11670,7 @@
       {
         "season": 2026,
         "week": 7,
+        "team": "DEN",
         "opponent": "ARI",
         "home": false,
         "div_game": false,
@@ -11076,6 +11688,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -11093,6 +11706,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,
@@ -11112,6 +11726,7 @@
       {
         "season": 2026,
         "week": 3,
+        "team": "DEN",
         "opponent": "LA",
         "home": true,
         "div_game": false,
@@ -11131,6 +11746,7 @@
       {
         "season": 2026,
         "week": 5,
+        "team": "LV",
         "opponent": "NE",
         "home": false,
         "div_game": false,
@@ -11148,6 +11764,7 @@
       {
         "season": 2026,
         "week": 10,
+        "team": "LV",
         "opponent": "SEA",
         "home": true,
         "div_game": false,
@@ -11167,6 +11784,7 @@
       {
         "season": 2026,
         "week": 8,
+        "team": "DEN",
         "opponent": "KC",
         "home": true,
         "div_game": true,
@@ -11184,6 +11802,7 @@
       {
         "season": 2026,
         "week": 9,
+        "team": "DEN",
         "opponent": "CAR",
         "home": false,
         "div_game": false,

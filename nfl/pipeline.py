@@ -288,6 +288,70 @@ def team_injuries(injuries: pl.DataFrame, usage: list[dict], team: str,
     return out
 
 
+# nflverse weekly-roster status → a short "special circumstance" note.
+# Keyed first by status_description_abbr (most specific), then by status.
+_ROSTER_ABBR_NOTES = {
+    "R01": ("IR", "On injured reserve"),
+    "R48": ("IR", "Injured reserve (designated to return)"),
+    "R40": ("PUP", "Physically unable to perform"),
+    "R04": ("DNR", "Reserve — did not report"),
+    "R05": ("NFI", "Reserve — non-football injury"),
+    "I01": ("INACTIVE", "Inactive"),
+    "I02": ("INACTIVE", "Inactive"),
+    "W03": ("RELEASED", "Released / waived"),
+    "E02": ("SUSP", "Exempt / suspended"),
+}
+_ROSTER_STATUS_NOTES = {
+    "RES": ("RESERVE", "On a reserve list"),
+    "DEV": ("PRACTICE SQ", "On the practice squad"),
+    "INA": ("INACTIVE", "Inactive"),
+    "RET": ("RETIRED", "Retired"),
+    "CUT": ("RELEASED", "Released / waived"),
+    "EXE": ("SUSP", "Exempt / suspended"),
+    "TRD": ("TRADED", "Recently traded"),
+    "TRC": ("TRADED", "Recently traded"),
+    "TRT": ("TRADED", "Recently traded"),
+}
+
+
+def _roster_note(status, abbr):
+    """Return (code, long_note) for a non-active status, else None."""
+    if abbr in _ROSTER_ABBR_NOTES:
+        return _ROSTER_ABBR_NOTES[abbr]
+    if status in _ROSTER_STATUS_NOTES:
+        return _ROSTER_STATUS_NOTES[status]
+    return None  # ACT / unknown → no special circumstance
+
+
+def roster_info_map(rosters: pl.DataFrame, season: int, week: int) -> dict:
+    """gsis_id -> {team, as_of_week, [code, note]} from the latest available week.
+
+    ``team`` is the player's current club (used to flag trades: a player who
+    appears in a team's usage but whose current club differs has moved on).
+    ``code``/``note`` are present only for a non-active status (IR/PUP/…).
+    """
+    if rosters is None or not rosters.height:
+        return {}
+    r = rosters.filter(pl.col("season") == season)
+    if not r.height:
+        return {}
+    avail = week if r.filter(pl.col("week") == week).height else int(
+        r.select(pl.col("week").max()).item()
+    )
+    r = r.filter(pl.col("week") == avail)
+    out: dict[str, dict] = {}
+    for row in r.iter_rows(named=True):
+        gid = row.get("gsis_id")
+        if not gid:
+            continue
+        info = {"team": row.get("team"), "as_of_week": avail}
+        note = _roster_note(row.get("status"), row.get("status_description_abbr"))
+        if note:
+            info["code"], info["note"] = note
+        out[gid] = info
+    return out
+
+
 def player_logs(player_stats: pl.DataFrame, schedules: pl.DataFrame,
                 player_ids: list[str]) -> dict:
     """Per-game logs (reference window) for prop-checker filtering in the browser."""
@@ -307,6 +371,7 @@ def player_logs(player_stats: pl.DataFrame, schedules: pl.DataFrame,
             {
                 "season": r["season"],
                 "week": r["week"],
+                "team": r["team"],
                 "opponent": r["opponent_team"],
                 "home": is_home,
                 "div_game": div,
@@ -397,6 +462,12 @@ def build_week(season: int, week: int) -> dict:
     except Exception as e:  # pragma: no cover
         print(f"  injuries unavailable: {e}")
         injuries = None
+    try:
+        rosters = nfl.load_rosters_weekly([season])
+    except Exception as e:  # pragma: no cover
+        print(f"  rosters unavailable: {e}")
+        rosters = None
+    roster_map = roster_info_map(rosters, season, week)
 
     stats_max_week = int(
         player_stats.filter(pl.col("season") == season).select(pl.col("week").max()).item()
@@ -440,6 +511,20 @@ def build_week(season: int, week: int) -> dict:
         teams = {}
         for t in (away, home):
             usage = team_usage(player_stats, snaps, t, season, week)
+            for p in usage:  # attach any special roster circumstance (IR/PUP/traded/…)
+                rs = roster_map.get(p["player_id"])
+                if not rs:
+                    continue
+                cur = rs.get("team")
+                if cur and cur != t:  # on another club now → traded/moved away
+                    p["status"] = "TRADED"
+                    p["status_note"] = (
+                        f"No longer on {t} — now with {cur}. "
+                        f"Stats shown are from their time with {t}."
+                    )
+                elif rs.get("code"):
+                    p["status"] = rs["code"]
+                    p["status_note"] = rs["note"]
             form = team_form(schedules, t, season, week)
             teams[t] = {
                 "form": form,
