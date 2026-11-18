@@ -95,7 +95,9 @@
           "carries_pg": 12.7,
           "rush_yds_pg": 44.7,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0037263",
@@ -110,7 +112,9 @@
           "carries_pg": 9.4,
           "rush_yds_pg": 38.3,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 2,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0038559",
@@ -125,7 +129,9 @@
           "carries_pg": 0.3,
           "rush_yds_pg": 3.1,
           "pass_yds_pg": 0.8,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0037744",
@@ -140,7 +146,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 5
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 5
         },
         {
           "player_id": "00-0037157",
@@ -155,7 +163,9 @@
           "carries_pg": 5.5,
           "rush_yds_pg": 31.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0033307",
@@ -170,7 +180,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0033119",
@@ -185,7 +197,9 @@
           "carries_pg": 3.6,
           "rush_yds_pg": 10.9,
           "pass_yds_pg": 214.9,
-          "total_tds": 11
+          "pass_tds": 10,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0041070",
@@ -200,7 +214,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039849",
@@ -215,7 +231,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0038640",
@@ -230,7 +248,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039041",
@@ -245,7 +265,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0037277",
@@ -260,37 +282,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
-        },
-        {
-          "player_id": "00-0041561",
-          "name": "Carson Beck",
-          "position": "QB",
-          "games": 1,
-          "snap_pct": 1.0,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 1.0,
-          "rush_yds_pg": 1.0,
-          "pass_yds_pg": 108.0,
-          "total_tds": 0
-        },
-        {
-          "player_id": "00-0041368",
-          "name": "Harrison Wallace III",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.09,
-          "target_share": 0.056,
-          "targets_pg": 1.0,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 9.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0038397",
@@ -305,7 +299,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0033891",
@@ -320,7 +316,43 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0041561",
+          "name": "Carson Beck",
+          "position": "QB",
+          "games": 1,
+          "snap_pct": 1.0,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 1.0,
+          "rush_yds_pg": 1.0,
+          "pass_yds_pg": 108.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0041368",
+          "name": "Harrison Wallace III",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.09,
+          "target_share": 0.056,
+          "targets_pg": 1.0,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 9.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037004",
@@ -335,7 +367,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036331",
@@ -350,7 +384,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0035289",
@@ -365,7 +401,9 @@
           "carries_pg": 0.5,
           "rush_yds_pg": 2.0,
           "pass_yds_pg": 177.0,
-          "total_tds": 3
+          "pass_tds": 3,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036646",
@@ -380,7 +418,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036510",
@@ -395,7 +435,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [
@@ -618,7 +660,9 @@
           "carries_pg": 19.9,
           "rush_yds_pg": 109.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 11
+          "pass_tds": 0,
+          "rush_tds": 7,
+          "rec_tds": 4
         },
         {
           "player_id": "00-0041013",
@@ -633,7 +677,9 @@
           "carries_pg": 5.3,
           "rush_yds_pg": 23.6,
           "pass_yds_pg": 0.0,
-          "total_tds": 4
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0039067",
@@ -648,7 +694,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0030506",
@@ -663,7 +711,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": 0.1,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0039894",
@@ -678,7 +728,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0038997",
@@ -693,7 +745,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0038104",
@@ -708,7 +762,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0033873",
@@ -723,7 +779,9 @@
           "carries_pg": 2.8,
           "rush_yds_pg": 11.1,
           "pass_yds_pg": 265.0,
-          "total_tds": 20
+          "pass_tds": 19,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036637",
@@ -738,22 +796,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
-        },
-        {
-          "player_id": "00-0040890",
-          "name": "Cyrus Allen",
-          "position": "WR",
-          "games": 7,
-          "snap_pct": 0.188,
-          "target_share": 0.063,
-          "targets_pg": 2.0,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 15.6,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040547",
@@ -768,7 +813,26 @@
           "carries_pg": 2.0,
           "rush_yds_pg": 6.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0040890",
+          "name": "Cyrus Allen",
+          "position": "WR",
+          "games": 7,
+          "snap_pct": 0.188,
+          "target_share": 0.063,
+          "targets_pg": 2.0,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 15.6,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040646",
@@ -783,22 +847,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
-        },
-        {
-          "player_id": "00-0040959",
-          "name": "Jaydn Ott",
-          "position": "RB",
-          "games": 2,
-          "snap_pct": 0.02,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 1.5,
-          "rush_yds_pg": 9.5,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0036945",
@@ -813,7 +864,26 @@
           "carries_pg": 1.5,
           "rush_yds_pg": -0.5,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0040959",
+          "name": "Jaydn Ott",
+          "position": "RB",
+          "games": 2,
+          "snap_pct": 0.02,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 1.5,
+          "rush_yds_pg": 9.5,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040081",
@@ -828,22 +898,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
-          "player_id": "00-0034386",
-          "name": "Justin Watson",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.055,
-          "target_share": 0.031,
-          "targets_pg": 1.0,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 7.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040298",
@@ -858,7 +915,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
+        },
+        {
+          "player_id": "00-0034386",
+          "name": "Justin Watson",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.055,
+          "target_share": 0.031,
+          "targets_pg": 1.0,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 7.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040078",
@@ -873,7 +949,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040967",
@@ -888,22 +966,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
-          "player_id": "00-0038489",
-          "name": "Ben VanSumeren",
-          "position": "RB",
-          "games": 2,
-          "snap_pct": 0.012,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0038519",
@@ -918,7 +983,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0038489",
+          "name": "Ben VanSumeren",
+          "position": "RB",
+          "games": 2,
+          "snap_pct": 0.012,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [

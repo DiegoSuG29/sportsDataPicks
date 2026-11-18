@@ -95,7 +95,9 @@
           "carries_pg": 12.3,
           "rush_yds_pg": 38.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 4
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0039338",
@@ -110,7 +112,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": 0.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 6
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 6
         },
         {
           "player_id": "00-0040878",
@@ -125,7 +129,9 @@
           "carries_pg": 7.9,
           "rush_yds_pg": 29.8,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0038563",
@@ -140,7 +146,9 @@
           "carries_pg": 0.2,
           "rush_yds_pg": -0.6,
           "pass_yds_pg": 0.0,
-          "total_tds": 4
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 4
         },
         {
           "player_id": "00-0039066",
@@ -155,7 +163,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": 0.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0037291",
@@ -170,7 +180,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040729",
@@ -185,7 +197,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0041562",
@@ -200,7 +214,9 @@
           "carries_pg": 3.5,
           "rush_yds_pg": 12.5,
           "pass_yds_pg": 95.5,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0035891",
@@ -215,7 +231,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0029604",
@@ -230,7 +248,9 @@
           "carries_pg": 2.4,
           "rush_yds_pg": 0.8,
           "pass_yds_pg": 260.0,
-          "total_tds": 22
+          "pass_tds": 20,
+          "rush_tds": 2,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040894",
@@ -245,7 +265,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": -1.1,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0034365",
@@ -260,7 +282,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0037487",
@@ -275,7 +299,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037304",
@@ -290,7 +316,9 @@
           "carries_pg": 0.6,
           "rush_yds_pg": -0.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039407",
@@ -305,7 +333,9 @@
           "carries_pg": 0.5,
           "rush_yds_pg": 0.9,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037093",
@@ -320,7 +350,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [
@@ -453,7 +485,9 @@
           "carries_pg": 9.4,
           "rush_yds_pg": 38.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 3,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036158",
@@ -468,7 +502,9 @@
           "carries_pg": 10.9,
           "rush_yds_pg": 36.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 3,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040730",
@@ -483,7 +519,9 @@
           "carries_pg": 4.0,
           "rush_yds_pg": 14.5,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0036613",
@@ -498,7 +536,9 @@
           "carries_pg": 0.2,
           "rush_yds_pg": 2.6,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0034348",
@@ -513,7 +553,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0039732",
@@ -528,7 +570,9 @@
           "carries_pg": 4.1,
           "rush_yds_pg": 12.9,
           "pass_yds_pg": 192.2,
-          "total_tds": 13
+          "pass_tds": 11,
+          "rush_tds": 2,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040134",
@@ -543,7 +587,9 @@
           "carries_pg": 0.2,
           "rush_yds_pg": 3.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0033881",
@@ -558,7 +604,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0038976",
@@ -573,7 +621,9 @@
           "carries_pg": 0.7,
           "rush_yds_pg": 4.3,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037085",
@@ -588,7 +638,9 @@
           "carries_pg": 1.2,
           "rush_yds_pg": 4.4,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039868",
@@ -603,7 +655,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": 0.6,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036422",
@@ -618,7 +672,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0038783",
@@ -633,7 +689,9 @@
           "carries_pg": 0.2,
           "rush_yds_pg": 1.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0035406",
@@ -648,7 +706,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036727",
@@ -663,22 +723,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": 0.4,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
-          "player_id": "00-0041292",
-          "name": "Kolbe Katsis",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.0,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039703",
@@ -693,7 +740,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0041292",
+          "name": "Kolbe Katsis",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.0,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [

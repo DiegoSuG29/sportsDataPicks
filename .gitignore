@@ -9,6 +9,10 @@ __pycache__/
 .cache/
 nflreadpy_cache/
 
+# Node / Vite (web/)
+node_modules/
+web/dist/
+
 # OS / editor
 .DS_Store
 Thumbs.db

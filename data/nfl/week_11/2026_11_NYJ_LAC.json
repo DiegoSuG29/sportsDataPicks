@@ -95,7 +95,9 @@
           "carries_pg": 15.4,
           "rush_yds_pg": 53.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039794",
@@ -110,7 +112,9 @@
           "carries_pg": 12.8,
           "rush_yds_pg": 63.8,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 3,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037740",
@@ -125,7 +129,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0039890",
@@ -140,7 +146,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0041511",
@@ -155,7 +163,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0040736",
@@ -170,7 +180,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0041032",
@@ -185,7 +197,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": 0.3,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0033375",
@@ -200,7 +214,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0041056",
@@ -215,7 +231,9 @@
           "carries_pg": 3.0,
           "rush_yds_pg": 26.0,
           "pass_yds_pg": 137.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039451",
@@ -230,22 +248,9 @@
           "carries_pg": 0.4,
           "rush_yds_pg": 2.5,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
-        },
-        {
-          "player_id": "00-0039798",
-          "name": "Isaiah Davis",
-          "position": "RB",
-          "games": 9,
-          "snap_pct": 0.072,
-          "target_share": 0.023,
-          "targets_pg": 0.7,
-          "receptions_pg": 0.6,
-          "rec_yds_pg": 7.6,
-          "carries_pg": 1.7,
-          "rush_yds_pg": 4.9,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0030565",
@@ -260,7 +265,26 @@
           "carries_pg": 2.4,
           "rush_yds_pg": 5.4,
           "pass_yds_pg": 222.6,
-          "total_tds": 12
+          "pass_tds": 12,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0039798",
+          "name": "Isaiah Davis",
+          "position": "RB",
+          "games": 9,
+          "snap_pct": 0.072,
+          "target_share": 0.023,
+          "targets_pg": 0.7,
+          "receptions_pg": 0.6,
+          "rec_yds_pg": 7.6,
+          "carries_pg": 1.7,
+          "rush_yds_pg": 4.9,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037805",
@@ -275,7 +299,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0032385",
@@ -290,7 +316,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037755",
@@ -305,7 +333,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040582",
@@ -320,7 +350,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0034959",
@@ -335,7 +367,9 @@
           "carries_pg": 0.4,
           "rush_yds_pg": 0.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036842",
@@ -350,7 +384,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040405",
@@ -365,7 +401,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0041267",
@@ -380,7 +418,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [
@@ -549,7 +589,9 @@
           "carries_pg": 13.8,
           "rush_yds_pg": 52.7,
           "pass_yds_pg": 0.0,
-          "total_tds": 4
+          "pass_tds": 0,
+          "rush_tds": 4,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0038454",
@@ -564,7 +606,9 @@
           "carries_pg": 5.4,
           "rush_yds_pg": 20.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0039391",
@@ -579,7 +623,9 @@
           "carries_pg": 4.8,
           "rush_yds_pg": 20.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040727",
@@ -594,7 +640,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036355",
@@ -609,22 +657,9 @@
           "carries_pg": 4.6,
           "rush_yds_pg": 26.8,
           "pass_yds_pg": 191.1,
-          "total_tds": 7
-        },
-        {
-          "player_id": "00-0040184",
-          "name": "KeAndre Lambert-Smith",
-          "position": "WR",
-          "games": 3,
-          "snap_pct": 0.296,
-          "target_share": 0.128,
-          "targets_pg": 4.3,
-          "receptions_pg": 2.0,
-          "rec_yds_pg": 27.3,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 6,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0038544",
@@ -639,22 +674,26 @@
           "carries_pg": 0.4,
           "rush_yds_pg": 1.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
-          "player_id": "00-0033885",
-          "name": "David Njoku",
-          "position": "TE",
-          "games": 2,
-          "snap_pct": 0.347,
-          "target_share": 0.15,
-          "targets_pg": 4.0,
-          "receptions_pg": 3.0,
-          "rec_yds_pg": 33.5,
+          "player_id": "00-0040184",
+          "name": "KeAndre Lambert-Smith",
+          "position": "WR",
+          "games": 3,
+          "snap_pct": 0.296,
+          "target_share": 0.128,
+          "targets_pg": 4.3,
+          "receptions_pg": 2.0,
+          "rec_yds_pg": 27.3,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039915",
@@ -669,7 +708,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
+        },
+        {
+          "player_id": "00-0033885",
+          "name": "David Njoku",
+          "position": "TE",
+          "games": 2,
+          "snap_pct": 0.347,
+          "target_share": 0.15,
+          "targets_pg": 4.0,
+          "receptions_pg": 3.0,
+          "rec_yds_pg": 33.5,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0038046",
@@ -684,7 +742,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": 0.4,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040189",
@@ -699,7 +759,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": 0.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0041550",
@@ -714,7 +776,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040311",
@@ -729,7 +793,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0034272",
@@ -744,7 +810,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0035125",
@@ -759,7 +827,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0038573",
@@ -774,7 +844,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": 0.4,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0039489",
@@ -789,22 +861,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
-        },
-        {
-          "player_id": "00-0040464",
-          "name": "DJ Uiagalelei",
-          "position": "QB",
-          "games": 1,
-          "snap_pct": 0.21,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 24.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040331",
@@ -819,7 +878,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0040464",
+          "name": "DJ Uiagalelei",
+          "position": "QB",
+          "games": 1,
+          "snap_pct": 0.21,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 24.0,
+          "pass_tds": 1,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0038614",
@@ -834,7 +912,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [

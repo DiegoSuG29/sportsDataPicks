@@ -95,7 +95,9 @@
           "carries_pg": 12.6,
           "rush_yds_pg": 49.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0036900",
@@ -110,7 +112,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 7
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 7
         },
         {
           "player_id": "00-0036410",
@@ -125,7 +129,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 6
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 6
         },
         {
           "player_id": "00-0033526",
@@ -140,7 +146,9 @@
           "carries_pg": 5.8,
           "rush_yds_pg": 21.4,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 2,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0034829",
@@ -155,7 +163,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 6
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 6
         },
         {
           "player_id": "00-0040785",
@@ -170,22 +180,9 @@
           "carries_pg": 0.2,
           "rush_yds_pg": 2.9,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
-        },
-        {
-          "player_id": "00-0039814",
-          "name": "Erick All",
-          "position": "TE",
-          "games": 3,
-          "snap_pct": 0.317,
-          "target_share": 0.1,
-          "targets_pg": 3.0,
-          "receptions_pg": 2.7,
-          "rec_yds_pg": 18.7,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0038839",
@@ -200,7 +197,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0039814",
+          "name": "Erick All",
+          "position": "TE",
+          "games": 3,
+          "snap_pct": 0.317,
+          "target_share": 0.1,
+          "targets_pg": 3.0,
+          "receptions_pg": 2.7,
+          "rec_yds_pg": 18.7,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036442",
@@ -215,7 +231,9 @@
           "carries_pg": 2.7,
           "rush_yds_pg": 9.4,
           "pass_yds_pg": 310.6,
-          "total_tds": 30
+          "pass_tds": 27,
+          "rush_tds": 3,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0035631",
@@ -230,7 +248,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0038619",
@@ -245,7 +265,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0034613",
@@ -260,7 +282,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0041116",
@@ -275,7 +299,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0041069",
@@ -290,7 +316,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040208",
@@ -305,7 +333,9 @@
           "carries_pg": 0.9,
           "rush_yds_pg": 2.6,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040534",
@@ -320,7 +350,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [
@@ -489,7 +521,9 @@
           "carries_pg": 13.4,
           "rush_yds_pg": 47.8,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 2,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037256",
@@ -504,7 +538,9 @@
           "carries_pg": 8.1,
           "rush_yds_pg": 34.4,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0033699",
@@ -519,7 +555,9 @@
           "carries_pg": 5.5,
           "rush_yds_pg": 18.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0031588",
@@ -534,7 +572,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 6
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 6
         },
         {
           "player_id": "00-0039910",
@@ -549,7 +589,9 @@
           "carries_pg": 6.0,
           "rush_yds_pg": 40.0,
           "pass_yds_pg": 214.1,
-          "total_tds": 12
+          "pass_tds": 10,
+          "rush_tds": 2,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037809",
@@ -564,7 +606,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0033955",
@@ -579,7 +623,9 @@
           "carries_pg": 5.0,
           "rush_yds_pg": 17.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0035659",
@@ -594,7 +640,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0041040",
@@ -609,22 +657,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
-        },
-        {
-          "player_id": "00-0041096",
-          "name": "Kaytron Allen",
-          "position": "RB",
-          "games": 3,
-          "snap_pct": 0.092,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 4.0,
-          "rush_yds_pg": 13.7,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0036415",
@@ -639,7 +674,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
+        },
+        {
+          "player_id": "00-0041096",
+          "name": "Kaytron Allen",
+          "position": "RB",
+          "games": 3,
+          "snap_pct": 0.092,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 4.0,
+          "rush_yds_pg": 13.7,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037742",
@@ -654,7 +708,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0041117",
@@ -669,7 +725,9 @@
           "carries_pg": 3.0,
           "rush_yds_pg": 16.0,
           "pass_yds_pg": 186.0,
-          "total_tds": 1
+          "pass_tds": 1,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0032268",
@@ -684,7 +742,9 @@
           "carries_pg": 2.3,
           "rush_yds_pg": 16.3,
           "pass_yds_pg": 113.3,
-          "total_tds": 4
+          "pass_tds": 4,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036626",
@@ -699,22 +759,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
-          "player_id": "00-0041178",
-          "name": "Robert Henry Jr.",
-          "position": "RB",
-          "games": 1,
-          "snap_pct": 0.04,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 2.0,
-          "rush_yds_pg": 4.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0035567",
@@ -729,7 +776,26 @@
           "carries_pg": 2.0,
           "rush_yds_pg": 4.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0041178",
+          "name": "Robert Henry Jr.",
+          "position": "RB",
+          "games": 1,
+          "snap_pct": 0.04,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 2.0,
+          "rush_yds_pg": 4.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039912",
@@ -744,22 +810,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
-        },
-        {
-          "player_id": "00-0041176",
-          "name": "Jaden Bradley",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.27,
-          "target_share": 0.029,
-          "targets_pg": 1.0,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 12.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0036628",
@@ -774,7 +827,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0041176",
+          "name": "Jaden Bradley",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.27,
+          "target_share": 0.029,
+          "targets_pg": 1.0,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 12.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039686",
@@ -789,7 +861,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040164",
@@ -804,7 +878,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039355",
@@ -819,7 +895,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [

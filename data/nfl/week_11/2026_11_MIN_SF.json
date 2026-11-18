@@ -95,7 +95,9 @@
           "carries_pg": 14.0,
           "rush_yds_pg": 57.9,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 3,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037525",
@@ -110,7 +112,9 @@
           "carries_pg": 12.0,
           "rush_yds_pg": 48.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036322",
@@ -125,7 +129,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": -1.4,
           "pass_yds_pg": 0.0,
-          "total_tds": 4
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 4
         },
         {
           "player_id": "00-0035229",
@@ -140,7 +146,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0038994",
@@ -155,7 +163,9 @@
           "carries_pg": 0.3,
           "rush_yds_pg": 0.3,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0035228",
@@ -170,7 +180,9 @@
           "carries_pg": 4.8,
           "rush_yds_pg": 27.8,
           "pass_yds_pg": 170.3,
-          "total_tds": 5
+          "pass_tds": 5,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0029604",
@@ -185,22 +197,9 @@
           "carries_pg": 3.0,
           "rush_yds_pg": 11.0,
           "pass_yds_pg": 207.0,
-          "total_tds": 2
-        },
-        {
-          "player_id": "00-0040215",
-          "name": "Gavin Bartholomew",
-          "position": "TE",
-          "games": 4,
-          "snap_pct": 0.218,
-          "target_share": 0.103,
-          "targets_pg": 3.0,
-          "receptions_pg": 2.5,
-          "rec_yds_pg": 22.5,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 2,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0032950",
@@ -215,7 +214,26 @@
           "carries_pg": 3.0,
           "rush_yds_pg": 1.7,
           "pass_yds_pg": 119.0,
-          "total_tds": 3
+          "pass_tds": 3,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0040215",
+          "name": "Gavin Bartholomew",
+          "position": "TE",
+          "games": 4,
+          "snap_pct": 0.218,
+          "target_share": 0.103,
+          "targets_pg": 3.0,
+          "receptions_pg": 2.5,
+          "rec_yds_pg": 22.5,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040154",
@@ -230,7 +248,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0041104",
@@ -245,7 +265,9 @@
           "carries_pg": 1.5,
           "rush_yds_pg": 3.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040506",
@@ -260,22 +282,9 @@
           "carries_pg": 0.2,
           "rush_yds_pg": 1.6,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
-        },
-        {
-          "player_id": "00-0036259",
-          "name": "Jauan Jennings",
-          "position": "WR",
-          "games": 6,
-          "snap_pct": 0.672,
-          "target_share": 0.064,
-          "targets_pg": 1.7,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 9.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0035249",
@@ -290,7 +299,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0036259",
+          "name": "Jauan Jennings",
+          "position": "WR",
+          "games": 6,
+          "snap_pct": 0.672,
+          "target_share": 0.064,
+          "targets_pg": 1.7,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 9.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040509",
@@ -305,7 +333,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036425",
@@ -320,7 +350,9 @@
           "carries_pg": 0.4,
           "rush_yds_pg": 1.6,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0041081",
@@ -335,7 +367,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039710",
@@ -350,7 +384,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040494",
@@ -365,7 +401,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 58.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [
@@ -570,7 +608,9 @@
           "carries_pg": 12.8,
           "rush_yds_pg": 57.7,
           "pass_yds_pg": 0.0,
-          "total_tds": 13
+          "pass_tds": 0,
+          "rush_tds": 10,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0041052",
@@ -585,7 +625,9 @@
           "carries_pg": 8.8,
           "rush_yds_pg": 39.6,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 2,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0030279",
@@ -600,7 +642,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0033288",
@@ -615,7 +659,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 5
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 5
         },
         {
           "player_id": "00-0031408",
@@ -630,7 +676,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0035719",
@@ -645,7 +693,9 @@
           "carries_pg": 2.0,
           "rush_yds_pg": 26.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 5
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 4
         },
         {
           "player_id": "00-0037834",
@@ -660,7 +710,9 @@
           "carries_pg": 4.6,
           "rush_yds_pg": 24.7,
           "pass_yds_pg": 263.2,
-          "total_tds": 22
+          "pass_tds": 20,
+          "rush_tds": 2,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0032775",
@@ -675,7 +727,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040172",
@@ -690,7 +744,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0036972",
@@ -705,7 +761,9 @@
           "carries_pg": 2.5,
           "rush_yds_pg": -2.5,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0029892",
@@ -720,7 +778,9 @@
           "carries_pg": 0.2,
           "rush_yds_pg": 0.7,
           "pass_yds_pg": 0.0,
-          "total_tds": 2
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0031236",
@@ -735,7 +795,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040177",
@@ -750,7 +812,9 @@
           "carries_pg": 1.3,
           "rush_yds_pg": 5.3,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039365",
@@ -765,7 +829,9 @@
           "carries_pg": 0.2,
           "rush_yds_pg": 1.3,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036887",
@@ -780,7 +846,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0034854",
@@ -795,7 +863,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0038643",
@@ -810,7 +880,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [

@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 11,
-  "generated_at": "2026-11-18T00:00:41+00:00",
+  "generated_at": "2026-11-18T00:26:20+00:00",
   "stats_through_week": 10,
   "reference_window": [
     2025,
@@ -45,7 +45,7 @@
       "gameday": "2026-11-22",
       "weekday": "Sunday",
       "spread_line": 11.5,
-      "total_line": 48.5,
+      "total_line": 49.5,
       "file": "week_11/2026_11_NO_CHI.json"
     },
     {

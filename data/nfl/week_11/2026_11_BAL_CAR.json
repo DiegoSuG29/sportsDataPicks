@@ -95,7 +95,9 @@
           "carries_pg": 18.5,
           "rush_yds_pg": 69.9,
           "pass_yds_pg": -0.3,
-          "total_tds": 11
+          "pass_tds": 0,
+          "rush_tds": 10,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0039064",
@@ -110,7 +112,9 @@
           "carries_pg": 0.7,
           "rush_yds_pg": 5.7,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0034975",
@@ -125,7 +129,9 @@
           "carries_pg": 3.6,
           "rush_yds_pg": 24.4,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0034753",
@@ -140,7 +146,9 @@
           "carries_pg": 0.2,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040870",
@@ -155,7 +163,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0034796",
@@ -170,7 +180,9 @@
           "carries_pg": 3.8,
           "rush_yds_pg": 28.8,
           "pass_yds_pg": 193.4,
-          "total_tds": 7
+          "pass_tds": 6,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036550",
@@ -185,7 +197,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0035993",
@@ -200,7 +214,9 @@
           "carries_pg": 3.6,
           "rush_yds_pg": 15.2,
           "pass_yds_pg": 145.4,
-          "total_tds": 5
+          "pass_tds": 4,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040981",
@@ -215,7 +231,9 @@
           "carries_pg": 3.0,
           "rush_yds_pg": 8.0,
           "pass_yds_pg": 75.5,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0033119",
@@ -230,22 +248,9 @@
           "carries_pg": 2.0,
           "rush_yds_pg": 2.0,
           "pass_yds_pg": 340.0,
-          "total_tds": 0
-        },
-        {
-          "player_id": "00-0040887",
-          "name": "Josh Cuevas",
-          "position": "TE",
-          "games": 8,
-          "snap_pct": 0.215,
-          "target_share": 0.063,
-          "targets_pg": 2.0,
-          "receptions_pg": 1.6,
-          "rec_yds_pg": 21.4,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040876",
@@ -260,22 +265,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
-          "player_id": "00-0039792",
-          "name": "Devontez Walker",
-          "position": "WR",
-          "games": 5,
-          "snap_pct": 0.362,
+          "player_id": "00-0040887",
+          "name": "Josh Cuevas",
+          "position": "TE",
+          "games": 8,
+          "snap_pct": 0.215,
           "target_share": 0.063,
-          "targets_pg": 1.8,
-          "receptions_pg": 0.8,
-          "rec_yds_pg": 15.0,
+          "targets_pg": 2.0,
+          "receptions_pg": 1.6,
+          "rec_yds_pg": 21.4,
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0032398",
@@ -290,7 +299,26 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
+        },
+        {
+          "player_id": "00-0039792",
+          "name": "Devontez Walker",
+          "position": "WR",
+          "games": 5,
+          "snap_pct": 0.362,
+          "target_share": 0.063,
+          "targets_pg": 1.8,
+          "receptions_pg": 0.8,
+          "rec_yds_pg": 15.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040879",
@@ -305,7 +333,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0039796",
@@ -320,7 +350,9 @@
           "carries_pg": 0.8,
           "rush_yds_pg": 3.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0034798",
@@ -335,7 +367,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040075",
@@ -350,7 +384,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [
@@ -528,7 +564,9 @@
           "carries_pg": 17.9,
           "rush_yds_pg": 79.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 9
+          "pass_tds": 0,
+          "rush_tds": 7,
+          "rec_tds": 2
         },
         {
           "player_id": "00-0040124",
@@ -543,7 +581,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0039491",
@@ -558,7 +598,9 @@
           "carries_pg": 0.2,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0039344",
@@ -573,7 +615,9 @@
           "carries_pg": 4.5,
           "rush_yds_pg": 15.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036265",
@@ -588,7 +632,9 @@
           "carries_pg": 4.2,
           "rush_yds_pg": 10.8,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0031610",
@@ -603,7 +649,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 4
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 4
         },
         {
           "player_id": "00-0037005",
@@ -618,7 +666,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 3
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 3
         },
         {
           "player_id": "00-0040644",
@@ -633,7 +683,9 @@
           "carries_pg": 2.6,
           "rush_yds_pg": 3.2,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039342",
@@ -648,7 +700,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0037614",
@@ -663,7 +717,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1
         },
         {
           "player_id": "00-0040187",
@@ -678,7 +734,9 @@
           "carries_pg": 0.1,
           "rush_yds_pg": 0.1,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0039150",
@@ -693,7 +751,9 @@
           "carries_pg": 1.3,
           "rush_yds_pg": 5.3,
           "pass_yds_pg": 266.3,
-          "total_tds": 17
+          "pass_tds": 16,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0038840",
@@ -708,37 +768,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
-          "player_id": "00-0040265",
-          "name": "Ja'Seem Reed",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.13,
-          "target_share": 0.026,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "total_tds": 0
-        },
-        {
-          "player_id": "00-0038102",
-          "name": "Kenny Pickett",
-          "position": "QB",
-          "games": 3,
-          "snap_pct": 0.13,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 1.0,
-          "rush_yds_pg": 11.7,
-          "pass_yds_pg": 15.7,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040218",
@@ -753,7 +785,43 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0040265",
+          "name": "Ja'Seem Reed",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.13,
+          "target_share": 0.026,
+          "targets_pg": 1.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
+        },
+        {
+          "player_id": "00-0038102",
+          "name": "Kenny Pickett",
+          "position": "QB",
+          "games": 3,
+          "snap_pct": 0.13,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 1.0,
+          "rush_yds_pg": 11.7,
+          "pass_yds_pg": 15.7,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0033589",
@@ -768,7 +836,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0040394",
@@ -783,7 +853,9 @@
           "carries_pg": 0.5,
           "rush_yds_pg": 3.8,
           "pass_yds_pg": 0.0,
-          "total_tds": 1
+          "pass_tds": 0,
+          "rush_tds": 1,
+          "rec_tds": 0
         },
         {
           "player_id": "00-0036825",
@@ -798,7 +870,9 @@
           "carries_pg": 0.0,
           "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
-          "total_tds": 0
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0
         }
       ],
       "injuries": [

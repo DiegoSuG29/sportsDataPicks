@@ -208,8 +208,9 @@ def team_usage(player_stats: pl.DataFrame, snaps: pl.DataFrame, team: str,
         pl.col("carries").fill_null(0).sum().alias("carries"),
         pl.col("rushing_yards").fill_null(0).sum().alias("rush_yds"),
         pl.col("target_share").mean().alias("target_share"),
-        (pl.col("receiving_tds").fill_null(0) + pl.col("rushing_tds").fill_null(0)
-         + pl.col("passing_tds").fill_null(0)).sum().alias("total_tds"),
+        pl.col("passing_tds").fill_null(0).sum().alias("pass_tds"),
+        pl.col("rushing_tds").fill_null(0).sum().alias("rush_tds"),
+        pl.col("receiving_tds").fill_null(0).sum().alias("rec_tds"),
         pl.col("passing_yards").fill_null(0).sum().alias("pass_yds"),
     )
 
@@ -240,7 +241,9 @@ def team_usage(player_stats: pl.DataFrame, snaps: pl.DataFrame, team: str,
                 "carries_pg": _round(r["carries"] / g, 1) if g else None,
                 "rush_yds_pg": _round(r["rush_yds"] / g, 1) if g else None,
                 "pass_yds_pg": _round(r["pass_yds"] / g, 1) if g else None,
-                "total_tds": int(r["total_tds"]),
+                "pass_tds": int(r["pass_tds"]),
+                "rush_tds": int(r["rush_tds"]),
+                "rec_tds": int(r["rec_tds"]),
             }
         )
     # sort by involvement: targets + carries

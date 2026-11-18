@@ -4,53 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Picks Dashboard — NFL</title>
-  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <span class="logo">🏈</span>
-      <div>
-        <h1>Picks Dashboard</h1>
-        <p class="tagline">Data-driven NFL edges — all judgments come from official data.</p>
-      </div>
-    </div>
-    <div class="controls">
-      <label class="week-select">
-        Week
-        <select id="week-select"></select>
-      </label>
-      <a id="refresh-link" class="btn" href="#" target="_blank" rel="noopener" title="Open GitHub Actions to refresh the data">↻ Refresh</a>
-    </div>
-  </header>
-
-  <p id="data-stamp" class="data-stamp"></p>
-
-  <main id="main">
-    <!-- Games list -->
-    <section id="games-view" class="view">
-      <div id="game-list" class="game-list"></div>
-    </section>
-
-    <!-- Game detail -->
-    <section id="game-view" class="view hidden">
-      <button id="back-btn" class="btn ghost">← All games</button>
-      <div id="game-detail"></div>
-    </section>
-  </main>
-
-  <!-- Player modal (prop checker + logs + with/without) -->
-  <div id="player-modal" class="modal hidden">
-    <div class="modal-card">
-      <button id="modal-close" class="modal-close" aria-label="Close">×</button>
-      <div id="player-detail"></div>
-    </div>
-  </div>
-
-  <footer class="foot">
-    <p>No betting sites or picks articles are used as inputs. Reference window: last season + current season only.</p>
-  </footer>
-
-  <script src="js/app.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
