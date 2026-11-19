@@ -1,7 +1,7 @@
-// Data lives under <base>/data/nfl. BASE_URL is "/" in dev and
-// "/sportsDataPicks/" in the production build, so these resolve same-origin
-// in both. (In dev a Vite middleware serves the repo-root data/ folder.)
-export const DATA_BASE = `${import.meta.env.BASE_URL}data/nfl`;
+// Data lives under <base>/data/<sport>. BASE_URL is "/" in dev and
+// "/sportsDataPicks/" in the production build, so these resolve same-origin in
+// both. (In dev a Vite middleware serves the repo-root data/ folder.)
+const base = import.meta.env.BASE_URL;
 
 export async function getJSON(path) {
   const res = await fetch(path, { cache: "no-store" });
@@ -9,5 +9,5 @@ export async function getJSON(path) {
   return res.json();
 }
 
-export const manifestUrl = () => `${DATA_BASE}/manifest.json`;
-export const dataUrl = (file) => `${DATA_BASE}/${file}`;
+export const manifestUrl = (sport) => `${base}data/${sport}/manifest.json`;
+export const dataUrl = (sport, file) => `${base}data/${sport}/${file}`;

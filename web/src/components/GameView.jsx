@@ -1,40 +1,37 @@
 import { useState } from "react";
-import { fmt, pct, spreadText, posClass, FLAG_TONE } from "../util.js";
+import { fmt, posClass, FLAG_TONE } from "../util.js";
 
-const POS_NAME = { QB: "Quarterbacks", RB: "Running backs", WR: "Wide receivers", TE: "Tight ends", FB: "Fullbacks" };
 const INJ_SHORT = { Out: "OUT", Doubtful: "DOUBT", Questionable: "QUES" };
-const BUCKET = { QB: "QB", RB: "RB", FB: "RB", WR: "WR", TE: "TE" };
 
-export default function GameView({ game, onPlayer }) {
+export default function GameView({ cfg, game, onPlayer }) {
+  const AvailCard = cfg.availKey === "dnps" ? DnpCard : InjuryCard;
   return (
     <div className="game-detail">
       <div className="game-head">
         <h2>{game.away_team} @ {game.home_team}</h2>
-        <span className="sub">
-          {game.weekday} · {game.gameday}{game.gametime ? ` · ${game.gametime}` : ""}
-        </span>
+        <span className="sub">{cfg.gameHeadSub(game)}</span>
         {game.div_game && <span className="pill div">Divisional</span>}
       </div>
 
       <div className="line-row">
-        <div className="box"><span>Spread </span><b>{spreadText(game)}</b></div>
-        <div className="box"><span>Total </span><b>{fmt(game.total_line)}</b></div>
-        <div className="box"><span>Roof </span><b>{game.roof || "—"}</b></div>
-        <div className="box"><span>Surface </span><b>{game.surface || "—"}</b></div>
+        {cfg.gameLineRow(game).map(([lbl, val]) => (
+          <div className="box" key={lbl}><span>{lbl} </span><b>{val}</b></div>
+        ))}
       </div>
 
-      <Edges edges={game.edges} />
+      <Edges edges={game.edges || []} />
 
       <div className="teams">
-        <TeamCard game={game} team={game.away_team} venue="Away" />
-        <TeamCard game={game} team={game.home_team} venue="Home" />
+        <TeamCard cfg={cfg} game={game} team={game.away_team} venue="Away" />
+        <TeamCard cfg={cfg} game={game} team={game.home_team} venue="Home" />
       </div>
 
-      <UsageSection key={game.game_id} game={game} onPlayer={onPlayer} />
+      <UsageSection key={game.game_id} cfg={cfg} game={game} onPlayer={onPlayer} />
 
       <div className="teams">
-        <InjuryCard team={game.away_team} injuries={game.teams[game.away_team].injuries} />
-        <InjuryCard team={game.home_team} injuries={game.teams[game.home_team].injuries} />
+        {[game.away_team, game.home_team].map((tm) => (
+          <AvailCard key={tm} cfg={cfg} team={tm} items={game.teams[tm][cfg.availKey] || []} />
+        ))}
       </div>
     </div>
   );
@@ -58,16 +55,16 @@ function Edges({ edges }) {
   );
 }
 
-// Headline team numbers, including point differential.
-function TeamMetrics({ f }) {
-  const net = (f.ppg ?? 0) - (f.papg ?? 0);
-  const netCls = net > 0 ? "over" : net < 0 ? "under" : "";
+// Headline team numbers (sport-specific tiles from cfg.teamMetrics).
+function TeamMetrics({ tiles }) {
   return (
     <div className="team-metrics">
-      <div className="tm"><div className="tm-big">{f.record}</div><div className="tm-lbl">Record</div></div>
-      <div className="tm"><div className="tm-big">{fmt(f.ppg)}</div><div className="tm-lbl">Scored/g</div></div>
-      <div className="tm"><div className="tm-big">{fmt(f.papg)}</div><div className="tm-lbl">Allowed/g</div></div>
-      <div className="tm"><div className={`tm-big ${netCls}`}>{net > 0 ? "+" : ""}{fmt(net)}</div><div className="tm-lbl">Net/g</div></div>
+      {tiles.map((t) => (
+        <div className="tm" key={t.label}>
+          <div className={`tm-big ${t.cls || ""}`}>{t.value}</div>
+          <div className="tm-lbl">{t.label}</div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -91,11 +88,7 @@ function FormList({ last5 }) {
   );
 }
 
-function SplitTable({ ha, dv }) {
-  const rows = [
-    ["Home", ha.home], ["Away", ha.away],
-    ["Divisional", dv.divisional], ["Non-div", dv.non_divisional],
-  ];
+function SplitTable({ rows }) {
   return (
     <div className="table-wrap">
       <table className="split-table">
@@ -122,26 +115,26 @@ function SplitTable({ ha, dv }) {
   );
 }
 
-// Team summary card (form, splits, defense). Usage/injuries live elsewhere now.
-function TeamCard({ game, team, venue }) {
+// Team summary card (form, splits, defense). Usage/availability live elsewhere.
+function TeamCard({ cfg, game, team, venue }) {
   const t = game.teams[team];
   const f = t.form;
-  const ha = f.home_away_split, dv = f.div_split;
   return (
     <div className="team-panel">
       <span className="panel-kind">Team</span>
       <h3>{team} <span className="muted" style={{ fontSize: 14 }}>({venue})</span></h3>
 
-      <TeamMetrics f={f} />
+      <TeamMetrics tiles={cfg.teamMetrics(f)} />
+      {f.back_to_back && <div className="loghint"><span className="under">Back-to-back</span>: played yesterday.</div>}
 
       <div className="section-label">Last {(f.last5 || []).length} games (most recent first)</div>
       <FormList last5={f.last5} />
 
       <div className="section-label">Situational splits — scored / allowed per game</div>
-      <SplitTable ha={ha} dv={dv} />
+      <SplitTable rows={cfg.splitRows(f)} />
 
-      <div className="section-label">Defense allowed by position (per game)</div>
-      <DefenseTable def={t.defense} />
+      <div className="section-label">{cfg.defenseLabel}</div>
+      <DefenseTable cfg={cfg} def={t.defense} />
       <div className="loghint">
         Matchup is for the opposing player: <span className="over">Soft</span> = this defense gives up a lot to that
         position (favorable), <span className="under">Tough</span> = stingy. Rank 1 = allows the most.
@@ -150,26 +143,28 @@ function TeamCard({ game, team, venue }) {
   );
 }
 
-function DefenseTable({ def }) {
-  const order = ["QB", "RB", "WR", "TE"];
+export function matchupTier(d) {
+  const third = d.of_teams / 3;
+  return d.rank_most_allowed <= third ? "soft" : d.rank_most_allowed > 2 * third ? "tough" : "avg";
+}
+
+function DefenseTable({ cfg, def }) {
   const MATCHUP = { soft: "Soft", avg: "Avg", tough: "Tough" };
   return (
     <div className="table-wrap">
       <table className="def-table">
-        <thead><tr><th>Pos</th><th>FP/g</th><th>Yds/g</th><th>TD/g</th><th>Matchup</th></tr></thead>
+        <thead>
+          <tr><th>Pos</th>{cfg.defenseColumns.map((c) => <th key={c[0]}>{c[0]}</th>)}<th>Matchup</th></tr>
+        </thead>
         <tbody>
-          {order.map((pos) => {
-            const d = def[pos];
+          {cfg.defensePositions.map((pos) => {
+            const d = def?.[pos];
             if (!d) return null;
-            const third = d.of_teams / 3;
-            const tier = d.rank_most_allowed <= third ? "soft"
-              : d.rank_most_allowed > 2 * third ? "tough" : "avg";
+            const tier = matchupTier(d);
             return (
               <tr key={pos} className={posClass(pos)}>
                 <td><span className={`pos-tag ${posClass(pos)}`}>{pos}</span></td>
-                <td>{fmt(d.fantasy_pg_allowed)}</td>
-                <td>{fmt(d.yards_pg_allowed)}</td>
-                <td>{fmt(d.tds_pg_allowed, 2)}</td>
+                {cfg.defenseColumns.map((c) => <td key={c[0]}>{c[1](d)}</td>)}
                 <td>
                   <span className={`matchup ${tier}`}>{MATCHUP[tier]}</span>
                   <span className="muted" style={{ marginLeft: 6, fontSize: 11 }}>{d.rank_most_allowed}/{d.of_teams}</span>
@@ -184,11 +179,12 @@ function DefenseTable({ def }) {
 }
 
 // Single full-width usage area with a team toggle, split into per-position grids.
-function UsageSection({ game, onPlayer }) {
+function UsageSection({ cfg, game, onPlayer }) {
   const teams = [game.away_team, game.home_team];
   const [team, setTeam] = useState(teams[0]);
   const active = game.teams[team] ? team : teams[0];
   const t = game.teams[active];
+  const shareWord = cfg.key === "nba" ? "most minutes" : "highest snap share";
 
   return (
     <div className="team-panel usage-section">
@@ -206,49 +202,14 @@ function UsageSection({ game, onPlayer }) {
           ))}
         </div>
       </div>
-      <div className="loghint">Each position shows its most relevant stats, highest snap share first. Click a player for props &amp; splits.</div>
-      <PositionGrids usage={t.usage} injuries={t.injuries} onPlayer={(p) => onPlayer(active, p)} />
+      <div className="loghint">Each position shows its most relevant stats, {shareWord} first. Click a player for props &amp; splits.</div>
+      <PositionGrids cfg={cfg} usage={t.usage} injuries={t.injuries} dnps={t.dnps} onPlayer={(p) => onPlayer(active, p)} />
     </div>
   );
 }
 
-// Position-specific column sets (season per-game figures + ratios).
-function columnsFor(bucket) {
-  if (bucket === "QB") return [
-    ["Snap%", (p) => pct(p.snap_pct)],
-    ["Comp%", (p) => (p.attempts ? pct(p.completions / p.attempts) : "—")],
-    ["Comp/g", (p) => (p.games ? fmt(p.completions / p.games) : "—")],
-    ["Yds/g", (p) => fmt(p.pass_yds_pg)],
-    ["Pass TD", (p) => p.pass_tds],
-    ["INT", (p) => p.interceptions],
-    ["Rush att/g", (p) => fmt(p.carries_pg)],
-    ["Rush yd/g", (p) => fmt(p.rush_yds_pg)],
-  ];
-  if (bucket === "RB") return [
-    ["Snap%", (p) => pct(p.snap_pct)],
-    ["Car/g", (p) => fmt(p.carries_pg)],
-    ["Rush yd/g", (p) => fmt(p.rush_yds_pg)],
-    ["YPC", (p) => (p.carries_pg ? fmt(p.rush_yds_pg / p.carries_pg, 1) : "—")],
-    ["Rush TD", (p) => p.rush_tds],
-    ["Tgt/g", (p) => fmt(p.targets_pg)],
-    ["Rec/g", (p) => fmt(p.receptions_pg)],
-    ["Rec yd/g", (p) => fmt(p.rec_yds_pg)],
-    ["Rec TD", (p) => p.rec_tds],
-  ];
-  // WR / TE
-  return [
-    ["Snap%", (p) => pct(p.snap_pct)],
-    ["Tgt%", (p) => pct(p.target_share)],
-    ["Tgt/g", (p) => fmt(p.targets_pg)],
-    ["Rec/g", (p) => fmt(p.receptions_pg)],
-    ["Rec yd/g", (p) => fmt(p.rec_yds_pg)],
-    ["YPR", (p) => (p.receptions_pg ? fmt(p.rec_yds_pg / p.receptions_pg, 1) : "—")],
-    ["Rec TD", (p) => p.rec_tds],
-  ];
-}
-
-function PositionGrids({ usage, injuries, onPlayer }) {
-  const known = ["QB", "RB", "WR", "TE"];
+function PositionGrids({ cfg, usage, injuries, dnps, onPlayer }) {
+  const known = cfg.positions;
   const byPos = {};
   usage.forEach((p) => (byPos[p.position] ||= []).push(p));
   const positions = [
@@ -257,6 +218,8 @@ function PositionGrids({ usage, injuries, onPlayer }) {
   ];
   const injByName = {};
   (injuries || []).forEach((i) => { if (i.report_status) injByName[i.name] = i; });
+  const dnpById = {};
+  (dnps || []).forEach((d) => { dnpById[d.player_id] = d; });
 
   if (!usage.length) return <p className="empty">No usage data.</p>;
   return (
@@ -264,9 +227,11 @@ function PositionGrids({ usage, injuries, onPlayer }) {
       {positions.map((pos) => (
         <PositionTable
           key={pos}
+          cfg={cfg}
           pos={pos}
-          players={byPos[pos].slice().sort((a, b) => (b.snap_pct || 0) - (a.snap_pct || 0))}
+          players={byPos[pos].slice().sort((a, b) => cfg.usageSort(b) - cfg.usageSort(a))}
           injByName={injByName}
+          dnpById={dnpById}
           onPlayer={onPlayer}
         />
       ))}
@@ -274,11 +239,11 @@ function PositionGrids({ usage, injuries, onPlayer }) {
   );
 }
 
-function PositionTable({ pos, players, injByName, onPlayer }) {
-  const cols = columnsFor(BUCKET[pos] || pos);
+function PositionTable({ cfg, pos, players, injByName, dnpById, onPlayer }) {
+  const cols = cfg.usageColumns(cfg.bucket[pos] || pos);
   return (
     <div className="pos-grid">
-      <div className={`pos-grid-head ${posClass(pos)}`}>{POS_NAME[pos] || pos}</div>
+      <div className={`pos-grid-head ${posClass(pos)}`}>{cfg.posName[pos] || pos}</div>
       <div className="table-wrap">
         <table>
           <thead>
@@ -287,17 +252,20 @@ function PositionTable({ pos, players, injByName, onPlayer }) {
           <tbody>
             {players.map((p) => {
               const inj = injByName[p.name];
+              const dnp = dnpById[p.player_id];
               return (
                 <tr key={p.player_id} className={`clickable ${posClass(p.position)}`} onClick={() => onPlayer(p)}>
                   <td>
                     {p.name}
                     {p.status ? (
                       <span className={`flag ${FLAG_TONE[p.status] || "muted"}`} title={p.status_note || p.status}>{p.status}</span>
-                    ) : inj && (
+                    ) : inj ? (
                       <span className={`status ${inj.report_status}`} style={{ marginLeft: 6 }}
                         title={`${inj.report_status}${inj.injury ? ` · ${inj.injury}` : ""}`}>
                         {INJ_SHORT[inj.report_status] || inj.report_status}
                       </span>
+                    ) : dnp && (
+                      <span className="flag warn" title={`DNP ${dnp.last_dnp}${dnp.reason ? ` · ${dnp.reason}` : ""}`}>DNP</span>
                     )}
                   </td>
                   {cols.map((c) => <td key={c[0]}>{c[1](p)}</td>)}
@@ -311,12 +279,12 @@ function PositionTable({ pos, players, injByName, onPlayer }) {
   );
 }
 
-function InjuryCard({ team, injuries }) {
+function InjuryCard({ cfg, team, items }) {
   return (
     <div className="team-panel">
       <span className="panel-kind">Injury report</span>
-      <h3 style={{ fontSize: 18 }}>{team} injuries</h3>
-      <InjuryList injuries={injuries} />
+      <h3 style={{ fontSize: 18 }}>{cfg.availTitle(team)}</h3>
+      <InjuryList injuries={items} />
     </div>
   );
 }
@@ -336,6 +304,34 @@ function InjuryList({ injuries }) {
           </span>
         </div>
       ))}
+    </div>
+  );
+}
+
+// NBA: no pregame injury feed — show who sat in recent games and why.
+function DnpCard({ cfg, team, items }) {
+  return (
+    <div className="team-panel">
+      <span className="panel-kind">Recent availability</span>
+      <h3 style={{ fontSize: 18 }}>{cfg.availTitle(team)}</h3>
+      {!items.length ? (
+        <p className="empty">No recent DNPs.</p>
+      ) : (
+        <div>
+          {items.map((d) => (
+            <div className="inj-row" key={d.player_id}>
+              <span>
+                {d.name} <span className={`pos-tag ${posClass(d.position)}`}>{d.position}</span>{" "}
+                <span className="muted">
+                  last DNP {d.last_dnp}{d.dnp_games > 1 ? ` · ${d.dnp_games} games` : ""}
+                </span>
+              </span>
+              <span className="status Questionable" title={d.reason || ""}>{d.reason || "DNP"}</span>
+            </div>
+          ))}
+        </div>
+      )}
+      <div className="loghint">From box scores only. Check the official injury report for tonight's status.</div>
     </div>
   );
 }

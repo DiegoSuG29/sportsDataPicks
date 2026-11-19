@@ -4,7 +4,11 @@ export const fmt = (v, d = 1) =>
 export const pct = (v) => (v == null ? "—" : Math.round(v * 100) + "%");
 
 // Map a listed position to its color class (FB shares RB's color).
-const POS_CLASS = { QB: "pos-QB", RB: "pos-RB", FB: "pos-RB", WR: "pos-WR", TE: "pos-TE" };
+// NBA G/F/C reuse the NFL palette slots.
+const POS_CLASS = {
+  QB: "pos-QB", RB: "pos-RB", FB: "pos-RB", WR: "pos-WR", TE: "pos-TE",
+  G: "pos-QB", F: "pos-WR", C: "pos-RB",
+};
 export const posClass = (p) => POS_CLASS[p] || "";
 
 // Roster special-circumstance code → chip tone (see styles.css .flag.*)

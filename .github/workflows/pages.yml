@@ -19,7 +19,7 @@ on:
   # Data commits from the refresh workflow use GITHUB_TOKEN, which does not fire
   # the push trigger above (loop prevention), so redeploy when it finishes.
   workflow_run:
-    workflows: ["Refresh NFL data"]
+    workflows: ["Refresh NFL data", "Refresh NBA data"]
     types: [completed]
 
 # Allow one concurrent deployment; let an in-progress run finish.

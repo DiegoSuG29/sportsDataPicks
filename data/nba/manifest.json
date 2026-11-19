@@ -1,0 +1,24 @@
+{
+  "sport": "nba",
+  "generated_at": "2026-11-18T06:03:36+00:00",
+  "latest": {
+    "season": 2027,
+    "date": "2026-11-18",
+    "label": "Wed Nov 18",
+    "file": "2026-11-18/index.json",
+    "games": 12,
+    "generated_at": "2026-11-18T06:03:35+00:00",
+    "stats_through": "2026-11-16"
+  },
+  "slates": [
+    {
+      "season": 2027,
+      "date": "2026-11-18",
+      "label": "Wed Nov 18",
+      "file": "2026-11-18/index.json",
+      "games": 12,
+      "generated_at": "2026-11-18T06:03:35+00:00",
+      "stats_through": "2026-11-16"
+    }
+  ]
+}

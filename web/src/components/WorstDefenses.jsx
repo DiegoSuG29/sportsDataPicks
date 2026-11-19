@@ -1,20 +1,18 @@
 import { posClass } from "../util.js";
 
-const POS_NAME = { QB: "Quarterbacks", RB: "Running backs", WR: "Wide receivers", TE: "Tight ends" };
-
 // League-wide soft spots: the defenses that allow the most fantasy per position,
-// among teams playing this week. The listed opponent is the offense to target.
-export default function WorstDefenses({ week, data, onOpen }) {
+// among teams playing on this slate. The listed opponent is the offense to target.
+export default function WorstDefenses({ cfg, data, onOpen }) {
   return (
     <section className="worst-def">
       <div className="wd-title">
         <h2>Worst defenses by position</h2>
-        <span className="muted">Top 5 soft spots this week · the opponent is the offense to target</span>
+        <span className="muted">Top 5 soft spots on this slate · the opponent is the offense to target</span>
       </div>
       <div className="wd-grid">
-        {["QB", "RB", "WR", "TE"].map((pos) => (
+        {cfg.positions.map((pos) => (
           <div className={`wd-col ${posClass(pos)}`} key={pos}>
-            <div className="wd-head">{POS_NAME[pos]}</div>
+            <div className="wd-head">{cfg.posName[pos]}</div>
             <ol className="wd-list">
               {(data[pos] || []).map((r) => (
                 <li className="wd-row" key={r.team} onClick={() => onOpen(r.game_file)}>

@@ -1,20 +1,22 @@
-import { fmt, spreadText } from "../util.js";
-
-export default function GameList({ games, onOpen }) {
+export default function GameList({ cfg, games, onOpen }) {
   return (
     <div className="game-list">
-      {games.map((g) => (
-        <div key={g.file} className="game-card" onClick={() => onOpen(g.file)}>
-          <div className="matchup">
-            {g.away_team} <span className="muted">@</span> {g.home_team}
+      {games.map((g) => {
+        const line = cfg.gameCardLine(g);
+        return (
+          <div key={g.file} className="game-card" onClick={() => onOpen(g.file)}>
+            <div className="matchup">
+              {g.away_team} <span className="muted">@</span> {g.home_team}
+            </div>
+            <div className="gc-meta">{cfg.gameCardMeta(g)}</div>
+            {line.length > 0 && (
+              <div className="gc-line">
+                {line.map(([lbl, val]) => <span key={lbl}>{lbl} <b>{val}</b></span>)}
+              </div>
+            )}
           </div>
-          <div className="gc-meta">{g.weekday} · {g.gameday}</div>
-          <div className="gc-line">
-            <span>Spread <b>{spreadText(g)}</b></span>
-            <span>Total <b>{fmt(g.total_line)}</b></span>
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

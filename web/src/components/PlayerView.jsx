@@ -1,10 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
-import { fmt, pct, posClass, FLAG_TONE } from "../util.js";
-import {
-  statOption, statsForPosition, defaultStatFor, computeProp, computeWithWithout,
-} from "../stats.js";
+import { fmt, posClass, FLAG_TONE } from "../util.js";
+import { computeProp, computeWithWithout } from "../stats.js";
+import { statOption, statsForPosition, defaultStatFor } from "../sports.js";
+import { matchupTier } from "./GameView.jsx";
 
-export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
+// NFL logs are keyed by week, NBA logs by date.
+const gameKey = (l) => `${l.season}-${l.week != null ? l.week : l.date}`;
+const gameLabel = (l) => (l.week != null ? `${l.season} W${l.week}` : l.date);
+
+export default function PlayerView({ cfg, game, playerId, onSelectPlayer, onBack }) {
   // flat roster across both teams in display order (away then home) for the switcher
   const roster = useMemo(() => {
     const list = [];
@@ -29,11 +33,11 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
   }, [logs]);
   const multiTeam = teamCounts.length > 1;
 
-  const availStats = useMemo(() => statsForPosition(player.position), [player.position]);
-  const defaultStat = defaultStatFor(player.position);
+  const availStats = useMemo(() => statsForPosition(cfg, player.position), [cfg, player.position]);
+  const defaultStat = defaultStatFor(cfg, player.position);
   const [statKey, setStatKey] = useState(defaultStat);
-  const [line, setLine] = useState(statOption(defaultStat).def);
-  const [filters, setFilters] = useState({ season: "all", venue: "all", div: "all", opp: "all", snap: "0" });
+  const [line, setLine] = useState(statOption(cfg, defaultStat).def);
+  const [filters, setFilters] = useState({ season: "all", venue: "all", div: "all", opp: "all", avail: "0" });
   const [mateIds, setMateIds] = useState([]);
 
   const toggleMate = (id) =>
@@ -64,25 +68,26 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
     return () => document.removeEventListener("keydown", onKey);
   }, [navIdx, navList, onBack]);
 
-  const onStatChange = (key) => { setStatKey(key); setLine(statOption(key).def); };
+  const onStatChange = (key) => { setStatKey(key); setLine(statOption(cfg, key).def); };
 
   // When teammates are selected, scope the log/prop to games where NONE of them
   // played — i.e. the "without" projection — so the table hides mismatched games.
   const scopedLogs = useMemo(() => {
     if (!mateIds.length) return logs;
-    const sets = mateIds.map((id) => new Set((game.player_logs[id] || []).map((l) => `${l.season}-${l.week}`)));
-    return logs.filter((l) => sets.every((s) => !s.has(`${l.season}-${l.week}`)));
+    const sets = mateIds.map((id) => new Set((game.player_logs[id] || []).map(gameKey)));
+    return logs.filter((l) => sets.every((s) => !s.has(gameKey(l))));
   }, [logs, mateIds, game]);
 
+  const opt = statOption(cfg, statKey);
   const prop = useMemo(
-    () => computeProp(scopedLogs, statKey, parseFloat(line), filters),
-    [scopedLogs, statKey, line, filters]
+    () => computeProp(scopedLogs, opt, parseFloat(line), filters, cfg.availFilter),
+    [scopedLogs, opt, line, filters, cfg]
   );
   // with/without tracks the same stat as the prop checker (the two are tied)
   const ww = useMemo(() => {
     if (!mateIds.length) return null;
-    return computeWithWithout(logs, mateIds.map((id) => game.player_logs[id] || []), statKey);
-  }, [logs, mateIds, statKey, game]);
+    return computeWithWithout(logs, mateIds.map((id) => game.player_logs[id] || []), opt);
+  }, [logs, mateIds, opt, game]);
   const mateNames = mateIds
     .map((id) => teammates.find((m) => m.player_id === id)?.name)
     .filter(Boolean);
@@ -93,19 +98,16 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
     : `${mateNames.length} teammates`;
 
   const setF = (k, v) => setFilters((f) => ({ ...f, [k]: v }));
-  const oppDef = game.teams[opp]?.defense?.[player.position];
+  const af = cfg.availFilter;
+  const hasDiv = logs.some((l) => l.div_game != null); // NBA logs carry no division flag
+  const slateWord = cfg.key === "nba" ? "tonight" : "this week";
+  const oppDef = game.teams[opp]?.defense?.[cfg.bucket[player.position] || player.position];
 
-  // teammates unavailable this week: roster status flag OR injury Out/Doubtful
-  const outMateIds = useMemo(() => {
-    const injOut = new Set(
-      (game.teams[team].injuries || [])
-        .filter((i) => i.report_status === "Out" || i.report_status === "Doubtful")
-        .map((i) => i.name.toLowerCase())
-    );
-    return teammates
-      .filter((m) => m.status || injOut.has(m.name.toLowerCase()))
-      .map((m) => m.player_id);
-  }, [game, team, teammates]);
+  // teammates unavailable: NFL roster flag / injury Out-Doubtful; NBA recent DNP
+  const outMateIds = useMemo(
+    () => cfg.outTeammates(game.teams[team], teammates),
+    [cfg, game, team, teammates]
+  );
   const outIds = useMemo(() => new Set(outMateIds), [outMateIds]);
 
   return (
@@ -139,7 +141,7 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
           {player.status && <span className={`flag ${FLAG_TONE[player.status] || "muted"}`}>{player.status}</span>}
         </h3>
         <div className="pd-sub">
-          {team} · {logs.length} games on record (last season + this season) · this week vs {opp}
+          {team} · {logs.length} games on record (last season + this season) · {slateWord} vs {opp}
         </div>
       </div>
 
@@ -159,8 +161,8 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
 
       {/* quick context: this player's season usage + the opponent matchup */}
       <div className="pv-context">
-        <StatStrip tiles={usageTiles(player)} />
-        {oppDef && <MatchupCallout opp={opp} pos={player.position} d={oppDef} />}
+        <StatStrip tiles={cfg.usageTiles(player)} />
+        {oppDef && <MatchupCallout cfg={cfg} slateWord={slateWord} opp={opp} pos={player.position} d={oppDef} />}
       </div>
 
       <div className="section-label">Prop checker</div>
@@ -172,14 +174,14 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
         </label>
         <label className="pp-line">Line
           <StepControl
-            min={statOption(statKey).min} max={statOption(statKey).max} step={statOption(statKey).step}
-            fallback={statOption(statKey).def} value={line} onChange={setLine}
+            min={opt.min} max={opt.max} step={opt.step}
+            fallback={opt.def} value={line} onChange={setLine}
           />
         </label>
-        <label className="pp-line">Min snap%
+        <label className="pp-line">{af.label}
           <StepControl
-            min={0} max={100} step={1} quantize={Math.round} suffix="%"
-            value={filters.snap} onChange={(v) => setF("snap", v)}
+            min={af.min} max={af.max} step={af.step} quantize={Math.round} suffix={af.suffix}
+            value={filters.avail} onChange={(v) => setF("avail", v)}
           />
         </label>
       </div>
@@ -195,11 +197,13 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
             <option value="all">All</option><option value="home">Home</option><option value="away">Away</option>
           </select>
         </label>
-        <label>Division
-          <select value={filters.div} onChange={(e) => setF("div", e.target.value)}>
-            <option value="all">All</option><option value="div">Divisional</option><option value="nondiv">Non-div</option>
-          </select>
-        </label>
+        {hasDiv && (
+          <label>Division
+            <select value={filters.div} onChange={(e) => setF("div", e.target.value)}>
+              <option value="all">All</option><option value="div">Divisional</option><option value="nondiv">Non-div</option>
+            </select>
+          </label>
+        )}
         <label>Opponent
           <select value={filters.opp} onChange={(e) => setF("opp", e.target.value)}>
             <option value="all">All</option><option value={opp}>vs {opp}</option>
@@ -218,7 +222,7 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
               showing {scopedLogs.length} of {logs.length}.
             </div>
           )}
-          <PropLog prop={prop} line={parseFloat(line)} showTeam={multiTeam} />
+          <PropLog cfg={cfg} prop={prop} line={parseFloat(line)} showTeam={multiTeam} />
         </div>
         <div className="pv-side">
           <div className="section-label">With / without teammates</div>
@@ -228,6 +232,7 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
             mateIds={mateIds}
             toggleMate={toggleMate}
             outIds={outIds}
+            outWord={cfg.key === "nba" ? "sat recently (DNP)" : "out this week"}
             onAutoOut={() => setMateIds([...outMateIds])}
             onClear={() => setMateIds([])}
             statKey={statKey}
@@ -241,22 +246,6 @@ export default function PlayerView({ game, playerId, onSelectPlayer, onBack }) {
       </div>
     </div>
   );
-}
-
-// Per-position season-usage tiles for the quick-context strip.
-function usageTiles(p) {
-  const t = [["Games", p.games], ["Snap%", pct(p.snap_pct)]];
-  if (p.position === "QB") {
-    t.push(["Pass yds/g", fmt(p.pass_yds_pg)], ["Pass TD", p.pass_tds],
-           ["Car/g", fmt(p.carries_pg)], ["Rush yds/g", fmt(p.rush_yds_pg)]);
-  } else if (p.position === "RB") {
-    t.push(["Car/g", fmt(p.carries_pg)], ["Rush yds/g", fmt(p.rush_yds_pg)],
-           ["Tgt/g", fmt(p.targets_pg)], ["Rec/g", fmt(p.receptions_pg)]);
-  } else {
-    t.push(["Tgt%", pct(p.target_share)], ["Tgt/g", fmt(p.targets_pg)],
-           ["Rec/g", fmt(p.receptions_pg)], ["Rec yds/g", fmt(p.rec_yds_pg)]);
-  }
-  return t;
 }
 
 function StatStrip({ tiles }) {
@@ -295,22 +284,18 @@ function StepControl({ min, max, step, quantize, suffix, fallback, value, onChan
   );
 }
 
-function MatchupCallout({ opp, pos, d }) {
-  const third = d.of_teams / 3;
-  const tier = d.rank_most_allowed <= third ? "soft"
-    : d.rank_most_allowed > 2 * third ? "tough" : "avg";
+function MatchupCallout({ cfg, slateWord, opp, pos, d }) {
+  const tier = matchupTier(d);
   const LABEL = { soft: "Soft", avg: "Average", tough: "Tough" };
   const NOTE = { soft: "favorable matchup", avg: "neutral matchup", tough: "tough matchup" };
   return (
     <div className={`matchup-callout ${tier}`}>
       <div className="mc-top">
-        <span className="mc-lbl">This week vs {opp} defense</span>
+        <span className="mc-lbl">{slateWord[0].toUpperCase() + slateWord.slice(1)} vs {opp} defense</span>
         <span className={`matchup ${tier}`}>{LABEL[tier]}</span>
       </div>
       <div className="mc-stats">
-        <span><b>{fmt(d.fantasy_pg_allowed)}</b> FP/g</span>
-        <span><b>{fmt(d.yards_pg_allowed)}</b> yds/g</span>
-        <span><b>{fmt(d.tds_pg_allowed, 2)}</b> TD/g</span>
+        {cfg.matchupStats(d).map(([lbl, val]) => <span key={lbl}><b>{val}</b> {lbl}</span>)}
         <span>rank <b>{d.rank_most_allowed}/{d.of_teams}</b></span>
       </div>
       <div className="mc-note">Allowed to {pos}s — {NOTE[tier]} (rank 1 = allows the most).</div>
@@ -318,7 +303,7 @@ function MatchupCallout({ opp, pos, d }) {
   );
 }
 
-function WithWithout({ player, teammates, mateIds, toggleMate, outIds, onAutoOut, onClear, statKey, onStatChange, availStats, ww, mateNames, mateLabel }) {
+function WithWithout({ player, teammates, mateIds, toggleMate, outIds, outWord, onAutoOut, onClear, statKey, onStatChange, availStats, ww, mateNames, mateLabel }) {
   if (!teammates.length) return <p className="empty">No teammates listed.</p>;
   const multi = mateNames.length > 1;
   const outCount = outIds?.size || 0;
@@ -328,7 +313,7 @@ function WithWithout({ player, teammates, mateIds, toggleMate, outIds, onAutoOut
       <div className="ww-actions">
         {outCount > 0 && (
           <button className="btn ghost sm" onClick={onAutoOut}>
-            Match this week's absences ({outCount})
+            Match absences ({outCount})
           </button>
         )}
         {mateIds.length > 0 && (
@@ -344,10 +329,10 @@ function WithWithout({ player, teammates, mateIds, toggleMate, outIds, onAutoOut
               key={m.player_id}
               className={`ww-chip ${on ? "on" : ""} ${isOut ? "out" : ""}`}
               onClick={() => toggleMate(m.player_id)}
-              title={isOut ? "Out this week" : undefined}
+              title={isOut ? outWord : undefined}
             >
               <span className={`pos-tag ${posClass(m.position)}`}>{m.position}</span> {m.name}
-              {isOut && <span className="ww-outdot" title="Out this week">●</span>}
+              {isOut && <span className="ww-outdot" title={outWord}>●</span>}
               <span className="pm">{on ? "−" : "+"}</span>
             </button>
           );
@@ -355,7 +340,7 @@ function WithWithout({ player, teammates, mateIds, toggleMate, outIds, onAutoOut
       </div>
       {outCount > 0 && (
         <div className="loghint">
-          "Match this week's absences" selects the {outCount} teammate{outCount === 1 ? "" : "s"} out this week —
+          "Match absences" selects the {outCount} teammate{outCount === 1 ? "" : "s"} who {outWord === "out this week" ? "are out this week" : "sat recently (DNP)"} —
           the <b>Without</b> figure then projects {player.name} with them sidelined.
         </div>
       )}
@@ -426,7 +411,7 @@ function PropResult({ prop, line }) {
   );
 }
 
-function PropLog({ prop, line, showTeam }) {
+function PropLog({ cfg, prop, line, showTeam }) {
   if (!prop.n) return <p className="empty">No games match these filters.</p>;
   const dec = prop.opt.dec;
   const hasLine = !Number.isNaN(line);
@@ -447,7 +432,7 @@ function PropLog({ prop, line, showTeam }) {
               <span
                 key={i}
                 className={`ou-dot ${over ? "over" : "under"}`}
-                title={`${prop.rows[i].season} W${prop.rows[i].week}: ${fmt(v, dec)} (${over ? "over" : "under"} ${line})`}
+                title={`${gameLabel(prop.rows[i])}:${fmt(v, dec)} (${over ? "over" : "under"} ${line})`}
               >
                 {over ? "O" : "U"}
               </span>
@@ -458,7 +443,7 @@ function PropLog({ prop, line, showTeam }) {
 
       <div className="table-wrap">
         <table className="oulog">
-          <thead><tr><th>Game</th><th>Opp</th><th>H/A</th><th>Snap%</th><th>{prop.opt.label}</th><th>± line</th><th></th></tr></thead>
+          <thead><tr><th>Game</th><th>Opp</th><th>H/A</th><th>{cfg.logAvailCol.label}</th><th>{prop.opt.label}</th><th>± line</th><th></th></tr></thead>
           <tbody>
             {prop.rows.map((l, i) => {
               const v = prop.vals[i];
@@ -467,13 +452,13 @@ function PropLog({ prop, line, showTeam }) {
               return (
                 <tr key={i}>
                   <td>
-                    {l.season} W{l.week}
+                    {gameLabel(l)}
                     {showTeam && l.team && <span className="pos-tag" title="player's team that game">{l.team}</span>}
                     {l.div_game && <span className="pos-tag">div</span>}
                   </td>
                   <td>{l.opponent}</td>
                   <td>{l.home === true ? "H" : l.home === false ? "A" : "—"}</td>
-                  <td className="muted">{pct(l.snap_pct)}</td>
+                  <td className="muted">{cfg.logAvailCol.fn(l)}</td>
                   <td className={cls ? `val-${cls}` : ""}>{fmt(v, dec)}</td>
                   <td>
                     {hasLine && (

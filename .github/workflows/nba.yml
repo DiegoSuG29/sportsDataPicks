@@ -1,0 +1,65 @@
+name: Refresh NBA data
+
+# Rebuilds the NBA slate JSON the dashboard reads, commits it, and lets
+# pages.yml (via its workflow_run trigger) redeploy. Runs daily once the prior
+# night's box scores are in the source, plus on demand ("Run workflow" =
+# the dashboard's Refresh button; pass a date to rebuild a specific slate).
+#
+# NOTE: GitHub pauses scheduled workflows in public repos after 60 days without
+# repo activity; a manual run re-arms the schedule after the offseason.
+
+on:
+  schedule:
+    # 13:00 UTC (~8am ET): late West-coast games from the night before are final.
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "Slate date YYYY-MM-DD (blank = next scheduled)"
+        required: false
+        type: string
+      season:
+        description: "Season ending year, e.g. 2027 (blank = auto)"
+        required: false
+        type: string
+
+concurrency:
+  group: nba-refresh
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build NBA slate
+        run: |
+          ARGS=""
+          if [ -n "${{ inputs.date }}" ]; then ARGS="$ARGS --date ${{ inputs.date }}"; fi
+          if [ -n "${{ inputs.season }}" ]; then ARGS="$ARGS --season ${{ inputs.season }}"; fi
+          echo "Running: python nba/pipeline.py $ARGS"
+          python nba/pipeline.py $ARGS
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/nba
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+          else
+            git commit -m "chore(data): refresh NBA slate [auto]"
+            git push
+          fi

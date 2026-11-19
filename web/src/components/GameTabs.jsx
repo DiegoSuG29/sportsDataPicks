@@ -10,7 +10,7 @@ export default function GameTabs({ games, current, onSelect, onBack }) {
             key={g.file}
             className={"tab" + (g.file === current ? " active" : "")}
             onClick={() => onSelect(g.file)}
-            title={`${g.away_team} @ ${g.home_team} · ${g.weekday}`}
+            title={`${g.away_team} @ ${g.home_team}${g.weekday ? ` · ${g.weekday}` : g.tipoff ? ` · ${g.tipoff}` : ""}`}
           >
             {g.away_team}<span className="muted">@</span>{g.home_team}
           </button>

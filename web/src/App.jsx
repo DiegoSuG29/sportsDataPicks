@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getJSON, manifestUrl, dataUrl } from "./api.js";
+import { SPORTS } from "./sports.js";
 import Header from "./components/Header.jsx";
 import GameList from "./components/GameList.jsx";
 import GameTabs from "./components/GameTabs.jsx";
@@ -10,53 +11,87 @@ import WorstDefenses from "./components/WorstDefenses.jsx";
 const ACTIONS_URL = "https://github.com/DiegoSuG29/sportsDataPicks/actions";
 
 export default function App() {
+  // ?sport=nba deep-links / bookmarks a sport; default NFL
+  const [sport, setSport] = useState(() => {
+    const q = new URLSearchParams(window.location.search).get("sport");
+    return SPORTS[q] ? q : "nfl";
+  });
+  const cfg = SPORTS[sport];
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (sport === "nfl") url.searchParams.delete("sport");
+    else url.searchParams.set("sport", sport);
+    window.history.replaceState(null, "", url);
+  }, [sport]);
   const [manifest, setManifest] = useState(null);
-  const [weekFile, setWeekFile] = useState(null);
-  const [week, setWeek] = useState(null);
+  const [slateFile, setSlateFile] = useState(null);
+  const [slate, setSlate] = useState(null);
   const [gameFile, setGameFile] = useState(null); // null => list view
   const [game, setGame] = useState(null);
   const [playerId, setPlayerId] = useState(null); // non-null => player page
   const [error, setError] = useState(null);
 
-  // manifest on mount
-  useEffect(() => {
-    getJSON(manifestUrl())
-      .then((m) => {
-        setManifest(m);
-        if (m.latest) setWeekFile(m.latest.file);
-      })
-      .catch((e) => setError(e.message));
-  }, []);
-
-  // week index when the selected week changes
-  useEffect(() => {
-    if (!weekFile) return;
+  // Switching sport clears everything in the SAME render batch, so no render
+  // ever pairs the new sport's cfg with the old sport's game/player data.
+  const changeSport = (s) => {
+    setSport(s);
+    setManifest(null);
+    setSlateFile(null);
+    setSlate(null);
     setGameFile(null);
     setGame(null);
-    getJSON(dataUrl(weekFile)).then(setWeek).catch((e) => setError(e.message));
-  }, [weekFile]);
+    setPlayerId(null);
+    setError(null);
+  };
+
+  // manifest whenever the sport changes
+  useEffect(() => {
+    let live = true;
+    getJSON(manifestUrl(sport))
+      .then((m) => {
+        if (!live) return;
+        setManifest(m);
+        if (m.latest) setSlateFile(m.latest.file);
+      })
+      .catch((e) => live && setError(e.message));
+    return () => { live = false; };
+  }, [sport]);
+
+  // slate index (NFL week / NBA date) when the selected slate changes
+  useEffect(() => {
+    setGameFile(null);
+    setGame(null);
+    if (!slateFile) return;
+    let live = true;
+    getJSON(dataUrl(sport, slateFile))
+      .then((s) => live && setSlate(s))
+      .catch((e) => live && setError(e.message));
+    return () => { live = false; };
+  }, [slateFile]); // sport is read at call time; a sport change resets slateFile first
 
   // game detail when a game is selected
   useEffect(() => {
     setPlayerId(null); // leaving/switching a game drops any open player page
-    if (!gameFile) {
-      setGame(null);
-      return;
-    }
     setGame(null);
-    getJSON(dataUrl(gameFile)).then(setGame).catch((e) => setError(e.message));
+    if (!gameFile) return;
+    let live = true;
+    getJSON(dataUrl(sport, gameFile))
+      .then((g) => live && setGame(g))
+      .catch((e) => live && setError(e.message));
+    return () => { live = false; };
   }, [gameFile]);
 
-  const stamp =
-    week &&
-    `Season ${week.season} · ${week.games.length} games · stats through Week ${week.stats_through_week} · data generated ${new Date(week.generated_at).toLocaleString()}`;
+  const stamp = slate && cfg.stamp(slate);
 
   return (
     <>
       <Header
-        weeks={manifest?.weeks || []}
-        weekFile={weekFile}
-        onWeekChange={setWeekFile}
+        cfg={cfg}
+        sport={sport}
+        onSportChange={changeSport}
+        slates={manifest?.[cfg.slateListKey] || []}
+        slateFile={slateFile}
+        onSlateChange={setSlateFile}
         actionsUrl={ACTIONS_URL}
       />
 
@@ -65,19 +100,19 @@ export default function App() {
       <main>
         {error && <p className="empty">Could not load data: {error}</p>}
 
-        {!gameFile && week && (
+        {!gameFile && slate && (
           <>
-            <GameList games={week.games} onOpen={setGameFile} />
-            {week.worst_defenses && (
-              <WorstDefenses week={week.week} data={week.worst_defenses} onOpen={setGameFile} />
+            <GameList cfg={cfg} games={slate.games} onOpen={setGameFile} />
+            {slate.worst_defenses && (
+              <WorstDefenses cfg={cfg} data={slate.worst_defenses} onOpen={setGameFile} />
             )}
           </>
         )}
 
-        {gameFile && week && (
+        {gameFile && slate && (
           <>
             <GameTabs
-              games={week.games}
+              games={slate.games}
               current={gameFile}
               onSelect={setGameFile}
               onBack={() => setGameFile(null)}
@@ -87,13 +122,14 @@ export default function App() {
             ) : playerId ? (
               <PlayerView
                 key={playerId}
+                cfg={cfg}
                 game={game}
                 playerId={playerId}
                 onSelectPlayer={setPlayerId}
                 onBack={() => setPlayerId(null)}
               />
             ) : (
-              <GameView game={game} onPlayer={(team, player) => setPlayerId(player.player_id)} />
+              <GameView cfg={cfg} game={game} onPlayer={(team, player) => setPlayerId(player.player_id)} />
             )}
           </>
         )}
