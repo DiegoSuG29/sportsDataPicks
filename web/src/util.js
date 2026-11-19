@@ -24,3 +24,15 @@ export function spreadText(game) {
   if (s === 0) return "Pick'em";
   return s > 0 ? `${game.home_team} -${s}` : `${game.away_team} -${Math.abs(s)}`;
 }
+
+// Practice participation → short label + chip class.
+// Source strings: "Full Participation in Practice",
+// "Limited Participation in Practice", "Did Not Participate In Practice".
+export function practiceTag(s) {
+  if (!s) return null;
+  const t = s.toLowerCase();
+  if (t.startsWith("full")) return { label: "Full", cls: "prac-full" };
+  if (t.startsWith("limited")) return { label: "Limited", cls: "prac-ltd" };
+  if (t.startsWith("did not") || t.startsWith("dnp")) return { label: "DNP", cls: "prac-dnp" };
+  return { label: s, cls: "" };
+}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { fmt, posClass, FLAG_TONE } from "../util.js";
+import { fmt, posClass, FLAG_TONE, practiceTag } from "../util.js";
 
 const INJ_SHORT = { Out: "OUT", Doubtful: "DOUBT", Questionable: "QUES" };
 
@@ -217,7 +217,7 @@ function PositionGrids({ cfg, usage, injuries, dnps, onPlayer }) {
     ...Object.keys(byPos).filter((p) => !known.includes(p)),
   ];
   const injByName = {};
-  (injuries || []).forEach((i) => { if (i.report_status) injByName[i.name] = i; });
+  (injuries || []).forEach((i) => { if (i.report_status || i.practice_status) injByName[i.name] = i; });
   const dnpById = {};
   (dnps || []).forEach((d) => { dnpById[d.player_id] = d; });
 
@@ -260,10 +260,7 @@ function PositionTable({ cfg, pos, players, injByName, dnpById, onPlayer }) {
                     {p.status ? (
                       <span className={`flag ${FLAG_TONE[p.status] || "muted"}`} title={p.status_note || p.status}>{p.status}</span>
                     ) : inj ? (
-                      <span className={`status ${inj.report_status}`} style={{ marginLeft: 6 }}
-                        title={`${inj.report_status}${inj.injury ? ` · ${inj.injury}` : ""}`}>
-                        {INJ_SHORT[inj.report_status] || inj.report_status}
-                      </span>
+                      <InjuryChips inj={inj} short />
                     ) : dnp && (
                       <span className="flag warn" title={`DNP ${dnp.last_dnp}${dnp.reason ? ` · ${dnp.reason}` : ""}`}>DNP</span>
                     )}
@@ -299,12 +296,28 @@ function InjuryList({ injuries }) {
             {i.name} <span className={`pos-tag ${posClass(i.position)}`}>{i.position}</span>{" "}
             <span className="muted">{i.injury || ""}{i.games_missed != null ? ` · ${i.games_missed} missed` : ""}</span>
           </span>
-          <span className={`status ${i.report_status || ""}`}>
-            {i.report_status || i.practice_status || "—"}
-          </span>
+          <InjuryChips inj={i} />
         </div>
       ))}
     </div>
+  );
+}
+
+// Game status (Out/Doubtful/Questionable) when posted, plus this week's
+// latest practice participation color-coded as Full / Limited / DNP.
+function InjuryChips({ inj, short }) {
+  const prac = practiceTag(inj.practice_status);
+  const tip = [inj.report_status, prac && `Practice: ${prac.label}`, inj.injury].filter(Boolean).join(" · ");
+  if (!inj.report_status && !prac) return <span className="status">—</span>;
+  return (
+    <span className="inj-tags" style={short ? { marginLeft: 6 } : undefined} title={tip}>
+      {inj.report_status && (
+        <span className={`status ${inj.report_status}`}>
+          {short ? INJ_SHORT[inj.report_status] || inj.report_status : inj.report_status}
+        </span>
+      )}
+      {prac && <span className={`status ${prac.cls}`}>{prac.label}</span>}
+    </span>
   );
 }
 

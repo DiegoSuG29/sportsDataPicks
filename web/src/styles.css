@@ -421,3 +421,17 @@ tbody tr[class*="pos-"] td:first-child { padding-left: 12px; }
   .prop-primary { grid-template-columns: 1fr; }
   .li-btn { width: 44px; }
 }
+
+/* Similar players vs opponent (player page) */
+.similar { margin-top: 28px; }
+.sim-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin: 10px 0 14px; }
+.sim-check { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text); cursor: pointer; }
+.sim-check input { width: 16px; height: 16px; accent-color: var(--accent); }
+.sim-thr { flex: 0 1 360px; min-width: 240px; }
+tr.sim-self td { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+
+/* practice participation chips (injury report + usage tables) */
+.status.prac-full { background: color-mix(in srgb, var(--good) 16%, transparent); color: var(--good); }
+.status.prac-ltd { background: #3a2a17; color: var(--warn); }
+.status.prac-dnp { background: #3a1a1a; color: var(--bad); }
+.inj-tags { display: inline-flex; gap: 6px; align-items: center; flex-shrink: 0; }

@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "week": 11,
-  "generated_at": "2026-11-18T21:39:54+00:00",
+  "generated_at": "2026-11-19T05:49:20+00:00",
   "stats_through_week": 10,
   "reference_window": [
     2025,
@@ -245,7 +245,7 @@
       "gameday": "2026-11-19",
       "weekday": "Thursday",
       "spread_line": 12.5,
-      "total_line": 44.5,
+      "total_line": 43.5,
       "file": "week_11/2026_11_IND_HOU.json"
     },
     {
@@ -355,7 +355,7 @@
       "gameday": "2026-11-22",
       "weekday": "Sunday",
       "spread_line": 3.0,
-      "total_line": 45.5,
+      "total_line": 46.5,
       "file": "week_11/2026_11_MIN_SF.json"
     },
     {

@@ -1,11 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
 import { fmt, posClass, FLAG_TONE } from "../util.js";
-import { computeProp, computeWithWithout } from "../stats.js";
+import { computeProp, computeWithWithout, gameKey, statVal } from "../stats.js";
 import { statOption, statsForPosition, defaultStatFor } from "../sports.js";
 import { matchupTier } from "./GameView.jsx";
 
-// NFL logs are keyed by week, NBA logs by date.
-const gameKey = (l) => `${l.season}-${l.week != null ? l.week : l.date}`;
+// NFL logs are labeled by week, NBA logs by date.
 const gameLabel = (l) => (l.week != null ? `${l.season} W${l.week}` : l.date);
 
 export default function PlayerView({ cfg, game, playerId, onSelectPlayer, onBack }) {
@@ -244,6 +243,130 @@ export default function PlayerView({ cfg, game, playerId, onSelectPlayer, onBack
           />
         </div>
       </div>
+
+      {cfg.similar && game.teams[opp]?.faced && (
+        <SimilarPlayers
+          cfg={cfg}
+          player={player}
+          opp={opp}
+          faced={game.teams[opp].faced}
+          opt={opt}
+          line={parseFloat(line)}
+        />
+      )}
+    </div>
+  );
+}
+
+// Same-position players who faced this opponent this season, filtered to a
+// comparable role (snap% ≥ the player's average minus a cushion).
+function SimilarPlayers({ cfg, player, opp, faced, opt, line }) {
+  const af = cfg.availFilter;
+  const base = cfg.similar.base(player);
+  const [useFilter, setUseFilter] = useState(base != null);
+  const [minAvail, setMinAvail] = useState(
+    base != null ? String(Math.max(af.min, base - cfg.similar.cushion)) : "0"
+  );
+  const bucket = cfg.bucket[player.position] || player.position;
+  const hasLine = !Number.isNaN(line);
+
+  const rows = useMemo(() => {
+    const thr = Number(minAvail);
+    return faced
+      .filter((r) => r.bucket === bucket)
+      .filter((r) => {
+        if (!useFilter) return true;
+        const v = r[af.field];
+        return v != null && v * (af.scale || 1) >= thr;
+      })
+      .map((r) => ({ ...r, val: statVal(opt, r) }))
+      .sort((a, b) => b.week - a.week || b.val - a.val);
+  }, [faced, bucket, useFilter, minAvail, opt, af]);
+
+  const n = rows.length;
+  const overs = hasLine ? rows.filter((r) => r.val > line).length : null;
+  const avg = n ? rows.reduce((s, r) => s + r.val, 0) / n : null;
+  const games = new Set(rows.map((r) => r.week)).size;
+  const maxVal = Math.max(line || 0, ...rows.map((r) => r.val), 1);
+  const dec = opt.dec;
+  const posLabel = (cfg.posName[bucket] || `${bucket}s`).toLowerCase();
+
+  return (
+    <div className="similar">
+      <div className="section-label">Similar players vs {opp}</div>
+      <div className="loghint">
+        Other {posLabel} against the {opp} defense this season, with the prop checker's stat and line.
+        {base != null && <> {player.name} averages <b>{cfg.similar.baseText(base)}</b>; default cutoff is {cfg.similar.cushion} below that.</>}
+      </div>
+      <div className="sim-controls">
+        <label className="sim-check">
+          <input type="checkbox" checked={useFilter} onChange={(e) => setUseFilter(e.target.checked)} />
+          Only similar roles ({af.label.toLowerCase()} filter)
+        </label>
+        {useFilter && (
+          <label className="pp-line sim-thr">{af.label}
+            <StepControl
+              min={af.min} max={af.max} step={af.step} quantize={Math.round} suffix={af.suffix}
+              value={minAvail} onChange={setMinAvail}
+            />
+          </label>
+        )}
+      </div>
+
+      {!n ? (
+        <p className="empty">No {posLabel} vs {opp} match{useFilter ? " this snap% threshold" : ""}.</p>
+      ) : (
+        <>
+          <div className="prop-result">
+            {hasLine && (
+              <div className={`rstat ${overs / n >= 0.5 ? "hit" : "miss"}`}>
+                <div className="big">{Math.round((overs / n) * 100)}%</div>
+                <div className="lbl">Over {line} ({overs}/{n})</div>
+              </div>
+            )}
+            <div className="rstat"><div className="big">{fmt(avg, 1)}</div><div className="lbl">Average</div></div>
+            <div className="rstat"><div className="big">{n}</div><div className="lbl">Player-games ({games} games)</div></div>
+          </div>
+          <div className="table-wrap">
+            <table className="oulog">
+              <thead>
+                <tr><th>Player</th><th>Wk</th><th>{cfg.logAvailCol.label}</th><th>{opt.label}</th><th>± line</th><th></th></tr>
+              </thead>
+              <tbody>
+                {rows.map((r) => {
+                  const over = r.val > line;
+                  const cls = hasLine ? (over ? "over" : "under") : "";
+                  const self = r.player_id === player.player_id;
+                  return (
+                    <tr key={`${r.player_id}-${r.week}`} className={self ? "sim-self" : ""}>
+                      <td>
+                        {r.name} <span className="pos-tag" title="team that game">{r.team}</span>
+                        {self && <span className="muted"> (this player)</span>}
+                      </td>
+                      <td>{gameLabel(r)}</td>
+                      <td className="muted">{cfg.logAvailCol.fn(r)}</td>
+                      <td className={cls ? `val-${cls}` : ""}>{fmt(r.val, dec)}</td>
+                      <td>
+                        {hasLine && (
+                          <span className={`ou-badge ${cls}`}>
+                            {over ? "+" : "−"}{Math.round(Math.abs(r.val - line) * 10) / 10}
+                          </span>
+                        )}
+                      </td>
+                      <td className="ou-barcell">
+                        <div className="ou-bar">
+                          <div className={`ou-fill ${cls}`} style={{ width: `${(r.val / maxVal) * 100}%` }} />
+                          {hasLine && <div className="ou-linemark" style={{ left: `${(line / maxVal) * 100}%` }} />}
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
     </div>
   );
 }

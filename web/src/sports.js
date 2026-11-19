@@ -98,6 +98,13 @@ export const SPORTS = {
     availTitle: (team) => `${team} injuries`,
     availFilter: { label: "Min snap%", suffix: "%", min: 0, max: 100, step: 1, field: "snap_pct", scale: 100 },
     logAvailCol: { label: "Snap%", fn: (l) => pct(l.snap_pct) },
+    // "Similar players vs X": opponent's faced-log rows filtered to the player's
+    // avg snap% minus a cushion (threshold in the availFilter's units).
+    similar: {
+      base: (p) => (p.snap_pct != null ? Math.round(p.snap_pct * 100) : null),
+      cushion: 5,
+      baseText: (v) => `${v}% of snaps`,
+    },
 
     gameHeadSub: (g) => `${g.weekday} · ${g.gameday}${g.gametime ? ` · ${g.gametime}` : ""}`,
     gameLineRow: (g) => [["Spread", spreadText(g)], ["Total", fmt(g.total_line)], ["Roof", g.roof || "—"], ["Surface", g.surface || "—"]],

@@ -50,12 +50,16 @@ export function computeProp(logs, opt, line, filters, avail) {
   };
 }
 
+// Identifies one team-game: season + week (NFL) or date (NBA) + the team the
+// player suited up for. Including the team means a traded teammate's game for
+// his NEW team doesn't count as "playing alongside" the player on his old one.
+export const gameKey = (l) => `${l.season}-${l.week != null ? l.week : l.date}-${l.team ?? ""}`;
+
 // Group with/without across one or more teammates.
 //   "with"    = games where EVERY selected teammate played
 //   "without" = games where NO selected teammate played
 //   mixed games (some in, some out) are excluded from both.
 export function computeWithWithout(playerLogs, mateLogsList, opt) {
-  const gameKey = (l) => `${l.season}-${l.week != null ? l.week : l.date}`;
   const playedSets = mateLogsList.map((logs) => new Set(logs.map(gameKey)));
   const withG = [], withoutG = [];
   let mixedN = 0;

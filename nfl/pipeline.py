@@ -314,7 +314,9 @@ def team_injuries(injuries: pl.DataFrame, usage: list[dict], team: str,
                 "name": r["full_name"],
                 "position": r["position"],
                 "report_status": status,
-                "injury": r["report_primary_injury"],
+                # game report's injury, else the practice report's (game
+                # statuses post later in the week than practice reports)
+                "injury": r["report_primary_injury"] or r["practice_primary_injury"],
                 "practice_status": r["practice_status"],
                 "report_week": avail_week,
                 "games_missed": (team_games - played) if played is not None else None,
@@ -353,6 +355,10 @@ _ROSTER_STATUS_NOTES = {
 
 def _roster_note(status, abbr):
     """Return (code, long_note) for a non-active status, else None."""
+    # ACT wins: an active player can still carry a stale game-day abbr (e.g.
+    # I01 "inactive" left over from last week) — don't flag them as out.
+    if status == "ACT":
+        return None
     if abbr in _ROSTER_ABBR_NOTES:
         return _ROSTER_ABBR_NOTES[abbr]
     if status in _ROSTER_STATUS_NOTES:
@@ -408,30 +414,64 @@ def player_logs(player_stats: pl.DataFrame, schedules: pl.DataFrame,
 
     logs: dict[str, list] = {}
     for r in df.iter_rows(named=True):
-        home_team, div = meta.get(r["game_id"], (None, None))
-        is_home = (home_team == r["team"]) if home_team else None
-        snap = snap_lookup.get((_norm_name(r["player_display_name"]), r["season"], r["week"]))
-        logs.setdefault(r["player_id"], []).append(
-            {
-                "season": r["season"],
-                "week": r["week"],
-                "team": r["team"],
-                "opponent": r["opponent_team"],
-                "home": is_home,
-                "div_game": div,
-                "targets": int(r["targets"] or 0),
-                "receptions": int(r["receptions"] or 0),
-                "rec_yds": int(r["receiving_yards"] or 0),
-                "rec_tds": int(r["receiving_tds"] or 0),
-                "carries": int(r["carries"] or 0),
-                "rush_yds": int(r["rushing_yards"] or 0),
-                "rush_tds": int(r["rushing_tds"] or 0),
-                "pass_yds": int(r["passing_yards"] or 0),
-                "pass_tds": int(r["passing_tds"] or 0),
-                "snap_pct": _round(snap, 3) if snap is not None else None,
-            }
-        )
+        logs.setdefault(r["player_id"], []).append(_log_row(r, meta, snap_lookup))
     return logs
+
+
+def _log_row(r: dict, meta: dict, snap_lookup: dict) -> dict:
+    """One player-game row (shared by player logs and defense-faced logs)."""
+    home_team, div = meta.get(r["game_id"], (None, None))
+    is_home = (home_team == r["team"]) if home_team else None
+    snap = snap_lookup.get((_norm_name(r["player_display_name"]), r["season"], r["week"]))
+    return {
+        "season": r["season"],
+        "week": r["week"],
+        "team": r["team"],
+        "opponent": r["opponent_team"],
+        "home": is_home,
+        "div_game": div,
+        "targets": int(r["targets"] or 0),
+        "receptions": int(r["receptions"] or 0),
+        "rec_yds": int(r["receiving_yards"] or 0),
+        "rec_tds": int(r["receiving_tds"] or 0),
+        "carries": int(r["carries"] or 0),
+        "rush_yds": int(r["rushing_yards"] or 0),
+        "rush_tds": int(r["rushing_tds"] or 0),
+        "pass_yds": int(r["passing_yards"] or 0),
+        "pass_tds": int(r["passing_tds"] or 0),
+        "snap_pct": _round(snap, 3) if snap is not None else None,
+    }
+
+
+def defense_faced_logs(player_stats: pl.DataFrame, schedules: pl.DataFrame,
+                       snaps: pl.DataFrame | None, team: str, season: int) -> list[dict]:
+    """Every opposing skill-player game against ``team``'s defense, CURRENT season only.
+
+    Powers the player page's "Similar players vs X" section: the browser filters
+    these by position bucket and by snap% relative to the player being viewed.
+    """
+    df = player_stats.filter(
+        (pl.col("season") == season)
+        & (pl.col("opponent_team") == team)
+        & pl.col("position").is_in(list(POS_BUCKET))
+    ).sort(["week", "player_display_name"])
+    meta = {r["game_id"]: (r["home_team"], bool(r["div_game"]))
+            for r in schedules.iter_rows(named=True)}
+    snap_lookup = {}
+    if snaps is not None and snaps.height:
+        for r in snaps.filter(pl.col("season") == season).iter_rows(named=True):
+            snap_lookup[(_norm_name(r["player"]), r["season"], r["week"])] = r["offense_pct"]
+    rows = []
+    for r in df.iter_rows(named=True):
+        row = _log_row(r, meta, snap_lookup)
+        row.update({
+            "player_id": r["player_id"],
+            "name": r["player_display_name"],
+            "position": r["position"],
+            "bucket": POS_BUCKET[r["position"]],
+        })
+        rows.append(row)
+    return rows
 
 
 # --------------------------------------------------------------------------- #
@@ -648,6 +688,8 @@ def build_week(season: int, week: int) -> dict:
                 "injuries": team_injuries(
                     injuries, usage, t, season, week, form["season_games"]
                 ),
+                # opposing skill players' games vs this defense (this season)
+                "faced": defense_faced_logs(player_stats, schedules, snaps, t, season),
             }
 
         # player logs for every listed skill player, both teams (prop checker)
