@@ -1,0 +1,202 @@
+{
+  "season": 2027,
+  "date": "2026-11-19",
+  "generated_at": "2026-11-19T21:05:39+00:00",
+  "stats_through": "2026-11-18",
+  "reference_window": [
+    2026,
+    2027
+  ],
+  "worst_defenses": {
+    "G": [
+      {
+        "team": "LAC",
+        "rank": 3,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 126.4,
+        "pts_pg_allowed": 66.2,
+        "opponent": "SA",
+        "home": false,
+        "game_file": "2026-11-19/401910022.json"
+      },
+      {
+        "team": "MIL",
+        "rank": 7,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 117.5,
+        "pts_pg_allowed": 57.3,
+        "opponent": "POR",
+        "home": true,
+        "game_file": "2026-11-19/401910020.json"
+      },
+      {
+        "team": "SA",
+        "rank": 12,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 112.1,
+        "pts_pg_allowed": 54.4,
+        "opponent": "LAC",
+        "home": true,
+        "game_file": "2026-11-19/401910022.json"
+      },
+      {
+        "team": "GS",
+        "rank": 18,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 108.6,
+        "pts_pg_allowed": 54.1,
+        "opponent": "MEM",
+        "home": false,
+        "game_file": "2026-11-19/401910019.json"
+      },
+      {
+        "team": "POR",
+        "rank": 19,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 108.1,
+        "pts_pg_allowed": 59.9,
+        "opponent": "MIL",
+        "home": false,
+        "game_file": "2026-11-19/401910020.json"
+      }
+    ],
+    "F": [
+      {
+        "team": "GS",
+        "rank": 7,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 94.6,
+        "pts_pg_allowed": 45.5,
+        "opponent": "MEM",
+        "home": false,
+        "game_file": "2026-11-19/401910019.json"
+      },
+      {
+        "team": "MIL",
+        "rank": 13,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 90.4,
+        "pts_pg_allowed": 43.7,
+        "opponent": "POR",
+        "home": true,
+        "game_file": "2026-11-19/401910020.json"
+      },
+      {
+        "team": "MEM",
+        "rank": 14,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 89.6,
+        "pts_pg_allowed": 44.1,
+        "opponent": "GS",
+        "home": true,
+        "game_file": "2026-11-19/401910019.json"
+      },
+      {
+        "team": "MIN",
+        "rank": 21,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 83.3,
+        "pts_pg_allowed": 39.5,
+        "opponent": "NY",
+        "home": true,
+        "game_file": "2026-11-19/401910021.json"
+      },
+      {
+        "team": "NY",
+        "rank": 22,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 82.2,
+        "pts_pg_allowed": 37.6,
+        "opponent": "MIN",
+        "home": false,
+        "game_file": "2026-11-19/401910021.json"
+      }
+    ],
+    "C": [
+      {
+        "team": "MIL",
+        "rank": 2,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 46.2,
+        "pts_pg_allowed": 19.8,
+        "opponent": "POR",
+        "home": true,
+        "game_file": "2026-11-19/401910020.json"
+      },
+      {
+        "team": "LAC",
+        "rank": 10,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 37.3,
+        "pts_pg_allowed": 15.8,
+        "opponent": "SA",
+        "home": false,
+        "game_file": "2026-11-19/401910022.json"
+      },
+      {
+        "team": "MIN",
+        "rank": 12,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 35.6,
+        "pts_pg_allowed": 13.4,
+        "opponent": "NY",
+        "home": true,
+        "game_file": "2026-11-19/401910021.json"
+      },
+      {
+        "team": "MEM",
+        "rank": 13,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 35.1,
+        "pts_pg_allowed": 13.5,
+        "opponent": "GS",
+        "home": true,
+        "game_file": "2026-11-19/401910019.json"
+      },
+      {
+        "team": "GS",
+        "rank": 17,
+        "of_teams": 30,
+        "fantasy_pg_allowed": 34.1,
+        "pts_pg_allowed": 13.2,
+        "opponent": "MEM",
+        "home": false,
+        "game_file": "2026-11-19/401910019.json"
+      }
+    ]
+  },
+  "games": [
+    {
+      "game_id": "401910019",
+      "away_team": "GS",
+      "home_team": "MEM",
+      "tipoff": "8:00 PM ET",
+      "status": "pre",
+      "file": "2026-11-19/401910019.json"
+    },
+    {
+      "game_id": "401910020",
+      "away_team": "POR",
+      "home_team": "MIL",
+      "tipoff": "8:00 PM ET",
+      "status": "pre",
+      "file": "2026-11-19/401910020.json"
+    },
+    {
+      "game_id": "401910021",
+      "away_team": "NY",
+      "home_team": "MIN",
+      "tipoff": "8:00 PM ET",
+      "status": "pre",
+      "file": "2026-11-19/401910021.json"
+    },
+    {
+      "game_id": "401910022",
+      "away_team": "LAC",
+      "home_team": "SA",
+      "tipoff": "8:00 PM ET",
+      "status": "pre",
+      "file": "2026-11-19/401910022.json"
+    }
+  ]
+}
