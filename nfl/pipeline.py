@@ -594,6 +594,23 @@ def _ordinal(n: int) -> str:
 # --------------------------------------------------------------------------- #
 # Main
 # --------------------------------------------------------------------------- #
+def _table(rows: list[dict]) -> dict:
+    """Row list -> {"cols": [...], "rows": [[...], ...]} so field names are written once.
+    The dashboard (web/src/api.js) expands these back into row objects on load."""
+    cols = list(dict.fromkeys(k for r in rows for k in r))
+    return {"cols": cols, "rows": [[r.get(c) for c in cols] for r in rows]}
+
+
+def _encode_game(game: dict) -> dict:
+    """Table-encode the bulky row lists (player logs, per-defense faced logs) for writing."""
+    return {
+        **game,
+        "player_logs": {pid: _table(rows) for pid, rows in game["player_logs"].items()},
+        "teams": {t: ({**v, "faced": _table(v["faced"])} if "faced" in v else v)
+                  for t, v in game["teams"].items()},
+    }
+
+
 def espn_logo(url: str | None) -> str | None:
     """ESPN team logo -> dark-background variant, resized to 64px by ESPN's image combiner."""
     if not url or "/teamlogos/" not in url:
@@ -722,7 +739,7 @@ def build_week(season: int, week: int) -> dict:
         }
 
         path = out_dir / f"{gr['game_id']}.json"
-        path.write_text(json.dumps(game, separators=(",", ":")), encoding="utf-8")
+        path.write_text(json.dumps(_encode_game(game), separators=(",", ":")), encoding="utf-8")
         print(f"  wrote {path.relative_to(REPO_ROOT)}  "
               f"({len(teams[away]['usage'])}+{len(teams[home]['usage'])} players, "
               f"{len(game['edges'])} edges)")

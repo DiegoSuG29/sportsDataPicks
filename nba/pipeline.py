@@ -45,6 +45,23 @@ def _df(obj):
     return pl.from_pandas(obj)
 
 
+def _table(rows: list[dict]) -> dict:
+    """Row list -> {"cols": [...], "rows": [[...], ...]} so field names are written once.
+    The dashboard (web/src/api.js) expands these back into row objects on load."""
+    cols = list(dict.fromkeys(k for r in rows for k in r))
+    return {"cols": cols, "rows": [[r.get(c) for c in cols] for r in rows]}
+
+
+def _encode_game(game: dict) -> dict:
+    """Table-encode the bulky row lists (player logs, per-defense faced logs) for writing."""
+    return {
+        **game,
+        "player_logs": {pid: _table(rows) for pid, rows in game["player_logs"].items()},
+        "teams": {t: ({**v, "faced": _table(v["faced"])} if "faced" in v else v)
+                  for t, v in game["teams"].items()},
+    }
+
+
 def espn_logo(url: str | None) -> str | None:
     """ESPN team logo -> dark-background variant, resized to 64px by ESPN's image combiner."""
     if not url or "/teamlogos/" not in url:
@@ -369,9 +386,9 @@ def defense_faced(cur: pl.DataFrame, team: str) -> tuple[list[dict], dict]:
     rows = []
     for r in df.iter_rows(named=True):
         row = _log_row(r)
+        row.pop("opponent")  # always this defense
         row.update({"player_id": str(r["athlete_id"]), "name": r["athlete_display_name"],
-                    "position": r["athlete_position_abbreviation"],
-                    "bucket": r["athlete_position_abbreviation"]})
+                    "position": r["athlete_position_abbreviation"]})  # = G/F/C bucket
         rows.append(row)
     ids = list({int(r["player_id"]) for r in rows})
     avgs = {}
@@ -548,7 +565,8 @@ def build_slate(season: int | None = None, date: dt.date | None = None) -> dict:
         logs = player_logs(box, pids)
 
         game = {**meta, "teams": teams, "player_logs": logs, "edges": flag_edges(meta, teams)}
-        (out_dir / f"{g['id']}.json").write_text(json.dumps(game, separators=(",", ":")), encoding="utf-8")
+        (out_dir / f"{g['id']}.json").write_text(
+            json.dumps(_encode_game(game), separators=(",", ":")), encoding="utf-8")
         print(f"  wrote {away}@{home}  "
               f"({len(teams[away]['usage'])}+{len(teams[home]['usage'])} players, "
               f"{len(game['edges'])} edges)")
@@ -563,8 +581,24 @@ def build_slate(season: int | None = None, date: dt.date | None = None) -> dict:
 
     (out_dir / "index.json").write_text(json.dumps(index, separators=(",", ":")), encoding="utf-8")
     print(f"  wrote {(out_dir / 'index.json').relative_to(REPO_ROOT)}")
+    prune_slates(keep_also=slate)
     write_manifest()
     return index
+
+
+KEEP_SLATES = 3  # newest slate folders kept in the repo/site (older ones are in git history)
+
+
+def prune_slates(keep: int = KEEP_SLATES, keep_also: dt.date | None = None) -> None:
+    """Delete slate folders older than the newest ``keep`` (never the one just built).
+    Any pruned date can be rebuilt with ``--date``."""
+    import shutil
+    dirs = sorted(d for d in OUT_ROOT.glob("20*-*-*") if d.is_dir())
+    for d in dirs[:-keep]:
+        if keep_also and d.name == keep_also.isoformat():
+            continue
+        shutil.rmtree(d)
+        print(f"  pruned old slate {d.name}")
 
 
 def write_manifest() -> None:

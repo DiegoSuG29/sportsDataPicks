@@ -285,7 +285,7 @@ function SimilarPlayers({ cfg, player, opp, faced, avgs, seasonLogs, opt, line }
   const rows = useMemo(() => {
     const thr = Number(minAvail);
     return faced
-      .filter((r) => r.bucket === bucket)
+      .filter((r) => (r.bucket ?? r.position) === bucket) // NBA rows: position is the bucket
       .filter((r) => {
         if (!useFilter) return true;
         const v = r[af.field];
