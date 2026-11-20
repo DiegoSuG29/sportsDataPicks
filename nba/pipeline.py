@@ -548,7 +548,7 @@ def build_slate(season: int | None = None, date: dt.date | None = None) -> dict:
         logs = player_logs(box, pids)
 
         game = {**meta, "teams": teams, "player_logs": logs, "edges": flag_edges(meta, teams)}
-        (out_dir / f"{g['id']}.json").write_text(json.dumps(game, indent=2), encoding="utf-8")
+        (out_dir / f"{g['id']}.json").write_text(json.dumps(game, separators=(",", ":")), encoding="utf-8")
         print(f"  wrote {away}@{home}  "
               f"({len(teams[away]['usage'])}+{len(teams[home]['usage'])} players, "
               f"{len(game['edges'])} edges)")
@@ -561,7 +561,7 @@ def build_slate(season: int | None = None, date: dt.date | None = None) -> dict:
             "file": f"{slate.isoformat()}/{g['id']}.json",
         })
 
-    (out_dir / "index.json").write_text(json.dumps(index, indent=2), encoding="utf-8")
+    (out_dir / "index.json").write_text(json.dumps(index, separators=(",", ":")), encoding="utf-8")
     print(f"  wrote {(out_dir / 'index.json').relative_to(REPO_ROOT)}")
     write_manifest()
     return index
@@ -592,7 +592,7 @@ def write_manifest() -> None:
         "latest": slates[-1] if slates else None,
         "slates": slates,
     }
-    (OUT_ROOT / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
+    (OUT_ROOT / "manifest.json").write_text(json.dumps(manifest, separators=(",", ":")), encoding="utf-8")
     print(f"  wrote {(OUT_ROOT / 'manifest.json').relative_to(REPO_ROOT)}")
 
 

@@ -722,7 +722,7 @@ def build_week(season: int, week: int) -> dict:
         }
 
         path = out_dir / f"{gr['game_id']}.json"
-        path.write_text(json.dumps(game, indent=2), encoding="utf-8")
+        path.write_text(json.dumps(game, separators=(",", ":")), encoding="utf-8")
         print(f"  wrote {path.relative_to(REPO_ROOT)}  "
               f"({len(teams[away]['usage'])}+{len(teams[home]['usage'])} players, "
               f"{len(game['edges'])} edges)")
@@ -737,7 +737,7 @@ def build_week(season: int, week: int) -> dict:
             "file": f"week_{week:02d}/{gr['game_id']}.json",
         })
 
-    (out_dir / "index.json").write_text(json.dumps(index, indent=2), encoding="utf-8")
+    (out_dir / "index.json").write_text(json.dumps(index, separators=(",", ":")), encoding="utf-8")
     print(f"  wrote {(out_dir / 'index.json').relative_to(REPO_ROOT)}")
 
     write_manifest()
@@ -769,7 +769,7 @@ def write_manifest() -> None:
         "weeks": weeks,
     }
     (OUT_ROOT / "manifest.json").write_text(
-        json.dumps(manifest, indent=2), encoding="utf-8"
+        json.dumps(manifest, separators=(",", ":")), encoding="utf-8"
     )
     print(f"  wrote {(OUT_ROOT / 'manifest.json').relative_to(REPO_ROOT)}")
 
