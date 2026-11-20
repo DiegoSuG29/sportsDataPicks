@@ -7,6 +7,7 @@ import GameTabs from "./components/GameTabs.jsx";
 import GameView from "./components/GameView.jsx";
 import PlayerView from "./components/PlayerView.jsx";
 import WorstDefenses from "./components/WorstDefenses.jsx";
+import { LogoContext } from "./logos.jsx";
 
 const ACTIONS_URL = "https://github.com/DiegoSuG29/sportsDataPicks/actions";
 
@@ -97,6 +98,7 @@ export default function App() {
 
       {stamp && <p className="data-stamp">{stamp}</p>}
 
+      <LogoContext.Provider value={slate?.logos || {}}>
       <main>
         {error && <p className="empty">Could not load data: {error}</p>}
 
@@ -104,7 +106,7 @@ export default function App() {
           <>
             <GameList cfg={cfg} games={slate.games} onOpen={setGameFile} />
             {slate.worst_defenses && (
-              <WorstDefenses cfg={cfg} data={slate.worst_defenses} onOpen={setGameFile} />
+              <WorstDefenses key={cfg.key} cfg={cfg} data={slate.worst_defenses} byStat={slate.worst_by_stat} onOpen={setGameFile} />
             )}
           </>
         )}
@@ -134,6 +136,7 @@ export default function App() {
           </>
         )}
       </main>
+      </LogoContext.Provider>
     </>
   );
 }

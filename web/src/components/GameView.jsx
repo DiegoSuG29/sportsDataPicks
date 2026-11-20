@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { fmt, posClass, FLAG_TONE, practiceTag } from "../util.js";
+import { Team } from "../logos.jsx";
 
 const INJ_SHORT = { Out: "OUT", Doubtful: "DOUBT", Questionable: "QUES" };
 
@@ -8,7 +9,7 @@ export default function GameView({ cfg, game, onPlayer }) {
   return (
     <div className="game-detail">
       <div className="game-head">
-        <h2>{game.away_team} @ {game.home_team}</h2>
+        <h2><Team abbr={game.away_team} size={34} /> <span className="muted">@</span> <Team abbr={game.home_team} size={34} /></h2>
         <span className="sub">{cfg.gameHeadSub(game)}</span>
         {game.div_game && <span className="pill div">Divisional</span>}
       </div>
@@ -122,7 +123,7 @@ function TeamCard({ cfg, game, team, venue }) {
   return (
     <div className="team-panel">
       <span className="panel-kind">Team</span>
-      <h3>{team} <span className="muted" style={{ fontSize: 14 }}>({venue})</span></h3>
+      <h3><Team abbr={team} size={28} /> <span className="muted" style={{ fontSize: 14 }}>({venue})</span></h3>
 
       <TeamMetrics tiles={cfg.teamMetrics(f)} />
       {f.back_to_back && <div className="loghint"><span className="under">Back-to-back</span>: played yesterday.</div>}
@@ -138,15 +139,30 @@ function TeamCard({ cfg, game, team, venue }) {
       <div className="loghint">
         Matchup is for the opposing player: <span className="over">Soft</span> = this defense gives up a lot to that
         position (favorable), <span className="under">Tough</span> = stingy. Rank 1 = allows the most.
+        {cfg.defenseHint && <> {cfg.defenseHint}</>}
       </div>
     </div>
   );
 }
 
-export function matchupTier(d) {
-  const third = d.of_teams / 3;
-  return d.rank_most_allowed <= third ? "soft" : d.rank_most_allowed > 2 * third ? "tough" : "avg";
+export function rankTier(rank, ofTeams) {
+  const third = ofTeams / 3;
+  return rank <= third ? "soft" : rank > 2 * third ? "tough" : "avg";
 }
+export const matchupTier = (d) => rankTier(d.rank_most_allowed, d.of_teams);
+
+// Strong per-stat matchups (top/bottom N pace-adjusted) for one position's defense.
+export function strongStats(cfg, d) {
+  if (!d?.by_stat || !cfg.strongN) return [];
+  const n = d.of_teams, k = cfg.strongN;
+  return (cfg.worstStats || [])
+    .filter(([key]) => key !== "fp" && d.by_stat[key])
+    .map(([key, label]) => ({ key, label, rank: d.by_stat[key].rank }))
+    .filter((s) => s.rank <= k || s.rank > n - k)
+    .map((s) => ({ ...s, tier: s.rank <= k ? "soft" : "tough" }));
+}
+
+const vsAvg = (v) => `${v > 0 ? "+" : ""}${Math.round(v * 100)}% vs avg`;
 
 function DefenseTable({ cfg, def }) {
   const MATCHUP = { soft: "Soft", avg: "Avg", tough: "Tough" };
@@ -164,7 +180,16 @@ function DefenseTable({ cfg, def }) {
             return (
               <tr key={pos} className={posClass(pos)}>
                 <td><span className={`pos-tag ${posClass(pos)}`}>{pos}</span></td>
-                {cfg.defenseColumns.map((c) => <td key={c[0]}>{c[1](d)}</td>)}
+                {cfg.defenseColumns.map((c) => {
+                  const s = c[2] && d.by_stat?.[c[2]];
+                  if (!s) return <td key={c[0]}>{c[1](d)}</td>;
+                  return (
+                    <td key={c[0]} className={`dcell ${rankTier(s.rank, d.of_teams)}`}
+                        title={`${s.p100} per 100 poss · rank ${s.rank}/${d.of_teams} · ${vsAvg(s.vs_avg)}`}>
+                      {c[1](d)}<span className="drk">{s.rank}</span>
+                    </td>
+                  );
+                })}
                 <td>
                   <span className={`matchup ${tier}`}>{MATCHUP[tier]}</span>
                   <span className="muted" style={{ marginLeft: 6, fontSize: 11 }}>{d.rank_most_allowed}/{d.of_teams}</span>
@@ -184,6 +209,7 @@ function UsageSection({ cfg, game, onPlayer }) {
   const [team, setTeam] = useState(teams[0]);
   const active = game.teams[team] ? team : teams[0];
   const t = game.teams[active];
+  const oppTeam = teams.find((x) => x !== active);
   const shareWord = cfg.key === "nba" ? "most minutes" : "highest snap share";
 
   return (
@@ -197,18 +223,20 @@ function UsageSection({ cfg, game, onPlayer }) {
               className={`tt-btn ${tm === active ? "active" : ""}`}
               onClick={() => setTeam(tm)}
             >
-              {tm}
+              <Team abbr={tm} size={16} />
             </button>
           ))}
         </div>
       </div>
       <div className="loghint">Each position shows its most relevant stats, {shareWord} first. Click a player for props &amp; splits.</div>
-      <PositionGrids cfg={cfg} usage={t.usage} injuries={t.injuries} dnps={t.dnps} onPlayer={(p) => onPlayer(active, p)} />
+      <PositionGrids cfg={cfg} usage={t.usage} injuries={t.injuries} dnps={t.dnps}
+        opp={oppTeam} oppDef={game.teams[oppTeam]?.defense}
+        onPlayer={(p) => onPlayer(active, p)} />
     </div>
   );
 }
 
-function PositionGrids({ cfg, usage, injuries, dnps, onPlayer }) {
+function PositionGrids({ cfg, usage, injuries, dnps, opp, oppDef, onPlayer }) {
   const known = cfg.positions;
   const byPos = {};
   usage.forEach((p) => (byPos[p.position] ||= []).push(p));
@@ -232,6 +260,8 @@ function PositionGrids({ cfg, usage, injuries, dnps, onPlayer }) {
           players={byPos[pos].slice().sort((a, b) => cfg.usageSort(b) - cfg.usageSort(a))}
           injByName={injByName}
           dnpById={dnpById}
+          opp={opp}
+          strong={strongStats(cfg, oppDef?.[cfg.bucket[pos] || pos])}
           onPlayer={onPlayer}
         />
       ))}
@@ -239,11 +269,21 @@ function PositionGrids({ cfg, usage, injuries, dnps, onPlayer }) {
   );
 }
 
-function PositionTable({ cfg, pos, players, injByName, dnpById, onPlayer }) {
+function PositionTable({ cfg, pos, players, injByName, dnpById, opp, strong = [], onPlayer }) {
   const cols = cfg.usageColumns(cfg.bucket[pos] || pos);
   return (
     <div className="pos-grid">
-      <div className={`pos-grid-head ${posClass(pos)}`}>{cfg.posName[pos] || pos}</div>
+      <div className={`pos-grid-head ${posClass(pos)}`}>
+        {cfg.posName[pos] || pos}
+        {strong.length > 0 && (
+          <span className="pg-match" title={`vs ${opp} defense: top/bottom ${cfg.strongN} pace-adjusted ranks`}>
+            <span className="muted">vs {opp}</span>
+            {strong.map((s) => (
+              <span key={s.key} className={`matchup ${s.tier}`}>{s.tier === "soft" ? "▲" : "▼"} {s.label} #{s.rank}</span>
+            ))}
+          </span>
+        )}
+      </div>
       <div className="table-wrap">
         <table>
           <thead>

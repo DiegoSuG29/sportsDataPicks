@@ -594,6 +594,23 @@ def _ordinal(n: int) -> str:
 # --------------------------------------------------------------------------- #
 # Main
 # --------------------------------------------------------------------------- #
+def espn_logo(url: str | None) -> str | None:
+    """ESPN team logo -> dark-background variant, resized to 64px by ESPN's image combiner."""
+    if not url or "/teamlogos/" not in url:
+        return url
+    path = url[url.index("/i/teamlogos/"):].replace("/500/", "/500-dark/")
+    return f"https://a.espncdn.com/combiner/i?img={path}&h=64&w=64"
+
+
+def team_logos() -> dict:
+    try:
+        teams = nfl.load_teams()
+    except Exception as e:  # pragma: no cover - source hiccup; page falls back to text
+        print(f"  teams/logos unavailable: {e}")
+        return {}
+    return {r["team_abbr"]: espn_logo(r["team_logo_espn"]) for r in teams.iter_rows(named=True)}
+
+
 def build_week(season: int, week: int) -> dict:
     seasons = [season - 1, season]
     print(f"Loading nflverse data for seasons {seasons} ...")
@@ -641,6 +658,7 @@ def build_week(season: int, week: int) -> dict:
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "stats_through_week": stats_max_week,
         "reference_window": seasons,
+        "logos": team_logos(),
         "worst_defenses": worst_defenses(def_table, team_opp),
         "games": [],
     }

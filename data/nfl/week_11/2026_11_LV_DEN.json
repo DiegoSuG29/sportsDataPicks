@@ -7,7 +7,7 @@
   "gametime": "16:25",
   "away_team": "LV",
   "home_team": "DEN",
-  "spread_line": 10.0,
+  "spread_line": 10.5,
   "total_line": 40.5,
   "div_game": true,
   "roof": "outdoors",
@@ -70,7 +70,7 @@
           "fantasy_pg_allowed": 34.6,
           "yards_pg_allowed": 167.9,
           "tds_pg_allowed": 1.3,
-          "rank_most_allowed": 9,
+          "rank_most_allowed": 8,
           "of_teams": 32
         },
         "TE": {
@@ -325,26 +325,6 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0037304",
-          "name": "Connor Heyward",
-          "position": "FB",
-          "games": 9,
-          "snap_pct": 0.261,
-          "target_share": 0.013,
-          "targets_pg": 0.4,
-          "receptions_pg": 0.4,
-          "rec_yds_pg": 3.1,
-          "carries_pg": 0.6,
-          "rush_yds_pg": -0.2,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0037487",
           "name": "Deven Thompkins",
           "position": "WR",
@@ -365,6 +345,26 @@
           "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
+        },
+        {
+          "player_id": "00-0037304",
+          "name": "Connor Heyward",
+          "position": "FB",
+          "games": 9,
+          "snap_pct": 0.261,
+          "target_share": 0.013,
+          "targets_pg": 0.4,
+          "receptions_pg": 0.4,
+          "rec_yds_pg": 3.1,
+          "carries_pg": 0.6,
+          "rush_yds_pg": -0.2,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039407",
@@ -409,48 +409,57 @@
       ],
       "injuries": [
         {
-          "name": "Thomas Booker",
-          "position": "DT",
-          "report_status": "Questionable",
-          "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Dont'e Thornton Jr.",
-          "position": "WR",
-          "report_status": "Questionable",
-          "injury": "Back",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
           "name": "Foley Fatukasi",
           "position": "DT",
           "report_status": null,
-          "injury": "Shoulder",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Toe",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Ian Thomas",
           "position": "TE",
           "report_status": null,
-          "injury": "Ankle",
+          "injury": "Calf",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": 5
         },
         {
-          "name": "Trey Zuhn III",
-          "position": "C",
+          "name": "Matt Gay",
+          "position": "K",
           "report_status": null,
-          "injury": "Concussion",
+          "injury": "Hip",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Thomas Booker",
+          "position": "DT",
+          "report_status": null,
+          "injury": "Ankle",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Brock Bowers",
+          "position": "TE",
+          "report_status": null,
+          "injury": "Ankle",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": 2
+        },
+        {
+          "name": "Tonka Hemingway",
+          "position": "DT",
+          "report_status": null,
+          "injury": "Stinger",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         }
       ],
@@ -2920,7 +2929,7 @@
           "fantasy_pg_allowed": 16.9,
           "yards_pg_allowed": 269.8,
           "tds_pg_allowed": 1.67,
-          "rank_most_allowed": 18,
+          "rank_most_allowed": 17,
           "of_teams": 32
         },
         "RB": {
@@ -3297,66 +3306,12 @@
       ],
       "injuries": [
         {
-          "name": "Brandon Jones",
-          "position": "S",
-          "report_status": "Out",
-          "injury": "Hamstring",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Eyioma Uwazurike",
-          "position": "DE",
-          "report_status": "Out",
-          "injury": "Shoulder",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Kris Abrams-Draine",
-          "position": "CB",
-          "report_status": "Out",
-          "injury": "Ankle",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Talanoa Hufanga",
-          "position": "S",
-          "report_status": "Questionable",
-          "injury": "Ankle",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Dondrea Tillman",
-          "position": "LB",
-          "report_status": "Questionable",
-          "injury": "Hip",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Pat Bryant",
-          "position": "WR",
-          "report_status": "Questionable",
-          "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": 4
-        },
-        {
           "name": "Courtland Sutton",
           "position": "WR",
           "report_status": null,
           "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": 0
         },
         {
@@ -3364,18 +3319,72 @@
           "position": "DE",
           "report_status": null,
           "injury": "Not injury related - resting player",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Brandon Jones",
+          "position": "S",
+          "report_status": null,
+          "injury": "Hamstring",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Talanoa Hufanga",
+          "position": "S",
+          "report_status": null,
+          "injury": "Ankle",
           "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Jaylen Waddle",
           "position": "WR",
           "report_status": null,
-          "injury": "Chest",
+          "injury": "Concussion",
           "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "report_week": 11,
           "games_missed": 0
+        },
+        {
+          "name": "Adam Prentice",
+          "position": "FB",
+          "report_status": null,
+          "injury": "Concussion",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
+          "games_missed": 1
+        },
+        {
+          "name": "Riley Moss",
+          "position": "CB",
+          "report_status": null,
+          "injury": "Concussion",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Kris Abrams-Draine",
+          "position": "CB",
+          "report_status": null,
+          "injury": "Ankle",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Caleb Lohner",
+          "position": "TE",
+          "report_status": null,
+          "injury": "Foot",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
         }
       ],
       "faced": [
@@ -16609,8 +16618,8 @@
   "edges": [
     {
       "type": "line",
-      "text": "DEN favored by 10.0. With a lead DEN leans run-heavy while LV throws to catch up \u2014 LV pass volume and RB receiving up.",
-      "stat": "spread_line=10.0, total_line=40.5"
+      "text": "DEN favored by 10.5. With a lead DEN leans run-heavy while LV throws to catch up \u2014 LV pass volume and RB receiving up.",
+      "stat": "spread_line=10.5, total_line=40.5"
     },
     {
       "type": "matchup",
@@ -16639,8 +16648,8 @@
     {
       "type": "matchup",
       "tier": "soft",
-      "text": "DEN WRs vs LV: SOFT matchup. LV allows the 9th-most to WRs (34.6 FP/g, 167.9 yds/g). Target: Jaylen Waddle (21% tgt share), Courtland Sutton (18% tgt share), Pat Bryant (11% tgt share).",
-      "stat": "LV vs WR rank 9/32; 1.3 TD/g allowed."
+      "text": "DEN WRs vs LV: SOFT matchup. LV allows the 8th-most to WRs (34.6 FP/g, 167.9 yds/g). Target: Jaylen Waddle (21% tgt share), Courtland Sutton (18% tgt share), Pat Bryant (11% tgt share).",
+      "stat": "LV vs WR rank 8/32; 1.3 TD/g allowed."
     },
     {
       "type": "matchup",

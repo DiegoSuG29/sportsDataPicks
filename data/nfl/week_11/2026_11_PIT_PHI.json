@@ -7,8 +7,8 @@
   "gametime": "16:25",
   "away_team": "PIT",
   "home_team": "PHI",
-  "spread_line": -4.5,
-  "total_line": 37.5,
+  "spread_line": -3.5,
+  "total_line": 38.5,
   "div_game": false,
   "roof": "outdoors",
   "surface": "grass",
@@ -182,7 +182,7 @@
           "attempts": 0,
           "interceptions": 0,
           "status": "IR",
-          "status_note": "On injured reserve"
+          "status_note": "Injured reserve (designated to return)"
         },
         {
           "player_id": "00-0036894",
@@ -224,7 +224,7 @@
           "attempts": 0,
           "interceptions": 0,
           "status": "IR",
-          "status_note": "On injured reserve"
+          "status_note": "Injured reserve (designated to return)"
         },
         {
           "player_id": "00-0038558",
@@ -347,26 +347,24 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0037382",
-          "name": "Brandon Johnson",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.11,
-          "target_share": 0.045,
-          "targets_pg": 1.0,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 9.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
+          "player_id": "00-0035594",
+          "name": "Travis Homer",
+          "position": "RB",
+          "games": 6,
+          "snap_pct": 0.018,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 1.0,
+          "rush_yds_pg": 2.5,
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
           "completions": 0,
           "attempts": 0,
-          "interceptions": 0,
-          "status": "PRACTICE SQ",
-          "status_note": "On the practice squad"
+          "interceptions": 0
         },
         {
           "player_id": "00-0033757",
@@ -389,24 +387,26 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0035594",
-          "name": "Travis Homer",
-          "position": "RB",
-          "games": 6,
-          "snap_pct": 0.018,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 1.0,
-          "rush_yds_pg": 2.5,
+          "player_id": "00-0037382",
+          "name": "Brandon Johnson",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.11,
+          "target_share": 0.045,
+          "targets_pg": 1.0,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 9.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
           "pass_yds_pg": 0.0,
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 0,
           "completions": 0,
           "attempts": 0,
-          "interceptions": 0
+          "interceptions": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
         },
         {
           "player_id": "00-0041398",
@@ -471,21 +471,21 @@
       ],
       "injuries": [
         {
-          "name": "Derrick Harmon",
-          "position": "DT",
-          "report_status": "Questionable",
-          "injury": "Foot",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
           "name": "Cameron Heyward",
           "position": "DT",
           "report_status": null,
           "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Jalen Ramsey",
+          "position": "CB",
+          "report_status": null,
+          "injury": "Not injury related - personal matter",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
@@ -493,53 +493,71 @@
           "position": "LB",
           "report_status": null,
           "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "DeShon Elliott",
           "position": "S",
           "report_status": null,
-          "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Knee",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Brandin Echols",
-          "position": "CB",
-          "report_status": null,
-          "injury": "Hamstring",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Ben Skowronek",
+          "name": "Michael Pittman",
           "position": "WR",
           "report_status": null,
-          "injury": "Calf",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 5
+          "injury": "Foot",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": 6
+        },
+        {
+          "name": "Patrick Queen",
+          "position": "LB",
+          "report_status": null,
+          "injury": "Hand",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
         },
         {
           "name": "Darnell Washington",
           "position": "TE",
           "report_status": null,
           "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": 0
         },
         {
-          "name": "Doneiko Slaughter",
-          "position": "CB",
+          "name": "Nick Herbig",
+          "position": "LB",
           "report_status": null,
-          "injury": "Hamstring",
+          "injury": "Hip",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Roman Wilson",
+          "position": "WR",
+          "report_status": null,
+          "injury": "Hand",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
+          "games_missed": 4
+        },
+        {
+          "name": "Gennings Dunker",
+          "position": "G",
+          "report_status": null,
+          "injury": "Knee",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         }
       ],
@@ -2832,7 +2850,7 @@
           "fantasy_pg_allowed": 10.3,
           "yards_pg_allowed": 43.0,
           "tds_pg_allowed": 0.33,
-          "rank_most_allowed": 29,
+          "rank_most_allowed": 28,
           "of_teams": 32
         }
       },
@@ -3286,11 +3304,11 @@
           "interceptions": 1
         },
         {
-          "player_id": "00-0038498",
-          "name": "E.J. Jenkins",
-          "position": "TE",
-          "games": 3,
-          "snap_pct": 0.177,
+          "player_id": "00-0037132",
+          "name": "Britain Covey",
+          "position": "WR",
+          "games": 7,
+          "snap_pct": 0.0,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -3306,11 +3324,11 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0037132",
-          "name": "Britain Covey",
-          "position": "WR",
-          "games": 7,
-          "snap_pct": 0.0,
+          "player_id": "00-0038498",
+          "name": "E.J. Jenkins",
+          "position": "TE",
+          "games": 3,
+          "snap_pct": 0.177,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -3330,100 +3348,10 @@
         {
           "name": "Jonathan Jones",
           "position": "CB",
-          "report_status": "Out",
+          "report_status": null,
           "injury": "Hamstring",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Michael Carter II",
-          "position": "CB",
-          "report_status": "Out",
-          "injury": "Abdomen",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "DeVonta Smith",
-          "position": "WR",
-          "report_status": "Out",
-          "injury": "Hamstring",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": 5
-        },
-        {
-          "name": "Britain Covey",
-          "position": "WR",
-          "report_status": "Out",
-          "injury": "Knee",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": 2
-        },
-        {
-          "name": "Dontayvion Wicks",
-          "position": "WR",
-          "report_status": "Out",
-          "injury": "Ankle",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": 3
-        },
-        {
-          "name": "Jihaad Campbell",
-          "position": "LB",
-          "report_status": "Out",
-          "injury": "Hamstring",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Tanner McKee",
-          "position": "QB",
-          "report_status": "Questionable",
-          "injury": "Rib",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 9,
-          "games_missed": 6
-        },
-        {
-          "name": "Kenny Moore II",
-          "position": "CB",
-          "report_status": null,
-          "injury": "Glute",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Jake Elliott",
-          "position": "K",
-          "report_status": null,
-          "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Dallas Goedert",
-          "position": "TE",
-          "report_status": null,
-          "injury": "Knee",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": 2
-        },
-        {
-          "name": "Jordan Mailata",
-          "position": "T",
-          "report_status": null,
-          "injury": "Elbow",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "report_week": 11,
           "games_missed": null
         },
         {
@@ -3431,8 +3359,8 @@
           "position": "RB",
           "report_status": null,
           "injury": "Hamstring",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 9,
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
           "games_missed": 2
         },
         {
@@ -3441,70 +3369,115 @@
           "report_status": null,
           "injury": "Ankle",
           "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Zack Baun",
           "position": "LB",
           "report_status": null,
-          "injury": "Shoulder",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "injury": "Back",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Elijah Moore",
+          "name": "Michael Carter II",
+          "position": "CB",
+          "report_status": null,
+          "injury": "Abdomen",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "DeVonta Smith",
           "position": "WR",
           "report_status": null,
-          "injury": "Neck",
+          "injury": "Hamstring",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": 5
+        },
+        {
+          "name": "Britain Covey",
+          "position": "WR",
+          "report_status": null,
+          "injury": "Knee",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": 2
+        },
+        {
+          "name": "Dontayvion Wicks",
+          "position": "WR",
+          "report_status": null,
+          "injury": "Ankle",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": 3
+        },
+        {
+          "name": "Tanner McKee",
+          "position": "QB",
+          "report_status": null,
+          "injury": "Rib",
           "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "report_week": 11,
           "games_missed": 6
         },
         {
-          "name": "Landon Dickerson",
-          "position": "G",
+          "name": "Nolan Smith",
+          "position": "LB",
           "report_status": null,
-          "injury": "Hip",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Jordan Davis",
-          "position": "DT",
-          "report_status": null,
-          "injury": "Thumb",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Moro Ojomo",
-          "position": "DT",
-          "report_status": null,
-          "injury": "Neck",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "injury": "Illness",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Jalyx Hunt",
           "position": "LB",
           "report_status": null,
-          "injury": "Knee",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 9,
+          "injury": "Ankle",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Markel Bell",
-          "position": "T",
+          "name": "Will Shipley",
+          "position": "RB",
           "report_status": null,
-          "injury": "Finger",
+          "injury": "Foot",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": 4
+        },
+        {
+          "name": "Smael Mondon Jr.",
+          "position": "LB",
+          "report_status": null,
+          "injury": "Ankle",
           "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Jihaad Campbell",
+          "position": "LB",
+          "report_status": null,
+          "injury": "Hamstring",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Andrew Mukuba",
+          "position": "S",
+          "report_status": null,
+          "injury": "Knee",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         }
       ],
@@ -16201,8 +16174,8 @@
   "edges": [
     {
       "type": "total",
-      "text": "Low total (37.5) \u2014 grind profile; favors unders and lead-back carries.",
-      "stat": "total_line=37.5"
+      "text": "Low total (38.5) \u2014 grind profile; favors unders and lead-back carries.",
+      "stat": "total_line=38.5"
     },
     {
       "type": "matchup",
@@ -16225,8 +16198,8 @@
     {
       "type": "matchup",
       "tier": "tough",
-      "text": "PIT TEs vs PHI: TOUGH matchup. PHI allows the 29th-most to TEs (10.3 FP/g, 43.0 yds/g). Fade: Pat Freiermuth (13% tgt share), Darnell Washington (11% tgt share).",
-      "stat": "PHI vs TE rank 29/32; 0.33 TD/g allowed."
+      "text": "PIT TEs vs PHI: TOUGH matchup. PHI allows the 28th-most to TEs (10.3 FP/g, 43.0 yds/g). Fade: Pat Freiermuth (13% tgt share), Darnell Washington (11% tgt share).",
+      "stat": "PHI vs TE rank 28/32; 0.33 TD/g allowed."
     },
     {
       "type": "matchup",
@@ -16248,11 +16221,6 @@
       "type": "injury",
       "text": "PHI RB room thinned \u2014 Elijah Mitchell (PRACTICE SQ); Tank Bigsby (IR). Snaps/targets funnel to Dameon Pierce, Saquon Barkley.",
       "stat": "next up: Dameon Pierce 12.3 car/g, Saquon Barkley 9.9 car/g, Carson Steele 0.0 car/g"
-    },
-    {
-      "type": "injury",
-      "text": "PHI WR room thinned \u2014 DeVonta Smith (Out); Dontayvion Wicks (Out). Snaps/targets funnel to Makai Lemon, Darius Cooper.",
-      "stat": "next up: Makai Lemon 19% tgt share, Darius Cooper 11% tgt share, Marquise Brown 6% tgt share"
     }
   ]
 }

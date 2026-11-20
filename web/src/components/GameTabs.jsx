@@ -1,3 +1,5 @@
+import { Team } from "../logos.jsx";
+
 // Horizontal strip of the week's games so you can hop between game views
 // without returning to the grid. Sits just under the header.
 export default function GameTabs({ games, current, onSelect, onBack }) {
@@ -12,7 +14,7 @@ export default function GameTabs({ games, current, onSelect, onBack }) {
             onClick={() => onSelect(g.file)}
             title={`${g.away_team} @ ${g.home_team}${g.weekday ? ` · ${g.weekday}` : g.tipoff ? ` · ${g.tipoff}` : ""}`}
           >
-            {g.away_team}<span className="muted">@</span>{g.home_team}
+            <Team abbr={g.away_team} size={16} /><span className="muted">@</span><Team abbr={g.home_team} size={16} />
           </button>
         ))}
       </div>

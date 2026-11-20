@@ -7,7 +7,7 @@
   "gametime": "13:00",
   "away_team": "BAL",
   "home_team": "CAR",
-  "spread_line": 2.5,
+  "spread_line": 3.0,
   "total_line": 43.5,
   "div_game": false,
   "roof": "outdoors",
@@ -56,7 +56,7 @@
           "fantasy_pg_allowed": 17.4,
           "yards_pg_allowed": 250.6,
           "tds_pg_allowed": 1.5,
-          "rank_most_allowed": 15,
+          "rank_most_allowed": 14,
           "of_teams": 32
         },
         "RB": {
@@ -205,6 +205,26 @@
           "status_note": "On injured reserve"
         },
         {
+          "player_id": "00-0036550",
+          "name": "Rashod Bateman",
+          "position": "WR",
+          "games": 10,
+          "snap_pct": 0.718,
+          "target_share": 0.126,
+          "targets_pg": 3.6,
+          "receptions_pg": 2.3,
+          "rec_yds_pg": 33.6,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
           "player_id": "00-0035993",
           "name": "Tyler Huntley",
           "position": "QB",
@@ -227,26 +247,6 @@
           "status_note": "On injured reserve"
         },
         {
-          "player_id": "00-0036550",
-          "name": "Rashod Bateman",
-          "position": "WR",
-          "games": 10,
-          "snap_pct": 0.718,
-          "target_share": 0.126,
-          "targets_pg": 3.6,
-          "receptions_pg": 2.3,
-          "rec_yds_pg": 33.6,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 1,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0040981",
           "name": "Joe Fagnano",
           "position": "QB",
@@ -265,26 +265,6 @@
           "completions": 20,
           "attempts": 39,
           "interceptions": 3
-        },
-        {
-          "player_id": "00-0033119",
-          "name": "Jacoby Brissett",
-          "position": "QB",
-          "games": 1,
-          "snap_pct": 1.0,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 2.0,
-          "rush_yds_pg": 2.0,
-          "pass_yds_pg": 340.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 33,
-          "attempts": 49,
-          "interceptions": 1
         },
         {
           "player_id": "00-0040887",
@@ -327,26 +307,24 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0032398",
-          "name": "Chris Moore",
-          "position": "WR",
-          "games": 4,
-          "snap_pct": 0.324,
-          "target_share": 0.065,
-          "targets_pg": 1.8,
-          "receptions_pg": 0.8,
-          "rec_yds_pg": 15.8,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
+          "player_id": "00-0033119",
+          "name": "Jacoby Brissett",
+          "position": "QB",
+          "games": 1,
+          "snap_pct": 1.0,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 2.0,
+          "rush_yds_pg": 2.0,
+          "pass_yds_pg": 340.0,
           "pass_tds": 0,
           "rush_tds": 0,
-          "rec_tds": 1,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0,
-          "status": "PRACTICE SQ",
-          "status_note": "On the practice squad"
+          "rec_tds": 0,
+          "completions": 33,
+          "attempts": 49,
+          "interceptions": 1
         },
         {
           "player_id": "00-0039792",
@@ -367,6 +345,28 @@
           "completions": 0,
           "attempts": 0,
           "interceptions": 0
+        },
+        {
+          "player_id": "00-0032398",
+          "name": "Chris Moore",
+          "position": "WR",
+          "games": 4,
+          "snap_pct": 0.324,
+          "target_share": 0.065,
+          "targets_pg": 1.8,
+          "receptions_pg": 0.8,
+          "rec_yds_pg": 15.8,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
         },
         {
           "player_id": "00-0040879",
@@ -453,84 +453,39 @@
       ],
       "injuries": [
         {
-          "name": "Jaylinn Hawkins",
-          "position": "S",
-          "report_status": "Out",
-          "injury": "Knee",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Adam Randall",
-          "position": "RB",
-          "report_status": "Questionable",
-          "injury": "Neck",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Calais Campbell",
+          "name": "Nnamdi Madubuike",
           "position": "DT",
           "report_status": null,
-          "injury": "Not injury related - resting player",
+          "injury": "Hamstring",
           "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Ronnie Stanley",
-          "position": "T",
-          "report_status": null,
-          "injury": "Not injury related - resting player",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Rashod Bateman",
-          "position": "WR",
-          "report_status": null,
-          "injury": "Calf",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 0
-        },
-        {
-          "name": "Kyle Hamilton",
+          "name": "Jaylinn Hawkins",
           "position": "S",
           "report_status": null,
-          "injury": "Hip",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Knee",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Nate Wiggins",
-          "position": "CB",
+          "name": "Mike Green",
+          "position": "LB",
           "report_status": null,
-          "injury": "Illness",
+          "injury": "Biceps",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
-        },
-        {
-          "name": "Rasheen Ali",
-          "position": "RB",
-          "report_status": null,
-          "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 2
         },
         {
           "name": "Olaivavega Ioane",
           "position": "G",
           "report_status": null,
           "injury": "Knee",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
@@ -539,8 +494,17 @@
           "report_status": null,
           "injury": "Hand",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": 4
+        },
+        {
+          "name": "Adam Randall",
+          "position": "RB",
+          "report_status": null,
+          "injury": "Neck",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
         }
       ],
       "faced": [
@@ -3384,6 +3348,26 @@
           "interceptions": 0
         },
         {
+          "player_id": "00-0040218",
+          "name": "Jimmy Horn Jr.",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.21,
+          "target_share": 0.029,
+          "targets_pg": 1.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
           "player_id": "00-0040265",
           "name": "Ja'Seem Reed",
           "position": "WR",
@@ -3404,26 +3388,6 @@
           "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
-        },
-        {
-          "player_id": "00-0040218",
-          "name": "Jimmy Horn Jr.",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.21,
-          "target_share": 0.029,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
         },
         {
           "player_id": "00-0033589",
@@ -3490,75 +3454,48 @@
       ],
       "injuries": [
         {
-          "name": "Bobby Okereke",
-          "position": "LB",
-          "report_status": "Out",
-          "injury": "Foot",
+          "name": "Darren Waller",
+          "position": "TE",
+          "report_status": null,
+          "injury": "Knee",
           "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
-          "games_missed": null
+          "report_week": 11,
+          "games_missed": 0
         },
         {
           "name": "Mike Jackson",
           "position": "CB",
-          "report_status": "Doubtful",
+          "report_status": null,
           "injury": "Groin",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Jonathon Brooks",
-          "position": "RB",
-          "report_status": "Doubtful",
-          "injury": "Groin",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
-          "games_missed": 7
-        },
-        {
-          "name": "Jaelan Phillips",
+          "name": "Bobby Okereke",
           "position": "LB",
-          "report_status": "Questionable",
-          "injury": "Hamstring",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_status": null,
+          "injury": "Foot",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Brady Christensen",
-          "position": "G",
-          "report_status": "Questionable",
-          "injury": "Hamstring",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Xavier Legette",
-          "position": "WR",
-          "report_status": "Questionable",
-          "injury": "Knee",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 7
-        },
-        {
-          "name": "Will Lee III",
-          "position": "CB",
-          "report_status": "Questionable",
-          "injury": "Hamstring",
+          "name": "Trevis Gipson",
+          "position": "LB",
+          "report_status": null,
+          "injury": "Ankle",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Damien Lewis",
-          "position": "G",
+          "name": "Isaiah Simmons",
+          "position": "S",
           "report_status": null,
           "injury": "Knee",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
@@ -3566,35 +3503,71 @@
           "position": "RB",
           "report_status": null,
           "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": 0
         },
         {
-          "name": "Torricelli Simpkins III",
+          "name": "Feleipe Franks",
+          "position": "TE",
+          "report_status": null,
+          "injury": "Wrist",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
+          "games_missed": 3
+        },
+        {
+          "name": "Brady Christensen",
           "position": "G",
           "report_status": null,
-          "injury": "Ankle",
+          "injury": "Hamstring",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Trevor Etienne",
-          "position": "RB",
+          "name": "Tommy Tremble",
+          "position": "TE",
           "report_status": null,
-          "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 4
+          "injury": "Knee",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": 0
         },
         {
-          "name": "Lee Hunter",
-          "position": "DT",
+          "name": "Bryce Young",
+          "position": "QB",
           "report_status": null,
-          "injury": "Calf",
+          "injury": "Foot",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
+          "games_missed": 0
+        },
+        {
+          "name": "Jonathon Brooks",
+          "position": "RB",
+          "report_status": null,
+          "injury": "Groin",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
+          "games_missed": 7
+        },
+        {
+          "name": "Will Lee III",
+          "position": "CB",
+          "report_status": null,
+          "injury": "Hamstring",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Jackson Kuwatch",
+          "position": "LB",
+          "report_status": null,
+          "injury": "Shoulder",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         }
       ],

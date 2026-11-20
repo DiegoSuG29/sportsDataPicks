@@ -45,6 +45,19 @@ def _df(obj):
     return pl.from_pandas(obj)
 
 
+def espn_logo(url: str | None) -> str | None:
+    """ESPN team logo -> dark-background variant, resized to 64px by ESPN's image combiner."""
+    if not url or "/teamlogos/" not in url:
+        return url
+    path = url[url.index("/i/teamlogos/"):].replace("/500/", "/500-dark/")
+    return f"https://a.espncdn.com/combiner/i?img={path}&h=64&w=64"
+
+
+def team_logos(box: pl.DataFrame) -> dict:
+    df = box.select(["team_abbreviation", "team_logo"]).drop_nulls().unique(subset=["team_abbreviation"])
+    return {r["team_abbreviation"]: espn_logo(r["team_logo"]) for r in df.iter_rows(named=True)}
+
+
 def _default_season(today: dt.date) -> int:
     """NBA season ending year: Nov 2026 -> 2027 (the 2026-27 season)."""
     return today.year + 1 if today.month >= 9 else today.year
@@ -101,8 +114,10 @@ def _points_split(rows: list[dict]) -> dict:
     }
 
 
-def team_form(cur: pl.DataFrame, team: str, slate: dt.date) -> dict:
-    tg = _team_games(cur, team).to_dicts()
+def team_form(cur: pl.DataFrame, team: str, slate: dt.date, gposs: pl.DataFrame) -> dict:
+    tgf = _team_games(cur, team)
+    tg = tgf.to_dicts()
+    pace = tgf.join(gposs, on="game_id", how="left")["game_poss"].mean() if tg else None
     wins = sum(1 for r in tg if r["team_winner"])
     rows_home = [r for r in tg if r["home_away"] == "home"]
     rows_away = [r for r in tg if r["home_away"] == "away"]
@@ -118,6 +133,7 @@ def team_form(cur: pl.DataFrame, team: str, slate: dt.date) -> dict:
         "season_games": len(tg),
         "ppg": _points_split(tg)["ppg"],
         "papg": _points_split(tg)["papg"],
+        "pace": _round(pace),
         "rest_days": rest,
         "back_to_back": rest == 1 if rest is not None else False,
         "last5": last5,
@@ -128,34 +144,63 @@ def team_form(cur: pl.DataFrame, team: str, slate: dt.date) -> dict:
 # --------------------------------------------------------------------------- #
 # Defense allowed by position (G/F/C) — league ranked
 # --------------------------------------------------------------------------- #
-def defense_table(cur: pl.DataFrame) -> pl.DataFrame:
-    """Per-defense, per-position production allowed per game (current season)."""
+# Per-stat matchup ranks. "fp" = overall (fantasy) rank, the others are the
+# individual props. All ranks are pace-adjusted (allowed per 100 possessions),
+# so a defense isn't "soft" just because its games are fast.
+DEF_STATS = {"fp": "fp", "pts": "points", "reb": "rebounds", "ast": "assists",
+             "fg3m": "three_point_field_goals_made"}
+STAT_LABEL = {"fp": "FP", "pts": "PTS", "reb": "REB", "ast": "AST", "fg3m": "3PM"}
+STRONG_N = 5  # top/bottom-N per-stat rank = a flagged (strong) matchup
+
+
+def game_possessions(cur: pl.DataFrame) -> pl.DataFrame:
+    """Estimated possessions per game: mean of both teams' FGA + 0.44*FTA - OREB + TOV."""
+    z = lambda c: pl.col(c).fill_null(0)
+    team = cur.group_by(["game_id", "team_abbreviation"]).agg(
+        (z("field_goals_attempted") + 0.44 * z("free_throws_attempted")
+         - z("offensive_rebounds") + z("turnovers")).sum().alias("poss")
+    )
+    return team.group_by("game_id").agg(pl.col("poss").mean().alias("game_poss"))
+
+
+def defense_table(cur: pl.DataFrame, gposs: pl.DataFrame) -> pl.DataFrame:
+    """Per-defense, per-position production allowed (current season): per game,
+    per 100 possessions, pace-adjusted rank and % vs league average, per stat."""
     df = _with_fantasy(cur).filter(pl.col("athlete_position_abbreviation").is_in(list(POS)))
-    games = df.group_by("opponent_team_abbreviation").agg(
-        pl.col("game_id").n_unique().alias("def_games")
+    games = (
+        cur.select(["game_id", "opponent_team_abbreviation"]).unique()
+        .join(gposs, on="game_id", how="left")
+        .group_by("opponent_team_abbreviation")
+        .agg(pl.col("game_id").n_unique().alias("def_games"),
+             pl.col("game_poss").sum().alias("def_poss"))
     )
     agg = df.group_by(["opponent_team_abbreviation", "athlete_position_abbreviation"]).agg(
-        pl.col("fp").sum().alias("fp_sum"),
-        pl.col("points").fill_null(0).sum().alias("pts_sum"),
-        pl.col("rebounds").fill_null(0).sum().alias("reb_sum"),
-        pl.col("assists").fill_null(0).sum().alias("ast_sum"),
+        [pl.col(col).fill_null(0).sum().alias(f"{k}_sum") for k, col in DEF_STATS.items()]
     ).join(games, on="opponent_team_abbreviation", how="left")
-    return agg.with_columns(
-        (pl.col("fp_sum") / pl.col("def_games")).alias("fp_pg"),
-        (pl.col("pts_sum") / pl.col("def_games")).alias("pts_pg"),
-        (pl.col("reb_sum") / pl.col("def_games")).alias("reb_pg"),
-        (pl.col("ast_sum") / pl.col("def_games")).alias("ast_pg"),
+    pos = "athlete_position_abbreviation"
+    agg = agg.with_columns(
+        [(pl.col(f"{k}_sum") / pl.col("def_games")).alias(f"{k}_pg") for k in DEF_STATS]
+        + [(100 * pl.col(f"{k}_sum") / pl.col("def_poss")).alias(f"{k}_p100") for k in DEF_STATS]
     )
+    return agg.with_columns(
+        [pl.col(f"{k}_p100").rank("min", descending=True).over(pos).cast(pl.Int64).alias(f"{k}_rk")
+         for k in DEF_STATS]
+        + [(pl.col(f"{k}_p100") / pl.col(f"{k}_p100").mean().over(pos) - 1).alias(f"{k}_vs")
+           for k in DEF_STATS]
+        + [pl.len().over(pos).alias("of_teams")]
+    )
+
+
+def _stat_entry(r: dict, k: str) -> dict:
+    return {"pg": _round(r[f"{k}_pg"]), "p100": _round(r[f"{k}_p100"]),
+            "rank": int(r[f"{k}_rk"]), "vs_avg": _round(r[f"{k}_vs"], 3)}
 
 
 def defense_profile(def_table: pl.DataFrame, team: str) -> dict:
     out = {}
     for pos in POS:
-        sub = def_table.filter(pl.col("athlete_position_abbreviation") == pos)
-        if not sub.height:
-            continue
-        ranked = sub.sort("fp_pg", descending=True).with_row_index("rk", offset=1)
-        row = ranked.filter(pl.col("opponent_team_abbreviation") == team)
+        row = def_table.filter((pl.col("athlete_position_abbreviation") == pos)
+                               & (pl.col("opponent_team_abbreviation") == team))
         if not row.height:
             continue
         r = row.row(0, named=True)
@@ -164,30 +209,34 @@ def defense_profile(def_table: pl.DataFrame, team: str) -> dict:
             "pts_pg_allowed": _round(r["pts_pg"]),
             "reb_pg_allowed": _round(r["reb_pg"]),
             "ast_pg_allowed": _round(r["ast_pg"]),
-            "rank_most_allowed": int(r["rk"]),
-            "of_teams": int(ranked.height),
+            "fg3m_pg_allowed": _round(r["fg3m_pg"]),
+            "rank_most_allowed": int(r["fp_rk"]),  # overall, pace-adjusted
+            "of_teams": int(r["of_teams"]),
+            "by_stat": {k: _stat_entry(r, k) for k in DEF_STATS},
         }
     return out
 
 
-def worst_defenses(def_table: pl.DataFrame, team_opp: dict, top_n: int = 5) -> dict:
+def worst_defenses(def_table: pl.DataFrame, team_opp: dict, stat: str = "fp",
+                   top_n: int = 5) -> dict:
+    """Softest defenses per position for one stat, among teams on this slate."""
     out = {}
     for pos in POS:
-        sub = def_table.filter(pl.col("athlete_position_abbreviation") == pos)
-        if not sub.height:
-            continue
-        ranked = sub.sort("fp_pg", descending=True).with_row_index("rk", offset=1)
+        sub = def_table.filter(pl.col("athlete_position_abbreviation") == pos).sort(f"{stat}_rk")
         rows = []
-        for r in ranked.iter_rows(named=True):
+        for r in sub.iter_rows(named=True):
             opp = team_opp.get(r["opponent_team_abbreviation"])
             if not opp:
                 continue  # team not playing this slate
             rows.append({
                 "team": r["opponent_team_abbreviation"],
-                "rank": int(r["rk"]),
-                "of_teams": int(ranked.height),
+                "rank": int(r[f"{stat}_rk"]),
+                "of_teams": int(r["of_teams"]),
                 "fantasy_pg_allowed": _round(r["fp_pg"]),
                 "pts_pg_allowed": _round(r["pts_pg"]),
+                "pg": _round(r[f"{stat}_pg"]),
+                "p100": _round(r[f"{stat}_p100"]),
+                "vs_avg": _round(r[f"{stat}_vs"], 3),
                 "opponent": opp["opponent"],
                 "home": opp["home"],
                 "game_file": opp["game_file"],
@@ -287,23 +336,57 @@ def player_logs(box: pl.DataFrame, player_ids: list[str]) -> dict:
     df = _played(box.filter(pl.col("athlete_id").is_in(ids))).sort(["season", "game_date"])
     logs: dict[str, list] = {}
     for r in df.iter_rows(named=True):
-        logs.setdefault(str(r["athlete_id"]), []).append({
-            "season": int(r["season"]),
-            "date": r["game_date"].isoformat(),
-            "team": r["team_abbreviation"],
-            "opponent": r["opponent_team_abbreviation"],
-            "home": r["home_away"] == "home",
-            "min": _round(r["minutes"]),
-            "pts": int(r["points"] or 0),
-            "reb": int(r["rebounds"] or 0),
-            "ast": int(r["assists"] or 0),
-            "fg3m": int(r["three_point_field_goals_made"] or 0),
-            "stl": int(r["steals"] or 0),
-            "blk": int(r["blocks"] or 0),
-            "to": int(r["turnovers"] or 0),
-            "started": bool(r["starter"]),
-        })
+        logs.setdefault(str(r["athlete_id"]), []).append(_log_row(r))
     return logs
+
+
+def _log_row(r: dict) -> dict:
+    return {
+        "season": int(r["season"]),
+        "date": r["game_date"].isoformat(),
+        "team": r["team_abbreviation"],
+        "opponent": r["opponent_team_abbreviation"],
+        "home": r["home_away"] == "home",
+        "min": _round(r["minutes"]),
+        "pts": int(r["points"] or 0),
+        "reb": int(r["rebounds"] or 0),
+        "ast": int(r["assists"] or 0),
+        "fg3m": int(r["three_point_field_goals_made"] or 0),
+        "stl": int(r["steals"] or 0),
+        "blk": int(r["blocks"] or 0),
+        "to": int(r["turnovers"] or 0),
+        "started": bool(r["starter"]),
+    }
+
+
+def defense_faced(cur: pl.DataFrame, team: str) -> tuple[list[dict], dict]:
+    """Every opposing player-game against ``team`` this season (G/F/C), plus each
+    of those players' current-season averages. Powers "Similar players vs X":
+    the browser filters by position, minutes and the prop stat's season average."""
+    df = _played(cur.filter((pl.col("opponent_team_abbreviation") == team)
+                            & pl.col("athlete_position_abbreviation").is_in(list(POS))))
+    df = df.sort(["game_date", "athlete_display_name"])
+    rows = []
+    for r in df.iter_rows(named=True):
+        row = _log_row(r)
+        row.update({"player_id": str(r["athlete_id"]), "name": r["athlete_display_name"],
+                    "position": r["athlete_position_abbreviation"],
+                    "bucket": r["athlete_position_abbreviation"]})
+        rows.append(row)
+    ids = list({int(r["player_id"]) for r in rows})
+    avgs = {}
+    if ids:
+        agg = _played(cur.filter(pl.col("athlete_id").is_in(ids))).group_by("athlete_id").agg(
+            pl.len().alias("g"),
+            *[pl.col(c).fill_null(0).mean().alias(k) for k, c in (
+                ("min", "minutes"), ("pts", "points"), ("reb", "rebounds"), ("ast", "assists"),
+                ("fg3m", "three_point_field_goals_made"), ("stl", "steals"),
+                ("blk", "blocks"), ("to", "turnovers"))],
+        )
+        for r in agg.iter_rows(named=True):
+            avgs[str(r["athlete_id"])] = {"g": int(r["g"]), **{
+                k: _round(r[k], 2) for k in ("min", "pts", "reb", "ast", "fg3m", "stl", "blk", "to")}}
+    return rows, avgs
 
 
 # --------------------------------------------------------------------------- #
@@ -329,7 +412,8 @@ def flag_edges(meta: dict, teams: dict) -> list[dict]:
                 "stat": f"{t} rest={f.get('rest_days')}d, {opp} rest={of.get('rest_days')}d",
             })
 
-    # per-position matchup vs the opposing defense (G/F/C)
+    # per-position, per-stat matchup vs the opposing defense (pace-adjusted ranks)
+    props = [k for k in DEF_STATS if k != "fp"]
     for off, dfn in ((away, home), (home, away)):
         prof = teams[dfn]["defense"]
         usage = teams[off]["usage"]
@@ -337,24 +421,36 @@ def flag_edges(meta: dict, teams: dict) -> list[dict]:
             dp = prof.get(pos)
             if not dp:
                 continue
-            third = dp["of_teams"] / 3
-            tier = ("soft" if dp["rank_most_allowed"] <= third
-                    else "tough" if dp["rank_most_allowed"] > 2 * third else None)
-            if not tier:
-                continue
-            grp = [p for p in usage if p["position"] == pos and (p["min_pg"] or 0) >= 18][:3]
+            n = dp["of_teams"]
+            grp = [p for p in usage if p["position"] == pos and (p["min_pg"] or 0) >= 18]
             if not grp:
                 continue
-            watch = ", ".join(f"{p['name']} ({_usage_tag(p)})" for p in grp)
-            edges.append({
-                "type": "matchup", "tier": tier,
-                "text": (f"{off} {POS_NAME[pos]} vs {dfn}: {tier.upper()} matchup. "
-                         f"{dfn} allows the {_ordinal(dp['rank_most_allowed'])}-most to {pos}s "
-                         f"({dp['fantasy_pg_allowed']} FP/g, {dp['pts_pg_allowed']} pts/g). "
-                         f"{'Target' if tier == 'soft' else 'Fade'}: {watch}."),
-                "stat": f"{dfn} vs {pos} rank {dp['rank_most_allowed']}/{dp['of_teams']}; "
-                        f"{dp['reb_pg_allowed']} reb, {dp['ast_pg_allowed']} ast allowed.",
-            })
+            for tier in ("soft", "tough"):
+                keys = [k for k in props
+                        if (dp["by_stat"][k]["rank"] <= STRONG_N if tier == "soft"
+                            else dp["by_stat"][k]["rank"] > n - STRONG_N)]
+                if not keys:
+                    continue
+                parts, who = [], []
+                for k in keys:
+                    b = dp["by_stat"][k]
+                    parts.append(f"{STAT_LABEL[k]} {_ordinal(b['rank'])}-most "
+                                 f"({b['pg']}/g, {b['vs_avg'] * 100:+.0f}% vs avg)")
+                    top = sorted(grp, key=lambda p: p.get(f"{k}_pg") or 0, reverse=True)[:2]
+                    # keep the runner-up only if they're a real contributor in that stat
+                    top = [p for p in top if (p.get(f"{k}_pg") or 0) >= 0.6 * (top[0].get(f"{k}_pg") or 0)]
+                    who.append(f"{STAT_LABEL[k]}: " + ", ".join(
+                        f"{p['name']} ({p.get(f'{k}_pg')})" for p in top))
+                labels = ", ".join(STAT_LABEL[k] for k in keys)
+                edges.append({
+                    "type": "matchup", "tier": tier, "pos": pos, "stats": keys,
+                    "text": (f"{off} {POS_NAME[pos]} vs {dfn}: {tier.upper()} for {labels}. "
+                             f"{dfn} allows to {pos}s: " + "; ".join(parts) + ". "
+                             f"{'Target' if tier == 'soft' else 'Fade'} — " + "; ".join(who) + "."),
+                    "stat": (f"Pace-adjusted (per 100 poss) ranks of {n}; "
+                             f"{'top' if tier == 'soft' else 'bottom'} {STRONG_N} flagged. "
+                             f"Overall FP rank {dp['rank_most_allowed']}/{n}."),
+                })
 
     # availability / recent DNPs
     for t in (away, home):
@@ -399,7 +495,8 @@ def build_slate(season: int | None = None, date: dt.date | None = None) -> dict:
 
     # current-season completed games strictly before the slate
     cur = box.filter((pl.col("season") == season) & (pl.col("game_date") < slate))
-    def_tbl = defense_table(cur)
+    gposs = game_possessions(cur)
+    def_tbl = defense_table(cur, gposs)
     stats_through = (cur.select(pl.col("game_date").max()).item()
                      if cur.height else None)
 
@@ -418,7 +515,9 @@ def build_slate(season: int | None = None, date: dt.date | None = None) -> dict:
         "generated_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
         "stats_through": stats_through.isoformat() if stats_through else None,
         "reference_window": seasons,
+        "logos": team_logos(box),
         "worst_defenses": worst_defenses(def_tbl, team_opp),
+        "worst_by_stat": {k: worst_defenses(def_tbl, team_opp, k) for k in DEF_STATS},
         "games": [],
     }
 
@@ -435,11 +534,15 @@ def build_slate(season: int | None = None, date: dt.date | None = None) -> dict:
         }
         teams = {}
         for t in (away, home):
+            faced, faced_avgs = defense_faced(cur, t)
             teams[t] = {
-                "form": team_form(cur, t, slate),
+                "form": team_form(cur, t, slate, gposs),
                 "defense": defense_profile(def_tbl, t),
                 "usage": team_usage(cur, t),
                 "dnps": recent_dnps(cur, t),
+                # opposing players' games vs this defense (this season) + their averages
+                "faced": faced,
+                "faced_avgs": faced_avgs,
             }
         pids = [p["player_id"] for t in (away, home) for p in teams[t]["usage"]]
         logs = player_logs(box, pids)

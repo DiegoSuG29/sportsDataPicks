@@ -7,8 +7,8 @@
   "gametime": "13:00",
   "away_team": "TB",
   "home_team": "DET",
-  "spread_line": 7.0,
-  "total_line": 43.5,
+  "spread_line": 6.0,
+  "total_line": 45.5,
   "div_game": false,
   "roof": "dome",
   "surface": "fieldturf",
@@ -70,7 +70,7 @@
           "fantasy_pg_allowed": 30.5,
           "yards_pg_allowed": 140.2,
           "tds_pg_allowed": 0.78,
-          "rank_most_allowed": 21,
+          "rank_most_allowed": 22,
           "of_teams": 32
         },
         "TE": {
@@ -365,6 +365,28 @@
           "interceptions": 0
         },
         {
+          "player_id": "00-0035359",
+          "name": "David Sills",
+          "position": "WR",
+          "games": 2,
+          "snap_pct": null,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
+        },
+        {
           "player_id": "00-0040429",
           "name": "Josh Williams",
           "position": "RB",
@@ -405,74 +427,16 @@
           "completions": 0,
           "attempts": 0,
           "interceptions": 0
-        },
-        {
-          "player_id": "00-0035359",
-          "name": "David Sills",
-          "position": "WR",
-          "games": 2,
-          "snap_pct": null,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0,
-          "status": "PRACTICE SQ",
-          "status_note": "On the practice squad"
         }
       ],
       "injuries": [
         {
-          "name": "Yaya Diaby",
-          "position": "LB",
-          "report_status": "Out",
-          "injury": "Knee",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Emeka Egbuka",
-          "position": "WR",
-          "report_status": "Questionable",
-          "injury": "Foot",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": 2
-        },
-        {
-          "name": "A'Shawn Robinson",
-          "position": "DT",
-          "report_status": null,
-          "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Chris Godwin Jr.",
-          "position": "WR",
-          "report_status": null,
-          "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": 0
-        },
-        {
           "name": "Baker Mayfield",
           "position": "QB",
           "report_status": null,
-          "injury": "Thumb",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "injury": "Foot",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": 3
         },
         {
@@ -480,18 +444,18 @@
           "position": "T",
           "report_status": null,
           "injury": "Toe",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 9,
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Kenny Gainwell",
-          "position": "RB",
+          "name": "Antoine Winfield Jr.",
+          "position": "S",
           "report_status": null,
-          "injury": "Hip",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": 0
+          "injury": "Ankle",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": null
         },
         {
           "name": "Cade Otton",
@@ -499,43 +463,25 @@
           "report_status": null,
           "injury": "Thumb",
           "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "report_week": 11,
           "games_missed": 1
         },
         {
-          "name": "Cody Mauch",
-          "position": "G",
+          "name": "Josh Hayes",
+          "position": "CB",
           "report_status": null,
-          "injury": "Back",
+          "injury": "Knee",
           "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Bucky Irving",
-          "position": "RB",
+          "name": "Yaya Diaby",
+          "position": "LB",
           "report_status": null,
-          "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": 0
-        },
-        {
-          "name": "Tykee Smith",
-          "position": "S",
-          "report_status": null,
-          "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Elijah Roberts",
-          "position": "DT",
-          "report_status": null,
-          "injury": "Not injury related - personal matter",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "injury": "Knee",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         }
       ],
@@ -2962,26 +2908,6 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0039065",
-          "name": "Sam LaPorta",
-          "position": "TE",
-          "games": 9,
-          "snap_pct": 0.887,
-          "target_share": 0.171,
-          "targets_pg": 5.9,
-          "receptions_pg": 4.0,
-          "rec_yds_pg": 46.1,
-          "carries_pg": 0.1,
-          "rush_yds_pg": 0.2,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 3,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0037240",
           "name": "Jameson Williams",
           "position": "WR",
@@ -2997,6 +2923,26 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 5,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0039065",
+          "name": "Sam LaPorta",
+          "position": "TE",
+          "games": 9,
+          "snap_pct": 0.887,
+          "target_share": 0.171,
+          "targets_pg": 5.9,
+          "receptions_pg": 4.0,
+          "rec_yds_pg": 46.1,
+          "carries_pg": 0.1,
+          "rush_yds_pg": 0.2,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 3,
           "completions": 0,
           "attempts": 0,
           "interceptions": 0
@@ -3102,26 +3048,6 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0034270",
-          "name": "Tyler Conklin",
-          "position": "TE",
-          "games": 3,
-          "snap_pct": 0.184,
-          "target_share": 0.037,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.7,
-          "rec_yds_pg": 3.7,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0040390",
           "name": "Jackson Meeks",
           "position": "TE",
@@ -3142,6 +3068,26 @@
           "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
+        },
+        {
+          "player_id": "00-0034270",
+          "name": "Tyler Conklin",
+          "position": "TE",
+          "games": 3,
+          "snap_pct": 0.184,
+          "target_share": 0.037,
+          "targets_pg": 1.0,
+          "receptions_pg": 0.7,
+          "rec_yds_pg": 3.7,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0031763",
@@ -3252,82 +3198,73 @@
         {
           "name": "D.J. Reed",
           "position": "CB",
-          "report_status": "Out",
+          "report_status": null,
           "injury": "Hip",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Joe Bachie",
+          "position": "LB",
+          "report_status": null,
+          "injury": "Knee",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Khalil Dorsey",
+          "position": "CB",
+          "report_status": null,
+          "injury": "Ankle",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Cade Mays",
           "position": "C",
-          "report_status": "Out",
+          "report_status": null,
           "injury": "Ankle",
           "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Kerby Joseph",
           "position": "S",
-          "report_status": "Out",
+          "report_status": null,
           "injury": "Knee",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Amon-Ra St. Brown",
-          "position": "WR",
-          "report_status": "Questionable",
-          "injury": "Rib",
+          "name": "Tyler Lacy",
+          "position": "DE",
+          "report_status": null,
+          "injury": "Shoulder",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
-          "games_missed": 0
+          "report_week": 11,
+          "games_missed": null
         },
         {
           "name": "Sione Vaki",
           "position": "RB",
-          "report_status": "Questionable",
+          "report_status": null,
           "injury": "Ankle",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": 0
         },
         {
-          "name": "Jared Goff",
-          "position": "QB",
+          "name": "Ennis Rakestraw Jr.",
+          "position": "CB",
           "report_status": null,
-          "injury": "Chest",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 0
-        },
-        {
-          "name": "DJ Wonnum",
-          "position": "DE",
-          "report_status": null,
-          "injury": "Concussion",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Jacob Saylors",
-          "position": "RB",
-          "report_status": null,
-          "injury": "Neck",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 1
-        },
-        {
-          "name": "Brian Branch",
-          "position": "S",
-          "report_status": null,
-          "injury": "Hip",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Shoulder",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         }
       ],
@@ -14813,11 +14750,6 @@
   },
   "edges": [
     {
-      "type": "line",
-      "text": "DET favored by 7.0. Moderate favorite; game script roughly balanced.",
-      "stat": "spread_line=7.0, total_line=43.5"
-    },
-    {
       "type": "matchup",
       "tier": "soft",
       "text": "TB QBs vs DET: SOFT matchup. DET allows the 1st-most to QBs (20.8 FP/g, 281.2 yds/g). Target: Jalon Daniels (100 pass yds/g), Baker Mayfield (154 pass yds/g).",
@@ -14846,6 +14778,12 @@
       "tier": "tough",
       "text": "DET RBs vs TB: TOUGH matchup. TB allows the 32nd-most to RBs (15.7 FP/g, 95.6 yds/g). Fade: Jahmyr Gibbs (22.1 car/g), Sione Vaki (4.0 car/g).",
       "stat": "TB vs RB rank 32/32; 0.33 TD/g allowed."
+    },
+    {
+      "type": "matchup",
+      "tier": "tough",
+      "text": "DET WRs vs TB: TOUGH matchup. TB allows the 22nd-most to WRs (30.5 FP/g, 140.2 yds/g). Fade: Amon-Ra St. Brown (31% tgt share), Jameson Williams (18% tgt share), Isaac TeSlaa (10% tgt share).",
+      "stat": "TB vs WR rank 22/32; 0.78 TD/g allowed."
     },
     {
       "type": "matchup",

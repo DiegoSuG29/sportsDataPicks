@@ -56,14 +56,14 @@
           "fantasy_pg_allowed": 18.0,
           "yards_pg_allowed": 224.7,
           "tds_pg_allowed": 2.1,
-          "rank_most_allowed": 11,
+          "rank_most_allowed": 10,
           "of_teams": 32
         },
         "RB": {
           "fantasy_pg_allowed": 24.6,
           "yards_pg_allowed": 141.8,
           "tds_pg_allowed": 1.2,
-          "rank_most_allowed": 10,
+          "rank_most_allowed": 9,
           "of_teams": 32
         },
         "WR": {
@@ -283,26 +283,6 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0030565",
-          "name": "Geno Smith",
-          "position": "QB",
-          "games": 10,
-          "snap_pct": 0.948,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 2.4,
-          "rush_yds_pg": 5.4,
-          "pass_yds_pg": 222.6,
-          "pass_tds": 12,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 196,
-          "attempts": 292,
-          "interceptions": 3
-        },
-        {
           "player_id": "00-0039798",
           "name": "Isaiah Davis",
           "position": "RB",
@@ -321,6 +301,26 @@
           "completions": 0,
           "attempts": 0,
           "interceptions": 0
+        },
+        {
+          "player_id": "00-0030565",
+          "name": "Geno Smith",
+          "position": "QB",
+          "games": 10,
+          "snap_pct": 0.948,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 2.4,
+          "rush_yds_pg": 5.4,
+          "pass_yds_pg": 222.6,
+          "pass_tds": 12,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 196,
+          "attempts": 292,
+          "interceptions": 3
         },
         {
           "player_id": "00-0037805",
@@ -427,6 +427,26 @@
           "interceptions": 0
         },
         {
+          "player_id": "00-0036842",
+          "name": "Kene Nwangwu",
+          "position": "RB",
+          "games": 5,
+          "snap_pct": 0.0,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
           "player_id": "00-0040405",
           "name": "Jamaal Pritchett",
           "position": "WR",
@@ -447,26 +467,6 @@
           "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
-        },
-        {
-          "player_id": "00-0036842",
-          "name": "Kene Nwangwu",
-          "position": "RB",
-          "games": 5,
-          "snap_pct": 0.0,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
         },
         {
           "player_id": "00-0041267",
@@ -491,84 +491,75 @@
       ],
       "injuries": [
         {
-          "name": "Trevin Wallace",
-          "position": "LB",
-          "report_status": "Out",
-          "injury": "Groin",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
+          "name": "Geno Smith",
+          "position": "QB",
+          "report_status": null,
+          "injury": "Ankle",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": 0
+        },
+        {
+          "name": "David Onyemata",
+          "position": "DT",
+          "report_status": null,
+          "injury": "Abdomen",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Harrison Phillips",
           "position": "DT",
-          "report_status": "Questionable",
+          "report_status": null,
           "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Joseph Ossai",
           "position": "DE",
-          "report_status": "Questionable",
-          "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Nahshon Wright",
-          "position": "CB",
-          "report_status": "Questionable",
-          "injury": "Back",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Garrett Wilson",
-          "position": "WR",
-          "report_status": "Questionable",
-          "injury": "Concussion",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 1
-        },
-        {
-          "name": "Jarvis Brownlee Jr.",
-          "position": "CB",
-          "report_status": "Questionable",
-          "injury": "Illness",
+          "report_status": null,
+          "injury": "Foot",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Adonai Mitchell",
+          "name": "Dylan Parham",
+          "position": "G",
+          "report_status": null,
+          "injury": "Knee",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Trevin Wallace",
+          "position": "LB",
+          "report_status": null,
+          "injury": "Groin",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Isaiah Williams",
           "position": "WR",
-          "report_status": "Questionable",
-          "injury": "Knee",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 4
-        },
-        {
-          "name": "VJ Payne",
-          "position": "S",
-          "report_status": "Questionable",
-          "injury": "Knee",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
+          "report_status": null,
+          "injury": "Ribs",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": 0
         },
         {
           "name": "Omar Cooper Jr.",
           "position": "WR",
-          "report_status": "Questionable",
+          "report_status": null,
           "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": 6
         }
       ],
@@ -3074,7 +3065,7 @@
           "fantasy_pg_allowed": 35.8,
           "yards_pg_allowed": 165.0,
           "tds_pg_allowed": 1.33,
-          "rank_most_allowed": 6,
+          "rank_most_allowed": 5,
           "of_teams": 32
         },
         "TE": {
@@ -3187,26 +3178,6 @@
           "interceptions": 11
         },
         {
-          "player_id": "00-0040184",
-          "name": "KeAndre Lambert-Smith",
-          "position": "WR",
-          "games": 3,
-          "snap_pct": 0.296,
-          "target_share": 0.128,
-          "targets_pg": 4.3,
-          "receptions_pg": 2.0,
-          "rec_yds_pg": 27.3,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0038544",
           "name": "Quentin Johnston",
           "position": "WR",
@@ -3222,6 +3193,26 @@
           "pass_tds": 0,
           "rush_tds": 0,
           "rec_tds": 1,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
+          "player_id": "00-0040184",
+          "name": "KeAndre Lambert-Smith",
+          "position": "WR",
+          "games": 3,
+          "snap_pct": 0.296,
+          "target_share": 0.128,
+          "targets_pg": 4.3,
+          "receptions_pg": 2.0,
+          "rec_yds_pg": 27.3,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
           "completions": 0,
           "attempts": 0,
           "interceptions": 0
@@ -3327,6 +3318,26 @@
           "interceptions": 0
         },
         {
+          "player_id": "00-0040311",
+          "name": "Theo Wease Jr.",
+          "position": "WR",
+          "games": 3,
+          "snap_pct": 0.4,
+          "target_share": 0.064,
+          "targets_pg": 1.7,
+          "receptions_pg": 1.0,
+          "rec_yds_pg": 12.3,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
           "player_id": "00-0034272",
           "name": "Marquez Valdes-Scantling",
           "position": "WR",
@@ -3347,26 +3358,6 @@
           "interceptions": 0,
           "status": "TRADED",
           "status_note": "No longer on LAC \u2014 now with PIT. Stats shown are from their time with LAC."
-        },
-        {
-          "player_id": "00-0040311",
-          "name": "Theo Wease Jr.",
-          "position": "WR",
-          "games": 3,
-          "snap_pct": 0.4,
-          "target_share": 0.064,
-          "targets_pg": 1.7,
-          "receptions_pg": 1.0,
-          "rec_yds_pg": 12.3,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
         },
         {
           "player_id": "00-0035125",
@@ -3433,6 +3424,26 @@
           "status_note": "No longer on LAC \u2014 now with PHI. Stats shown are from their time with LAC."
         },
         {
+          "player_id": "00-0038614",
+          "name": "Scott Matlock",
+          "position": "RB",
+          "games": 2,
+          "snap_pct": 0.332,
+          "target_share": 0.0,
+          "targets_pg": 0.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
           "player_id": "00-0040331",
           "name": "Patrick Herbert",
           "position": "TE",
@@ -3453,26 +3464,6 @@
           "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
-        },
-        {
-          "player_id": "00-0038614",
-          "name": "Scott Matlock",
-          "position": "RB",
-          "games": 2,
-          "snap_pct": 0.332,
-          "target_share": 0.0,
-          "targets_pg": 0.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
         },
         {
           "player_id": "00-0040464",
@@ -3497,175 +3488,103 @@
       ],
       "injuries": [
         {
-          "name": "Kendall Williamson",
-          "position": "S",
-          "report_status": "Out",
-          "injury": "Calf",
+          "name": "Khalil Mack",
+          "position": "DE",
+          "report_status": null,
+          "injury": "Not injury related - resting player",
           "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Isas Waxter",
+          "name": "Donte Jackson",
           "position": "CB",
-          "report_status": "Out",
-          "injury": "Ankle",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
+          "report_status": null,
+          "injury": "Groin",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
-        },
-        {
-          "name": "Branson Taylor",
-          "position": "G",
-          "report_status": "Out",
-          "injury": "Ankle",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Brenen Thompson",
-          "position": "WR",
-          "report_status": "Doubtful",
-          "injury": "Hamstring",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
-          "games_missed": 8
-        },
-        {
-          "name": "Denzel Perryman",
-          "position": "LB",
-          "report_status": "Questionable",
-          "injury": "Pectoral",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "David Njoku",
-          "position": "TE",
-          "report_status": "Questionable",
-          "injury": "Fibula",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 7
         },
         {
           "name": "Trey Pipkins",
           "position": "T",
-          "report_status": "Questionable",
-          "injury": "Not injury related - personal matter",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Kayode Awosika",
-          "position": "G",
-          "report_status": "Questionable",
-          "injury": "Fibula",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Justin Eboigbe",
-          "position": "DE",
-          "report_status": "Questionable",
-          "injury": "Ankle",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Ladd McConkey",
-          "position": "WR",
-          "report_status": "Questionable",
-          "injury": "Back",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
-          "games_missed": 3
-        },
-        {
-          "name": "Khalil Mack",
-          "position": "LB",
           "report_status": null,
-          "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Knee",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Bud Dupree",
-          "position": "DE",
-          "report_status": null,
-          "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Deane Leonard",
-          "position": "CB",
+          "name": "Charlie Kolar",
+          "position": "TE",
           "report_status": null,
           "injury": "Concussion",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": 2
         },
         {
-          "name": "Keaton Mitchell",
-          "position": "RB",
+          "name": "Kendall Williamson",
+          "position": "S",
           "report_status": null,
-          "injury": "Hip",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 0
+          "injury": "Calf",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
         },
         {
           "name": "Daiyan Henley",
           "position": "LB",
           "report_status": null,
-          "injury": "Not injury related - personal matter",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Knee",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Cam Hart",
+          "name": "Justin Eboigbe",
+          "position": "DE",
+          "report_status": null,
+          "injury": "Ankle",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Ladd McConkey",
+          "position": "WR",
+          "report_status": null,
+          "injury": "Back",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": 3
+        },
+        {
+          "name": "Isas Waxter",
           "position": "CB",
           "report_status": null,
           "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Tre Harris",
-          "position": "WR",
-          "report_status": null,
-          "injury": "Shoulder",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 1
-        },
-        {
-          "name": "Alex Harkey",
-          "position": "G",
-          "report_status": null,
-          "injury": "Foot",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Rodney Shelley",
           "position": "CB",
           "report_status": null,
-          "injury": "Calf",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Ankle",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
+        },
+        {
+          "name": "Brenen Thompson",
+          "position": "WR",
+          "report_status": null,
+          "injury": "Hamstring",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": 8
         }
       ],
       "faced": [
@@ -16478,8 +16397,8 @@
     {
       "type": "matchup",
       "tier": "soft",
-      "text": "NYJ WRs vs LAC: SOFT matchup. LAC allows the 6th-most to WRs (35.8 FP/g, 165.0 yds/g). Target: Garrett Wilson (28% tgt share), Adonai Mitchell (22% tgt share), Omar Cooper Jr. (21% tgt share).",
-      "stat": "LAC vs WR rank 6/32; 1.33 TD/g allowed."
+      "text": "NYJ WRs vs LAC: SOFT matchup. LAC allows the 5th-most to WRs (35.8 FP/g, 165.0 yds/g). Target: Garrett Wilson (28% tgt share), Adonai Mitchell (22% tgt share), Omar Cooper Jr. (21% tgt share).",
+      "stat": "LAC vs WR rank 5/32; 1.33 TD/g allowed."
     },
     {
       "type": "matchup",
@@ -16490,13 +16409,19 @@
     {
       "type": "matchup",
       "tier": "soft",
-      "text": "LAC RBs vs NYJ: SOFT matchup. NYJ allows the 10th-most to RBs (24.6 FP/g, 141.8 yds/g). Target: Omarion Hampton (13.8 car/g), Keaton Mitchell (5.4 car/g), Kimani Vidal (4.8 car/g).",
-      "stat": "NYJ vs RB rank 10/32; 1.2 TD/g allowed."
+      "text": "LAC QBs vs NYJ: SOFT matchup. NYJ allows the 10th-most to QBs (18.0 FP/g, 224.7 yds/g). Target: Justin Herbert (191 pass yds/g), DJ Uiagalelei (24 pass yds/g).",
+      "stat": "NYJ vs QB rank 10/32; 2.1 TD/g allowed."
+    },
+    {
+      "type": "matchup",
+      "tier": "soft",
+      "text": "LAC RBs vs NYJ: SOFT matchup. NYJ allows the 9th-most to RBs (24.6 FP/g, 141.8 yds/g). Target: Omarion Hampton (13.8 car/g), Keaton Mitchell (5.4 car/g), Kimani Vidal (4.8 car/g).",
+      "stat": "NYJ vs RB rank 9/32; 1.2 TD/g allowed."
     },
     {
       "type": "matchup",
       "tier": "tough",
-      "text": "LAC WRs vs NYJ: TOUGH matchup. NYJ allows the 26th-most to WRs (28.4 FP/g, 126.5 yds/g). Fade: Tre Harris (19% tgt share), KeAndre Lambert-Smith (13% tgt share), Quentin Johnston (13% tgt share).",
+      "text": "LAC WRs vs NYJ: TOUGH matchup. NYJ allows the 26th-most to WRs (28.4 FP/g, 126.5 yds/g). Fade: Tre Harris (19% tgt share), Quentin Johnston (13% tgt share), KeAndre Lambert-Smith (13% tgt share).",
       "stat": "NYJ vs WR rank 26/32; 1.0 TD/g allowed."
     },
     {
@@ -16511,8 +16436,8 @@
     },
     {
       "type": "injury",
-      "text": "LAC WR room thinned \u2014 Marquez Valdes-Scantling (TRADED). Snaps/targets funnel to Tre Harris, KeAndre Lambert-Smith.",
-      "stat": "next up: Tre Harris 19% tgt share, KeAndre Lambert-Smith 13% tgt share, Quentin Johnston 13% tgt share"
+      "text": "LAC WR room thinned \u2014 Marquez Valdes-Scantling (TRADED). Snaps/targets funnel to Tre Harris, Quentin Johnston.",
+      "stat": "next up: Tre Harris 19% tgt share, Quentin Johnston 13% tgt share, KeAndre Lambert-Smith 13% tgt share"
     }
   ]
 }

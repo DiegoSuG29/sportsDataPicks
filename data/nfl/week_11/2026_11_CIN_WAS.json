@@ -7,8 +7,8 @@
   "gametime": "20:15",
   "away_team": "CIN",
   "home_team": "WAS",
-  "spread_line": -6.5,
-  "total_line": 54.5,
+  "spread_line": -6.0,
+  "total_line": 53.5,
   "div_game": false,
   "roof": "outdoors",
   "surface": "grass",
@@ -56,7 +56,7 @@
           "fantasy_pg_allowed": 17.2,
           "yards_pg_allowed": 265.3,
           "tds_pg_allowed": 1.44,
-          "rank_most_allowed": 16,
+          "rank_most_allowed": 15,
           "of_teams": 32
         },
         "RB": {
@@ -3183,26 +3183,6 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0036628",
-          "name": "John Bates",
-          "position": "TE",
-          "games": 6,
-          "snap_pct": 0.398,
-          "target_share": 0.035,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.8,
-          "rec_yds_pg": 4.5,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
-        },
-        {
           "player_id": "00-0041176",
           "name": "Jaden Bradley",
           "position": "WR",
@@ -3223,6 +3203,26 @@
           "interceptions": 0,
           "status": "PRACTICE SQ",
           "status_note": "On the practice squad"
+        },
+        {
+          "player_id": "00-0036628",
+          "name": "John Bates",
+          "position": "TE",
+          "games": 6,
+          "snap_pct": 0.398,
+          "target_share": 0.035,
+          "targets_pg": 1.0,
+          "receptions_pg": 0.8,
+          "rec_yds_pg": 4.5,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
         },
         {
           "player_id": "00-0039686",
@@ -15739,8 +15739,8 @@
   "edges": [
     {
       "type": "total",
-      "text": "High total (54.5) \u2014 shootout profile; favors pass-catcher overs and anytime-TD props.",
-      "stat": "total_line=54.5"
+      "text": "High total (53.5) \u2014 shootout profile; favors pass-catcher overs and anytime-TD props.",
+      "stat": "total_line=53.5"
     },
     {
       "type": "matchup",

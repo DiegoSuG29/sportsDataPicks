@@ -387,39 +387,21 @@
       ],
       "injuries": [
         {
-          "name": "Jessie Bates",
-          "position": "S",
-          "report_status": "Out",
-          "injury": "Not injury related - resting player",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Jordan Davis",
+          "name": "Arik Armstead",
           "position": "DT",
-          "report_status": "Out",
-          "injury": "Not injury related - resting player",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_status": null,
+          "injury": "Not injury related - personal matter",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "BJ Green II",
-          "position": "DE",
-          "report_status": "Out",
-          "injury": "Forearm",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Robert Hainsey",
-          "position": "C",
-          "report_status": "Questionable",
-          "injury": "Concussion",
+          "name": "Matt Dickerson",
+          "position": "DT",
+          "report_status": null,
+          "injury": "Neck",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
@@ -428,16 +410,16 @@
           "report_status": null,
           "injury": "Ankle",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": 0
         },
         {
-          "name": "Ezra Cleveland",
-          "position": "G",
+          "name": "Robert Hainsey",
+          "position": "C",
           "report_status": null,
           "injury": "Knee",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
@@ -446,7 +428,7 @@
           "report_status": null,
           "injury": "Rib",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
@@ -455,7 +437,7 @@
           "report_status": null,
           "injury": "Ankle",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
@@ -464,16 +446,52 @@
           "report_status": null,
           "injury": "Hand",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": 0
         },
         {
-          "name": "Branson Combs",
+          "name": "Jalen McLeod",
           "position": "LB",
           "report_status": null,
-          "injury": "Shoulder",
+          "injury": "Groin",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Jonah Monheim",
+          "position": "C",
+          "report_status": null,
+          "injury": "Ankle",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "LeQuint Allen Jr.",
+          "position": "RB",
+          "report_status": null,
+          "injury": "Hamstring",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": 1
+        },
+        {
+          "name": "BJ Green II",
+          "position": "DE",
+          "report_status": null,
+          "injury": "Forearm",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Danny Striggow",
+          "position": "DE",
+          "report_status": null,
+          "injury": "Concussion",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
@@ -482,7 +500,7 @@
           "report_status": null,
           "injury": "Ankle",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": 0
         }
       ],
@@ -3043,6 +3061,26 @@
           "interceptions": 0
         },
         {
+          "player_id": "00-0038938",
+          "name": "Jalin Hyatt",
+          "position": "WR",
+          "games": 1,
+          "snap_pct": 0.08,
+          "target_share": 0.037,
+          "targets_pg": 1.0,
+          "receptions_pg": 0.0,
+          "rec_yds_pg": 0.0,
+          "carries_pg": 0.0,
+          "rush_yds_pg": 0.0,
+          "pass_yds_pg": 0.0,
+          "pass_tds": 0,
+          "rush_tds": 0,
+          "rec_tds": 0,
+          "completions": 0,
+          "attempts": 0,
+          "interceptions": 0
+        },
+        {
           "player_id": "00-0031235",
           "name": "Odell Beckham Jr.",
           "position": "WR",
@@ -3063,26 +3101,6 @@
           "interceptions": 0,
           "status": "TRADED",
           "status_note": "No longer on NYG \u2014 now with MIN. Stats shown are from their time with NYG."
-        },
-        {
-          "player_id": "00-0038938",
-          "name": "Jalin Hyatt",
-          "position": "WR",
-          "games": 1,
-          "snap_pct": 0.08,
-          "target_share": 0.037,
-          "targets_pg": 1.0,
-          "receptions_pg": 0.0,
-          "rec_yds_pg": 0.0,
-          "carries_pg": 0.0,
-          "rush_yds_pg": 0.0,
-          "pass_yds_pg": 0.0,
-          "pass_tds": 0,
-          "rush_tds": 0,
-          "rec_tds": 0,
-          "completions": 0,
-          "attempts": 0,
-          "interceptions": 0
         },
         {
           "player_id": "00-0040225",
@@ -3123,8 +3141,8 @@
           "completions": 0,
           "attempts": 0,
           "interceptions": 0,
-          "status": "RELEASED",
-          "status_note": "Released / waived"
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
         },
         {
           "player_id": "00-0034419",
@@ -3195,82 +3213,37 @@
         {
           "name": "Malik Harrison",
           "position": "LB",
-          "report_status": "Questionable",
+          "report_status": null,
           "injury": "Groin",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Jermaine Eluemunor",
-          "position": "T",
-          "report_status": null,
-          "injury": "Calf",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Darnell Mooney",
-          "position": "WR",
-          "report_status": null,
-          "injury": "Chest",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 0
-        },
-        {
-          "name": "Andrew Thomas",
-          "position": "T",
-          "report_status": null,
-          "injury": "Groin",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Charlie Jones",
-          "position": "WR",
-          "report_status": null,
-          "injury": "Thumb",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 3
-        },
-        {
-          "name": "Malik Nabers",
-          "position": "WR",
-          "report_status": null,
-          "injury": "Knee",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 0
-        },
-        {
-          "name": "Theo Johnson",
-          "position": "TE",
-          "report_status": null,
-          "injury": "Neck",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 4
-        },
-        {
-          "name": "J.J. McCarthy",
-          "position": "QB",
+          "name": "Jason Pinnock",
+          "position": "S",
           "report_status": null,
           "injury": "Hip",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 4
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": null
         },
         {
-          "name": "Abdul Carter",
-          "position": "LB",
+          "name": "Nic Jones",
+          "position": "CB",
           "report_status": null,
           "injury": "Knee",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Deonte Banks",
+          "position": "CB",
+          "report_status": null,
+          "injury": "Shoulder",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         },
         {
@@ -3279,16 +3252,16 @@
           "report_status": null,
           "injury": "Hamstring",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": 2
         },
         {
-          "name": "Colton Hood",
-          "position": "CB",
+          "name": "Ben Mann",
+          "position": "LS",
           "report_status": null,
-          "injury": "Finger",
+          "injury": "Illness",
           "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "report_week": 11,
           "games_missed": null
         }
       ],

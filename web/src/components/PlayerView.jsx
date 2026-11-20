@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { fmt, posClass, FLAG_TONE } from "../util.js";
 import { computeProp, computeWithWithout, gameKey, statVal } from "../stats.js";
 import { statOption, statsForPosition, defaultStatFor } from "../sports.js";
-import { matchupTier } from "./GameView.jsx";
+import { matchupTier, rankTier } from "./GameView.jsx";
+import { Team } from "../logos.jsx";
 
 // NFL logs are labeled by week, NBA logs by date.
 const gameLabel = (l) => (l.week != null ? `${l.season} W${l.week}` : l.date);
@@ -140,7 +141,7 @@ export default function PlayerView({ cfg, game, playerId, onSelectPlayer, onBack
           {player.status && <span className={`flag ${FLAG_TONE[player.status] || "muted"}`}>{player.status}</span>}
         </h3>
         <div className="pd-sub">
-          {team} · {logs.length} games on record (last season + this season) · {slateWord} vs {opp}
+          <Team abbr={team} size={16} /> · {logs.length} games on record (last season + this season) · {slateWord} vs {opp}
         </div>
       </div>
 
@@ -161,7 +162,7 @@ export default function PlayerView({ cfg, game, playerId, onSelectPlayer, onBack
       {/* quick context: this player's season usage + the opponent matchup */}
       <div className="pv-context">
         <StatStrip tiles={cfg.usageTiles(player)} />
-        {oppDef && <MatchupCallout cfg={cfg} slateWord={slateWord} opp={opp} pos={player.position} d={oppDef} />}
+        {oppDef && <MatchupCallout cfg={cfg} slateWord={slateWord} opp={opp} pos={player.position} d={oppDef} focus={cfg.matchupFocus?.[statKey]} />}
       </div>
 
       <div className="section-label">Prop checker</div>
@@ -250,6 +251,8 @@ export default function PlayerView({ cfg, game, playerId, onSelectPlayer, onBack
           player={player}
           opp={opp}
           faced={game.teams[opp].faced}
+          avgs={game.teams[opp].faced_avgs}
+          seasonLogs={logs.filter((l) => l.season === game.season)}
           opt={opt}
           line={parseFloat(line)}
         />
@@ -260,7 +263,8 @@ export default function PlayerView({ cfg, game, playerId, onSelectPlayer, onBack
 
 // Same-position players who faced this opponent this season, filtered to a
 // comparable role (snap% ≥ the player's average minus a cushion).
-function SimilarPlayers({ cfg, player, opp, faced, opt, line }) {
+// NBA adds a second, optional filter: similar season average in the prop stat.
+function SimilarPlayers({ cfg, player, opp, faced, avgs, seasonLogs, opt, line }) {
   const af = cfg.availFilter;
   const base = cfg.similar.base(player);
   const [useFilter, setUseFilter] = useState(base != null);
@@ -269,6 +273,14 @@ function SimilarPlayers({ cfg, player, opp, faced, opt, line }) {
   );
   const bucket = cfg.bucket[player.position] || player.position;
   const hasLine = !Number.isNaN(line);
+  const sa = avgs && cfg.similar.statAvg; // stat-average filter available?
+  const [useAvg, setUseAvg] = useState(!!sa);
+  const [avgPct, setAvgPct] = useState(String(sa?.pct ?? 30));
+  // this player's current-season average in the selected prop stat
+  const selfAvg = seasonLogs?.length
+    ? seasonLogs.reduce((s, l) => s + statVal(opt, l), 0) / seasonLogs.length
+    : null;
+  const avgOf = (r) => (avgs?.[r.player_id] ? statVal(opt, avgs[r.player_id]) : null);
 
   const rows = useMemo(() => {
     const thr = Number(minAvail);
@@ -279,14 +291,21 @@ function SimilarPlayers({ cfg, player, opp, faced, opt, line }) {
         const v = r[af.field];
         return v != null && v * (af.scale || 1) >= thr;
       })
-      .map((r) => ({ ...r, val: statVal(opt, r) }))
-      .sort((a, b) => b.week - a.week || b.val - a.val);
-  }, [faced, bucket, useFilter, minAvail, opt, af]);
+      .filter((r) => {
+        if (!sa || !useAvg || selfAvg == null) return true;
+        const a = avgOf(r);
+        if (a == null) return false;
+        const tol = Math.max(selfAvg * (Number(avgPct) / 100), sa.floor);
+        return Math.abs(a - selfAvg) <= tol;
+      })
+      .map((r) => ({ ...r, val: statVal(opt, r), avg: avgOf(r) }))
+      .sort((a, b) => (b.week ?? 0) - (a.week ?? 0) || (b.date || "").localeCompare(a.date || "") || b.val - a.val);
+  }, [faced, bucket, useFilter, minAvail, opt, af, sa, useAvg, avgPct, selfAvg, avgs]);
 
   const n = rows.length;
   const overs = hasLine ? rows.filter((r) => r.val > line).length : null;
   const avg = n ? rows.reduce((s, r) => s + r.val, 0) / n : null;
-  const games = new Set(rows.map((r) => r.week)).size;
+  const games = new Set(rows.map((r) => r.week ?? r.date)).size;
   const maxVal = Math.max(line || 0, ...rows.map((r) => r.val), 1);
   const dec = opt.dec;
   const posLabel = (cfg.posName[bucket] || `${bucket}s`).toLowerCase();
@@ -311,10 +330,24 @@ function SimilarPlayers({ cfg, player, opp, faced, opt, line }) {
             />
           </label>
         )}
+        {sa && selfAvg != null && (
+          <label className="sim-check">
+            <input type="checkbox" checked={useAvg} onChange={(e) => setUseAvg(e.target.checked)} />
+            Similar {opt.label.toLowerCase()} average (this season: {player.name} {fmt(selfAvg, 1)})
+          </label>
+        )}
+        {sa && selfAvg != null && useAvg && (
+          <label className="pp-line sim-thr">Within ±
+            <StepControl
+              min={10} max={100} step={5} quantize={Math.round} suffix="%"
+              value={avgPct} onChange={setAvgPct}
+            />
+          </label>
+        )}
       </div>
 
       {!n ? (
-        <p className="empty">No {posLabel} vs {opp} match{useFilter ? " this snap% threshold" : ""}.</p>
+        <p className="empty">No {posLabel} vs {opp} match{useFilter || useAvg ? " these filters" : ""}.</p>
       ) : (
         <>
           <div className="prop-result">
@@ -330,7 +363,7 @@ function SimilarPlayers({ cfg, player, opp, faced, opt, line }) {
           <div className="table-wrap">
             <table className="oulog">
               <thead>
-                <tr><th>Player</th><th>Wk</th><th>{cfg.logAvailCol.label}</th><th>{opt.label}</th><th>± line</th><th></th></tr>
+                <tr><th>Player</th><th>{cfg.similar.whenLabel || "Wk"}</th><th>{cfg.logAvailCol.label}</th>{sa && <th title="that player's season average">Szn avg</th>}<th>{opt.label}</th><th>± line</th><th></th></tr>
               </thead>
               <tbody>
                 {rows.map((r) => {
@@ -338,13 +371,14 @@ function SimilarPlayers({ cfg, player, opp, faced, opt, line }) {
                   const cls = hasLine ? (over ? "over" : "under") : "";
                   const self = r.player_id === player.player_id;
                   return (
-                    <tr key={`${r.player_id}-${r.week}`} className={self ? "sim-self" : ""}>
+                    <tr key={`${r.player_id}-${r.week ?? r.date}`} className={self ? "sim-self" : ""}>
                       <td>
                         {r.name} <span className="pos-tag" title="team that game">{r.team}</span>
                         {self && <span className="muted"> (this player)</span>}
                       </td>
                       <td>{gameLabel(r)}</td>
                       <td className="muted">{cfg.logAvailCol.fn(r)}</td>
+                      {sa && <td className="muted">{fmt(r.avg, 1)}</td>}
                       <td className={cls ? `val-${cls}` : ""}>{fmt(r.val, dec)}</td>
                       <td>
                         {hasLine && (
@@ -407,18 +441,27 @@ function StepControl({ min, max, step, quantize, suffix, fallback, value, onChan
   );
 }
 
-function MatchupCallout({ cfg, slateWord, opp, pos, d }) {
+function MatchupCallout({ cfg, slateWord, opp, pos, d, focus }) {
   const tier = matchupTier(d);
   const LABEL = { soft: "Soft", avg: "Average", tough: "Tough" };
   const NOTE = { soft: "favorable matchup", avg: "neutral matchup", tough: "tough matchup" };
   return (
     <div className={`matchup-callout ${tier}`}>
       <div className="mc-top">
-        <span className="mc-lbl">{slateWord[0].toUpperCase() + slateWord.slice(1)} vs {opp} defense</span>
+        <span className="mc-lbl">{slateWord[0].toUpperCase() + slateWord.slice(1)} vs <Team abbr={opp} size={16} /> defense</span>
         <span className={`matchup ${tier}`}>{LABEL[tier]}</span>
       </div>
       <div className="mc-stats">
-        {cfg.matchupStats(d).map(([lbl, val]) => <span key={lbl}><b>{val}</b> {lbl}</span>)}
+        {cfg.matchupStats(d).map(([lbl, val, key]) => {
+          const s = key && d.by_stat?.[key];
+          if (!s) return <span key={lbl}><b>{val}</b> {lbl}</span>;
+          return (
+            <span key={lbl} className={`mc-stat ${rankTier(s.rank, d.of_teams)} ${focus?.includes(key) ? "focus" : ""}`}
+                  title={`${s.p100} per 100 poss · rank ${s.rank}/${d.of_teams}`}>
+              <b>{val}</b> {lbl} <span className="drk">#{s.rank}</span>
+            </span>
+          );
+        })}
         <span>rank <b>{d.rank_most_allowed}/{d.of_teams}</b></span>
       </div>
       <div className="mc-note">Allowed to {pos}s — {NOTE[tier]} (rank 1 = allows the most).</div>

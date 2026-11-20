@@ -56,7 +56,7 @@
           "fantasy_pg_allowed": 16.8,
           "yards_pg_allowed": 266.4,
           "tds_pg_allowed": 1.44,
-          "rank_most_allowed": 19,
+          "rank_most_allowed": 18,
           "of_teams": 32
         },
         "RB": {
@@ -455,112 +455,94 @@
       ],
       "injuries": [
         {
-          "name": "Erik McCoy",
-          "position": "C",
-          "report_status": "Out",
-          "injury": "Biceps",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Taliese Fuaga",
-          "position": "T",
-          "report_status": "Out",
-          "injury": "Knee",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "CJ Donaldson",
-          "position": "RB",
-          "report_status": "Out",
-          "injury": "Shoulder",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
-          "games_missed": 3
-        },
-        {
-          "name": "Christen Miller",
-          "position": "DT",
-          "report_status": "Out",
-          "injury": "Knee",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
-          "name": "Travis Etienne",
-          "position": "RB",
-          "report_status": "Questionable",
-          "injury": "Hamstring",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 5
-        },
-        {
-          "name": "Martin Emerson",
-          "position": "CB",
-          "report_status": "Questionable",
-          "injury": "Shin",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 10,
-          "games_missed": null
-        },
-        {
           "name": "Alvin Kamara",
           "position": "RB",
           "report_status": null,
           "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": 1
         },
         {
-          "name": "Noah Fant",
-          "position": "TE",
+          "name": "Justin Reid",
+          "position": "S",
           "report_status": null,
-          "injury": "Back",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
-          "games_missed": 1
+          "injury": "Not injury related - personal matter",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": null
         },
         {
-          "name": "David Edwards",
-          "position": "G",
+          "name": "Erik McCoy",
+          "position": "C",
           "report_status": null,
-          "injury": "Knee",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Biceps",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Pete Werner",
+          "position": "LB",
+          "report_status": null,
+          "injury": "Hamstring",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Martin Emerson",
+          "position": "CB",
+          "report_status": null,
+          "injury": "Concussion",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Asim Richards",
           "position": "T",
           "report_status": null,
-          "injury": "Thumb",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Knee",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Kelvin Banks Jr.",
+          "name": "Taliese Fuaga",
           "position": "T",
           "report_status": null,
-          "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Knee",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
-          "name": "Quincy Riley",
+          "name": "Decamerion Richardson",
           "position": "CB",
           "report_status": null,
-          "injury": "Knee",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 10,
+          "injury": "Thigh",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
           "games_missed": null
+        },
+        {
+          "name": "Jordyn Tyson",
+          "position": "WR",
+          "report_status": null,
+          "injury": "Chest",
+          "practice_status": "Limited Participation in Practice",
+          "report_week": 11,
+          "games_missed": 7
+        },
+        {
+          "name": "CJ Donaldson",
+          "position": "RB",
+          "report_status": null,
+          "injury": "Shoulder",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
+          "games_missed": 3
         }
       ],
       "faced": [
@@ -3184,11 +3166,11 @@
           "interceptions": 0
         },
         {
-          "player_id": "00-0035039",
-          "name": "Stephen Carlson",
-          "position": "TE",
+          "player_id": "00-0037380",
+          "name": "Kaden Davis",
+          "position": "WR",
           "games": 1,
-          "snap_pct": 0.175,
+          "snap_pct": 0.13,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -3201,7 +3183,9 @@
           "rec_tds": 0,
           "completions": 0,
           "attempts": 0,
-          "interceptions": 0
+          "interceptions": 0,
+          "status": "PRACTICE SQ",
+          "status_note": "On the practice squad"
         },
         {
           "player_id": "00-0038440",
@@ -3226,11 +3210,11 @@
           "status_note": "On injured reserve"
         },
         {
-          "player_id": "00-0037380",
-          "name": "Kaden Davis",
-          "position": "WR",
+          "player_id": "00-0035039",
+          "name": "Stephen Carlson",
+          "position": "TE",
           "games": 1,
-          "snap_pct": 0.13,
+          "snap_pct": 0.175,
           "target_share": 0.0,
           "targets_pg": 0.0,
           "receptions_pg": 0.0,
@@ -3243,91 +3227,53 @@
           "rec_tds": 0,
           "completions": 0,
           "attempts": 0,
-          "interceptions": 0,
-          "status": "PRACTICE SQ",
-          "status_note": "On the practice squad"
+          "interceptions": 0
         }
       ],
       "injuries": [
         {
-          "name": "Tyrique Stevenson",
-          "position": "CB",
-          "report_status": "Questionable",
-          "injury": "Thumb",
+          "name": "Jeffery Simmons",
+          "position": "DT",
+          "report_status": null,
+          "injury": "Knee",
           "practice_status": "Limited Participation in Practice",
-          "report_week": 9,
+          "report_week": 11,
+          "games_missed": null
+        },
+        {
+          "name": "Kyler Gordon",
+          "position": "CB",
+          "report_status": null,
+          "injury": "Shoulder",
+          "practice_status": "Did Not Participate In Practice",
+          "report_week": 11,
           "games_missed": null
         },
         {
           "name": "Kyle Monangai",
           "position": "RB",
-          "report_status": "Questionable",
-          "injury": "Thumb",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 9,
+          "report_status": null,
+          "injury": "Toe",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
           "games_missed": 5
+        },
+        {
+          "name": "Luther Burden III",
+          "position": "WR",
+          "report_status": null,
+          "injury": "Concussion",
+          "practice_status": "Full Participation in Practice",
+          "report_week": 11,
+          "games_missed": 0
         },
         {
           "name": "Malik Muhammad",
           "position": "CB",
-          "report_status": "Questionable",
+          "report_status": null,
           "injury": "Toe",
-          "practice_status": "Limited Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Grady Jarrett",
-          "position": "DT",
-          "report_status": null,
-          "injury": "Groin",
           "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Joe Thuney",
-          "position": "G",
-          "report_status": null,
-          "injury": "Not injury related - resting player",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "T.J. Edwards",
-          "position": "LB",
-          "report_status": null,
-          "injury": "Not injury related - personal matter",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "D'Marco Jackson",
-          "position": "LB",
-          "report_status": null,
-          "injury": "Ankle",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
-          "games_missed": null
-        },
-        {
-          "name": "Zavier Scott",
-          "position": "RB",
-          "report_status": null,
-          "injury": "Wrist",
-          "practice_status": "Did Not Participate In Practice",
-          "report_week": 9,
-          "games_missed": 5
-        },
-        {
-          "name": "Theo Benedet",
-          "position": "T",
-          "report_status": null,
-          "injury": "Shoulder",
-          "practice_status": "Full Participation in Practice",
-          "report_week": 9,
+          "report_week": 11,
           "games_missed": null
         }
       ],

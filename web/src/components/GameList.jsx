@@ -1,3 +1,5 @@
+import { Team } from "../logos.jsx";
+
 export default function GameList({ cfg, games, onOpen }) {
   return (
     <div className="game-list">
@@ -6,7 +8,7 @@ export default function GameList({ cfg, games, onOpen }) {
         return (
           <div key={g.file} className="game-card" onClick={() => onOpen(g.file)}>
             <div className="matchup">
-              {g.away_team} <span className="muted">@</span> {g.home_team}
+              <Team abbr={g.away_team} size={26} /> <span className="muted">@</span> <Team abbr={g.home_team} size={26} />
             </div>
             <div className="gc-meta">{cfg.gameCardMeta(g)}</div>
             {line.length > 0 && (

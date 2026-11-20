@@ -145,16 +145,24 @@ export const SPORTS = {
     ],
 
     defensePositions: ["G", "F", "C"],
+    // third element = by_stat key: the cell is colored by that stat's pace-adjusted rank
     defenseColumns: [
-      ["FP/g", (d) => fmt(d.fantasy_pg_allowed)], ["Pts/g", (d) => fmt(d.pts_pg_allowed)],
-      ["Reb/g", (d) => fmt(d.reb_pg_allowed)], ["Ast/g", (d) => fmt(d.ast_pg_allowed)],
+      ["FP/g", (d) => fmt(d.fantasy_pg_allowed), "fp"], ["Pts/g", (d) => fmt(d.pts_pg_allowed), "pts"],
+      ["Reb/g", (d) => fmt(d.reb_pg_allowed), "reb"], ["Ast/g", (d) => fmt(d.ast_pg_allowed), "ast"],
+      ["3PM/g", (d) => fmt(d.fg3m_pg_allowed), "fg3m"],
     ],
     defenseLabel: "Defense allowed by position (per game, G/F/C)",
-    matchupStats: (d) => [["FP/g", fmt(d.fantasy_pg_allowed)], ["pts/g", fmt(d.pts_pg_allowed)], ["reb/g", fmt(d.reb_pg_allowed)], ["ast/g", fmt(d.ast_pg_allowed)]],
+    defenseHint: "Cell color = that stat's rank, pace-adjusted (per 100 possessions); small number = rank.",
+    matchupStats: (d) => [["FP/g", fmt(d.fantasy_pg_allowed), "fp"], ["pts/g", fmt(d.pts_pg_allowed), "pts"], ["reb/g", fmt(d.reb_pg_allowed), "reb"], ["ast/g", fmt(d.ast_pg_allowed), "ast"], ["3pm/g", fmt(d.fg3m_pg_allowed), "fg3m"]],
+    // prop-checker stat -> the defense stats it depends on (highlighted in the callout)
+    matchupFocus: { pts: ["pts"], reb: ["reb"], ast: ["ast"], fg3m: ["fg3m"], pra: ["pts", "reb", "ast"], pr: ["pts", "reb"], pa: ["pts", "ast"], ra: ["reb", "ast"] },
+    // stat tabs on the worst-defenses board (index.json worst_by_stat)
+    worstStats: [["fp", "FP"], ["pts", "PTS"], ["reb", "REB"], ["ast", "AST"], ["fg3m", "3PM"]],
+    strongN: 5, // top/bottom-N per-stat rank = flagged matchup (matches the pipeline)
 
     teamMetrics: (f) => [
       { label: "Record", value: f.record }, { label: "PPG", value: fmt(f.ppg) },
-      { label: "Opp PPG", value: fmt(f.papg) },
+      { label: "Opp PPG", value: fmt(f.papg) }, { label: "Pace", value: fmt(f.pace) },
       { label: "Rest", value: f.rest_days == null ? "—" : `${f.rest_days}d`, cls: f.back_to_back ? "under" : "" },
     ],
     splitRows: (f) => [["Home", f.home_away_split.home], ["Away", f.home_away_split.away]],
@@ -167,6 +175,15 @@ export const SPORTS = {
     availTitle: (team) => `${team} recent DNPs`,
     availFilter: { label: "Min minutes", suffix: "", min: 0, max: 44, step: 1, field: "min", scale: 1 },
     logAvailCol: { label: "Min", fn: (l) => fmt(l.min, 0) },
+    // "Similar players vs X": same G/F/C bucket, minutes ≥ player's avg − cushion,
+    // optionally a season average in the prop stat within ±pct% (floor = min abs tolerance)
+    similar: {
+      base: (p) => (p.min_pg != null ? Math.round(p.min_pg) : null),
+      cushion: 4,
+      baseText: (v) => `${v} min`,
+      whenLabel: "Date",
+      statAvg: { pct: 30, floor: 0.5 },
+    },
 
     gameHeadSub: (g) => `${new Date(g.date + "T12:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" })}`,
     gameLineRow: (g) => [["Tip", g.tipoff], ["Status", g.status === "pre" ? "Scheduled" : g.status === "post" ? "Final" : "Live"]],

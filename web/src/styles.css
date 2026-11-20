@@ -435,3 +435,17 @@ tr.sim-self td { background: color-mix(in srgb, var(--accent) 8%, transparent); 
 .status.prac-ltd { background: #3a2a17; color: var(--warn); }
 .status.prac-dnp { background: #3a1a1a; color: var(--bad); }
 .inj-tags { display: inline-flex; gap: 6px; align-items: center; flex-shrink: 0; }
+
+/* per-stat defense cells (NBA): tinted by that stat's pace-adjusted rank */
+.dcell.soft { background: color-mix(in srgb, var(--good) 14%, transparent); color: var(--good); }
+.dcell.tough { background: color-mix(in srgb, var(--bad) 14%, transparent); color: var(--bad); }
+.drk { font-size: 10px; color: var(--muted); margin-left: 4px; font-weight: 600; }
+.pg-match { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 5px; margin-left: 10px; text-transform: none; letter-spacing: 0; font-weight: 600; }
+.mc-stat.soft b { color: var(--good); }
+.mc-stat.tough b { color: var(--bad); }
+.mc-stat.focus { outline: 1px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.wd-tabs { margin-left: auto; }
+
+/* team logo + abbreviation */
+.team-id { display: inline-flex; align-items: center; gap: .35em; vertical-align: middle; white-space: nowrap; }
+.team-logo { object-fit: contain; flex: none; }
