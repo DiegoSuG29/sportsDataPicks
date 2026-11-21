@@ -10,8 +10,10 @@ name: Refresh NBA data
 
 on:
   schedule:
-    # 13:00 UTC (~8am ET): late West-coast games from the night before are final.
-    - cron: "0 13 * * *"
+    # 07:00 UTC (1am GDL / 2am ET): late West-coast games from the night before
+    # are final. Set early on purpose: GitHub has been starting scheduled runs
+    # ~8h late, so this should land around 9am GDL.
+    - cron: "0 7 * * *"
   workflow_dispatch:
     inputs:
       date:
