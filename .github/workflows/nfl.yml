@@ -11,10 +11,12 @@ name: Refresh NFL data
 
 on:
   schedule:
-    # UTC (~9am ET): Wednesday for midweek injury reports, Saturday pre-Sunday.
+    # 08:00 UTC (2am GDL / 3am ET): Wednesday for midweek injury reports,
+    # Saturday pre-Sunday. Set early on purpose: GitHub has been starting
+    # scheduled runs ~8h late, so these should land around 10am GDL.
     # Thursday games are covered by a manual Refresh after the final report.
-    - cron: "0 14 * * 3"
-    - cron: "0 14 * * 6"
+    - cron: "0 8 * * 3"
+    - cron: "0 8 * * 6"
   workflow_dispatch:
     inputs:
       season:
